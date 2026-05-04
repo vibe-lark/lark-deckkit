@@ -124,6 +124,7 @@ class GeneratedArtifactsTest(unittest.TestCase):
 
         self.assertIn("Lark DeckKit", readme)
         self.assertIn("https://yannisxu.github.io/lark-deckkit/", readme)
+        self.assertIn("https://magic.solutionsuite.cn/html-box/viE4zlP5oro", readme)
         self.assertIn("Start Here", readme)
         self.assertIn("第一次接触项目的新手", readme)
         self.assertIn("Download ZIP", readme)
