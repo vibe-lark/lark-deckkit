@@ -123,7 +123,7 @@ class GeneratedArtifactsTest(unittest.TestCase):
         readme = (ROOT / "README.md").read_text(encoding="utf-8")
 
         self.assertIn("Lark DeckKit", readme)
-        self.assertIn("https://yannisxu.github.io/lark-deckkit/", readme)
+        self.assertIn("https://vibe-lark.github.io/lark-deckkit/", readme)
         self.assertIn("https://magic.solutionsuite.cn/html-box/viE4zlP5oro", readme)
         self.assertIn("Start Here", readme)
         self.assertIn("第一次接触项目的新手", readme)
@@ -139,7 +139,7 @@ class GeneratedArtifactsTest(unittest.TestCase):
         magic = (DIST / "lark-deckkit-magic.html").read_text(encoding="utf-8")
 
         self.assertIn("dist/lark-visual-sample.html", index)
-        self.assertIn("https://yannisxu.github.io/lark-deckkit/dist/lark-visual-sample.html", magic)
+        self.assertIn("https://vibe-lark.github.io/lark-deckkit/dist/lark-visual-sample.html", magic)
         self.assertLess(len(magic), 80_000)
 
 
