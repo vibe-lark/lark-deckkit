@@ -21,7 +21,7 @@ https://vibe-lark.github.io/lark-deckkit/dist/lark-visual-sample.html#/29
 ## Highlights
 
 - **Editable HTML decks**：用 DOM 元素重建幻灯片，而不是整页截图回放。
-- **16:9 presentation runtime**：内置缩放、键盘翻页、Hash 跳页、全屏、进度条和临近图片预加载。
+- **16:9 presentation runtime**：内置缩放、键盘翻页、Hash 跳页、全屏播放、ESC 退出、进度条和临近图片预加载。
 - **Template SDK**：通过 `Deck Spec`、主题、模板注册表和组件化 blocks 复用页面结构。
 - **Lark-style visual system**：内置暗色画布、蓝青渐变字、引导线、标签、Logo/资产页等视觉规则。
 - **PPTX conversion helper**：提供脚本把 PPTX 抽取为 HTML、manifest 和素材资源，方便迁移旧演示稿。

@@ -71,13 +71,7 @@
 
     const prev = button("上一页", "‹", () => deck.prev());
     const next = button("下一页", "›", () => deck.next());
-    const fullscreen = button("全屏", "⛶", () => {
-      if (document.fullscreenElement) {
-        document.exitFullscreen();
-      } else {
-        deck.mount.requestFullscreen?.();
-      }
-    });
+    const fullscreen = button("全屏播放", "⛶", () => deck.toggleFullscreen());
 
     const status = document.createElement("div");
     status.className = "ls-status";
@@ -163,6 +157,11 @@
       scaleTransform: "",
       theme: null,
       updateScale,
+      enterFullscreen,
+      exitFullscreen,
+      toggleFullscreen,
+      syncPresentationState,
+      isPresenting,
       renderDeck() {
         return renderDeck(this);
       },
@@ -193,6 +192,7 @@
         window.removeEventListener("resize", this.onResize);
         window.removeEventListener("hashchange", this.onHashChange);
         window.removeEventListener("keydown", this.onKeydown);
+        document.removeEventListener("fullscreenchange", this.onFullscreenChange);
         cancelAnimationFrame(this.scaleFrame);
       },
     };
@@ -204,9 +204,15 @@
       deck.scaleFrame = requestAnimationFrame(() => deck.updateScale());
     };
     deck.onHashChange = () => deck.goTo(readHashIndex() || 0, { replace: true });
+    deck.onFullscreenChange = () => deck.syncPresentationState();
     deck.onKeydown = (event) => {
       if (!deck.options.keyboard) return;
       if (event.target?.isContentEditable) return;
+      if (event.code === "Escape" && deck.isPresenting()) {
+        event.preventDefault();
+        deck.exitFullscreen();
+        return;
+      }
       if (["ArrowRight", "PageDown", "Space"].includes(event.code)) {
         event.preventDefault();
         deck.next();
@@ -222,6 +228,7 @@
     window.addEventListener("resize", deck.onResize);
     window.addEventListener("hashchange", deck.onHashChange);
     window.addEventListener("keydown", deck.onKeydown);
+    document.addEventListener("fullscreenchange", deck.onFullscreenChange);
 
     return deck.renderDeck();
   }
@@ -324,6 +331,39 @@
     });
   }
 
+  function enterFullscreen() {
+    if (document.fullscreenElement === this.mount) return Promise.resolve(this);
+    if (!this.mount.requestFullscreen) {
+      this.syncPresentationState(true);
+      return Promise.resolve(this);
+    }
+    return this.mount.requestFullscreen().then(() => this);
+  }
+
+  function exitFullscreen() {
+    if (document.fullscreenElement === this.mount && document.exitFullscreen) {
+      return document.exitFullscreen().then(() => this);
+    }
+    this.syncPresentationState(false);
+    return Promise.resolve(this);
+  }
+
+  function toggleFullscreen() {
+    return this.isPresenting() ? this.exitFullscreen() : this.enterFullscreen();
+  }
+
+  function isPresenting() {
+    return this.mount.classList.contains("ls-presenting") || document.fullscreenElement === this.mount;
+  }
+
+  function syncPresentationState(force) {
+    const isFullscreen = force ?? document.fullscreenElement === this.mount;
+    this.mount.classList.toggle("ls-presenting", Boolean(isFullscreen));
+    cancelAnimationFrame(this.scaleFrame);
+    this.scaleFrame = requestAnimationFrame(() => this.updateScale());
+    return this;
+  }
+
   function setSlideActive(slide, isActive) {
     if (!slide) return;
     slide.hidden = !isActive;
@@ -334,15 +374,32 @@
     loadSlideImages(slides[index]);
     loadSlideImages(slides[index - 1]);
     loadSlideImages(slides[index + 1]);
+    loadSlideImages(slides[index - 2]);
+    loadSlideImages(slides[index + 2]);
   }
 
   function loadSlideImages(slide) {
     if (!slide) return;
     slide.querySelectorAll("img[data-src]").forEach((image) => {
-      if (!image.getAttribute("src")) {
-        image.setAttribute("src", image.dataset.src);
+      const source = image.dataset.src;
+      if (!source) return;
+      if (image.getAttribute("src") !== source) {
+        image.classList.add("is-loading");
+        image.addEventListener("load", markImageLoaded, { once: true });
+        image.addEventListener("error", markImageLoaded, { once: true });
+        image.setAttribute("src", source);
+      }
+      if (image.complete && image.getAttribute("src") === source) {
+        markImageLoaded({ currentTarget: image });
       }
     });
+  }
+
+  function markImageLoaded(event) {
+    const image = event.currentTarget;
+    image.classList.remove("is-loading");
+    image.classList.add("is-loaded");
+    image.dataset.lsLoaded = "true";
   }
 
   function normalizeIndex(index, length) {
@@ -365,6 +422,15 @@
     mountControls,
     defineTheme,
     applyTheme,
+    enterFullscreen(deck) {
+      return deck.enterFullscreen();
+    },
+    exitFullscreen(deck) {
+      return deck.exitFullscreen();
+    },
+    toggleFullscreen(deck) {
+      return deck.toggleFullscreen();
+    },
     goTo(deck, index) {
       return deck.goTo(index);
     },

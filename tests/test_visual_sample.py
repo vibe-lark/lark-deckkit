@@ -33,7 +33,11 @@ class VisualSampleTest(unittest.TestCase):
         templates = (ROOT / "sdk" / "templates.js").read_text(encoding="utf-8")
         self.assertIn("createDeck", runtime)
         self.assertIn("keydown", runtime)
+        self.assertIn("Escape", runtime)
+        self.assertIn("data-src", templates)
         self.assertIn("contenteditable", templates)
+        self.assertIn("重复工作量</span></p><p", html)
+        self.assertIn(">下降</span></p>", html)
         for template in [
             "visualLayout",
             "visualCover",
