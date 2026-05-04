@@ -1,0 +1,1502 @@
+{
+  "source": "16-9 活动 PPT-通用模版.pptx",
+  "slideCount": 49,
+  "canvas": {
+    "width": 1600,
+    "height": 900
+  },
+  "slides": [
+    {
+      "index": 1,
+      "title": "Keynote Visual Guidelines",
+      "layout": "1_内容-左右排版（带副标题）",
+      "elementCount": 4
+    },
+    {
+      "index": 2,
+      "title": "PPT 设计模版",
+      "layout": "1_内容-左右排版（带副标题）",
+      "elementCount": 3
+    },
+    {
+      "index": 3,
+      "title": "封面替换文案文案 封面替换图片图片",
+      "layout": "1_单行标题-居中（无副标题）",
+      "elementCount": 6
+    },
+    {
+      "index": 4,
+      "title": "先进的团队",
+      "layout": "空白页",
+      "elementCount": 4
+    },
+    {
+      "index": 5,
+      "title": "选 AI 产品 看成熟度",
+      "layout": "标题居中",
+      "elementCount": 1
+    },
+    {
+      "index": 6,
+      "title": "Slide 6",
+      "layout": "通用底纹1",
+      "elementCount": 15
+    },
+    {
+      "index": 7,
+      "title": "追求先进 就是先进",
+      "layout": "标题居中",
+      "elementCount": 2
+    },
+    {
+      "index": 8,
+      "title": "让 AI 真能用、真落地",
+      "layout": "标题居中",
+      "elementCount": 2
+    },
+    {
+      "index": 9,
+      "title": "AI 落地",
+      "layout": "金句页1",
+      "elementCount": 4
+    },
+    {
+      "index": 10,
+      "title": "飞书让 AI 真能用，真落地",
+      "layout": "金句页2",
+      "elementCount": 7
+    },
+    {
+      "index": 11,
+      "title": "协作是一群人",
+      "layout": "通用底纹1",
+      "elementCount": 5
+    },
+    {
+      "index": 12,
+      "title": "组织高效 信息透明",
+      "layout": "通用底纹1",
+      "elementCount": 9
+    },
+    {
+      "index": 13,
+      "title": "每天 400 场会议 是安全生产的",
+      "layout": "仅标题",
+      "elementCount": 6
+    },
+    {
+      "index": 14,
+      "title": "4000",
+      "layout": "1_内容-左右排版（带副标题）",
+      "elementCount": 4
+    },
+    {
+      "index": 15,
+      "title": "协作是一群人",
+      "layout": "1_内容-左右排版（带副标题）",
+      "elementCount": 3
+    },
+    {
+      "index": 16,
+      "title": "招商到运营一站式数智化护航 让加盟商安心做茶，简单经营",
+      "layout": "金句页2",
+      "elementCount": 7
+    },
+    {
+      "index": 17,
+      "title": "“好于尝鲜”",
+      "layout": "通用底纹1",
+      "elementCount": 12
+    },
+    {
+      "index": 18,
+      "title": "极致追求",
+      "layout": "通用底纹1",
+      "elementCount": 18
+    },
+    {
+      "index": 19,
+      "title": "最懂企业知识",
+      "layout": "1_内容-左右排版（带副标题）",
+      "elementCount": 3
+    },
+    {
+      "index": 20,
+      "title": "20x",
+      "layout": "1_内容-左右排版（带副标题）",
+      "elementCount": 13
+    },
+    {
+      "index": 21,
+      "title": "100x",
+      "layout": "1_内容-左右排版（带副标题）",
+      "elementCount": 20
+    },
+    {
+      "index": 22,
+      "title": "Slide 22",
+      "layout": "1_内容-左右排版（带副标题）",
+      "elementCount": 8
+    },
+    {
+      "index": 23,
+      "title": "2025.3 月底",
+      "layout": "仅标题",
+      "elementCount": 18
+    },
+    {
+      "index": 24,
+      "title": "每日任务自动化通知",
+      "layout": "空白页",
+      "elementCount": 8
+    },
+    {
+      "index": 25,
+      "title": "内容占位 内容占位",
+      "layout": "1_内容-左右排版（带副标题）",
+      "elementCount": 7
+    },
+    {
+      "index": 26,
+      "title": "60%",
+      "layout": "空白页",
+      "elementCount": 13
+    },
+    {
+      "index": 27,
+      "title": "唯有数字基建 能支撑\"万店一盘棋\"的管理蓝图",
+      "layout": "金句页1",
+      "elementCount": 4
+    },
+    {
+      "index": 28,
+      "title": "门店 QSC 标准化的三大挑战",
+      "layout": "默认-底图",
+      "elementCount": 14
+    },
+    {
+      "index": 29,
+      "title": "工具不统一，协作成本高",
+      "layout": "1_内容-左右排版（带副标题）",
+      "elementCount": 12
+    },
+    {
+      "index": 30,
+      "title": "知识透明",
+      "layout": "1_内容-左右排版（带副标题）",
+      "elementCount": 22
+    },
+    {
+      "index": 31,
+      "title": "产品演示能力不带框",
+      "layout": "1_内容-左右排版（带副标题）",
+      "elementCount": 6
+    },
+    {
+      "index": 32,
+      "title": "产品演示能力不带框",
+      "layout": "1_内容-左右排版（带副标题）",
+      "elementCount": 6
+    },
+    {
+      "index": 33,
+      "title": "让业务应用 彼此链接，易于使用",
+      "layout": "1_内容-左右排版（带副标题）",
+      "elementCount": 6
+    },
+    {
+      "index": 34,
+      "title": "Slide 34",
+      "layout": "通用底纹1",
+      "elementCount": 13
+    },
+    {
+      "index": 35,
+      "title": "走进 100 家先进企业",
+      "layout": "1_单行标题-居中（无副标题）",
+      "elementCount": 27
+    },
+    {
+      "index": 36,
+      "title": "Slide 36",
+      "layout": "1_二级章节页",
+      "elementCount": 21
+    },
+    {
+      "index": 37,
+      "title": "设计视觉元素/资产",
+      "layout": "1_内容-左右排版（带副标题）",
+      "elementCount": 3
+    },
+    {
+      "index": 38,
+      "title": "方正兰亭黑Pro",
+      "layout": "1_内容-左右排版（带副标题）",
+      "elementCount": 17
+    },
+    {
+      "index": 39,
+      "title": "更多资源见 figma",
+      "layout": "1_内容-左右排版（带副标题）",
+      "elementCount": 4
+    },
+    {
+      "index": 40,
+      "title": "Hex # B1D5F6",
+      "layout": "1_内容-左右排版（带副标题）",
+      "elementCount": 16
+    },
+    {
+      "index": 41,
+      "title": "Hex # 717171",
+      "layout": "1_内容-左右排版（带副标题）",
+      "elementCount": 13
+    },
+    {
+      "index": 42,
+      "title": "内容引导线：基于内容需要 2px 的倍数使用，增长越高，越正向颜色越亮",
+      "layout": "1_内容-左右排版（带副标题）",
+      "elementCount": 31
+    },
+    {
+      "index": 43,
+      "title": "通用型高层",
+      "layout": "1_内容-左右排版（带副标题）",
+      "elementCount": 44
+    },
+    {
+      "index": 44,
+      "title": "联合 Logo，飞书 Logo 固定在前面展示",
+      "layout": "1_内容-左右排版（带副标题）",
+      "elementCount": 15
+    },
+    {
+      "index": 45,
+      "title": "Slogan",
+      "layout": "1_内容-左右排版（带副标题）",
+      "elementCount": 11
+    },
+    {
+      "index": 46,
+      "title": "产品 ICON",
+      "layout": "1_单行标题-居中（无副标题）",
+      "elementCount": 52
+    },
+    {
+      "index": 47,
+      "title": "产品 ICON",
+      "layout": "1_单行标题-居中（无副标题）",
+      "elementCount": 37
+    },
+    {
+      "index": 48,
+      "title": "功能 ICON 资源库",
+      "layout": "1_单行标题-居中（无副标题）",
+      "elementCount": 126
+    },
+    {
+      "index": 49,
+      "title": "常用 LOGO 矢量图",
+      "layout": "内容页-标题双行居中",
+      "elementCount": 35
+    }
+  ],
+  "assets": [
+    {
+      "path": "dist/assets/pptx-media/e2cc3c0d5dc3155d.png",
+      "bytes": 225728
+    },
+    {
+      "path": "dist/assets/pptx-media/a081f44dc9ae62db.png",
+      "bytes": 13528046
+    },
+    {
+      "path": "dist/assets/pptx-media/c79530d42bdf7e25.png",
+      "bytes": 7718
+    },
+    {
+      "path": "dist/assets/pptx-media/e91c0c8f0f0e01ca.png",
+      "bytes": 6735991
+    },
+    {
+      "path": "dist/assets/pptx-media/b4906f8983e9cecf.png",
+      "bytes": 10448
+    },
+    {
+      "path": "dist/assets/pptx-media/fe0be4b4d6325923.png",
+      "bytes": 5134631
+    },
+    {
+      "path": "dist/assets/pptx-media/4816de094aaf8f83.png",
+      "bytes": 17102021
+    },
+    {
+      "path": "dist/assets/pptx-media/af985b2a97fbead8.png",
+      "bytes": 3695839
+    },
+    {
+      "path": "dist/assets/pptx-media/7e43583df202e745.png",
+      "bytes": 1414705
+    },
+    {
+      "path": "dist/assets/pptx-media/d6589325e30cc912.png",
+      "bytes": 36302
+    },
+    {
+      "path": "dist/assets/pptx-media/9034d2ae6aaf0c2b.png",
+      "bytes": 150454
+    },
+    {
+      "path": "dist/assets/pptx-media/f5c863fda4723f28.png",
+      "bytes": 5674413
+    },
+    {
+      "path": "dist/assets/pptx-media/64a5ca2b4a3aab78.png",
+      "bytes": 21153
+    },
+    {
+      "path": "dist/assets/pptx-media/a16f29d7442612c7.png",
+      "bytes": 103482
+    },
+    {
+      "path": "dist/assets/pptx-media/ff72104dbd4a73a6.png",
+      "bytes": 10691474
+    },
+    {
+      "path": "dist/assets/pptx-media/6d6a6910c1536ee0.png",
+      "bytes": 3349
+    },
+    {
+      "path": "dist/assets/pptx-media/87db19d23d312115.png",
+      "bytes": 806927
+    },
+    {
+      "path": "dist/assets/pptx-media/fd1c5e2c612d80c2.png",
+      "bytes": 1930640
+    },
+    {
+      "path": "dist/assets/pptx-media/262580914d0cb8e0.png",
+      "bytes": 2494679
+    },
+    {
+      "path": "dist/assets/pptx-media/5fce6b7a20086ded.png",
+      "bytes": 929690
+    },
+    {
+      "path": "dist/assets/pptx-media/bfef7fcec9c3efeb.jpeg",
+      "bytes": 240608
+    },
+    {
+      "path": "dist/assets/pptx-media/992cd65a40609062.png",
+      "bytes": 2870842
+    },
+    {
+      "path": "dist/assets/pptx-media/2b798c99a0609e29.jpeg",
+      "bytes": 41505
+    },
+    {
+      "path": "dist/assets/pptx-media/f7d51b9aaad1162a.png",
+      "bytes": 576355
+    },
+    {
+      "path": "dist/assets/pptx-media/f15d62bc63903cd1.png",
+      "bytes": 83309
+    },
+    {
+      "path": "dist/assets/pptx-media/f8d245ed6167b0d8.png",
+      "bytes": 541139
+    },
+    {
+      "path": "dist/assets/pptx-media/9fadf1458a33d8b3.png",
+      "bytes": 1224
+    },
+    {
+      "path": "dist/assets/pptx-media/a5a1cb8513075ccb.png",
+      "bytes": 785
+    },
+    {
+      "path": "dist/assets/pptx-media/0155f5e8fed3b5ec.png",
+      "bytes": 126559
+    },
+    {
+      "path": "dist/assets/pptx-media/8151698eea632296.png",
+      "bytes": 62503
+    },
+    {
+      "path": "dist/assets/pptx-media/8b37a7696483eecc.png",
+      "bytes": 78428
+    },
+    {
+      "path": "dist/assets/pptx-media/1a371697ae600ace.png",
+      "bytes": 5319
+    },
+    {
+      "path": "dist/assets/pptx-media/f5a1f018b39db7cf.png",
+      "bytes": 1000
+    },
+    {
+      "path": "dist/assets/pptx-media/33198493b017095a.png",
+      "bytes": 3431
+    },
+    {
+      "path": "dist/assets/pptx-media/7eade25d7dfd8233.png",
+      "bytes": 731
+    },
+    {
+      "path": "dist/assets/pptx-media/7efc8dc96a9d0a18.png",
+      "bytes": 99128
+    },
+    {
+      "path": "dist/assets/pptx-media/fb2664faf480b23e.png",
+      "bytes": 22815
+    },
+    {
+      "path": "dist/assets/pptx-media/9bf7e6e02aa80a2b.png",
+      "bytes": 171
+    },
+    {
+      "path": "dist/assets/pptx-media/9a02ea22acfd3784.png",
+      "bytes": 6619
+    },
+    {
+      "path": "dist/assets/pptx-media/ac8915eca1d4b76e.png",
+      "bytes": 5487
+    },
+    {
+      "path": "dist/assets/pptx-media/df67549ffd3e2be9.png",
+      "bytes": 6527
+    },
+    {
+      "path": "dist/assets/pptx-media/4554ef58edfc89d1.png",
+      "bytes": 367354
+    },
+    {
+      "path": "dist/assets/pptx-media/1694bc1d8cd2a0fb.png",
+      "bytes": 8875
+    },
+    {
+      "path": "dist/assets/pptx-media/98d057d0474ae4b2.png",
+      "bytes": 18184
+    },
+    {
+      "path": "dist/assets/pptx-media/d8617b18f7fe3922.png",
+      "bytes": 1132182
+    },
+    {
+      "path": "dist/assets/pptx-media/a1bf71926a28fc19.jpeg",
+      "bytes": 200551
+    },
+    {
+      "path": "dist/assets/pptx-media/02a17cc4064075db.png",
+      "bytes": 394770
+    },
+    {
+      "path": "dist/assets/pptx-media/b0f8d0ec7e7195aa.jpeg",
+      "bytes": 130285
+    },
+    {
+      "path": "dist/assets/pptx-media/f673a41a0c530fab.png",
+      "bytes": 4617331
+    },
+    {
+      "path": "dist/assets/pptx-media/1307195857c1c165.png",
+      "bytes": 4394339
+    },
+    {
+      "path": "dist/assets/pptx-media/f2eee9a72061d1bf.png",
+      "bytes": 4973
+    },
+    {
+      "path": "dist/assets/pptx-media/38c49b3cea755150.png",
+      "bytes": 4621
+    },
+    {
+      "path": "dist/assets/pptx-media/8cf6ffe459a7ec56.png",
+      "bytes": 3651
+    },
+    {
+      "path": "dist/assets/pptx-media/02ff194a6c99225a.png",
+      "bytes": 2963144
+    },
+    {
+      "path": "dist/assets/pptx-media/6ab41e23adc6772b.png",
+      "bytes": 2931222
+    },
+    {
+      "path": "dist/assets/pptx-media/686657b7b77dbe4b.png",
+      "bytes": 2348840
+    },
+    {
+      "path": "dist/assets/pptx-media/3b2fc3af7fbf2dd2.png",
+      "bytes": 754737
+    },
+    {
+      "path": "dist/assets/pptx-media/5ee37433a8567767.png",
+      "bytes": 709863
+    },
+    {
+      "path": "dist/assets/pptx-media/03bfceac5459f168.jpg",
+      "bytes": 2114874
+    },
+    {
+      "path": "dist/assets/pptx-media/71440ab9c990dcce.png",
+      "bytes": 2472
+    },
+    {
+      "path": "dist/assets/pptx-media/5cfa40729e3c636e.png",
+      "bytes": 17041
+    },
+    {
+      "path": "dist/assets/pptx-media/7a6471c1e252259a.png",
+      "bytes": 183674
+    },
+    {
+      "path": "dist/assets/pptx-media/db50fdf4a864220d.png",
+      "bytes": 111038
+    },
+    {
+      "path": "dist/assets/pptx-media/7b3a916b4f85c635.png",
+      "bytes": 50528
+    },
+    {
+      "path": "dist/assets/pptx-media/55adb414daa2a42b.png",
+      "bytes": 6652
+    },
+    {
+      "path": "dist/assets/pptx-media/b8798958dab08e18.png",
+      "bytes": 52855
+    },
+    {
+      "path": "dist/assets/pptx-media/7423bfddbabf8232.png",
+      "bytes": 35668
+    },
+    {
+      "path": "dist/assets/pptx-media/da12fbd32e88ac66.jpeg",
+      "bytes": 92124
+    },
+    {
+      "path": "dist/assets/pptx-media/84f13ead6f5b7026.png",
+      "bytes": 3393
+    },
+    {
+      "path": "dist/assets/pptx-media/6c091d7547925fae.png",
+      "bytes": 686378
+    },
+    {
+      "path": "dist/assets/pptx-media/254ef41520870317.png",
+      "bytes": 286311
+    },
+    {
+      "path": "dist/assets/pptx-media/70f40590943bfa16.png",
+      "bytes": 24613
+    },
+    {
+      "path": "dist/assets/pptx-media/528b09fad3e307bb.png",
+      "bytes": 1258
+    },
+    {
+      "path": "dist/assets/pptx-media/0e0837affdf09225.png",
+      "bytes": 1293
+    },
+    {
+      "path": "dist/assets/pptx-media/a0399f7b86c6dcd3.png",
+      "bytes": 1294
+    },
+    {
+      "path": "dist/assets/pptx-media/1680a7cb41534c7c.png",
+      "bytes": 115065
+    },
+    {
+      "path": "dist/assets/pptx-media/5f59bdda82f52155.png",
+      "bytes": 145848
+    },
+    {
+      "path": "dist/assets/pptx-media/dc0ced06675d1797.png",
+      "bytes": 137362
+    },
+    {
+      "path": "dist/assets/pptx-media/4a52644458264c9e.png",
+      "bytes": 121283
+    },
+    {
+      "path": "dist/assets/pptx-media/b514c5a6da6a3836.png",
+      "bytes": 152416
+    },
+    {
+      "path": "dist/assets/pptx-media/c068661d22e1b310.png",
+      "bytes": 133868
+    },
+    {
+      "path": "dist/assets/pptx-media/728284ddb37d8746.png",
+      "bytes": 116306
+    },
+    {
+      "path": "dist/assets/pptx-media/b472c9001ec3c7ba.png",
+      "bytes": 148979
+    },
+    {
+      "path": "dist/assets/pptx-media/82b20e64a807a1e4.png",
+      "bytes": 166607
+    },
+    {
+      "path": "dist/assets/pptx-media/0955a6ce25efe281.png",
+      "bytes": 121613
+    },
+    {
+      "path": "dist/assets/pptx-media/0606bba5fec31d6a.png",
+      "bytes": 152498
+    },
+    {
+      "path": "dist/assets/pptx-media/e24ba0f3b74c6ec6.png",
+      "bytes": 135542
+    },
+    {
+      "path": "dist/assets/pptx-media/d2ed5cd47e00bcf2.png",
+      "bytes": 107532
+    },
+    {
+      "path": "dist/assets/pptx-media/b972ab53e095fe13.png",
+      "bytes": 70373
+    },
+    {
+      "path": "dist/assets/pptx-media/add8ee3f2e5106c7.png",
+      "bytes": 12922
+    },
+    {
+      "path": "dist/assets/pptx-media/bf0d486a2f2f144a.png",
+      "bytes": 14612
+    },
+    {
+      "path": "dist/assets/pptx-media/d6ef9c0153913d4d.png",
+      "bytes": 12371
+    },
+    {
+      "path": "dist/assets/pptx-media/1f910f6c8f80b9c1.png",
+      "bytes": 14139
+    },
+    {
+      "path": "dist/assets/pptx-media/293269c2527f61ae.png",
+      "bytes": 178479
+    },
+    {
+      "path": "dist/assets/pptx-media/d3456ffa1c942dc8.png",
+      "bytes": 148050
+    },
+    {
+      "path": "dist/assets/pptx-media/cb79a2461ba7e11c.png",
+      "bytes": 188253
+    },
+    {
+      "path": "dist/assets/pptx-media/2e10cadf46d95b5f.png",
+      "bytes": 175751
+    },
+    {
+      "path": "dist/assets/pptx-media/7b8d7aeb7574b22c.png",
+      "bytes": 94970
+    },
+    {
+      "path": "dist/assets/pptx-media/984faae5892b890a.png",
+      "bytes": 190545
+    },
+    {
+      "path": "dist/assets/pptx-media/66e4e414512b5574.png",
+      "bytes": 93064
+    },
+    {
+      "path": "dist/assets/pptx-media/7d9d8b865ccd8dc9.png",
+      "bytes": 181408
+    },
+    {
+      "path": "dist/assets/pptx-media/73244d313c20ed0b.png",
+      "bytes": 1901
+    },
+    {
+      "path": "dist/assets/pptx-media/c537c1f1d108908d.png",
+      "bytes": 27262
+    },
+    {
+      "path": "dist/assets/pptx-media/a4c32b0e1e0b41db.png",
+      "bytes": 23331
+    },
+    {
+      "path": "dist/assets/pptx-media/693432e14452ee90.png",
+      "bytes": 34351
+    },
+    {
+      "path": "dist/assets/pptx-media/b7b42851f262ec9e.png",
+      "bytes": 81354
+    },
+    {
+      "path": "dist/assets/pptx-media/7301005f37f21d42.png",
+      "bytes": 2356
+    },
+    {
+      "path": "dist/assets/pptx-media/d878c7867c7b9e88.png",
+      "bytes": 20934
+    },
+    {
+      "path": "dist/assets/pptx-media/25722f297895d4ae.png",
+      "bytes": 39333
+    },
+    {
+      "path": "dist/assets/pptx-media/9249fa111beee451.png",
+      "bytes": 1599
+    },
+    {
+      "path": "dist/assets/pptx-media/7abe93b4391fc455.png",
+      "bytes": 35889
+    },
+    {
+      "path": "dist/assets/pptx-media/3904b80d255a1608.png",
+      "bytes": 79747
+    },
+    {
+      "path": "dist/assets/pptx-media/dfd9487073435ec9.png",
+      "bytes": 95394
+    },
+    {
+      "path": "dist/assets/pptx-media/1f9e13756ae21f1e.png",
+      "bytes": 1616
+    },
+    {
+      "path": "dist/assets/pptx-media/7b0bdb056d319311.png",
+      "bytes": 99563
+    },
+    {
+      "path": "dist/assets/pptx-media/4f4afc2549aa721c.png",
+      "bytes": 144689
+    },
+    {
+      "path": "dist/assets/pptx-media/0749c41196e45f5d.png",
+      "bytes": 229716
+    },
+    {
+      "path": "dist/assets/pptx-media/9d43f3e97a8af812.png",
+      "bytes": 31784
+    },
+    {
+      "path": "dist/assets/pptx-media/5155306be12707a8.png",
+      "bytes": 31294
+    },
+    {
+      "path": "dist/assets/pptx-media/a036319fe61f83ae.png",
+      "bytes": 34220
+    },
+    {
+      "path": "dist/assets/pptx-media/019f6500aa3ac44c.png",
+      "bytes": 31902
+    },
+    {
+      "path": "dist/assets/pptx-media/7546062c7214735f.png",
+      "bytes": 33204
+    },
+    {
+      "path": "dist/assets/pptx-media/b275ffc57932a81d.png",
+      "bytes": 34781
+    },
+    {
+      "path": "dist/assets/pptx-media/0558f754dba3bfdf.png",
+      "bytes": 37763
+    },
+    {
+      "path": "dist/assets/pptx-media/9795af3ccf6eb151.png",
+      "bytes": 38543
+    },
+    {
+      "path": "dist/assets/pptx-media/be8695dcb6bf4536.png",
+      "bytes": 32112
+    },
+    {
+      "path": "dist/assets/pptx-media/2bf6f9b662ff534e.png",
+      "bytes": 29668
+    },
+    {
+      "path": "dist/assets/pptx-media/a2215f724dd5e556.png",
+      "bytes": 31249
+    },
+    {
+      "path": "dist/assets/pptx-media/00ad799ca0f5b0f9.png",
+      "bytes": 28989
+    },
+    {
+      "path": "dist/assets/pptx-media/197bffb3cd81c93f.png",
+      "bytes": 25766
+    },
+    {
+      "path": "dist/assets/pptx-media/4de48b7a2bc4ba6c.png",
+      "bytes": 26580
+    },
+    {
+      "path": "dist/assets/pptx-media/007c9627af7e0fe8.png",
+      "bytes": 38609
+    },
+    {
+      "path": "dist/assets/pptx-media/b002c8999f649004.png",
+      "bytes": 32020
+    },
+    {
+      "path": "dist/assets/pptx-media/70261b4ec331edb9.png",
+      "bytes": 29582
+    },
+    {
+      "path": "dist/assets/pptx-media/e04936988e3ce7e5.png",
+      "bytes": 43914
+    },
+    {
+      "path": "dist/assets/pptx-media/d7a1a3a3b463d4b6.png",
+      "bytes": 45757
+    },
+    {
+      "path": "dist/assets/pptx-media/964f28cc7c209d19.png",
+      "bytes": 36085
+    },
+    {
+      "path": "dist/assets/pptx-media/6d89be707e8e87dd.png",
+      "bytes": 32365
+    },
+    {
+      "path": "dist/assets/pptx-media/02bc9c904821ed62.png",
+      "bytes": 37287
+    },
+    {
+      "path": "dist/assets/pptx-media/629b68634a5b28df.png",
+      "bytes": 26474
+    },
+    {
+      "path": "dist/assets/pptx-media/dd8813686c79649d.png",
+      "bytes": 28533
+    },
+    {
+      "path": "dist/assets/pptx-media/4fd246f92ff8af99.png",
+      "bytes": 27706
+    },
+    {
+      "path": "dist/assets/pptx-media/8cf9918876acc13f.png",
+      "bytes": 28277
+    },
+    {
+      "path": "dist/assets/pptx-media/a7d93a6b4c77762c.png",
+      "bytes": 25166
+    },
+    {
+      "path": "dist/assets/pptx-media/783f624ca78241ef.png",
+      "bytes": 29969
+    },
+    {
+      "path": "dist/assets/pptx-media/f10520cf6eff41a0.png",
+      "bytes": 1752
+    },
+    {
+      "path": "dist/assets/pptx-media/748861cbc203d394.png",
+      "bytes": 1894
+    },
+    {
+      "path": "dist/assets/pptx-media/d13ea668c3d3a608.png",
+      "bytes": 1707
+    },
+    {
+      "path": "dist/assets/pptx-media/6126b2089946ea7d.png",
+      "bytes": 1288
+    },
+    {
+      "path": "dist/assets/pptx-media/b261e6a7dca84624.png",
+      "bytes": 1860
+    },
+    {
+      "path": "dist/assets/pptx-media/a8a8226737bd1b6e.png",
+      "bytes": 1513
+    },
+    {
+      "path": "dist/assets/pptx-media/7d27d110df1eea5e.png",
+      "bytes": 1547
+    },
+    {
+      "path": "dist/assets/pptx-media/00b007938d7b80bd.png",
+      "bytes": 1172
+    },
+    {
+      "path": "dist/assets/pptx-media/f1d7eaf936ed47e3.png",
+      "bytes": 1774
+    },
+    {
+      "path": "dist/assets/pptx-media/a11731bb8bf38b84.png",
+      "bytes": 1584
+    },
+    {
+      "path": "dist/assets/pptx-media/ba1be3d39bce7b5e.png",
+      "bytes": 2333
+    },
+    {
+      "path": "dist/assets/pptx-media/a7543037dc0e7a14.png",
+      "bytes": 1372
+    },
+    {
+      "path": "dist/assets/pptx-media/84c699d6c4f1d99f.png",
+      "bytes": 1735
+    },
+    {
+      "path": "dist/assets/pptx-media/7f66c7f7d21aad17.png",
+      "bytes": 1592
+    },
+    {
+      "path": "dist/assets/pptx-media/dbf4c9262b825388.png",
+      "bytes": 2095
+    },
+    {
+      "path": "dist/assets/pptx-media/b92e6560f73efe4e.png",
+      "bytes": 1347
+    },
+    {
+      "path": "dist/assets/pptx-media/a360cbf0c9bf4e39.png",
+      "bytes": 1754
+    },
+    {
+      "path": "dist/assets/pptx-media/039298b1d47d5f5c.png",
+      "bytes": 988
+    },
+    {
+      "path": "dist/assets/pptx-media/be428d6fa45b6bfe.png",
+      "bytes": 1264
+    },
+    {
+      "path": "dist/assets/pptx-media/e31c46b1b4868c10.png",
+      "bytes": 2020
+    },
+    {
+      "path": "dist/assets/pptx-media/db530e9b2022142b.png",
+      "bytes": 946
+    },
+    {
+      "path": "dist/assets/pptx-media/9d0e262f50905444.png",
+      "bytes": 1086
+    },
+    {
+      "path": "dist/assets/pptx-media/c01e4ac0dff96592.png",
+      "bytes": 1165
+    },
+    {
+      "path": "dist/assets/pptx-media/3697b3f2edc44ee9.png",
+      "bytes": 1433
+    },
+    {
+      "path": "dist/assets/pptx-media/0081b693f8e229dc.png",
+      "bytes": 1620
+    },
+    {
+      "path": "dist/assets/pptx-media/b9c3169c32b18e71.png",
+      "bytes": 890
+    },
+    {
+      "path": "dist/assets/pptx-media/3dcaf1285290267a.png",
+      "bytes": 1581
+    },
+    {
+      "path": "dist/assets/pptx-media/2a1d158b6e98428f.png",
+      "bytes": 2178
+    },
+    {
+      "path": "dist/assets/pptx-media/45f88bb9977acc63.png",
+      "bytes": 1145
+    },
+    {
+      "path": "dist/assets/pptx-media/47185783db7b73e3.png",
+      "bytes": 1315
+    },
+    {
+      "path": "dist/assets/pptx-media/a4a25724019e3484.png",
+      "bytes": 1459
+    },
+    {
+      "path": "dist/assets/pptx-media/fda00381edcabad5.png",
+      "bytes": 1207
+    },
+    {
+      "path": "dist/assets/pptx-media/9ea9f4536b6f5a71.png",
+      "bytes": 1983
+    },
+    {
+      "path": "dist/assets/pptx-media/59d8e6f929dfcdaf.png",
+      "bytes": 1316
+    },
+    {
+      "path": "dist/assets/pptx-media/a0141c60b9a4f794.png",
+      "bytes": 1876
+    },
+    {
+      "path": "dist/assets/pptx-media/aabe6e7f8feb1bec.png",
+      "bytes": 2325
+    },
+    {
+      "path": "dist/assets/pptx-media/269b73e502bb726c.png",
+      "bytes": 1398
+    },
+    {
+      "path": "dist/assets/pptx-media/cc6c8846edc9c189.png",
+      "bytes": 990
+    },
+    {
+      "path": "dist/assets/pptx-media/32ec464138375dbe.png",
+      "bytes": 1611
+    },
+    {
+      "path": "dist/assets/pptx-media/782654115b739b4c.png",
+      "bytes": 1847
+    },
+    {
+      "path": "dist/assets/pptx-media/9046520727b55e57.png",
+      "bytes": 994
+    },
+    {
+      "path": "dist/assets/pptx-media/80a90c8bb3348e66.png",
+      "bytes": 849
+    },
+    {
+      "path": "dist/assets/pptx-media/397fe590b39154b4.png",
+      "bytes": 1193
+    },
+    {
+      "path": "dist/assets/pptx-media/16a4761efc8c063f.png",
+      "bytes": 1570
+    },
+    {
+      "path": "dist/assets/pptx-media/8820aa6f3719cf1d.png",
+      "bytes": 1088
+    },
+    {
+      "path": "dist/assets/pptx-media/221b6d1eb7e63021.png",
+      "bytes": 1784
+    },
+    {
+      "path": "dist/assets/pptx-media/d1341ad3939e1248.png",
+      "bytes": 1261
+    },
+    {
+      "path": "dist/assets/pptx-media/c52c7954cfd05608.png",
+      "bytes": 1705
+    },
+    {
+      "path": "dist/assets/pptx-media/62974cee3c7526b4.png",
+      "bytes": 1637
+    },
+    {
+      "path": "dist/assets/pptx-media/a5c6c32b12759806.png",
+      "bytes": 1567
+    },
+    {
+      "path": "dist/assets/pptx-media/bc6d0cecfe422fb7.png",
+      "bytes": 1531
+    },
+    {
+      "path": "dist/assets/pptx-media/67a250c510052d8f.png",
+      "bytes": 1933
+    },
+    {
+      "path": "dist/assets/pptx-media/569668d9d0f33387.png",
+      "bytes": 2128
+    },
+    {
+      "path": "dist/assets/pptx-media/978fcb8d795b97cf.png",
+      "bytes": 2024
+    },
+    {
+      "path": "dist/assets/pptx-media/72b865cb08503d22.png",
+      "bytes": 1898
+    },
+    {
+      "path": "dist/assets/pptx-media/7c9d4b72dcf17a6b.png",
+      "bytes": 2694
+    },
+    {
+      "path": "dist/assets/pptx-media/e54651be3b930869.png",
+      "bytes": 1218
+    },
+    {
+      "path": "dist/assets/pptx-media/2351aaabe2f614e8.png",
+      "bytes": 1698
+    },
+    {
+      "path": "dist/assets/pptx-media/0f9f6f7f863e2558.png",
+      "bytes": 2045
+    },
+    {
+      "path": "dist/assets/pptx-media/4e674d95af6566e1.png",
+      "bytes": 1850
+    },
+    {
+      "path": "dist/assets/pptx-media/0d8c4d5e4fb2af64.png",
+      "bytes": 2129
+    },
+    {
+      "path": "dist/assets/pptx-media/ea73d0a4b3f5ad9e.png",
+      "bytes": 1131
+    },
+    {
+      "path": "dist/assets/pptx-media/fc28c003b91367ee.png",
+      "bytes": 1801
+    },
+    {
+      "path": "dist/assets/pptx-media/c62aa96c25032012.png",
+      "bytes": 1207
+    },
+    {
+      "path": "dist/assets/pptx-media/5773381ab52790fb.png",
+      "bytes": 1099
+    },
+    {
+      "path": "dist/assets/pptx-media/a0d4bded88cf974e.png",
+      "bytes": 841
+    },
+    {
+      "path": "dist/assets/pptx-media/015725b38d8cbe66.png",
+      "bytes": 901
+    },
+    {
+      "path": "dist/assets/pptx-media/1ec0487b12e47ba3.png",
+      "bytes": 1612
+    },
+    {
+      "path": "dist/assets/pptx-media/6ab74fdce2f432a7.png",
+      "bytes": 1480
+    },
+    {
+      "path": "dist/assets/pptx-media/5be6d8ddee1958d5.png",
+      "bytes": 1509
+    },
+    {
+      "path": "dist/assets/pptx-media/5c77177ba3127208.png",
+      "bytes": 1695
+    },
+    {
+      "path": "dist/assets/pptx-media/274841c034e38a03.png",
+      "bytes": 957
+    },
+    {
+      "path": "dist/assets/pptx-media/0e84cc002d656b8d.png",
+      "bytes": 1365
+    },
+    {
+      "path": "dist/assets/pptx-media/913ffc9d345ae1b1.png",
+      "bytes": 2363
+    },
+    {
+      "path": "dist/assets/pptx-media/059e3fbf526f097c.png",
+      "bytes": 1706
+    },
+    {
+      "path": "dist/assets/pptx-media/56cdfd9d3d5a7cdf.png",
+      "bytes": 1595
+    },
+    {
+      "path": "dist/assets/pptx-media/966d67ff63dbcc59.png",
+      "bytes": 1477
+    },
+    {
+      "path": "dist/assets/pptx-media/f8c54e3abd30b1b1.png",
+      "bytes": 1708
+    },
+    {
+      "path": "dist/assets/pptx-media/a1c9c5fb4ab505a0.png",
+      "bytes": 1913
+    },
+    {
+      "path": "dist/assets/pptx-media/97c71f315c3919a9.png",
+      "bytes": 1824
+    },
+    {
+      "path": "dist/assets/pptx-media/5b88486e739bbc7b.png",
+      "bytes": 2074
+    },
+    {
+      "path": "dist/assets/pptx-media/1dfe6e9880e63abb.png",
+      "bytes": 1491
+    },
+    {
+      "path": "dist/assets/pptx-media/5cfef117c6af51ea.png",
+      "bytes": 1573
+    },
+    {
+      "path": "dist/assets/pptx-media/c2e9a240923e7d86.png",
+      "bytes": 1665
+    },
+    {
+      "path": "dist/assets/pptx-media/73c341f46b9816ce.png",
+      "bytes": 1493
+    },
+    {
+      "path": "dist/assets/pptx-media/a94d3c74a8d7b9e7.png",
+      "bytes": 1655
+    },
+    {
+      "path": "dist/assets/pptx-media/c99b47f042524ca6.png",
+      "bytes": 2126
+    },
+    {
+      "path": "dist/assets/pptx-media/bc6a8b51bd6c0215.png",
+      "bytes": 2269
+    },
+    {
+      "path": "dist/assets/pptx-media/c56260bde525697f.png",
+      "bytes": 1722
+    },
+    {
+      "path": "dist/assets/pptx-media/e6b1304700eed38d.png",
+      "bytes": 1684
+    },
+    {
+      "path": "dist/assets/pptx-media/0985820158633f16.png",
+      "bytes": 1592
+    },
+    {
+      "path": "dist/assets/pptx-media/0b4c0d3891f4dd34.png",
+      "bytes": 1680
+    },
+    {
+      "path": "dist/assets/pptx-media/fd0cdb640750c21a.png",
+      "bytes": 1525
+    },
+    {
+      "path": "dist/assets/pptx-media/f1cc2419640a2e24.png",
+      "bytes": 2078
+    },
+    {
+      "path": "dist/assets/pptx-media/49da7f3dd752f52b.png",
+      "bytes": 1684
+    },
+    {
+      "path": "dist/assets/pptx-media/410cc507df1e03cf.png",
+      "bytes": 1514
+    },
+    {
+      "path": "dist/assets/pptx-media/a35878b6800821b0.png",
+      "bytes": 1114
+    },
+    {
+      "path": "dist/assets/pptx-media/98d9096d0e722f90.png",
+      "bytes": 1194
+    },
+    {
+      "path": "dist/assets/pptx-media/cf4299f82972c2b0.png",
+      "bytes": 1899
+    },
+    {
+      "path": "dist/assets/pptx-media/b215d7e496a08eed.png",
+      "bytes": 1178
+    },
+    {
+      "path": "dist/assets/pptx-media/59bfc32a2191d2b9.png",
+      "bytes": 1478
+    },
+    {
+      "path": "dist/assets/pptx-media/f036c268f4df72b6.png",
+      "bytes": 1633
+    },
+    {
+      "path": "dist/assets/pptx-media/744ebf066c8cc432.png",
+      "bytes": 1377
+    },
+    {
+      "path": "dist/assets/pptx-media/d0432830da6feb79.png",
+      "bytes": 1685
+    },
+    {
+      "path": "dist/assets/pptx-media/80cef12ea710a61e.png",
+      "bytes": 2596
+    },
+    {
+      "path": "dist/assets/pptx-media/a26ddb71787f1259.png",
+      "bytes": 1797
+    },
+    {
+      "path": "dist/assets/pptx-media/38134e9b2e811efa.png",
+      "bytes": 1494
+    },
+    {
+      "path": "dist/assets/pptx-media/95503602738d9e22.png",
+      "bytes": 1114
+    },
+    {
+      "path": "dist/assets/pptx-media/bd71f9c4bf3cc425.png",
+      "bytes": 2121
+    },
+    {
+      "path": "dist/assets/pptx-media/57435b10d51be8ad.png",
+      "bytes": 1076
+    },
+    {
+      "path": "dist/assets/pptx-media/fadd92cee4d27fa3.png",
+      "bytes": 1515
+    },
+    {
+      "path": "dist/assets/pptx-media/91490351f79cf2cf.png",
+      "bytes": 1764
+    },
+    {
+      "path": "dist/assets/pptx-media/c66f4d48760bfe0b.png",
+      "bytes": 1707
+    },
+    {
+      "path": "dist/assets/pptx-media/0ac4a972380156a6.png",
+      "bytes": 1830
+    },
+    {
+      "path": "dist/assets/pptx-media/cd69f7f30e01daeb.png",
+      "bytes": 1525
+    },
+    {
+      "path": "dist/assets/pptx-media/cc25d5ae3f749683.png",
+      "bytes": 2083
+    },
+    {
+      "path": "dist/assets/pptx-media/2fe88ce0dd93a4b2.png",
+      "bytes": 1827
+    },
+    {
+      "path": "dist/assets/pptx-media/f149639a17f83ac5.png",
+      "bytes": 1484
+    },
+    {
+      "path": "dist/assets/pptx-media/79537a3295e5735a.png",
+      "bytes": 2277
+    },
+    {
+      "path": "dist/assets/pptx-media/f1c5234a10c60691.png",
+      "bytes": 2882
+    },
+    {
+      "path": "dist/assets/pptx-media/a4540d81cce4891e.png",
+      "bytes": 2747
+    },
+    {
+      "path": "dist/assets/pptx-media/152dadcf7e952d4e.png",
+      "bytes": 2210
+    },
+    {
+      "path": "dist/assets/pptx-media/306e3e3f8fc9e59b.png",
+      "bytes": 13309
+    },
+    {
+      "path": "dist/assets/pptx-media/08bf3a9e90ef777f.png",
+      "bytes": 16618
+    },
+    {
+      "path": "dist/assets/pptx-media/86a42cf94fdfdaa7.png",
+      "bytes": 32775
+    },
+    {
+      "path": "dist/assets/pptx-media/f3d01182424ad03c.png",
+      "bytes": 24996
+    },
+    {
+      "path": "dist/assets/pptx-media/6646fc17314ef42a.png",
+      "bytes": 26704
+    },
+    {
+      "path": "dist/assets/pptx-media/9140a4bcad1a9c4a.png",
+      "bytes": 18378
+    },
+    {
+      "path": "dist/assets/pptx-media/f86cd25986881291.png",
+      "bytes": 26071
+    },
+    {
+      "path": "dist/assets/pptx-media/629a9a311157f43c.png",
+      "bytes": 23784
+    },
+    {
+      "path": "dist/assets/pptx-media/2d2b36c2ee485ac7.png",
+      "bytes": 26000
+    },
+    {
+      "path": "dist/assets/pptx-media/928e69bfa628313e.png",
+      "bytes": 23588
+    },
+    {
+      "path": "dist/assets/pptx-media/346c5453de44f9eb.png",
+      "bytes": 21829
+    },
+    {
+      "path": "dist/assets/pptx-media/d2a1101762b7aa3a.png",
+      "bytes": 19805
+    },
+    {
+      "path": "dist/assets/pptx-media/8379a50c7287aa1c.png",
+      "bytes": 32771
+    },
+    {
+      "path": "dist/assets/pptx-media/33c6da4f7a6f63d2.png",
+      "bytes": 25179
+    },
+    {
+      "path": "dist/assets/pptx-media/6763ff489114bf3c.png",
+      "bytes": 26912
+    },
+    {
+      "path": "dist/assets/pptx-media/68c87366f3f2c0f1.png",
+      "bytes": 55894
+    },
+    {
+      "path": "dist/assets/pptx-media/da79e7dc06db0901.png",
+      "bytes": 53443
+    },
+    {
+      "path": "dist/assets/pptx-media/3acfb7fc5171ce0e.png",
+      "bytes": 42888
+    },
+    {
+      "path": "dist/assets/pptx-media/2593e92000a220ec.png",
+      "bytes": 46717
+    },
+    {
+      "path": "dist/assets/pptx-media/3b957b1496c9b927.png",
+      "bytes": 43234
+    },
+    {
+      "path": "dist/assets/pptx-media/efd08a8c0a333f1f.png",
+      "bytes": 118012
+    },
+    {
+      "path": "dist/assets/pptx-media/218fa5b929300c78.png",
+      "bytes": 106718
+    },
+    {
+      "path": "dist/assets/pptx-media/57a9fc797aecd8c6.png",
+      "bytes": 47669
+    },
+    {
+      "path": "dist/assets/pptx-media/628b9ff97a86d46e.png",
+      "bytes": 93045
+    },
+    {
+      "path": "dist/assets/pptx-media/14cfd839ad465a63.png",
+      "bytes": 89180
+    },
+    {
+      "path": "dist/assets/pptx-media/727edf778ae14b93.png",
+      "bytes": 34763
+    },
+    {
+      "path": "dist/assets/pptx-media/65d2f061d654acae.png",
+      "bytes": 40952
+    },
+    {
+      "path": "dist/assets/pptx-media/4cfbf4d0ab64daf4.png",
+      "bytes": 24537
+    },
+    {
+      "path": "dist/assets/pptx-media/9633c624c96b21bf.png",
+      "bytes": 31965
+    },
+    {
+      "path": "dist/assets/pptx-media/c84e950fb4330f5b.png",
+      "bytes": 17636
+    },
+    {
+      "path": "dist/assets/pptx-media/6094a3077e72335d.png",
+      "bytes": 45874
+    },
+    {
+      "path": "dist/assets/pptx-media/e95eafae2f279bb8.png",
+      "bytes": 27829
+    }
+  ]
+}
