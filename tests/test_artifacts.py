@@ -133,6 +133,9 @@ class GeneratedArtifactsTest(unittest.TestCase):
         self.assertIn("Download ZIP", readme)
         self.assertIn("sdk/example.html", readme)
         self.assertIn("Magic Pages", readme)
+        self.assertIn("妙笔 TOS/CDN", readme)
+        self.assertIn("scripts/upload_magic_assets.js", readme)
+        self.assertIn("scripts/build_magic_page.py", readme)
         self.assertIn("Source Reference", readme)
         self.assertIn("https://bytedance.larkoffice.com/wiki/PdkgwdJO9iKS49k57pDcEcGxnad", readme)
         self.assertIn("原始 `.ppt/.pptx` 不进仓库", readme)
@@ -140,13 +143,20 @@ class GeneratedArtifactsTest(unittest.TestCase):
     def test_public_preview_entrypoints_are_cloud_ready(self):
         index = (ROOT / "index.html").read_text(encoding="utf-8")
         magic = (DIST / "lark-deckkit-magic.html").read_text(encoding="utf-8")
+        magic_manifest_path = DIST / "magic-assets-manifest.json"
+        self.assertTrue(magic_manifest_path.exists(), "missing Magic CDN asset manifest")
+        magic_manifest = json.loads(magic_manifest_path.read_text(encoding="utf-8"))
 
         self.assertIn("dist/lark-visual-sample.html", index)
         self.assertIn("window.LarkSlides", magic)
         self.assertIn("window.LarkSlideTemplates", magic)
-        self.assertIn("https://vibe-lark.github.io/lark-deckkit/dist/assets/pptx-media/", magic)
+        self.assertIn("MAGIC_ASSET_URLS", magic)
+        self.assertIn("https://magic-builder.tos-cn-beijing.volces.com/uploads/", magic)
+        self.assertNotIn("https://vibe-lark.github.io/lark-deckkit/dist/assets/pptx-media/", magic)
         self.assertNotIn("<iframe", magic)
         self.assertLess(len(magic), 800_000)
+        self.assertEqual(magic_manifest["apiBase"], "https://magic.solutionsuite.cn")
+        self.assertEqual(len(magic_manifest["assets"]), 299)
 
 
 if __name__ == "__main__":
