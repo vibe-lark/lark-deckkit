@@ -142,8 +142,11 @@ class GeneratedArtifactsTest(unittest.TestCase):
         magic = (DIST / "lark-deckkit-magic.html").read_text(encoding="utf-8")
 
         self.assertIn("dist/lark-visual-sample.html", index)
-        self.assertIn("https://vibe-lark.github.io/lark-deckkit/dist/lark-visual-sample.html", magic)
-        self.assertLess(len(magic), 80_000)
+        self.assertIn("window.LarkSlides", magic)
+        self.assertIn("window.LarkSlideTemplates", magic)
+        self.assertIn("https://vibe-lark.github.io/lark-deckkit/dist/assets/pptx-media/", magic)
+        self.assertNotIn("<iframe", magic)
+        self.assertLess(len(magic), 800_000)
 
 
 if __name__ == "__main__":
