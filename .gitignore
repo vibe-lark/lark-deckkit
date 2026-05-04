@@ -1,0 +1,23 @@
+.DS_Store
+*.swp
+.*.swp
+.magic-token
+.cache/
+__pycache__/
+*.pyc
+
+# Local Office temporary files
+~$*
+
+# Source decks can easily exceed GitHub's 100MB single-file limit.
+# Keep the generated HTML/assets in dist, but store original PPTX files elsewhere
+# or use Git LFS if you really need to version them.
+*.ppt
+*.pptx
+
+# Local screenshots and smoke-test artifacts
+*.log
+
+# Oversized offline artifact. Regenerate with:
+# python3 scripts/build_magic_preview.py
+dist/lark-deckkit-preview.html

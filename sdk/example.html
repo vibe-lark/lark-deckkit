@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lark DeckKit SDK Example</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./lark-slides.css" />
+  </head>
+  <body>
+    <div id="deck" data-lark-deck></div>
+    <script src="./lark-slides.js"></script>
+    <script src="./templates.js"></script>
+    <script>
+      const A = LarkSlideTemplates.asset("../dist/assets/pptx-media");
+
+      LarkSlideTemplates.defineTemplate("teamQuote", ({ title, subtitle, bg }) =>
+        LarkSlideTemplates.visualLayout({
+          title,
+          blocks: [
+            LarkSlideTemplates.components.imageBlock({ src: bg }),
+            LarkSlideTemplates.components.textBlock({
+              x: 0,
+              y: 344,
+              w: 1600,
+              h: 120,
+              text: title,
+              align: "center",
+              size: 76,
+              gradient: "brand",
+            }),
+            LarkSlideTemplates.components.textBlock({
+              x: 0,
+              y: 482,
+              w: 1600,
+              h: 60,
+              text: subtitle,
+              align: "center",
+              size: 32,
+              weight: 500,
+              color: "#b5bac4",
+            }),
+          ],
+        })
+      );
+
+      const deck = LarkSlides.createDeckSpec({
+        title: "HTML PPT 模板 SDK",
+        theme: "larkVisual",
+        slides: [
+          LarkSlideTemplates.create("cover", {
+            kicker: "Lark Design",
+            title: "HTML PPT 模板 SDK",
+            subtitle: "用结构化数据生成可演示、可复用、可发布的 16:9 HTML 幻灯片。",
+          }),
+          LarkSlideTemplates.create("metric", {
+            title: "适合标准业务演示",
+            metrics: [
+              { value: "16:9", label: "固定画布，方便转场和投屏" },
+              { value: "0", label: "无构建依赖，直接浏览器打开" },
+              { value: "5+", label: "常用模板函数，可继续扩展" },
+            ],
+          }),
+          LarkSlideTemplates.create("twoColumn", {
+            title: "把内容和表现分开",
+            left: ["用模板函数描述页面结构", "用 CSS 统一字体、颜色和间距"],
+            right: ["用键盘翻页、Hash 定位、全屏播放", "可以嵌入图片、图表、产品截图"],
+          }),
+          LarkSlideTemplates.create("visualCover", {
+            sourceSlide: "demo-visual-cover",
+            title: "设计视觉元素/资产",
+            subtitle: "更多可编辑版本请查看 figma",
+          }),
+          LarkSlideTemplates.create("visualPalette", {
+            sourceSlide: "demo-visual-palette",
+          }),
+          LarkSlideTemplates.create("visualHero", {
+            sourceSlide: "demo-visual-hero",
+            bg: A("fe0be4b4d6325923.png"),
+            align: "center",
+            highlight: ["先进团队 ", { text: "先用飞书", className: "lvg-blue" }],
+            subtitle: "这类页面可以用结构化数据复用。",
+          }),
+          LarkSlideTemplates.create("teamQuote", {
+            title: "先进团队 先用飞书",
+            subtitle: "自定义模板也复用同一套字体、渐变、画布和播放能力。",
+            bg: A("e2cc3c0d5dc3155d.png"),
+          }),
+        ],
+      });
+
+      LarkSlides.createDeck({ mount: "#deck", deck });
+    </script>
+  </body>
+</html>
