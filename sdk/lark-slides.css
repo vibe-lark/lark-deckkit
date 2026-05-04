@@ -58,6 +58,23 @@ body {
   box-shadow: none;
 }
 
+.ls-app.ls-presenting {
+  grid-template-rows: 1fr;
+  background: #000;
+}
+
+.ls-app.ls-presenting .ls-stage {
+  width: min(100vw, calc(100vh * 16 / 9));
+  max-width: 100vw;
+  box-shadow: none;
+}
+
+.ls-app.ls-presenting .ls-toolbar,
+.ls-app.ls-presenting .ls-progress {
+  opacity: 0;
+  pointer-events: none;
+}
+
 .ls-slide {
   position: absolute;
   inset: 0;
@@ -113,6 +130,16 @@ body {
   display: block;
   max-width: none;
   object-fit: fill;
+}
+
+.ls-slide img[data-src] {
+  opacity: 0;
+  transition: opacity 180ms ease;
+}
+
+.ls-slide img[data-src].is-loaded,
+.ls-slide img[data-src][data-ls-loaded="true"] {
+  opacity: 1;
 }
 
 .ls-shape {
@@ -940,6 +967,14 @@ body {
 .ls-slide[data-source-slide="26"] .lvg-layout-text[style*="top:545.682px"] span {
   color: inherit !important;
   -webkit-text-fill-color: inherit !important;
+}
+
+.ls-slide[data-source-slide="26"] .lvg-layout-text[style*="top:545.682px"] {
+  justify-content: center !important;
+}
+
+.ls-slide[data-source-slide="26"] .lvg-layout-text[style*="top:545.682px"] p {
+  line-height: 1.12;
 }
 
 .ls-slide[data-source-slide="26"] .lvg-layout-text[style*="top:611.139px"],

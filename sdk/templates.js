@@ -20,7 +20,7 @@
   function imageTag(src, className = "", attrs = "") {
     const classAttr = className ? ` class="${escapeHtml(className)}"` : "";
     const extraAttrs = attrs ? ` ${attrs}` : "";
-    return `<img${classAttr} src="${escapeHtml(src)}" alt=""${extraAttrs}>`;
+    return `<img${classAttr} data-src="${escapeHtml(src)}" alt="" decoding="async"${extraAttrs}>`;
   }
 
   const tokens = {
@@ -338,7 +338,7 @@
       const innerStyle = block.innerStyle ? escapeHtml(block.innerStyle) : "left:0;top:0;width:100%;height:100%;";
       return `
         <div class="lvg-layout-block lvg-layout-image${className}" style="${style}">
-          <img src="${escapeHtml(block.src)}" alt="" loading="lazy" decoding="async" style="${innerStyle}">
+          <img data-src="${escapeHtml(block.src)}" alt="" decoding="async" style="${innerStyle}">
         </div>
       `;
     }

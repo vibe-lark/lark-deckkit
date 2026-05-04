@@ -63,6 +63,9 @@ class GeneratedArtifactsTest(unittest.TestCase):
             "requestAnimationFrame",
             "setSlideActive",
             "preloadNearbySlides",
+            "toggleFullscreen",
+            "fullscreenchange",
+            "markImageLoaded",
         ]:
             self.assertIn(symbol, runtime)
 

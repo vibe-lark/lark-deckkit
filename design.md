@@ -17,7 +17,7 @@ The dominant canvas is near-black (`#000000` / `#111217`) with high-contrast whi
 
 The design has two modes:
 
-- **Presentation shell**: runtime UI around the slide, using `#111217`, compact toolbar controls, subtle borders, and a bottom progress bar.
+- **Presentation shell**: runtime UI around the slide, using `#111217`, compact toolbar controls, subtle borders, and a bottom progress bar. In fullscreen playback, the shell must disappear and the 16:9 stage fills the available screen like a PPT presentation; `ESC` exits playback.
 - **Lark visual slide**: the actual 1600x900 slide canvas, usually black, asset-driven, gradient-type-heavy, and centered on a single message or diagram.
 
 Key characteristics:
@@ -115,7 +115,7 @@ Implementation:
 ### Slide Runtime
 
 - `.ls-app`: fixed full-window presentation shell.
-- `.ls-stage`: centered 16:9 slide frame. With controls, reserve bottom space for toolbar; without controls, fill the viewport.
+- `.ls-stage`: centered 16:9 slide frame. With controls, reserve bottom space for toolbar; without controls or in fullscreen playback, fill the viewport.
 - `.ls-toolbar`: compact, dark, translucent, `8px` radius, subtle white border.
 - `.ls-button`: square `36px`, `6px` radius, centered icon/text.
 - `.ls-progress-bar`: blue `#1456f0`, 3px high.

@@ -45,6 +45,7 @@ class SdkUpgradeTest(unittest.TestCase):
                   slideCount: spec.slides.length,
                   themeName: theme.name,
                   themeAccent: LarkSlides.themes.custom.cssVars["--ls-accent"],
+                  canFullscreen: typeof LarkSlides.toggleFullscreen === "function",
                 }));
                 """
             )
@@ -60,6 +61,7 @@ class SdkUpgradeTest(unittest.TestCase):
                 "slideCount": 1,
                 "themeName": "custom",
                 "themeAccent": "#3ec3f7",
+                "canFullscreen": True,
             },
         )
 
