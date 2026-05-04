@@ -2,6 +2,7 @@
 *.swp
 .*.swp
 .magic-token
+.magic-apps.json
 .cache/
 __pycache__/
 *.pyc
