@@ -145,6 +145,7 @@ class GeneratedArtifactsTest(unittest.TestCase):
             (SDK / "example.html", './fonts.css', './lark-slides.css'),
             (DIST / "lark-visual-sample.html", '../sdk/fonts.css', '../sdk/lark-slides.css'),
             (DIST / "lark-design-guidelines.html", '../sdk/fonts.css', '../sdk/lark-slides.css'),
+            (DIST / "lark-cli-intro.html", '../sdk/fonts.css', '../sdk/lark-slides.css'),
         ]
 
         for html_path, font_href, slide_href in entrypoints:
@@ -181,12 +182,14 @@ class GeneratedArtifactsTest(unittest.TestCase):
         self.assertIn("Lark DeckKit", readme)
         self.assertIn("https://vibe-lark.github.io/lark-deckkit/", readme)
         self.assertIn("https://magic.solutionsuite.cn/html-box/viE4zlP5oro", readme)
+        self.assertIn("https://magic.solutionsuite.cn/html-box/viIxWdFIYeG", readme)
         self.assertIn("Start Here", readme)
         self.assertIn("第一次接触项目的新手", readme)
         self.assertIn("Download ZIP", readme)
         self.assertIn("sdk/fonts.css", readme)
         self.assertIn("sdk/font-manifest.json", readme)
         self.assertIn("sdk/example.html", readme)
+        self.assertIn("lark-cli-intro.html", readme)
         self.assertIn("Magic Pages", readme)
         self.assertIn("妙笔 TOS/CDN", readme)
         self.assertIn("dist/magic-fonts-manifest.json", readme)
@@ -199,6 +202,7 @@ class GeneratedArtifactsTest(unittest.TestCase):
     def test_public_preview_entrypoints_are_cloud_ready(self):
         index = (ROOT / "index.html").read_text(encoding="utf-8")
         magic = (DIST / "lark-deckkit-magic.html").read_text(encoding="utf-8")
+        cli_magic = (DIST / "lark-cli-intro-magic.html").read_text(encoding="utf-8")
         magic_manifest_path = DIST / "magic-assets-manifest.json"
         magic_fonts_manifest_path = DIST / "magic-fonts-manifest.json"
         self.assertTrue(magic_manifest_path.exists(), "missing Magic CDN asset manifest")
@@ -211,6 +215,11 @@ class GeneratedArtifactsTest(unittest.TestCase):
         self.assertIn("window.LarkSlideTemplates", magic)
         self.assertIn("MAGIC_ASSET_URLS", magic)
         self.assertIn("https://magic-builder.tos-cn-beijing.volces.com/uploads/", magic)
+        self.assertIn("MAGIC_ASSET_URLS", cli_magic)
+        self.assertIn("飞书 CLI", cli_magic)
+        self.assertIn(".woff2", cli_magic)
+        self.assertNotIn("./fonts/", cli_magic)
+        self.assertNotIn("../sdk/fonts/", cli_magic)
         self.assertIn(".woff2", magic)
         self.assertNotIn("./fonts/", magic)
         self.assertNotIn("../sdk/fonts/", magic)
@@ -225,6 +234,23 @@ class GeneratedArtifactsTest(unittest.TestCase):
         for name, url in magic_fonts_manifest["assets"].items():
             self.assertTrue(name.endswith(".woff2"), name)
             self.assertIn("magic-builder.tos-cn-beijing.volces.com", url)
+
+    def test_lark_cli_intro_deck_uses_deckkit_and_stays_short(self):
+        html_path = DIST / "lark-cli-intro.html"
+        self.assertTrue(html_path.exists(), "missing Lark CLI intro deck")
+        html = html_path.read_text(encoding="utf-8")
+
+        self.assertIn("data-lark-cli-intro", html)
+        self.assertIn("LarkSlides.createDeckSpec", html)
+        self.assertIn("T.visualLayout", html)
+        self.assertIn("飞书 CLI", html)
+        self.assertIn("给每个 Agent", html)
+        self.assertIn("npx @larksuite/cli@latest install", html)
+        self.assertIn("lark-cli auth login", html)
+        self.assertIn("github.com/larksuite/cli", html)
+        self.assertIn("https://bytedance.larkoffice.com/docx/WnHkdJQM6oGpQFxm9i7ckVdenSh", html)
+        self.assertEqual(len(re.findall(r"sourceSlide: \"cli-", html)), 5)
+        self.assertLessEqual(len(re.findall(r"sourceSlide: \"cli-", html)), 5)
 
 
 if __name__ == "__main__":
