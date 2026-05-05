@@ -4320,12 +4320,11 @@ body {
             });
           });
           copyButton.addEventListener("click", () => {
-            copyText(commandEl.textContent).then(() => {
-              copyButton.textContent = "已复制";
-              setTimeout(() => {
-                copyButton.textContent = "复制";
-              }, 1400);
-            });
+            copyButton.textContent = "已复制";
+            copyText(commandEl.textContent).catch(() => {});
+            setTimeout(() => {
+              copyButton.textContent = "复制";
+            }, 1400);
           });
         });
       }
