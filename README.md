@@ -96,7 +96,7 @@ metrics: [
 | `Deck Spec` | 演示稿元信息、主题、页面数组。纯数据，可被预览、发布、导出复用。 |
 | `Theme / Tokens` | 字体、颜色、渐变、圆角、画布尺寸。 |
 | `Template Registry` | 页面级模板，如封面、金句页、案例页、指标页、规范页。 |
-| `Components` | 页面内部的 `textBlock`、`imageBlock`、`shapeBlock`、`vectorBlock`。 |
+| `Components` | 页面内部的 `textBlock`、`imageBlock`、`shapeBlock`、`vectorBlock`，以及用于对齐的 `layoutGrid`。 |
 
 最小示例：
 
