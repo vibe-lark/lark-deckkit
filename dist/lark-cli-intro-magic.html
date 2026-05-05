@@ -1112,12 +1112,12 @@ body {
   overflow: hidden;
 }
 
-.ls-slide[data-source-slide="26"] .lvg-layout-shape[style*="top:450.012px"] {
+.ls-slide[data-source-slide="26"] .editable-solution-tag-frame {
   border: 1.4px solid rgba(255, 255, 255, 0.88) !important;
   background: rgba(255, 255, 255, 0.02) !important;
 }
 
-.ls-slide[data-source-slide="26"] .lvg-layout-text[style*="top:454.561px"] {
+.ls-slide[data-source-slide="26"] .editable-solution-tag {
   left: 155.427px !important;
   top: 450.012px !important;
   width: 275.93px !important;
@@ -1127,11 +1127,11 @@ body {
   justify-content: center;
 }
 
-.ls-slide[data-source-slide="26"] .lvg-layout-text[style*="top:454.561px"] span {
+.ls-slide[data-source-slide="26"] .editable-solution-tag span {
   font-weight: 560 !important;
 }
 
-.ls-slide[data-source-slide="26"] .lvg-layout-text[style*="top:454.561px"] p,
+.ls-slide[data-source-slide="26"] .editable-solution-tag p,
 .ls-slide[data-source-slide="26"] .lvg-layout-text[style*="top:545.682px"] p {
   display: inline-block;
   background: var(--lvg-label-gray-gradient);
@@ -1141,13 +1141,13 @@ body {
   -webkit-text-fill-color: transparent !important;
 }
 
-.ls-slide[data-source-slide="26"] .lvg-layout-text[style*="top:454.561px"] span,
+.ls-slide[data-source-slide="26"] .editable-solution-tag span,
 .ls-slide[data-source-slide="26"] .lvg-layout-text[style*="top:545.682px"] span {
   color: inherit !important;
   -webkit-text-fill-color: inherit !important;
 }
 
-.ls-slide[data-source-slide="26"] .lvg-layout-text[style*="top:454.561px"] p {
+.ls-slide[data-source-slide="26"] .editable-solution-tag p {
   width: 100%;
   height: 100%;
   display: flex;
@@ -2515,16 +2515,6 @@ body {
 
 </style>
     <style>
-      .cli-code span,
-      .cli-command span {
-        font-family: "SFMono-Regular", Menlo, Consolas, monospace !important;
-      }
-
-      .cli-card p,
-      .cli-pill p {
-        line-height: 1.18;
-      }
-
       .cli-muted span {
         color: #b5bac4 !important;
         -webkit-text-fill-color: #b5bac4 !important;
@@ -2532,14 +2522,158 @@ body {
       }
 
       .cli-muted,
-      .cli-muted p {
+      .cli-muted p,
+      .cli-card p {
         white-space: normal !important;
-        overflow: hidden;
       }
 
-      .cli-grid-label span {
-        color: #d8dee8 !important;
-        -webkit-text-fill-color: #d8dee8 !important;
+      .cli-code span,
+      .cli-terminal,
+      .cli-terminal * {
+        font-family: "SFMono-Regular", Menlo, Consolas, monospace !important;
+      }
+
+      .cli-panel,
+      .cli-card {
+        backdrop-filter: blur(6px);
+      }
+
+      .cli-panel::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        border-radius: inherit;
+        background: linear-gradient(90deg, transparent, rgba(62, 195, 247, 0.12), transparent);
+        transform: translateX(-120%);
+      }
+
+      .ls-slide.is-active .cli-panel::after {
+        animation: cli-shine 4.8s ease-in-out infinite;
+      }
+
+      .cli-proto-dot {
+        background: radial-gradient(circle, #e2fff7 0%, #3ec3f7 42%, rgba(20, 86, 240, 0) 72%);
+        border-radius: 999px;
+        filter: drop-shadow(0 0 18px rgba(62, 195, 247, 0.45));
+      }
+
+      .ls-slide.is-active .cli-proto-dot {
+        animation: cli-pulse 2.4s ease-in-out infinite;
+      }
+
+      .cli-flow path,
+      .cli-flow line {
+        stroke-dasharray: 18 16;
+      }
+
+      .ls-slide.is-active .cli-flow path,
+      .ls-slide.is-active .cli-flow line {
+        animation: cli-dash 2.3s linear infinite;
+      }
+
+      .cli-terminal {
+        color: #f7f9ff;
+        font-size: 22px;
+        line-height: 1.62;
+      }
+
+      .cli-terminal .muted {
+        color: #8e98a9;
+      }
+
+      .cli-terminal .ok {
+        color: #69dca9;
+      }
+
+      .cli-terminal .typing {
+        display: inline-block;
+        width: 0;
+        max-width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        vertical-align: bottom;
+      }
+
+      .ls-slide.is-active .cli-terminal .typing {
+        animation: cli-type 3.6s steps(42, end) 0.45s forwards;
+      }
+
+      .cli-cursor {
+        display: inline-block;
+        width: 10px;
+        height: 22px;
+        margin-left: 5px;
+        background: #3ec3f7;
+        vertical-align: -4px;
+      }
+
+      .ls-slide.is-active .cli-cursor {
+        animation: cli-blink 0.8s steps(2, start) infinite;
+      }
+
+      .ls-slide.is-active .cli-drift {
+        animation: cli-drift 7s ease-in-out infinite;
+      }
+
+      .ls-slide.is-active .cli-step-a {
+        animation: cli-rise 0.7s ease-out both;
+      }
+
+      .ls-slide.is-active .cli-step-b {
+        animation: cli-rise 0.7s ease-out 0.16s both;
+      }
+
+      .ls-slide.is-active .cli-step-c {
+        animation: cli-rise 0.7s ease-out 0.32s both;
+      }
+
+      @keyframes cli-shine {
+        0%, 42% { transform: translateX(-120%); }
+        72%, 100% { transform: translateX(120%); }
+      }
+
+      @keyframes cli-pulse {
+        0%, 100% { transform: scale(0.92); opacity: 0.62; }
+        50% { transform: scale(1.14); opacity: 1; }
+      }
+
+      @keyframes cli-dash {
+        to { stroke-dashoffset: -68; }
+      }
+
+      @keyframes cli-type {
+        from { width: 0; }
+        to { width: 700px; }
+      }
+
+      @keyframes cli-blink {
+        50% { opacity: 0; }
+      }
+
+      @keyframes cli-drift {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-12px); }
+      }
+
+      @keyframes cli-rise {
+        from { opacity: 0; transform: translateY(18px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .cli-panel::after,
+        .cli-proto-dot,
+        .cli-flow path,
+        .cli-flow line,
+        .cli-terminal .typing,
+        .cli-cursor,
+        .cli-drift,
+        .cli-step-a,
+        .cli-step-b,
+        .cli-step-c {
+          animation: none !important;
+        }
       }
     </style>
   </head>
@@ -3869,7 +4003,7 @@ body {
         ];
       }
 
-      function text({ x, y, w, h, value, size = 40, weight = 650, color = "#f7f8fb", align = "left", gradient = "", className = "", lineHeight = 1.18 }) {
+      function text({ x, y, w, h, value, size = 38, weight = 650, color = "#f7f8fb", align = "left", gradient = "", className = "", lineHeight = 1.16 }) {
         return C.textBlock({ x, y, w, h, text: value, size, weight, color, align, gradient, className, lineHeight });
       }
 
@@ -3877,7 +4011,7 @@ body {
         return { kind: "text", className, style: `left:${x}px;top:${y}px;width:${w}px;height:${h}px;background:transparent;`, html };
       }
 
-      function panel({ x, y, w, h, border = "rgba(255,255,255,0.18)", fill = "rgba(255,255,255,0.055)" }) {
+      function panel({ x, y, w, h, border = "rgba(255,255,255,0.18)", fill = "rgba(255,255,255,0.055)", className = "" }) {
         return C.shapeBlock({
           x,
           y,
@@ -3886,41 +4020,67 @@ body {
           fill,
           radius: "8px",
           border: `1.2px solid ${border}`,
-          style: "backdrop-filter:blur(4px);",
+          className: `cli-panel ${className}`.trim(),
         });
       }
 
-      function pill({ x, y, w, label, tone = "brand" }) {
-        const border = tone === "brand" ? "rgba(62,195,247,0.56)" : "rgba(255,255,255,0.24)";
+      function pill({ x, y, w, label, tone = "default", className = "" }) {
+        const border = tone === "brand" ? "rgba(62,195,247,0.58)" : "rgba(255,255,255,0.24)";
+        const gradient = tone === "brand" ? "deepBlue" : "";
         return [
-          C.shapeBlock({ x, y, w, h: 48, fill: "rgba(255,255,255,0.035)", radius: "6px", border: `1.2px solid ${border}` }),
-          text({ x, y: y + 6, w, h: 36, value: label, size: 22, weight: 560, align: "center", color: "#d8dee8", className: "cli-pill" }),
+          C.shapeBlock({ x, y, w, h: 46, fill: "rgba(255,255,255,0.035)", radius: "6px", border: `1.2px solid ${border}`, className }),
+          text({ x, y: y + 7, w, h: 32, value: label, size: 21, weight: 620, align: "center", color: "#d8dee8", gradient }),
         ];
       }
 
-      function line({ x1, y1, x2, y2, dashed = true }) {
-        const dash = dashed ? 'stroke-dasharray="16 18"' : "";
+      function flow({ x, y, w, h = 24, id = "flow", reverse = false }) {
+        const x1 = reverse ? w : 0;
+        const x2 = reverse ? 0 : w;
         return C.vectorBlock({
-          x: Math.min(x1, x2),
-          y: Math.min(y1, y2) - 8,
-          w: Math.abs(x2 - x1),
-          h: 16,
-          html: `<svg viewBox="0 0 ${Math.abs(x2 - x1)} 16" width="100%" height="100%" preserveAspectRatio="none"><line x1="0" y1="8" x2="${Math.abs(x2 - x1)}" y2="8" stroke="url(#g)" stroke-width="3" stroke-linecap="round" ${dash}/><defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#ceeafe"/><stop offset="0.55" stop-color="#3ec3f7"/><stop offset="1" stop-color="#1456f0"/></linearGradient></defs></svg>`,
+          x,
+          y,
+          w,
+          h,
+          className: "cli-flow",
+          html: `<svg viewBox="0 0 ${w} ${h}" width="100%" height="100%" preserveAspectRatio="none"><line x1="${x1}" y1="${h / 2}" x2="${x2}" y2="${h / 2}" stroke="url(#${id})" stroke-width="4" stroke-linecap="round"/><defs><linearGradient id="${id}" x1="0" x2="1"><stop offset="0" stop-color="#ceeafe"/><stop offset="0.55" stop-color="#3ec3f7"/><stop offset="1" stop-color="#1456f0"/></linearGradient></defs></svg>`,
         });
       }
 
-      function card({ x, y, w, h, title, body, index }) {
+      function node({ x, y, w = 218, h = 88, label, caption, tone = "default", className = "" }) {
+        const brand = tone === "brand";
         return [
-          panel({ x, y, w, h }),
-          text({ x: x + 30, y: y + 28, w: 58, h: 40, value: index, size: 22, weight: 700, gradient: "deepBlue" }),
-          text({ x: x + 88, y: y + 24, w: w - 118, h: 44, value: title, size: 30, weight: 740, gradient: "brand" }),
-          text({ x: x + 30, y: y + 82, w: w - 60, h: h - 106, value: body, size: 23, weight: 480, color: "#b5bac4", lineHeight: 1.42, className: "cli-muted" }),
+          panel({ x, y, w, h, border: brand ? "rgba(62,195,247,0.52)" : "rgba(255,255,255,0.18)", fill: brand ? "rgba(62,195,247,0.07)" : "rgba(255,255,255,0.045)", className }),
+          text({ x: x + 22, y: y + 17, w: w - 44, h: 30, value: label, size: 25, weight: 720, align: "center", gradient: brand ? "brand" : "", color: "#f7f8fb" }),
+          text({ x: x + 22, y: y + 54, w: w - 44, h: 22, value: caption, size: 17, weight: 480, align: "center", color: "#9ea8b8", className: "cli-muted" }),
+        ];
+      }
+
+      function card({ x, y, w, h, title, body, index, className = "" }) {
+        return [
+          panel({ x, y, w, h, className: `cli-card ${className}`.trim() }),
+          text({ x: x + 28, y: y + 24, w: 54, h: 36, value: index, size: 22, weight: 760, gradient: "deepBlue" }),
+          text({ x: x + 82, y: y + 21, w: w - 112, h: 38, value: title, size: 28, weight: 740, gradient: "brand" }),
+          text({ x: x + 28, y: y + 78, w: w - 56, h: h - 96, value: body, size: 22, weight: 480, color: "#b5bac4", lineHeight: 1.38, className: "cli-muted" }),
+        ];
+      }
+
+      function terminal({ x, y, w, h, command, lines = [] }) {
+        return [
+          C.shapeBlock({ x, y, w, h, fill: "rgba(4,11,25,0.74)", radius: "8px", border: "1.2px solid rgba(255,255,255,0.18)", className: "cli-panel" }),
+          htmlText({
+            x: x + 30,
+            y: y + 26,
+            w: w - 60,
+            h: h - 52,
+            className: "cli-terminal",
+            html: `<div class="cli-terminal"><div><span class="muted">$</span> <span class="typing">${command}</span><span class="cli-cursor"></span></div>${lines.map((line) => `<div>${line}</div>`).join("")}</div>`,
+          }),
         ];
       }
 
       const deck = LarkSlides.createDeckSpec({
         title: "飞书 CLI 介绍",
-        description: "基于飞书 CLI 能力介绍与最佳实践文档生成的 5 页以内 HTML 演示稿。",
+        description: "基于飞书 CLI 能力介绍与最佳实践文档生成的 5 页以内 HTML 演示稿，突出 HTML 做 PPT 的可编辑、可动效和可发布优势。",
         theme: "larkVisual",
         meta: {
           sourceDoc: "https://bytedance.larkoffice.com/docx/WnHkdJQM6oGpQFxm9i7ckVdenSh",
@@ -3931,14 +4091,21 @@ body {
             title: "飞书 CLI",
             blocks: [
               ...bg(),
-              C.shapeBlock({ x: 120, y: 108, w: 184, h: 48, fill: "rgba(62,195,247,0.08)", radius: "6px", border: "1.2px solid rgba(62,195,247,0.44)" }),
-              text({ x: 120, y: 118, w: 184, h: 32, value: "Lark CLI", size: 22, weight: 700, align: "center", gradient: "deepBlue" }),
-              text({ x: 120, y: 266, w: 1100, h: 172, value: "给每个 Agent\n一双操作飞书的手", size: 78, weight: 760, gradient: "brand", lineHeight: 1.08 }),
-              text({ x: 124, y: 486, w: 930, h: 84, value: "让 AI 不止会回答，还能直接读消息、查日历、写文档、建表格、发邮件。", size: 32, weight: 500, color: "#d9dee8", lineHeight: 1.34, className: "cli-muted" }),
-              C.shapeBlock({ x: 122, y: 642, w: 710, h: 76, fill: "rgba(255,255,255,0.06)", radius: "8px", border: "1.2px solid rgba(255,255,255,0.18)" }),
-              text({ x: 154, y: 666, w: 646, h: 34, value: "npx @larksuite/cli@latest install", size: 28, weight: 650, color: "#f7f9ff", className: "cli-command" }),
-              text({ x: 1062, y: 626, w: 310, h: 34, value: "Open Source", size: 26, weight: 700, align: "center", gradient: "deepBlue" }),
-              text({ x: 970, y: 676, w: 500, h: 80, value: "无需登记、无需审核，Claude Code / Codex / Cursor 都可接入", size: 24, weight: 480, color: "#b5bac4", align: "center", className: "cli-muted" }),
+              C.shapeBlock({ x: 1180, y: 90, w: 260, h: 46, fill: "rgba(62,195,247,0.07)", radius: "6px", border: "1.2px solid rgba(62,195,247,0.5)" }),
+              text({ x: 1180, y: 100, w: 260, h: 28, value: "HTML PPT Prototype", size: 21, weight: 700, align: "center", gradient: "deepBlue" }),
+              text({ x: 120, y: 154, w: 1080, h: 82, value: "飞书 CLI", size: 72, weight: 780, gradient: "brand" }),
+              text({ x: 120, y: 250, w: 1010, h: 174, value: "给每个 Agent\n一双操作飞书的手", size: 76, weight: 760, gradient: "soft", lineHeight: 1.08 }),
+              text({ x: 124, y: 474, w: 875, h: 76, value: "让 AI 不止会回答，还能直接读消息、查日历、写文档、建多维表格、发邮件。", size: 30, weight: 500, color: "#d9dee8", lineHeight: 1.34, className: "cli-muted" }),
+              ...terminal({ x: 122, y: 620, w: 784, h: 118, command: "npx @larksuite/cli@latest install", lines: ['<span class="ok">done</span> skills loaded for Codex / Claude Code / Cursor'] }),
+              C.shapeBlock({ x: 1078, y: 330, w: 18, h: 18, fill: "#3ec3f7", className: "cli-proto-dot" }),
+              C.shapeBlock({ x: 1306, y: 446, w: 18, h: 18, fill: "#3ec3f7", className: "cli-proto-dot", style: "animation-delay:.6s;" }),
+              ...node({ x: 1010, y: 210, label: "消息", caption: "群聊 / 私信", className: "cli-drift" }),
+              ...node({ x: 1248, y: 286, label: "日历", caption: "忙闲 / 邀约", className: "cli-drift", tone: "brand" }),
+              ...node({ x: 990, y: 420, label: "文档", caption: "创建 / 评论", className: "cli-drift" }),
+              ...node({ x: 1238, y: 530, label: "多维表格", caption: "记录 / 看板", className: "cli-drift", tone: "brand" }),
+              flow({ x: 1138, y: 374, w: 138, id: "cover-flow-a" }),
+              flow({ x: 1144, y: 514, w: 108, id: "cover-flow-b" }),
+              text({ x: 1008, y: 704, w: 500, h: 36, value: "这份稿不是截图播放壳：文字、图形、动效都在 DOM 里。", size: 23, weight: 520, align: "center", color: "#b5bac4", className: "cli-muted" }),
             ],
           }),
           T.visualLayout({
@@ -3946,20 +4113,20 @@ body {
             title: "CLI 是什么",
             blocks: [
               ...bg(),
-              text({ x: 120, y: 112, w: 900, h: 64, value: "CLI 不是给你学命令", size: 52, weight: 760, gradient: "brand" }),
-              text({ x: 122, y: 184, w: 820, h: 44, value: "它是让 AI 直接和飞书对话的通道", size: 28, weight: 500, color: "#b5bac4", className: "cli-muted" }),
-              panel({ x: 145, y: 360, w: 300, h: 164 }),
-              panel({ x: 650, y: 320, w: 300, h: 244, border: "rgba(62,195,247,0.48)", fill: "rgba(62,195,247,0.07)" }),
-              panel({ x: 1155, y: 360, w: 300, h: 164 }),
-              ...pill({ x: 190, y: 312, w: 210, label: "你" }),
-              ...pill({ x: 695, y: 272, w: 210, label: "AI Agent", tone: "brand" }),
-              ...pill({ x: 1200, y: 312, w: 210, label: "飞书" }),
-              text({ x: 188, y: 402, w: 214, h: 58, value: "用自然语言\n说清楚目标", size: 28, weight: 620, align: "center", color: "#f7f8fb", lineHeight: 1.18 }),
-              text({ x: 688, y: 368, w: 224, h: 88, value: "调用 CLI\n读取 context\n执行动作", size: 30, weight: 740, align: "center", gradient: "brand", lineHeight: 1.16 }),
-              text({ x: 1190, y: 402, w: 230, h: 58, value: "返回结果\n写回业务系统", size: 28, weight: 620, align: "center", color: "#f7f8fb", lineHeight: 1.18 }),
-              line({ x1: 458, y1: 442, x2: 632, y2: 442 }),
-              line({ x1: 968, y1: 442, x2: 1142, y2: 442 }),
-              text({ x: 282, y: 640, w: 1036, h: 72, value: "以前是你操作飞书；现在是 AI 操作飞书，你只管拍板。", size: 44, weight: 740, align: "center", gradient: "soft" }),
+              text({ x: 120, y: 96, w: 980, h: 66, value: "一句话理解：把飞书加入 AI 工作流", size: 54, weight: 760, gradient: "brand" }),
+              text({ x: 124, y: 174, w: 760, h: 42, value: "你用自然语言说目标，Agent 用 CLI 读取 context 并执行动作。", size: 27, weight: 500, color: "#b5bac4", className: "cli-muted" }),
+              ...node({ x: 126, y: 332, w: 260, h: 112, label: "你", caption: "说清目标" }),
+              flow({ x: 408, y: 382, w: 196, id: "what-flow-a" }),
+              ...node({ x: 626, y: 292, w: 348, h: 192, label: "AI Agent", caption: "规划任务 / 调命令 / 处理权限", tone: "brand", className: "cli-step-a" }),
+              flow({ x: 998, y: 382, w: 196, id: "what-flow-b" }),
+              ...node({ x: 1216, y: 332, w: 260, h: 112, label: "飞书", caption: "返回结果并写回" }),
+              ...pill({ x: 226, y: 552, w: 190, label: "看日历" }),
+              ...pill({ x: 450, y: 552, w: 190, label: "读群聊", tone: "brand" }),
+              ...pill({ x: 674, y: 552, w: 190, label: "写文档" }),
+              ...pill({ x: 898, y: 552, w: 190, label: "建 Base", tone: "brand" }),
+              ...pill({ x: 1122, y: 552, w: 190, label: "发邮件" }),
+              C.shapeBlock({ x: 232, y: 688, w: 1136, h: 72, fill: "rgba(62,195,247,0.06)", radius: "8px", border: "1.2px solid rgba(62,195,247,0.42)", className: "cli-panel" }),
+              text({ x: 270, y: 709, w: 1060, h: 32, value: "核心变化：以前 AI 只能建议你做什么，现在 AI 可以带着授权直接把事做完。", size: 26, weight: 640, align: "center", gradient: "deepBlue" }),
             ],
           }),
           T.visualLayout({
@@ -3967,41 +4134,81 @@ body {
             title: "快速开始",
             blocks: [
               ...bg(),
-              text({ x: 120, y: 102, w: 900, h: 64, value: "三步开始第一件事", size: 54, weight: 760, gradient: "brand" }),
-              ...card({ x: 120, y: 236, w: 410, h: 230, index: "01", title: "安装", body: "终端执行一行命令，或直接让 Codex / Cursor / Claude Code 帮你安装。"}),
-              ...card({ x: 595, y: 236, w: 410, h: 230, index: "02", title: "授权", body: "需要个人数据时执行 lark-cli auth login，让 AI 能以你的身份读取日历、消息和文档。"}),
-              ...card({ x: 1070, y: 236, w: 410, h: 230, index: "03", title: "重启 Agent", body: "配置完成后重启 AI 工具，确保 skills 和命令能力完整加载。"}),
-              C.shapeBlock({ x: 178, y: 572, w: 1244, h: 118, fill: "rgba(255,255,255,0.06)", radius: "8px", border: "1.2px solid rgba(255,255,255,0.18)" }),
-              text({ x: 220, y: 604, w: 1160, h: 34, value: "帮我创建一篇云文档，介绍飞书 CLI 的能力有哪些，以及基于你对我的了解，我可以先开始用哪些能力", size: 27, weight: 600, color: "#f7f9ff", className: "cli-code" }),
-              text({ x: 178, y: 724, w: 1244, h: 40, value: "你不需要记命令。把目标说给 AI，AI 会自己选择 CLI 能力并处理权限提示。", size: 28, weight: 500, color: "#b5bac4", align: "center", className: "cli-muted" }),
+              text({ x: 120, y: 96, w: 920, h: 66, value: "三分钟跑通第一条任务", size: 54, weight: 760, gradient: "brand" }),
+              text({ x: 124, y: 174, w: 870, h: 42, value: "命令只是安装入口。真正的交互入口是你给 Agent 的一句话。", size: 27, weight: 500, color: "#b5bac4", className: "cli-muted" }),
+              ...terminal({
+                x: 120,
+                y: 260,
+                w: 700,
+                h: 330,
+                command: "lark-cli auth login",
+                lines: [
+                  '<span class="muted">open browser for user authorization</span>',
+                  '<span class="ok">identity: user</span>',
+                  '<span class="ok">calendar, docs, drive scopes ready</span>',
+                  '<span class="muted">$</span> lark-cli help',
+                ],
+              }),
+              ...card({ x: 880, y: 260, w: 460, h: 118, index: "01", title: "安装", body: "npx @larksuite/cli@latest install", className: "cli-step-a" }),
+              ...card({ x: 880, y: 418, w: 460, h: 118, index: "02", title: "授权", body: "需要个人数据时执行 lark-cli auth login，后续权限可按需补齐。", className: "cli-step-b" }),
+              ...card({ x: 880, y: 576, w: 460, h: 118, index: "03", title: "开工", body: "重启 Agent 后直接说目标，不需要背命令。", className: "cli-step-c" }),
+              C.shapeBlock({ x: 158, y: 688, w: 1236, h: 74, fill: "rgba(255,255,255,0.055)", radius: "8px", border: "1.2px solid rgba(255,255,255,0.18)", className: "cli-panel" }),
+              text({ x: 196, y: 709, w: 1160, h: 32, value: "示例：帮我创建一篇云文档，介绍飞书 CLI 的能力，以及我可以先用哪些能力。", size: 25, weight: 620, color: "#f7f9ff", align: "center", className: "cli-code" }),
             ],
           }),
           T.visualLayout({
             sourceSlide: "cli-4",
-            title: "能做什么",
+            title: "工作流原型",
             blocks: [
               ...bg(),
-              text({ x: 120, y: 96, w: 980, h: 66, value: "从聊天到执行，飞书进入 AI 工作流", size: 52, weight: 760, gradient: "brand" }),
-              text({ x: 124, y: 174, w: 820, h: 40, value: "典型价值不是“查一下”，而是把信息读取、判断、写回串成闭环。", size: 27, weight: 500, color: "#b5bac4", className: "cli-muted" }),
-              ...card({ x: 120, y: 280, w: 430, h: 198, index: "A", title: "会议后待办自动执行", body: "从妙记里识别要发文档、约 follow-up、找链接等动作，执行前给你确认。"}),
-              ...card({ x: 585, y: 280, w: 430, h: 198, index: "B", title: "人与 AI 共创文档", body: "AI 创建初稿、读评论、改正文；也能作为审稿人直接在文档里提评论。"}),
-              ...card({ x: 1050, y: 280, w: 430, h: 198, index: "C", title: "跨时区智能约会", body: "拉群成员、查忙闲、考虑时区，推荐共同合适时间并创建日程。"}),
-              ...card({ x: 355, y: 530, w: 430, h: 198, index: "D", title: "会议审计到仪表盘", body: "拉取日历和妙记，自动分类、打分，写入多维表格形成看板。"}),
-              ...card({ x: 815, y: 530, w: 430, h: 198, index: "E", title: "未读邮件智能处理", body: "扫描未读邮件、分类摘要、起草回复，把重要邮件推送到群。"}),
+              text({ x: 120, y: 92, w: 980, h: 66, value: "把文档里的能力变成可演示原型", size: 54, weight: 760, gradient: "brand" }),
+              text({ x: 124, y: 170, w: 890, h: 42, value: "HTML 做 PPT 的优势是：流程线可以动、状态可以跳、真实命令和素材可以持续替换。", size: 27, weight: 500, color: "#b5bac4", className: "cli-muted" }),
+              ...card({ x: 120, y: 264, w: 370, h: 168, index: "A", title: "会议之后", body: "妙记 -> 待办识别 -> 发文档 / 建日程 / 写 Base", className: "cli-step-a" }),
+              flow({ x: 516, y: 338, w: 184, id: "proto-flow-a" }),
+              ...card({ x: 730, y: 264, w: 370, h: 168, index: "B", title: "文档协作", body: "初稿 -> 评论读取 -> 修订正文 -> 标记修改点", className: "cli-step-b" }),
+              flow({ x: 1126, y: 338, w: 184, id: "proto-flow-b" }),
+              ...card({ x: 1230, y: 264, w: 250, h: 168, index: "C", title: "邮件处理", body: "摘要 / 分级 / 草稿回复", className: "cli-step-c" }),
+              C.vectorBlock({
+                x: 220,
+                y: 510,
+                w: 1160,
+                h: 136,
+                className: "cli-flow",
+                html: '<svg viewBox="0 0 1160 136" width="100%" height="100%" preserveAspectRatio="none"><path d="M0 118 C220 12, 420 12, 580 72 S940 148, 1160 24" fill="none" stroke="url(#proto-curve)" stroke-width="4" stroke-linecap="round"/><defs><linearGradient id="proto-curve" x1="0" x2="1"><stop offset="0" stop-color="#ceeafe"/><stop offset="0.55" stop-color="#3ec3f7"/><stop offset="1" stop-color="#1456f0"/></linearGradient></defs></svg>',
+              }),
+              C.shapeBlock({ x: 304, y: 602, w: 18, h: 18, fill: "#3ec3f7", className: "cli-proto-dot" }),
+              C.shapeBlock({ x: 758, y: 574, w: 18, h: 18, fill: "#3ec3f7", className: "cli-proto-dot" }),
+              C.shapeBlock({ x: 1264, y: 530, w: 18, h: 18, fill: "#3ec3f7", className: "cli-proto-dot" }),
+              ...pill({ x: 266, y: 676, w: 196, label: "可交互动效", tone: "brand" }),
+              ...pill({ x: 516, y: 676, w: 196, label: "可替换文案" }),
+              ...pill({ x: 766, y: 676, w: 196, label: "可接真实数据", tone: "brand" }),
+              ...pill({ x: 1016, y: 676, w: 196, label: "可直接上线" }),
             ],
           }),
           T.visualLayout({
             sourceSlide: "cli-5",
-            title: "为什么选择飞书 CLI",
+            title: "HTML 做 PPT 的优势",
             blocks: [
               ...bg(),
-              text({ x: 120, y: 104, w: 1060, h: 76, value: "企业 Agent 缺的不是模型，而是 context 和手", size: 54, weight: 760, gradient: "brand" }),
-              text({ x: 124, y: 184, w: 860, h: 76, value: "飞书 CLI 同时解决“知道工作上下文”和“能直接执行动作”两个问题。", size: 28, weight: 500, color: "#b5bac4", className: "cli-muted" }),
-              ...card({ x: 120, y: 312, w: 390, h: 238, index: "01", title: "为 AI 设计", body: "错误会告诉 AI 怎么修；缺权限会引导补授权；命令输出对 token 更友好。"}),
-              ...card({ x: 550, y: 312, w: 390, h: 238, index: "02", title: "两种身份", body: "支持应用身份和用户身份，既能做企业集成，也能代表个人完成工作。"}),
-              ...card({ x: 980, y: 312, w: 390, h: 238, index: "03", title: "覆盖核心域", body: "消息、文档、表格、多维表格、日历、会议、邮箱、任务、知识库、通讯录等。"}),
-              C.shapeBlock({ x: 190, y: 660, w: 1220, h: 74, fill: "rgba(62,195,247,0.07)", radius: "8px", border: "1.2px solid rgba(62,195,247,0.44)" }),
-              text({ x: 230, y: 682, w: 1140, h: 34, value: "GitHub：github.com/larksuite/cli    更新：lark-cli update    帮助：lark-cli help", size: 26, weight: 650, align: "center", gradient: "deepBlue", className: "cli-grid-label" }),
+              text({ x: 120, y: 94, w: 1120, h: 70, value: "为什么用 HTML 做 PPT 讲飞书 CLI", size: 54, weight: 760, gradient: "brand" }),
+              text({ x: 124, y: 176, w: 930, h: 42, value: "CLI 是面向 Agent 的执行层，HTML 幻灯片则是面向用户的可演示、可复用、可发布表达层。", size: 27, weight: 500, color: "#b5bac4", className: "cli-muted" }),
+              ...card({ x: 120, y: 288, w: 360, h: 172, index: "01", title: "可编辑", body: "文字、标签、连线、图形都是 DOM，不再被锁在整页截图里。", className: "cli-step-a" }),
+              ...card({ x: 520, y: 288, w: 360, h: 172, index: "02", title: "可动效", body: "终端输入、状态流转、流程连线可以直接成为原型演示。", className: "cli-step-b" }),
+              ...card({ x: 920, y: 288, w: 360, h: 172, index: "03", title: "可发布", body: "素材和字体上 CDN，一个 URL 就能预览，不要求观众下载文件。", className: "cli-step-c" }),
+              ...terminal({
+                x: 152,
+                y: 540,
+                w: 1040,
+                h: 156,
+                command: "deck = LarkSlides.createDeckSpec({ source: doc, theme: 'larkVisual' })",
+                lines: [
+                  '<span class="ok">editable text</span> + <span class="ok">motion prototype</span> + <span class="ok">Magic Pages URL</span>',
+                ],
+              }),
+              C.shapeBlock({ x: 1230, y: 552, w: 120, h: 120, fill: "rgba(62,195,247,0.08)", radius: "8px", border: "1.2px solid rgba(62,195,247,0.42)", className: "cli-panel cli-drift" }),
+              text({ x: 1238, y: 582, w: 104, h: 32, value: "SDK", size: 29, weight: 760, align: "center", gradient: "deepBlue" }),
+              text({ x: 1238, y: 626, w: 104, h: 28, value: "模板化复用", size: 18, weight: 500, align: "center", color: "#b5bac4", className: "cli-muted" }),
+              text({ x: 154, y: 748, w: 1240, h: 34, value: "GitHub：github.com/larksuite/cli    帮助：lark-cli help    更新：lark-cli update", size: 25, weight: 650, align: "center", gradient: "deepBlue", className: "cli-code" }),
             ],
           }),
         ],

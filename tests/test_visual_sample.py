@@ -38,6 +38,13 @@ class VisualSampleTest(unittest.TestCase):
         self.assertIn("contenteditable", templates)
         self.assertIn("重复工作量</span></p><p", html)
         self.assertIn(">下降</span></p>", html)
+        self.assertIn("editable-solution-tag-frame", html)
+        self.assertIn("editable-solution-tag", html)
+        self.assertLess(
+            html.index('className: "editable-solution-tag-frame"'),
+            html.index('className: "editable-solution-tag"'),
+        )
+        self.assertIn("一店一群质检方案", html)
         for template in [
             "visualLayout",
             "visualCover",

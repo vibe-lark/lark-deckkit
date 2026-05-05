@@ -944,12 +944,12 @@ body {
   overflow: hidden;
 }
 
-.ls-slide[data-source-slide="26"] .lvg-layout-shape[style*="top:450.012px"] {
+.ls-slide[data-source-slide="26"] .editable-solution-tag-frame {
   border: 1.4px solid rgba(255, 255, 255, 0.88) !important;
   background: rgba(255, 255, 255, 0.02) !important;
 }
 
-.ls-slide[data-source-slide="26"] .lvg-layout-text[style*="top:454.561px"] {
+.ls-slide[data-source-slide="26"] .editable-solution-tag {
   left: 155.427px !important;
   top: 450.012px !important;
   width: 275.93px !important;
@@ -959,11 +959,11 @@ body {
   justify-content: center;
 }
 
-.ls-slide[data-source-slide="26"] .lvg-layout-text[style*="top:454.561px"] span {
+.ls-slide[data-source-slide="26"] .editable-solution-tag span {
   font-weight: 560 !important;
 }
 
-.ls-slide[data-source-slide="26"] .lvg-layout-text[style*="top:454.561px"] p,
+.ls-slide[data-source-slide="26"] .editable-solution-tag p,
 .ls-slide[data-source-slide="26"] .lvg-layout-text[style*="top:545.682px"] p {
   display: inline-block;
   background: var(--lvg-label-gray-gradient);
@@ -973,13 +973,13 @@ body {
   -webkit-text-fill-color: transparent !important;
 }
 
-.ls-slide[data-source-slide="26"] .lvg-layout-text[style*="top:454.561px"] span,
+.ls-slide[data-source-slide="26"] .editable-solution-tag span,
 .ls-slide[data-source-slide="26"] .lvg-layout-text[style*="top:545.682px"] span {
   color: inherit !important;
   -webkit-text-fill-color: inherit !important;
 }
 
-.ls-slide[data-source-slide="26"] .lvg-layout-text[style*="top:454.561px"] p {
+.ls-slide[data-source-slide="26"] .editable-solution-tag p {
   width: 100%;
   height: 100%;
   display: flex;
