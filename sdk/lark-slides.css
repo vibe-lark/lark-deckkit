@@ -987,6 +987,23 @@ body {
   justify-content: center;
   line-height: 1;
   text-align: center !important;
+  transform: translateY(-2px);
+}
+
+.ls-slide[data-source-slide="26"] .metric-sixty {
+  left: 135.418px !important;
+  width: 150px !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
+}
+
+.ls-slide[data-source-slide="26"] .metric-sixty p {
+  width: 100%;
+  text-align: left !important;
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+  line-height: 1;
 }
 
 .ls-slide[data-source-slide="26"] .lvg-layout-text[style*="top:545.682px"] {

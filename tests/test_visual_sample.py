@@ -40,6 +40,7 @@ class VisualSampleTest(unittest.TestCase):
         self.assertIn(">下降</span></p>", html)
         self.assertIn("editable-solution-tag-frame", html)
         self.assertIn("editable-solution-tag", html)
+        self.assertIn("metric-sixty", html)
         self.assertLess(
             html.index('className: "editable-solution-tag-frame"'),
             html.index('className: "editable-solution-tag"'),
