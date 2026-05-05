@@ -87,6 +87,8 @@ class SdkUpgradeTest(unittest.TestCase):
                   text: "先进团队",
                   gradient: "brand",
                 });
+                const grid = T.components.layoutGrid({ x: 120, w: 1360, columns: 3, gap: 40 });
+                const secondCol = grid.col(1);
                 const slide = T.create("customMetric", { title: "提效价值" });
                 console.log(JSON.stringify({
                   canCreate: slide.title,
@@ -96,6 +98,8 @@ class SdkUpgradeTest(unittest.TestCase):
                   tokenColor: T.tokens.colors.deepBlue,
                   blockKind: textBlock.kind,
                   blockHasGradient: textBlock.html.includes("lvg-gradient-text"),
+                  gridColWidth: grid.colW,
+                  secondColX: secondCol.x,
                 }));
                 """
             )
@@ -111,6 +115,8 @@ class SdkUpgradeTest(unittest.TestCase):
                 "tokenColor": "#1456f0",
                 "blockKind": "text",
                 "blockHasGradient": True,
+                "gridColWidth": 426.6666666666667,
+                "secondColX": 586.6666666666667,
             },
         )
 

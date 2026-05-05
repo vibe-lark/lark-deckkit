@@ -3162,6 +3162,28 @@ body {
     return { kind: "vector", className, html, style: geometryStyle({ x, y, w, h, style }) };
   }
 
+  function layoutGrid({ x = 120, y = 0, w = 1360, columns = 3, gap = 32 } = {}) {
+    const safeColumns = Math.max(1, Number(columns) || 1);
+    const safeGap = Number(gap) || 0;
+    const colW = (Number(w) - safeGap * (safeColumns - 1)) / safeColumns;
+    return {
+      x: Number(x),
+      y: Number(y),
+      w: Number(w),
+      columns: safeColumns,
+      gap: safeGap,
+      colW,
+      col(index = 0, span = 1) {
+        const safeSpan = Math.max(1, Number(span) || 1);
+        return {
+          x: Number(x) + Number(index) * (colW + safeGap),
+          y: Number(y),
+          w: colW * safeSpan + safeGap * (safeSpan - 1),
+        };
+      },
+    };
+  }
+
   function paragraphList(items = []) {
     return renderList(items, (item) => `<p class="ls-template-label">${escapeHtml(item)}</p>`);
   }
@@ -3795,6 +3817,7 @@ body {
     imageBlock,
     shapeBlock,
     vectorBlock,
+    layoutGrid,
   };
 
   window.LarkSlideTemplates = {

@@ -99,6 +99,7 @@ class GeneratedArtifactsTest(unittest.TestCase):
             "components",
             "tokens",
             "asset",
+            "layoutGrid",
         ]:
             self.assertIn(template, templates)
 
@@ -251,7 +252,8 @@ class GeneratedArtifactsTest(unittest.TestCase):
         self.assertIn("HTML 做 PPT", html)
         self.assertIn("cli-flow", html)
         self.assertIn("cli-terminal", html)
-        self.assertIn("可交互动效", html)
+        self.assertIn("可动效", html)
+        self.assertIn("layoutGrid", html)
         self.assertIn("https://bytedance.larkoffice.com/docx/WnHkdJQM6oGpQFxm9i7ckVdenSh", html)
         self.assertEqual(len(re.findall(r"sourceSlide: \"cli-", html)), 5)
         self.assertLessEqual(len(re.findall(r"sourceSlide: \"cli-", html)), 5)
