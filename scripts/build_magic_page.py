@@ -9,20 +9,24 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 HTML = ROOT / "dist" / "lark-visual-sample.html"
+FONTS_CSS = ROOT / "sdk" / "fonts.css"
 CSS = ROOT / "sdk" / "lark-slides.css"
 RUNTIME = ROOT / "sdk" / "lark-slides.js"
 TEMPLATES = ROOT / "sdk" / "templates.js"
 MANIFEST = ROOT / "dist" / "magic-assets-manifest.json"
+FONT_MANIFEST = ROOT / "dist" / "magic-fonts-manifest.json"
 OUT = ROOT / "dist" / "lark-deckkit-magic.html"
 
 
 def parse_args():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--html", type=Path, default=HTML)
+    parser.add_argument("--fonts-css", type=Path, default=FONTS_CSS)
     parser.add_argument("--css", type=Path, default=CSS)
     parser.add_argument("--runtime", type=Path, default=RUNTIME)
     parser.add_argument("--templates", type=Path, default=TEMPLATES)
     parser.add_argument("--manifest", type=Path, default=MANIFEST)
+    parser.add_argument("--font-manifest", type=Path, default=FONT_MANIFEST)
     parser.add_argument("--out", type=Path, default=OUT)
     return parser.parse_args()
 
@@ -41,13 +45,23 @@ def replace_literal_asset_paths(html, assets):
     return html
 
 
+def rewrite_font_urls(css, font_assets):
+    for name, url in font_assets.items():
+        css = css.replace(f"./fonts/{name}", url)
+        css = css.replace(f"fonts/{name}", url)
+    return css
+
+
 def main():
     args = parse_args()
     html = args.html.read_text(encoding="utf-8")
+    fonts_css = args.fonts_css.read_text(encoding="utf-8")
     css = args.css.read_text(encoding="utf-8")
     runtime = args.runtime.read_text(encoding="utf-8")
     templates = args.templates.read_text(encoding="utf-8")
     assets = load_manifest(args.manifest)
+    font_assets = load_manifest(args.font_manifest)
+    fonts_css = rewrite_font_urls(fonts_css, font_assets)
 
     used_names = sorted(set(re.findall(r'A\("([^"]+)"\)', html)))
     missing = [name for name in used_names if name not in assets]
@@ -62,6 +76,10 @@ def main():
     html = html.replace(
         '<link rel="stylesheet" href="../sdk/lark-slides.css" />',
         f"<style>\n{css}\n</style>",
+    )
+    html = html.replace(
+        '<link rel="stylesheet" href="../sdk/fonts.css" />',
+        f"<style>\n{fonts_css}\n</style>",
     )
     html = html.replace(
         '<script src="../sdk/lark-slides.js"></script>',
@@ -82,6 +100,7 @@ def main():
     args.out.write_text(html, encoding="utf-8")
     print(f"wrote {args.out}")
     print(f"asset_urls: {len(assets)}")
+    print(f"font_urls: {len(font_assets)}")
     print(f"size_kb: {args.out.stat().st_size / 1024:.1f}")
 
 

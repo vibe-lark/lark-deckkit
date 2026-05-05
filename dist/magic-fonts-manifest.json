@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "apiBase": "https://magic.solutionsuite.cn",
+  "generatedAt": "2026-05-05T03:57:38.751Z",
+  "assetDir": "sdk/fonts",
+  "assets": {
+    "FZLanTingHeiProGB18030-Bold.woff2": "https://magic-builder.tos-cn-beijing.volces.com/uploads/1777953432607_FZLanTingHeiProGB18030-Bold.woff2",
+    "FZLanTingHeiProGB18030-DemiBold.woff2": "https://magic-builder.tos-cn-beijing.volces.com/uploads/1777953435667_FZLanTingHeiProGB18030-DemiBold.woff2",
+    "FZLanTingHeiProGB18030-ExtraBold.woff2": "https://magic-builder.tos-cn-beijing.volces.com/uploads/1777953437856_FZLanTingHeiProGB18030-ExtraBold.woff2",
+    "FZLanTingHeiProGB18030-ExtraLight.woff2": "https://magic-builder.tos-cn-beijing.volces.com/uploads/1777953440221_FZLanTingHeiProGB18030-ExtraLight.woff2",
+    "FZLanTingHeiProGB18030-Heavy.woff2": "https://magic-builder.tos-cn-beijing.volces.com/uploads/1777953442578_FZLanTingHeiProGB18030-Heavy.woff2",
+    "FZLanTingHeiProGB18030-Light.woff2": "https://magic-builder.tos-cn-beijing.volces.com/uploads/1777953444787_FZLanTingHeiProGB18030-Light.woff2",
+    "FZLanTingHeiProGB18030-Medium.woff2": "https://magic-builder.tos-cn-beijing.volces.com/uploads/1777953449140_FZLanTingHeiProGB18030-Medium.woff2",
+    "FZLanTingHeiProGB18030-Regular.woff2": "https://magic-builder.tos-cn-beijing.volces.com/uploads/1777953451740_FZLanTingHeiProGB18030-Regular.woff2",
+    "FZLanTingHeiProGB18030-SemiBold.woff2": "https://magic-builder.tos-cn-beijing.volces.com/uploads/1777953456364_FZLanTingHeiProGB18030-SemiBold.woff2"
+  }
+}

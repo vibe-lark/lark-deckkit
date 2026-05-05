@@ -46,7 +46,7 @@ function parseArgs(argv) {
 function printHelp() {
   console.log(`Usage: node scripts/upload_magic_assets.js [options]
 
-Uploads dist/assets/pptx-media files to Magic TOS/CDN and writes a URL manifest.
+Uploads static files to Magic TOS/CDN and writes a URL manifest.
 
 Options:
   --asset-dir <dir>    Asset directory. Default: dist/assets/pptx-media
@@ -112,7 +112,7 @@ function listAssets(assetDir) {
     .readdirSync(assetDir, { withFileTypes: true })
     .filter((entry) => entry.isFile())
     .map((entry) => entry.name)
-    .filter((name) => /\.(png|jpe?g|webp|gif|svg)$/i.test(name))
+    .filter((name) => /\.(png|jpe?g|webp|gif|svg|woff2?|otf|ttf)$/i.test(name))
     .sort((a, b) => a.localeCompare(b));
 }
 
@@ -125,6 +125,10 @@ function contentTypeFor(file) {
     ".png": "image/png",
     ".svg": "image/svg+xml",
     ".webp": "image/webp",
+    ".woff": "font/woff",
+    ".woff2": "font/woff2",
+    ".otf": "font/otf",
+    ".ttf": "font/ttf",
   };
   return types[ext] || "application/octet-stream";
 }

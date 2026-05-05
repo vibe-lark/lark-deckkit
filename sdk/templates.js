@@ -41,7 +41,9 @@
       deepBlue: "linear-gradient(90deg, #3ec3f7 0%, #1456f0 100%)",
     },
     fonts: {
-      zh: "\"FZLanTingHeiPro_GB18030\", \"PingFang SC\", \"Microsoft YaHei\", Arial, sans-serif",
+      display: "var(--ld-font-display, \"TikTok Display\", \"FZLanTingHeiPro_GB18030\", \"PingFang SC\", \"Microsoft YaHei\", Arial, sans-serif)",
+      zh: "var(--ld-font-zh, \"FZLanTingHeiPro_GB18030\", \"PingFang SC\", \"Microsoft YaHei\", Arial, sans-serif)",
+      ui: "var(--ld-font-ui, \"Inter\", \"FZLanTingHeiPro_GB18030\", \"PingFang SC\", \"Microsoft YaHei\", Arial, sans-serif)",
       en: "\"TikTok Display\", \"Inter\", Arial, sans-serif",
     },
   };

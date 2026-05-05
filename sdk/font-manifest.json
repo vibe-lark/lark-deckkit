@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "primaryFamily": "FZLanTingHeiPro_GB18030",
+  "css": "sdk/fonts.css",
+  "fonts": [
+    {
+      "family": "FZLanTingHeiPro_GB18030",
+      "weight": 200,
+      "style": "normal",
+      "file": "sdk/fonts/FZLanTingHeiProGB18030-ExtraLight.woff2"
+    },
+    {
+      "family": "FZLanTingHeiPro_GB18030",
+      "weight": 300,
+      "style": "normal",
+      "file": "sdk/fonts/FZLanTingHeiProGB18030-Light.woff2"
+    },
+    {
+      "family": "FZLanTingHeiPro_GB18030",
+      "weight": 400,
+      "style": "normal",
+      "file": "sdk/fonts/FZLanTingHeiProGB18030-Regular.woff2"
+    },
+    {
+      "family": "FZLanTingHeiPro_GB18030",
+      "weight": 500,
+      "style": "normal",
+      "file": "sdk/fonts/FZLanTingHeiProGB18030-Medium.woff2"
+    },
+    {
+      "family": "FZLanTingHeiPro_GB18030",
+      "weight": 600,
+      "style": "normal",
+      "file": "sdk/fonts/FZLanTingHeiProGB18030-SemiBold.woff2"
+    },
+    {
+      "family": "FZLanTingHeiPro_GB18030",
+      "weight": 650,
+      "style": "normal",
+      "file": "sdk/fonts/FZLanTingHeiProGB18030-DemiBold.woff2"
+    },
+    {
+      "family": "FZLanTingHeiPro_GB18030",
+      "weight": 700,
+      "style": "normal",
+      "file": "sdk/fonts/FZLanTingHeiProGB18030-Bold.woff2"
+    },
+    {
+      "family": "FZLanTingHeiPro_GB18030",
+      "weight": 800,
+      "style": "normal",
+      "file": "sdk/fonts/FZLanTingHeiProGB18030-ExtraBold.woff2"
+    },
+    {
+      "family": "FZLanTingHeiPro_GB18030",
+      "weight": 900,
+      "style": "normal",
+      "file": "sdk/fonts/FZLanTingHeiProGB18030-Heavy.woff2"
+    }
+  ],
+  "optionalFamilies": [
+    {
+      "family": "TikTok Display",
+      "status": "not bundled",
+      "rule": "Do not alias it to another family. Add licensed WOFF2 files and @font-face declarations when available."
+    }
+  ]
+}

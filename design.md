@@ -4,6 +4,7 @@ This document follows the DESIGN.md pattern from VoltAgent's `awesome-design-md`
 
 Use this file together with:
 
+- `sdk/fonts.css` for bundled web fonts, `@font-face` declarations, and font-family variables.
 - `sdk/lark-slides.css` for implemented visual tokens and component styles.
 - `sdk/lark-slides.js` for deck runtime, themes, and `createDeckSpec`.
 - `sdk/templates.js` for template registry, tokens, and block components.
@@ -83,10 +84,12 @@ Implementation:
 
 | Role | Font Stack |
 |---|---|
-| Visual Slide Display | `"TikTok Display", "FZLanTingHeiS-H-GB", "方正兰亭黑Pro", "PingFang SC", "Microsoft YaHei", Arial, sans-serif` |
-| Chinese Business Headline | `"FZLanTingHeiPro_GB18030", "PingFang SC", "Microsoft YaHei", Arial, sans-serif` |
-| SDK Light Template | `"Inter", "PingFang SC", "Microsoft YaHei", Arial, sans-serif` |
+| Visual Slide Display | `var(--ld-font-display)` = `"TikTok Display", "FZLanTingHeiPro_GB18030", "PingFang SC", "Microsoft YaHei", Arial, sans-serif` |
+| Chinese Business Headline | `var(--ld-font-zh)` = `"FZLanTingHeiPro_GB18030", "PingFang SC", "Microsoft YaHei", Arial, sans-serif` |
+| SDK Light Template | `var(--ld-font-ui)` = `"Inter", "FZLanTingHeiPro_GB18030", "PingFang SC", "Microsoft YaHei", Arial, sans-serif` |
 | English / Numeric Accent | `"TikTok Display", "Inter", Arial, sans-serif` |
+
+The primary committed family is `FZLanTingHeiPro_GB18030`, stored as full-glyph WOFF2 files in `sdk/fonts/` and registered by `sdk/fonts.css`. Any new HTML deck must load `sdk/fonts.css` before `sdk/lark-slides.css`. `TikTok Display` is optional and should only render when the viewer environment or a future licensed font file provides it.
 
 ### Hierarchy
 
@@ -281,6 +284,8 @@ Authoring rules:
 
 ```text
 Canvas: 1600x900
+Font CSS: load sdk/fonts.css before sdk/lark-slides.css
+Primary Chinese font: FZLanTingHeiPro_GB18030
 Dark background: #000000
 Player background: #111217
 Primary text: #f7f8fb
