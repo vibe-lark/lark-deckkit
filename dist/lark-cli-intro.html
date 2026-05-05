@@ -15,9 +15,7 @@
         white-space: normal !important;
       }
 
-      .cli-code span,
-      .cli-terminal,
-      .cli-terminal * {
+      .cli-code span {
         font-family: "SFMono-Regular", Menlo, Consolas, monospace !important;
       }
 
@@ -35,31 +33,20 @@
         overflow-wrap: break-word;
       }
 
-      .cli-terminal {
-        color: #f7f9ff;
-        font-size: 23px;
-        line-height: 1.5;
+      .cli-stage-code,
+      .cli-stage-code * {
+        font-family: "SFMono-Regular", Menlo, Consolas, monospace !important;
       }
 
-      .cli-terminal .muted {
-        color: #8590a3;
+      .cli-stage-code {
+        color: #dceeff;
+        font-size: 16px;
+        line-height: 1.52;
+        letter-spacing: 0;
       }
 
-      .cli-terminal .ok {
-        color: #62d99c;
-      }
-
-      .cli-cursor {
-        display: inline-block;
-        width: 9px;
-        height: 23px;
-        margin-left: 5px;
-        background: #3ec3f7;
-        vertical-align: -4px;
-      }
-
-      .ls-slide.is-active .cli-cursor {
-        animation: cli-blink 0.9s steps(2, start) infinite;
+      .cli-stage-code .muted {
+        color: #7e8a9c;
       }
 
       .cli-flow line,
@@ -70,16 +57,6 @@
       .ls-slide.is-active .cli-flow line,
       .ls-slide.is-active .cli-flow path {
         animation: cli-dash 2.6s linear infinite;
-      }
-
-      .cli-dot {
-        background: radial-gradient(circle, #e2fff7 0%, #3ec3f7 48%, rgba(20, 86, 240, 0) 74%);
-        border-radius: 999px;
-        filter: drop-shadow(0 0 16px rgba(62, 195, 247, 0.42));
-      }
-
-      .ls-slide.is-active .cli-dot {
-        animation: cli-pulse 2.1s ease-in-out infinite;
       }
 
       .ls-slide.is-active .cli-rise-a {
@@ -134,7 +111,7 @@
       .cli-install-command {
         position: absolute;
         left: 34px;
-        right: 118px;
+        right: 136px;
         top: 84px;
         height: 54px;
         display: flex;
@@ -154,7 +131,10 @@
         position: absolute;
         right: 34px;
         top: 94px;
-        width: 70px;
+        width: 88px;
+        padding: 0 10px;
+        text-align: center;
+        white-space: nowrap;
       }
 
       .cli-install-note {
@@ -184,17 +164,8 @@
         font: 15px "SFMono-Regular", Menlo, Consolas, monospace;
       }
 
-      @keyframes cli-blink {
-        50% { opacity: 0; }
-      }
-
       @keyframes cli-dash {
         to { stroke-dashoffset: -68; }
-      }
-
-      @keyframes cli-pulse {
-        0%, 100% { transform: scale(0.92); opacity: 0.72; }
-        50% { transform: scale(1.12); opacity: 1; }
       }
 
       @keyframes cli-rise {
@@ -203,10 +174,8 @@
       }
 
       @media (prefers-reduced-motion: reduce) {
-        .cli-cursor,
         .cli-flow line,
         .cli-flow path,
-        .cli-dot,
         .cli-rise-a,
         .cli-rise-b,
         .cli-rise-c,
@@ -266,17 +235,40 @@
         ];
       }
 
-      function terminal({ x, y, w, h, command, lines = [] }) {
+      function metric({ x, y, w, value, label, suffix = "" }) {
         return [
-          C.shapeBlock({ x, y, w, h, fill: "rgba(3,10,23,0.78)", radius: "8px", border: "1.2px solid rgba(255,255,255,0.18)" }),
-          htmlText({
-            x: x + 30,
-            y: y + 28,
-            w: w - 60,
-            h: h - 56,
-            className: "cli-terminal",
-            html: `<div class="cli-terminal"><div><span class="muted">$</span> ${command}<span class="cli-cursor"></span></div>${lines.map((line) => `<div>${line}</div>`).join("")}</div>`,
-          }),
+          C.shapeBlock({ x, y, w, h: 118, fill: "rgba(3,10,23,0.52)", radius: "8px", border: "1.1px solid rgba(62,195,247,0.26)" }),
+          text({ x: x + 18, y: y + 22, w: w - 36, h: 44, value, size: 43, weight: 780, align: "center", gradient: "soft", className: "cli-code" }),
+          text({ x: x + 18, y: y + 68, w: w - 36, h: 26, value: `${label}${suffix}`, size: 19, weight: 560, align: "center", color: "#aeb7c7", className: "cli-muted" }),
+        ];
+      }
+
+      function stageCard({ x, y, w, h, label, title, body, code = "", className = "" }) {
+        const blocks = [
+          panel({ x, y, w, h, className }),
+          text({ x: x + 28, y: y + 28, w: w - 56, h: 28, value: label, size: 20, weight: 720, gradient: "deepBlue" }),
+          text({ x: x + 28, y: y + 72, w: w - 56, h: 40, value: title, size: 30, weight: 740, gradient: "brand" }),
+          text({ x: x + 28, y: y + 128, w: w - 56, h: code ? 64 : h - 150, value: body, size: 21, weight: 480, color: "#aeb7c7", lineHeight: 1.35, className: "cli-muted" }),
+        ];
+        if (code) {
+          blocks.push(htmlText({
+            x: x + 28,
+            y: y + h - 76,
+            w: w - 56,
+            h: 54,
+            className: "cli-stage-code",
+            html: `<div class="cli-stage-code">${code}</div>`,
+          }));
+        }
+        return blocks;
+      }
+
+      function miniStep({ x, y, w, h, title, body, command, className = "" }) {
+        return [
+          panel({ x, y, w, h, border: "rgba(62,195,247,0.28)", fill: "rgba(255,255,255,0.04)", className }),
+          text({ x: x + 28, y: y + 28, w: w - 56, h: 36, value: title, size: 29, weight: 740, gradient: "brand" }),
+          text({ x: x + 28, y: y + 78, w: w - 56, h: 54, value: body, size: 21, weight: 480, color: "#aeb7c7", lineHeight: 1.3, className: "cli-muted" }),
+          htmlText({ x: x + 28, y: y + h - 54, w: w - 56, h: 30, className: "cli-stage-code", html: `<div class="cli-stage-code"><span class="muted">$</span> ${command}</div>` }),
         ];
       }
 
@@ -326,14 +318,7 @@
         ];
       }
 
-      const abilities = [
-        "即时消息", "云文档", "云空间",
-        "电子表格", "多维表格", "日历",
-        "视频会议", "妙记", "邮箱",
-        "任务", "知识库", "通讯录",
-        "幻灯片", "画板", "审批",
-        "考勤", "API", "Schema",
-      ];
+      const abilities = ["消息", "文档", "日历", "多维表格", "邮箱", "妙记", "任务", "审批", "..."];
 
       const deck = LarkSlides.createDeckSpec({
         title: "飞书 CLI 介绍",
@@ -354,12 +339,15 @@
               ...installDemo({ x: FRAME.x, y: 560, w: 820, h: 244 }),
               panel({ x: 1002, y: 130, w: 406, h: 674, border: "rgba(62,195,247,0.38)", fill: "rgba(255,255,255,0.035)" }),
               text({ x: 1040, y: 168, w: 330, h: 36, value: "能力覆盖", size: 30, weight: 740, align: "center", gradient: "brand" }),
-              text({ x: 1040, y: 212, w: 330, h: 34, value: "从协同内容到业务数据，全部交给 Agent 调用。", size: 19, weight: 480, align: "center", color: "#aeb7c7", className: "cli-muted" }),
+              text({ x: 1040, y: 214, w: 330, h: 58, value: "覆盖 17 个业务域、219 个命令接口，从协同内容到业务数据都能被 Agent 调用。", size: 19, weight: 480, align: "center", color: "#aeb7c7", lineHeight: 1.32, className: "cli-muted" }),
+              ...metric({ x: 1042, y: 306, w: 142, value: "17", label: "业务域" }),
+              ...metric({ x: 1214, y: 306, w: 142, value: "219", label: "命令接口" }),
               ...abilities.flatMap((label, index) => {
                 const col = index % 3;
                 const row = Math.floor(index / 3);
-                return tag({ x: 1038 + col * 110, y: 282 + row * 58, w: 92, label, className: `cli-rise-${["a", "b", "c", "d"][row % 4]}` });
+                return tag({ x: 1038 + col * 110, y: 470 + row * 58, w: 92, label, className: `cli-rise-${["a", "b", "c"][row % 3]}` });
               }),
+              text({ x: 1040, y: 676, w: 330, h: 42, value: "更多能力通过 lark-cli help 和 schema 查询。", size: 18, weight: 480, align: "center", color: "#aeb7c7", lineHeight: 1.28, className: "cli-muted" }),
             ],
           }),
           T.visualLayout({
@@ -367,31 +355,25 @@
             title: "CLI 是什么",
             blocks: [
               ...bg(),
-              ...title({ title: "CLI 是 Agent 和飞书之间的执行层", subtitle: "用户说目标，Agent 选择命令，飞书返回结果并写回业务现场。" }),
+              ...title({ title: "用户说目标，Agent 把它拆成飞书动作", subtitle: "CLI 的价值不是展示一条命令，而是让每一步执行都可验证、可继续、可写回。" }),
               ...(() => {
-                const grid = C.layoutGrid({ x: FRAME.x, y: 292, w: FRAME.w, columns: 4, gap: 38 });
+                const grid = C.layoutGrid({ x: FRAME.x, y: 286, w: FRAME.w, columns: 4, gap: 38 });
                 const labels = [
-                  ["01", "用户目标", "帮我约下周项目复盘，并把纪要模板建好。"],
-                  ["02", "Agent 规划", "拆成查忙闲、建日程、创建文档、发群消息。"],
-                  ["03", "CLI 执行", "calendar / docs / im 等命令按权限调用飞书。"],
-                  ["04", "飞书写回", "日程、文档、消息、表格都落在真实工作空间。"],
+                  { label: "用户目标", title: "一句自然语言", body: "帮我约下周项目复盘，把纪要模板建好，再通知项目群。" },
+                  { label: "Agent 规划", title: "拆成动作计划", body: "先查忙闲，再建日程；随后创建文档模板，最后把链接发到群里。" },
+                  { label: "CLI 执行", title: "按权限调用飞书", body: "每个动作对应明确命令；结果返回后继续下一步。", code: '<span class="muted">$</span> calendar +freebusy<br><span class="muted">$</span> docs +create<br><span class="muted">$</span> im messages-reply' },
+                  { label: "飞书回写", title: "落到真实空间", body: "日程、文档、群消息都在飞书里生成，团队直接接着协作。" },
                 ];
-                return labels.flatMap(([eyebrow, itemTitle, body], index) => {
+                return labels.flatMap((item, index) => {
                   const col = grid.col(index);
                   return [
-                    ...card({ x: col.x, y: grid.y, w: col.w, h: 222, eyebrow, title: itemTitle, body, className: `cli-rise-${["a", "b", "c", "d"][index]}` }),
-                    ...(index < 3 ? [flowLine({ x: col.x + col.w + 12, y: 390, w: 14, id: `what-${index}` })] : []),
+                    ...stageCard({ x: col.x, y: grid.y, w: col.w, h: 284, label: item.label, title: item.title, body: item.body, code: item.code, className: `cli-rise-${["a", "b", "c", "d"][index]}` }),
+                    ...(index < 3 ? [flowLine({ x: col.x + col.w + 12, y: 415, w: 14, id: `what-${index}` })] : []),
                   ];
                 });
               })(),
-              ...terminal({
-                x: 210,
-                y: 610,
-                w: 1180,
-                h: 118,
-                command: "lark-cli calendar +agenda --as user",
-                lines: ['<span class="ok">returns structured JSON that Agent can continue using</span>'],
-              }),
+              panel({ x: 238, y: 660, w: 1124, h: 86, border: "rgba(62,195,247,0.34)", fill: "rgba(62,195,247,0.045)" }),
+              text({ x: 278, y: 684, w: 1044, h: 34, value: "你看到的是目标，Agent 看到的是一组可执行、可检查、可恢复的飞书操作。", size: 26, weight: 620, align: "center", gradient: "soft" }),
             ],
           }),
           T.visualLayout({
@@ -399,51 +381,26 @@
             title: "使用案例",
             blocks: [
               ...bg(),
-              ...title({ title: "案例：开完会，事就办了", subtitle: "从会议纪要里识别待办，执行前给你确认，执行后写回飞书。" }),
-              panel({ x: FRAME.x, y: 276, w: 456, h: 392, border: "rgba(255,255,255,0.2)" }),
-              text({ x: 158, y: 318, w: 380, h: 36, value: "你只说一句话", size: 30, weight: 740, gradient: "brand" }),
-              text({ x: 158, y: 386, w: 372, h: 128, value: "读一下这个妙记，\n把里面的待办提取出来，\n做之前给我看一下计划。", size: 30, weight: 560, color: "#f7f8fb", lineHeight: 1.38, className: "cli-wrap" }),
-              text({ x: 158, y: 568, w: 372, h: 42, value: "Agent 会自己选择 minutes / docs / calendar / im 等能力。", size: 22, weight: 480, color: "#aeb7c7", lineHeight: 1.3, className: "cli-muted" }),
-              flowLine({ x: 610, y: 458, w: 210, id: "case-a" }),
-              C.shapeBlock({ x: 704, y: 450, w: 18, h: 18, fill: "#3ec3f7", className: "cli-dot" }),
+              ...title({ title: "案例：从妙记到待办，再同步到群", subtitle: "适合展示飞书 CLI 的地方，是把会议之后的执行链路跑完。" }),
+              panel({ x: FRAME.x, y: 270, w: 1260, h: 128, border: "rgba(62,195,247,0.38)", fill: "rgba(62,195,247,0.045)" }),
+              text({ x: 168, y: 298, w: 1164, h: 30, value: "你只说一句话", size: 23, weight: 720, align: "center", gradient: "brand" }),
+              text({ x: 168, y: 340, w: 1164, h: 34, value: "读一下这个妙记，把里面的待办提取出来，帮我创建待办后发到群里", size: 30, weight: 650, align: "center", color: "#f7f8fb", className: "cli-wrap" }),
               ...(() => {
-                const grid = C.layoutGrid({ x: 854, y: 276, w: 626, columns: 2, gap: 28 });
+                const grid = C.layoutGrid({ x: FRAME.x, y: 486, w: FRAME.w, columns: 3, gap: 44 });
                 const items = [
-                  ["01", "提取待办", "从妙记总结和逐字稿里找人、事、时间。"],
-                  ["02", "创建文档", "把方案、链接、背景资料整理成飞书文档。"],
-                  ["03", "创建日程", "查忙闲后约 follow-up，并同步参会人。"],
-                  ["04", "发群消息", "把执行结果发回项目群，等待确认。"],
+                  { title: "读妙记", body: "读取会议纪要、章节和 AI 总结，识别谁要做什么。", command: "lark-cli minutes +download" },
+                  { title: "创建待办", body: "把识别出的事项转成飞书任务，带负责人、截止时间和原始链接。", command: "lark-cli task +create" },
+                  { title: "发到群里", body: "把任务清单和链接同步到项目群，方便团队确认和跟进。", command: "lark-cli im messages-reply" },
                 ];
-                return items.flatMap(([eyebrow, itemTitle, body], index) => {
-                  const col = grid.col(index % 2);
-                  const rowY = grid.y + Math.floor(index / 2) * 210;
-                  return card({ x: col.x, y: rowY, w: col.w, h: 176, eyebrow, title: itemTitle, body, className: `cli-rise-${["a", "b", "c", "d"][index]}` });
-                });
-              })(),
-            ],
-          }),
-          T.visualLayout({
-            sourceSlide: "cli-4",
-            title: "开始使用",
-            blocks: [
-              ...bg(),
-              ...title({ title: "怎么开始：安装一次，然后用自然语言工作", subtitle: "不用背命令。命令、权限和参数由 Agent 处理；你只负责确认关键动作。" }),
-              ...(() => {
-                const grid = C.layoutGrid({ x: FRAME.x, y: 292, w: FRAME.w, columns: 3, gap: 44 });
-                const items = [
-                  ["01", "安装", "npx @larksuite/cli@latest install"],
-                  ["02", "授权", "lark-cli auth login"],
-                  ["03", "检查", "lark-cli doctor"],
-                ];
-                return items.flatMap(([eyebrow, itemTitle, body], index) => {
+                return items.flatMap((item, index) => {
                   const col = grid.col(index);
-                  return card({ x: col.x, y: grid.y, w: col.w, h: 190, eyebrow, title: itemTitle, body, className: `cli-rise-${["a", "b", "c"][index]}` });
+                  return [
+                    ...miniStep({ x: col.x, y: grid.y, w: col.w, h: 218, title: item.title, body: item.body, command: item.command, className: `cli-rise-${["a", "b", "c"][index]}` }),
+                    ...(index < 2 ? [flowLine({ x: col.x + col.w + 12, y: 586, w: 20, id: `case-${index}` })] : []),
+                  ];
                 });
               })(),
-              panel({ x: 212, y: 560, w: 1176, h: 118, border: "rgba(62,195,247,0.38)", fill: "rgba(62,195,247,0.045)" }),
-              text({ x: 250, y: 592, w: 1100, h: 30, value: "第一条任务示例", size: 24, weight: 720, align: "center", gradient: "brand" }),
-              text({ x: 250, y: 636, w: 1100, h: 30, value: "帮我创建一篇云文档，介绍飞书 CLI 的能力，以及我可以先用哪些能力。", size: 24, weight: 560, align: "center", color: "#f7f8fb", className: "cli-code" }),
-              text({ x: 154, y: 748, w: 1240, h: 34, value: "GitHub：github.com/larksuite/cli    帮助：lark-cli help    更新：lark-cli update", size: 25, weight: 650, align: "center", gradient: "deepBlue", className: "cli-code" }),
+              text({ x: 180, y: 754, w: 1240, h: 34, value: "关键点：CLI 不替代 Agent 思考，它把 Agent 的计划变成真实飞书操作。", size: 25, weight: 560, align: "center", color: "#aeb7c7", className: "cli-muted" }),
             ],
           }),
         ],
