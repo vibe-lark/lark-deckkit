@@ -167,7 +167,7 @@ font-family: var(--ld-font-ui);
 ├── dist/
 │   ├── lark-design-guidelines.html   # PPTX 直接转换结果
 │   ├── lark-visual-sample.html       # 基于 SDK 重做的 49 页视觉样板
-│   ├── lark-cli-intro.html           # 基于飞书文档生成的 4 页 CLI 介绍稿
+│   ├── lark-cli-intro.html           # 基于飞书文档生成的 3 页 CLI 介绍稿
 │   ├── lark-cli-intro-magic.html     # 飞书 CLI 介绍稿妙笔直发页
 │   ├── lark-deckkit-magic.html       # 妙笔空间直发预览页
 │   ├── magic-assets-manifest.json     # 妙笔 TOS/CDN 素材 URL 映射
