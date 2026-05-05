@@ -20,7 +20,7 @@ body {
   margin: 0;
   background: var(--ls-app-bg);
   color: #1f2329;
-  font-family: "Inter", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+  font-family: var(--ld-font-ui, "Inter", "FZLanTingHeiPro_GB18030", "PingFang SC", "Microsoft YaHei", Arial, sans-serif);
   overflow: hidden;
 }
 
@@ -274,7 +274,7 @@ body {
   box-sizing: border-box;
   background: #000;
   color: #f7f8fb;
-  font-family: "TikTok Display", "FZLanTingHeiS-H-GB", "方正兰亭黑Pro", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+  font-family: var(--ld-font-display, "TikTok Display", "FZLanTingHeiPro_GB18030", "方正兰亭黑Pro_GB18030", "PingFang SC", "Microsoft YaHei", Arial, sans-serif);
   letter-spacing: 0;
 }
 
@@ -389,7 +389,7 @@ body {
   background: transparent !important;
   color: inherit !important;
   -webkit-text-fill-color: inherit !important;
-  font-family: "TikTok Display Medium", "FZLanTingHeiPro_GB18030 SemiBold", "FZLanTingHeiPro_GB18030 DemiBold", "FZLanTingHeiPro_GB18030 Bold", "PingFang SC", "Microsoft YaHei", Arial, sans-serif !important;
+  font-family: "TikTok Display Medium", "FZLanTingHeiPro_GB18030 SemiBold", "FZLanTingHeiPro_GB18030 DemiBold", "FZLanTingHeiPro_GB18030 Bold", var(--ld-font-zh, "FZLanTingHeiPro_GB18030", "PingFang SC", "Microsoft YaHei", Arial, sans-serif) !important;
   font-weight: 760 !important;
 }
 
@@ -697,7 +697,7 @@ body {
   background: transparent !important;
   color: inherit !important;
   -webkit-text-fill-color: inherit !important;
-  font-family: "TikTok Display Medium", "FZLanTingHeiPro_GB18030 SemiBold", "FZLanTingHeiPro_GB18030 DemiBold", "PingFang SC", "Microsoft YaHei", Arial, sans-serif !important;
+  font-family: "TikTok Display Medium", "FZLanTingHeiPro_GB18030 SemiBold", "FZLanTingHeiPro_GB18030 DemiBold", var(--ld-font-zh, "FZLanTingHeiPro_GB18030", "PingFang SC", "Microsoft YaHei", Arial, sans-serif) !important;
   font-weight: 760 !important;
 }
 
@@ -709,7 +709,7 @@ body {
 .ls-slide[data-source-slide="20"] .lvg-layout-text[style*="top:417.582px"] span,
 .ls-slide[data-source-slide="21"] .lvg-layout-text[style*="top:205.743px"] span,
 .ls-slide[data-source-slide="26"] .lvg-layout-text[style*="top:454.561px"] span {
-  font-family: "TikTok Display Medium", "FZLanTingHeiPro_GB18030 SemiBold", "FZLanTingHeiPro_GB18030 DemiBold", "PingFang SC", "Microsoft YaHei", Arial, sans-serif !important;
+  font-family: "TikTok Display Medium", "FZLanTingHeiPro_GB18030 SemiBold", "FZLanTingHeiPro_GB18030 DemiBold", var(--ld-font-zh, "FZLanTingHeiPro_GB18030", "PingFang SC", "Microsoft YaHei", Arial, sans-serif) !important;
   font-weight: 760 !important;
 }
 
@@ -1177,7 +1177,7 @@ body {
 .ls-slide[data-source-slide="33"] .lvg-layout-text[style*="top:201.516px"] p:nth-child(2) span {
   color: inherit !important;
   -webkit-text-fill-color: inherit !important;
-  font-family: "TikTok Display Medium", "FZLanTingHeiPro_GB18030 SemiBold", "FZLanTingHeiPro_GB18030 DemiBold", "PingFang SC", "Microsoft YaHei", Arial, sans-serif !important;
+  font-family: "TikTok Display Medium", "FZLanTingHeiPro_GB18030 SemiBold", "FZLanTingHeiPro_GB18030 DemiBold", var(--ld-font-zh, "FZLanTingHeiPro_GB18030", "PingFang SC", "Microsoft YaHei", Arial, sans-serif) !important;
   font-weight: 760 !important;
 }
 

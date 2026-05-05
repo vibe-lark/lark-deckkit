@@ -4,6 +4,9 @@
 
 ## 文件
 
+- `fonts.css`：字体资产入口，包含 `@font-face` 和统一字体变量。
+- `font-manifest.json`：已提交字体文件、字重和可选字体说明。
+- `fonts/`：浏览器可直接加载的 WOFF2 字体资源。
 - `lark-slides.css`：基础画布、播放控件、模板样式。
 - `lark-slides.js`：演示稿运行时，提供翻页、Hash 定位、全屏、缩放、主题注册和 Deck Spec。
 - `templates.js`：模板注册表、组件化 block、设计 tokens、资源路径解析器，以及基础模板和 Lark 暗色视觉模板。
@@ -12,6 +15,7 @@
 ## 最小用法
 
 ```html
+<link rel="stylesheet" href="./fonts.css" />
 <link rel="stylesheet" href="./lark-slides.css" />
 <div id="deck" data-lark-deck></div>
 <script src="./lark-slides.js"></script>
@@ -39,12 +43,28 @@
 </script>
 ```
 
+`fonts.css` 必须先于 `lark-slides.css` 加载。这样新 HTML 可以直接复用 `--ld-font-display`、`--ld-font-zh`、`--ld-font-ui`，并让模板样式拿到同一套兰亭黑字体。
+
+如果 HTML 放在仓库根目录，使用：
+
+```html
+<link rel="stylesheet" href="./sdk/fonts.css" />
+<link rel="stylesheet" href="./sdk/lark-slides.css" />
+```
+
+如果 HTML 放在 `dist/`，使用：
+
+```html
+<link rel="stylesheet" href="../sdk/fonts.css" />
+<link rel="stylesheet" href="../sdk/lark-slides.css" />
+```
+
 ## 推荐封装方式
 
 做下一套 PPT 时，不要复制 `dist/lark-visual-sample.html` 里的 49 页实现。推荐把内容拆成四层：
 
 - `Deck Spec`：演示稿元信息、主题、页面数组。它不绑定 DOM，可以被发布、预览、导出流程复用。
-- `Theme / Tokens`：字体、颜色、渐变、圆角、画布尺寸。运行时用 `LarkSlides.defineTheme` 注册，模板里用 `LarkSlideTemplates.tokens` 读取。
+- `Theme / Tokens`：字体、颜色、渐变、圆角、画布尺寸。运行时用 `LarkSlides.defineTheme` 注册，模板里用 `LarkSlideTemplates.tokens` 读取；字体不要散落硬编码，优先使用 `fonts.css` 里的 CSS 变量。
 - `Template Registry`：页面级模板，比如封面、金句页、案例页、指标页、Logo 规范页。用 `LarkSlideTemplates.defineTemplate` 注册，用 `LarkSlideTemplates.create` 调用。
 - `Components`：页面内部的 text/image/shape/vector block。用 `LarkSlideTemplates.components` 拼页面，不直接散落大量 HTML 字符串。
 
@@ -102,6 +122,25 @@ const deck = LarkSlides.createDeckSpec({
     }),
   ],
 });
+```
+
+## 字体规范
+
+当前 SDK 提交 `FZLanTingHeiPro_GB18030` 的 9 个 WOFF2 字重，覆盖 `200/300/400/500/600/650/700/800/900`。清单见 `font-manifest.json`，完整规则见 `../docs/font-standard.md`。
+
+模板里使用这些字体入口：
+
+```css
+font-family: var(--ld-font-display); /* 英文标题、金句、强视觉标题 */
+font-family: var(--ld-font-zh);      /* 中文标题、标签、指标说明 */
+font-family: var(--ld-font-ui);      /* 播放壳与轻量模板 */
+```
+
+妙笔空间发布时不能引用本地 `fonts/` 目录。先上传字体，再生成妙笔 HTML：
+
+```bash
+node scripts/upload_magic_assets.js --asset-dir sdk/fonts --manifest dist/magic-fonts-manifest.json
+python3 scripts/build_magic_page.py
 ```
 
 ## Lark 视觉模板

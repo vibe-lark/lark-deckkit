@@ -24,6 +24,7 @@ https://vibe-lark.github.io/lark-deckkit/dist/lark-visual-sample.html#/29
 - **16:9 presentation runtime**：内置缩放、键盘翻页、Hash 跳页、全屏播放、ESC 退出、进度条和临近图片预加载。
 - **Template SDK**：通过 `Deck Spec`、主题、模板注册表和组件化 blocks 复用页面结构。
 - **Lark-style visual system**：内置暗色画布、蓝青渐变字、引导线、标签、Logo/资产页等视觉规则。
+- **Bundled web fonts**：提交可被新 HTML 直接引用的兰亭黑 WOFF2 字体，并通过 `sdk/fonts.css` 统一字体栈。
 - **PPTX conversion helper**：提供脚本把 PPTX 抽取为 HTML、manifest 和素材资源，方便迁移旧演示稿。
 - **Agent-ready design spec**：根目录的 `design.md` 按 DESIGN.md 标准描述视觉系统，方便后续让 AI 生成同风格页面。
 
@@ -99,6 +100,7 @@ metrics: [
 最小示例：
 
 ```html
+<link rel="stylesheet" href="./sdk/fonts.css" />
 <link rel="stylesheet" href="./sdk/lark-slides.css" />
 <div id="deck" data-lark-deck></div>
 
@@ -127,17 +129,46 @@ metrics: [
 </script>
 ```
 
+## Font Standard
+
+新做的 HTML 需要先加载字体，再加载幻灯片样式：
+
+```html
+<link rel="stylesheet" href="./sdk/fonts.css" />
+<link rel="stylesheet" href="./sdk/lark-slides.css" />
+```
+
+`dist/` 目录下的页面使用：
+
+```html
+<link rel="stylesheet" href="../sdk/fonts.css" />
+<link rel="stylesheet" href="../sdk/lark-slides.css" />
+```
+
+仓库提交了 `FZLanTingHeiPro_GB18030` 的 9 个 WOFF2 字重，清单在 `sdk/font-manifest.json`，规则文档在 `docs/font-standard.md`。新模板不要手写散落的字体栈，优先用：
+
+```css
+font-family: var(--ld-font-display);
+font-family: var(--ld-font-zh);
+font-family: var(--ld-font-ui);
+```
+
+`TikTok Display` 仍作为可选字体保留在字体栈里；当前仓库不提交它的字体文件。
+
 ## Project Structure
 
 ```text
 .
 ├── index.html                        # GitHub Pages 预览入口
 ├── design.md                         # AI/设计代理可读的视觉系统说明
+├── docs/
+│   └── font-standard.md              # 字体提交、引用和妙笔发布规范
 ├── dist/
 │   ├── lark-design-guidelines.html   # PPTX 直接转换结果
 │   ├── lark-visual-sample.html       # 基于 SDK 重做的 49 页视觉样板
 │   ├── lark-deckkit-magic.html       # 妙笔空间直发预览页
 │   ├── magic-assets-manifest.json     # 妙笔 TOS/CDN 素材 URL 映射
+│   ├── magic-fonts-manifest.json      # 妙笔 TOS/CDN 字体 URL 映射
 │   └── assets/pptx-media/            # 从 PPTX 抽取的公开素材
 ├── scripts/
 │   ├── convert_pptx_to_html.py       # PPTX -> HTML 转换脚本
@@ -145,6 +176,9 @@ metrics: [
 │   ├── build_magic_page.py           # 用 CDN URL 生成妙笔直发页
 │   └── build_magic_preview.py        # 本地离线单文件预览生成脚本
 ├── sdk/
+│   ├── fonts.css                     # @font-face 与字体变量
+│   ├── font-manifest.json            # 字体资产清单
+│   ├── fonts/                        # 已提交的 WOFF2 字体文件
 │   ├── lark-slides.css               # 运行时与模板样式
 │   ├── lark-slides.js                # 播放运行时
 │   ├── templates.js                  # 模板、tokens、组件 helpers
@@ -167,6 +201,7 @@ metrics: [
 | `node --check sdk/lark-slides.js` | 检查运行时 JS 语法 |
 | `node --check sdk/templates.js` | 检查模板 JS 语法 |
 | `node scripts/upload_magic_assets.js` | 上传 `dist/assets/pptx-media/` 到妙笔 TOS/CDN，生成 manifest |
+| `node scripts/upload_magic_assets.js --asset-dir sdk/fonts --manifest dist/magic-fonts-manifest.json` | 上传 SDK 字体到妙笔 TOS/CDN，生成字体 manifest |
 | `python3 scripts/build_magic_page.py` | 使用 CDN manifest 生成 `dist/lark-deckkit-magic.html` |
 | `python3 scripts/build_magic_preview.py` | 生成本地离线单文件预览，产物默认不进 Git |
 
@@ -204,6 +239,8 @@ https://bytedance.larkoffice.com/wiki/PdkgwdJO9iKS49k57pDcEcGxnad
 
 后续让 AI 生成新页面时，可以直接要求它读取 `design.md` 并使用 `LarkSlides.createDeckSpec`、`LarkSlideTemplates.defineTemplate` 和 `visualLayout`。
 
+字体规范以 `docs/font-standard.md` 为准。新 HTML 需要引用 `sdk/fonts.css`，Magic Pages 发布需要同时使用 `dist/magic-assets-manifest.json` 和 `dist/magic-fonts-manifest.json`。
+
 ## GitHub Publishing Notes
 
 公开发布前确认：
@@ -217,11 +254,12 @@ https://bytedance.larkoffice.com/wiki/PdkgwdJO9iKS49k57pDcEcGxnad
 
 妙笔空间的 HTML 内容有大小限制，因此不要把 299 张图片全部内联成 base64。当前发布方式是：
 
-1. `node scripts/upload_magic_assets.js`：复用本机妙笔 token，调用 `/api/tos/multipart/init`、`/part`、`/complete` 上传素材。
-2. `python3 scripts/build_magic_page.py`：把 SDK CSS/JS 内联进 HTML，把图片切到 `dist/magic-assets-manifest.json` 里的 TOS/CDN URL。
-3. `node /Users/bytedance/.codex/skills/publish-to-magic-pages/publish.js publish dist/lark-deckkit-magic.html --title "Lark DeckKit Public Preview" --open-source`：更新妙笔页面。
+1. `node scripts/upload_magic_assets.js`：上传 `dist/assets/pptx-media/` 图片素材，生成 `dist/magic-assets-manifest.json`。
+2. `node scripts/upload_magic_assets.js --asset-dir sdk/fonts --manifest dist/magic-fonts-manifest.json`：上传 `sdk/fonts/` 字体，生成 `dist/magic-fonts-manifest.json`。
+3. `python3 scripts/build_magic_page.py`：把 SDK CSS/JS 内联进 HTML，把图片和字体都切到妙笔 TOS/CDN URL。
+4. `node /Users/bytedance/.codex/skills/publish-to-magic-pages/publish.js publish dist/lark-deckkit-magic.html --title "Lark DeckKit Public Preview" --open-source`：更新妙笔页面。
 
-token 不进入仓库。`dist/magic-assets-manifest.json` 只保存公开图片 URL，可以提交。
+token 不进入仓库。`dist/magic-assets-manifest.json` 和 `dist/magic-fonts-manifest.json` 只保存公开 CDN URL，可以提交。
 
 ## Status
 
@@ -231,6 +269,7 @@ token 不进入仓库。`dist/magic-assets-manifest.json` 只保存公开图片 
 - 可复用 HTML Slide SDK。
 - PPTX 转 HTML 脚本。
 - GitHub Pages 与妙笔空间预览入口，其中妙笔版使用妙笔 TOS/CDN 图片资源。
+- 可复用字体规范与已提交的 WOFF2 字体资源。
 - DESIGN.md 风格规范。
 
 ## License

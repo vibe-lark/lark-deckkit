@@ -13,6 +13,7 @@ from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
 HTML = ROOT / "dist" / "lark-visual-sample.html"
+FONTS_CSS = ROOT / "sdk" / "fonts.css"
 CSS = ROOT / "sdk" / "lark-slides.css"
 RUNTIME = ROOT / "sdk" / "lark-slides.js"
 TEMPLATES = ROOT / "sdk" / "templates.js"
@@ -54,6 +55,7 @@ def encode_raw(path):
 
 def main():
     html = HTML.read_text(encoding="utf-8")
+    fonts_css = FONTS_CSS.read_text(encoding="utf-8").replace("./fonts/", "../sdk/fonts/")
     css = CSS.read_text(encoding="utf-8")
     runtime = RUNTIME.read_text(encoding="utf-8")
     templates = TEMPLATES.read_text(encoding="utf-8")
@@ -64,6 +66,10 @@ def main():
     html = html.replace(
         '<title>Lark Visual Guidelines HTML Deck</title>',
         '<title>Lark DeckKit Public Preview</title>',
+    )
+    html = html.replace(
+        '<link rel="stylesheet" href="../sdk/fonts.css" />',
+        f"<style>\n{fonts_css}\n</style>",
     )
     html = html.replace(
         '<link rel="stylesheet" href="../sdk/lark-slides.css" />',
