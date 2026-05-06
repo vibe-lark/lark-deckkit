@@ -100,6 +100,11 @@ class GeneratedArtifactsTest(unittest.TestCase):
             "tokens",
             "asset",
             "layoutGrid",
+            "qualityRules",
+            "designGuidance",
+            "getDesignGuidance",
+            "createDeckFromOutline",
+            "validateDeckSpec",
         ]:
             self.assertIn(template, templates)
 
@@ -109,6 +114,9 @@ class GeneratedArtifactsTest(unittest.TestCase):
         self.assertIn("LarkSlides.createDeckSpec", example)
         self.assertIn("HTML PPT 模板 SDK", readme)
         self.assertIn("推荐封装方式", readme)
+        self.assertIn("Front-Design 规则", readme)
+        self.assertIn("getDesignGuidance", readme)
+        self.assertIn("qualityRules.typography", readme)
 
     def test_font_assets_are_bundled_and_reusable(self):
         fonts_css_path = SDK / "fonts.css"
@@ -144,6 +152,7 @@ class GeneratedArtifactsTest(unittest.TestCase):
     def test_html_entrypoints_load_fonts_before_slide_css(self):
         entrypoints = [
             (SDK / "example.html", './fonts.css', './lark-slides.css'),
+            (SDK / "quickstart.html", './fonts.css', './lark-slides.css'),
             (DIST / "lark-visual-sample.html", '../sdk/fonts.css', '../sdk/lark-slides.css'),
             (DIST / "lark-design-guidelines.html", '../sdk/fonts.css', '../sdk/lark-slides.css'),
             (DIST / "lark-cli-intro.html", '../sdk/fonts.css', '../sdk/lark-slides.css'),
@@ -185,15 +194,21 @@ class GeneratedArtifactsTest(unittest.TestCase):
         self.assertIn("https://magic.solutionsuite.cn/html-box/viE4zlP5oro", readme)
         self.assertIn("https://magic.solutionsuite.cn/html-box/viIxWdFIYeG", readme)
         self.assertIn("Start Here", readme)
+        self.assertIn("Front-Design Workflow", readme)
+        self.assertIn("front-design", readme)
+        self.assertIn("LarkSlideTemplates.getDesignGuidance()", readme)
+        self.assertIn("LarkSlideTemplates.qualityRules.typography", readme)
         self.assertIn("第一次接触项目的新手", readme)
         self.assertIn("Download ZIP", readme)
         self.assertIn("sdk/fonts.css", readme)
         self.assertIn("sdk/font-manifest.json", readme)
         self.assertIn("sdk/example.html", readme)
+        self.assertIn("sdk/quickstart.html", readme)
         self.assertIn("lark-cli-intro.html", readme)
         self.assertIn("Magic Pages", readme)
-        self.assertIn("妙笔 TOS/CDN", readme)
+        self.assertIn("可选发布路径", readme)
         self.assertIn("dist/magic-fonts-manifest.json", readme)
+        self.assertIn("scripts/validate_deck.js", readme)
         self.assertIn("scripts/upload_magic_assets.js", readme)
         self.assertIn("scripts/build_magic_page.py", readme)
         self.assertIn("Source Reference", readme)
@@ -260,10 +275,13 @@ class GeneratedArtifactsTest(unittest.TestCase):
         self.assertIn("Agent 规划", html)
         self.assertIn("CLI 执行", html)
         self.assertIn("飞书回写", html)
+        self.assertIn("Agent 生成的执行待办", html)
         self.assertIn("task +create", html)
         self.assertIn("读一下这个妙记，把里面的待办提取出来，帮我创建待办后发到群里", html)
         self.assertIn("cli-flow", html)
         self.assertIn("layoutGrid", html)
+        self.assertNotIn("你看到的是目标，Agent 看到的是一组可执行、可检查、可恢复的飞书操作。", html)
+        self.assertNotIn("关键点：CLI 不替代 Agent 思考，它把 Agent 的计划变成真实飞书操作。", html)
         self.assertNotIn("returns structured JSON", html)
         self.assertNotIn("lark-cli calendar +agenda --as user", html)
         self.assertNotIn("HTML PPT Prototype", html)

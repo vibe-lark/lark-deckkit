@@ -303,7 +303,7 @@ Large metric: 96-120px, 760 weight
 ### Prompt: Create a New Business Case Deck
 
 ```text
-Use the Lark DeckKit SDK and this design.md. Create a dark 16:9 HTML slide deck using createDeckSpec, defineTemplate, visualLayout, and components. Keep all text editable. Use PPT assets through LarkSlideTemplates.asset. The style should match the Lark visual sample: black canvas, large centered gradient claims, blue-cyan guide lines, precise rectangular tags, restrained card surfaces, and no screenshot playback shell.
+Use the Lark DeckKit SDK and this design.md. First read LarkSlideTemplates.getDesignGuidance() and LarkSlideTemplates.qualityRules.typography, then compress the story with a front-design pass: one idea per slide, fewer elements, strong hierarchy, and enough negative space. Generate the first draft with LarkSlideTemplates.createDeckFromOutline. Use statement, todo, and caseFlow page types for the first draft. Keep all text editable. Use PPT assets through LarkSlideTemplates.asset only when they are useful. The style should match the Lark visual sample: black canvas, large centered gradient claims, blue-cyan guide lines, precise rectangular tags, restrained card surfaces, and no screenshot playback shell. Run LarkSlideTemplates.validateDeckSpec(deck) before finishing and verify with browser screenshots.
 ```
 
 ### Prompt: Build One Precision Slide
@@ -327,6 +327,35 @@ Compare every generated slide against the reference deck. Check: headline gradie
 ## Source Alignment
 
 This file follows the section model described by VoltAgent's `awesome-design-md` collection: visual theme, colors, typography, components, layout, depth, do/don't rules, responsive behavior, and agent prompt guidance.
+
+## 10. Fast Generation Standard
+
+The default path for a new HTML PPT is now:
+
+1. Extract a short narrative outline.
+2. Map each page to a stable template contract.
+3. Read `LarkSlideTemplates.getDesignGuidance()` and apply a front-design pass: fewer elements, stronger hierarchy, and PPT-scale typography.
+4. Generate with `LarkSlideTemplates.createDeckFromOutline`.
+5. Validate with `LarkSlideTemplates.validateDeckSpec`.
+6. Preview in browser and refine only the pages that need precision with `visualLayout`.
+
+Template contracts should be treated as authoring guardrails:
+
+| Page Type | Use For | Main Slots | Limits |
+|---|---|---|---|
+| `statement` | Section claim, cover-like idea, keynote sentence | `kicker`, `title`, `subtitle` | One main idea, short subtitle |
+| `todo` | Plan, checklist, Agent execution breakdown | `title`, `subtitle`, `items[]` | Up to 5 rows |
+| `caseFlow` | User goal to action chain, product case story | `prompt`, `steps[]` | Up to 4 cards |
+| `visualLayout` | Exact PPT-style reproduction | `blocks[]` | Use only when precision is needed |
+
+Authoring rules for fast generation:
+
+- Start with structure, not CSS. Let the SDK decide the first pass of alignment, font sizes, gradients, and spacing.
+- Use `statement`, `todo`, and `caseFlow` for most new decks. They are intentionally opinionated so AI output is less random.
+- Use `visualLayout` for source-slide reconstruction, complex diagrams, and final polish.
+- Do not require Magic Pages single-file output during authoring. Magic CDN manifests are a publishing option for specific deployment targets.
+- Do not use web-dashboard density for presentation pages. If a slide needs many cards, split it or turn it into a simpler process/story page.
+- Every generated deck should be checkable by `node scripts/validate_deck.js <html-file> --expect-slides N`.
 
 References:
 

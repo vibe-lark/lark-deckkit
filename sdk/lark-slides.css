@@ -341,6 +341,29 @@ body {
   color: #fff !important;
 }
 
+.lvg-quick-slide .lvg-quick-copy,
+.lvg-quick-slide .lvg-quick-copy p,
+.lvg-quick-slide .lvg-quick-copy span,
+.lvg-quick-slide .lvg-quick-heading,
+.lvg-quick-slide .lvg-quick-heading p,
+.lvg-quick-slide .lvg-quick-heading span {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.lvg-quick-slide .lvg-quick-copy,
+.lvg-quick-slide .lvg-quick-heading {
+  overflow: hidden;
+}
+
+.lvg-quick-slide .lvg-code-copy,
+.lvg-quick-slide .lvg-code-copy p,
+.lvg-quick-slide .lvg-code-copy span {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
 .ls-slide[data-source-slide="4"] .lvg-layout-text[style*="top:240.670px"],
 .ls-slide[data-source-slide="5"] .lvg-layout-text,
 .ls-slide[data-source-slide="6"] .lvg-layout-text[style*="top:392px"],

@@ -49,12 +49,88 @@
   };
 
   const templateRegistry = {};
+  const templateContracts = {};
 
-  function defineTemplate(name, renderer) {
+  const qualityRules = {
+    canvas: { width: 1600, height: 900 },
+    typography: {
+      heroClaim: { min: 76, max: 92, weight: "740-760", lineHeight: "1.05-1.10" },
+      sectionClaim: { min: 58, max: 68, weight: "700-760", lineHeight: "1.08-1.15" },
+      subtitle: { min: 28, max: 40, weight: "400-600", lineHeight: "1.35-1.45" },
+      body: { min: 20, max: 28, weight: "400-600", lineHeight: "1.35-1.55" },
+      micro: { min: 12, max: 18, weight: "400-500", lineHeight: "1.30-1.50" },
+    },
+    defaults: {
+      maxTitleChars: 34,
+      maxSubtitleChars: 96,
+      maxBodyChars: 220,
+      maxItems: 6,
+      maxBlocks: 96,
+    },
+  };
+
+  const designGuidance = {
+    name: "front-design keynote loop",
+    intent: "Generate fewer, stronger, presentation-ready HTML slides before doing precision layout.",
+    workflow: [
+      "Compress the narrative before choosing a template.",
+      "Map each slide to one job: statement, todo, caseFlow, metric, or precision visualLayout.",
+      "Keep one dominant focal point per slide; supporting text should be short and visibly secondary.",
+      "Use the 1600x900 typography scale instead of web UI defaults.",
+      "Preview screenshots and fix alignment, density, and hierarchy before publishing.",
+    ],
+    layout: [
+      "Prefer large centered claims, restrained dividers, and generous negative space.",
+      "Avoid nested cards, decorative card grids, and repeated equal-weight boxes.",
+      "Use columns only when comparison or process flow is the actual message.",
+      "Keep tags rectangular and precise; do not use overly round pill shapes unless the source deck does.",
+    ],
+    typography: [
+      "Hero claim: 76-92px on the 1600x900 canvas.",
+      "Section claim: 58-68px.",
+      "Subtitle: 28-40px.",
+      "Body and labels: 20-28px, except metadata labels can use 12-18px.",
+    ],
+    antiPatterns: [
+      "Starting from HTML/CSS layout before the page story is clear.",
+      "Filling a slide with many cards because the content has many bullets.",
+      "Using web-dashboard density for a fullscreen presentation.",
+      "Adding glow, shine, or gradients when they do not clarify hierarchy.",
+    ],
+    verification: [
+      "Run validateDeckSpec for structure and density.",
+      "Run scripts/validate_deck.js for HTML entrypoint checks.",
+      "Use browser screenshots to inspect alignment, clipping, and perceived type size.",
+    ],
+  };
+
+  function normalizeContract(contract = {}) {
+    return {
+      intent: contract.intent || "",
+      slots: { ...(contract.slots || {}) },
+      limits: { ...(contract.limits || {}) },
+      guidance: Array.from(contract.guidance || []),
+    };
+  }
+
+  function defineTemplate(name, renderer, contract = {}) {
     if (!name || typeof name !== "string") throw new Error("LarkSlideTemplates: template name is required");
     if (typeof renderer !== "function") throw new Error(`LarkSlideTemplates: ${name} must be a function`);
     templateRegistry[name] = renderer;
+    templateContracts[name] = normalizeContract(contract);
     return renderer;
+  }
+
+  function normalizeTemplateName(name = "") {
+    return String(name).replace(/-([a-z])/g, (_, char) => char.toUpperCase());
+  }
+
+  function resolveTemplateName(name = "") {
+    const value = String(name || "");
+    if (templateRegistry[value] || templateContracts[value]) return value;
+    const normalized = normalizeTemplateName(value);
+    if (templateRegistry[normalized] || templateContracts[normalized]) return normalized;
+    return value;
   }
 
   function create(name, props = {}) {
@@ -65,6 +141,93 @@
 
   function templateNames() {
     return Object.keys(templateRegistry);
+  }
+
+  function getTemplateContract(name) {
+    const resolved = resolveTemplateName(name);
+    return templateContracts[resolved]
+      ? {
+          ...templateContracts[resolved],
+          slots: { ...templateContracts[resolved].slots },
+          limits: { ...templateContracts[resolved].limits },
+          guidance: Array.from(templateContracts[resolved].guidance || []),
+        }
+      : null;
+  }
+
+  function getDesignGuidance() {
+    return {
+      ...designGuidance,
+      workflow: Array.from(designGuidance.workflow),
+      layout: Array.from(designGuidance.layout),
+      typography: Array.from(designGuidance.typography),
+      antiPatterns: Array.from(designGuidance.antiPatterns),
+      verification: Array.from(designGuidance.verification),
+    };
+  }
+
+  function plainText(value = "") {
+    return String(value ?? "")
+      .replace(/<script[\s\S]*?<\/script>/gi, " ")
+      .replace(/<style[\s\S]*?<\/style>/gi, " ")
+      .replace(/<[^>]+>/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  function textLength(value = "") {
+    return plainText(value).length;
+  }
+
+  function addIssue(list, level, code, message, details = {}) {
+    list.push({ level, code, message, ...details });
+  }
+
+  function validateDeckSpec(spec = {}, options = {}) {
+    const issues = [];
+    const rules = { ...qualityRules.defaults, ...(options.rules || {}) };
+    const slides = Array.isArray(spec.slides) ? spec.slides : [];
+    const size = spec.size || qualityRules.canvas;
+
+    if (!spec.title) addIssue(issues, "warning", "deck-title-missing", "Deck title is missing.");
+    if (!slides.length) addIssue(issues, "error", "slides-empty", "Deck has no slides.");
+    if (size.width !== qualityRules.canvas.width || size.height !== qualityRules.canvas.height) {
+      addIssue(issues, "warning", "canvas-size", "DeckKit is tuned for 1600x900 slides.", { size });
+    }
+
+    slides.forEach((slide, index) => {
+      const label = `slide ${index + 1}`;
+      const resolvedTemplate = slide.template ? resolveTemplateName(slide.template) : "";
+      const contract = resolvedTemplate ? templateContracts[resolvedTemplate] : null;
+      const limits = { ...rules, ...(contract?.limits || {}) };
+      const titleLength = textLength(slide.title || "");
+      const contentLength = textLength(slide.content || "");
+
+      if (!slide.title) addIssue(issues, "warning", "slide-title-missing", `${label} has no title.`, { index });
+      if (slide.template && !templateRegistry[resolvedTemplate]) {
+        addIssue(issues, "warning", "template-unknown", `${label} uses an unknown template "${slide.template}".`, { index, template: slide.template });
+      }
+      if (titleLength > limits.maxTitleChars) {
+        addIssue(issues, "warning", "title-density", `${label} title is long; split or shorten for keynote-quality layout.`, { index, length: titleLength, max: limits.maxTitleChars });
+      }
+      if (contentLength > limits.maxBodyChars) {
+        addIssue(issues, "warning", "content-density", `${label} has dense text; use a higher-level template or split into multiple slides.`, { index, length: contentLength, max: limits.maxBodyChars });
+      }
+      if (slide.template === "visual-layout") {
+        const blockCount = (slide.content || "").match(/lvg-layout-block/g)?.length || 0;
+        if (blockCount > limits.maxBlocks) {
+          addIssue(issues, "warning", "block-density", `${label} has many absolute blocks; prefer a stable pattern template for new decks.`, { index, blockCount, max: limits.maxBlocks });
+        }
+      }
+    });
+
+    return {
+      ok: !issues.some((issue) => issue.level === "error"),
+      issueCount: issues.length,
+      errors: issues.filter((issue) => issue.level === "error").length,
+      warnings: issues.filter((issue) => issue.level === "warning").length,
+      issues,
+    };
   }
 
   function asset(basePath = "") {
@@ -391,6 +554,121 @@
         </div>
       `,
     });
+  }
+
+  function visualBackgroundBlocks() {
+    return [
+      shapeBlock({ x: 0, y: 0, w: 1600, h: 900, fill: "#03050a" }),
+      shapeBlock({
+        x: 0,
+        y: 0,
+        w: 1600,
+        h: 900,
+        fill: "radial-gradient(circle at 50% -10%, rgba(128,163,255,0.26), rgba(3,5,10,0) 44%), radial-gradient(circle at 18% 18%, rgba(62,195,247,0.08), rgba(3,5,10,0) 34%)",
+      }),
+    ];
+  }
+
+  function quickText({ x, y, w, h, text, size = 34, weight = 620, color = tokens.colors.white, align = "left", gradient = "", lineHeight = 1.2, className = "", style = "" }) {
+    return textBlock({ x, y, w, h, text, size, weight, color, align, gradient, lineHeight, className, style });
+  }
+
+  function visualStatement({ title, subtitle, kicker = "", sourceSlide } = {}) {
+    return visualLayout({
+      title,
+      sourceSlide,
+      className: "lvg-quick-slide lvg-quick-apple lvg-quick-statement",
+      blocks: [
+        ...visualBackgroundBlocks(),
+        quickText({ x: 0, y: 174, w: 1600, h: 28, text: kicker, size: 19, weight: 640, align: "center", color: "#7b8494", className: "lvg-quick-copy" }),
+        quickText({ x: 180, y: 268, w: 1240, h: 126, text: title, size: 76, weight: 760, align: "center", gradient: "brand", lineHeight: 1.05, className: "lvg-quick-heading" }),
+        quickText({ x: 360, y: 456, w: 880, h: 86, text: subtitle, size: 29, weight: 500, align: "center", color: "#b9c2d1", lineHeight: 1.36, className: "lvg-quick-copy" }),
+        shapeBlock({ x: 610, y: 604, w: 380, h: 2, fill: tokens.gradients.deepBlue, radius: "999px", opacity: 0.82 }),
+      ],
+    });
+  }
+
+  function visualTodoList({ title, subtitle = "", items = [], sourceSlide } = {}) {
+    const visibleItems = Array.from(items).slice(0, 5);
+    const blocks = [
+      ...visualBackgroundBlocks(),
+      quickText({ x: 240, y: 106, w: 1120, h: 74, text: title, size: 60, weight: 760, align: "center", gradient: "brand", className: "lvg-quick-heading" }),
+      quickText({ x: 330, y: 196, w: 940, h: 42, text: subtitle, size: 28, weight: 500, align: "center", color: "#aeb7c7", lineHeight: 1.36, className: "lvg-quick-copy" }),
+    ];
+    if (visibleItems.length <= 5) {
+      const grid = layoutGrid({ x: 216, y: 348, w: 1168, columns: visibleItems.length, gap: 56 });
+      blocks.push(shapeBlock({ x: 240, y: 306, w: 1120, h: 1, fill: "linear-gradient(90deg, rgba(206,234,254,0), rgba(206,234,254,0.30), rgba(206,234,254,0))", radius: "999px" }));
+      visibleItems.forEach((item, index) => {
+        const col = grid.col(index);
+        const label = item.label || `Step ${index + 1}`;
+        const heading = item.title || item.heading || "";
+        const body = item.body || item.text || "";
+        blocks.push(quickText({ x: col.x, y: grid.y, w: col.w, h: 44, text: String(index + 1).padStart(2, "0"), size: 40, weight: 720, align: "center", gradient: "deepBlue", className: "lvg-quick-heading" }));
+        blocks.push(quickText({ x: col.x, y: grid.y + 82, w: col.w, h: 22, text: label, size: 17, weight: 650, align: "center", color: "#7f8aa0", className: "lvg-quick-copy" }));
+        blocks.push(quickText({ x: col.x, y: grid.y + 116, w: col.w, h: 34, text: heading, size: 28, weight: 740, align: "center", gradient: "brand", className: "lvg-quick-heading" }));
+        blocks.push(quickText({ x: col.x - 4, y: grid.y + 178, w: col.w + 8, h: 102, text: body, size: 21, weight: 500, align: "center", color: "#aeb7c7", lineHeight: 1.34, className: "lvg-quick-copy" }));
+        if (index < visibleItems.length - 1) {
+          blocks.push(shapeBlock({ x: col.x + col.w + 28, y: grid.y + 94, w: 1, h: 132, fill: "rgba(206,234,254,0.14)" }));
+        }
+      });
+      return visualLayout({ title, sourceSlide, className: "lvg-quick-slide lvg-quick-apple lvg-quick-todo", blocks });
+    }
+    const rowH = 88;
+    const startY = 286;
+    blocks.push(shapeBlock({ x: 238, y: 250, w: 1124, h: Math.max(visibleItems.length * rowH + 64, 300), fill: "rgba(255,255,255,0.035)", radius: "8px", border: "1.2px solid rgba(62,195,247,0.34)" }));
+    visibleItems.forEach((item, index) => {
+      const y = startY + index * rowH;
+      const label = item.label || `Step ${index + 1}`;
+      const heading = item.title || item.heading || "";
+      const body = item.body || item.text || "";
+      const chips = Array.from(item.chips || []).slice(0, 3);
+      blocks.push(shapeBlock({ x: 292, y, w: 1016, h: rowH - 14, fill: "rgba(3,10,23,0.62)", radius: "8px", border: "1.1px solid rgba(62,195,247,0.22)" }));
+      blocks.push(shapeBlock({ x: 318, y: y + 27, w: 30, h: 30, fill: "rgba(62,195,247,0.12)", radius: "6px", border: "1.2px solid rgba(62,195,247,0.62)" }));
+      blocks.push(quickText({ x: 318, y: y + 29, w: 30, h: 26, text: "✓", size: 21, weight: 760, align: "center", gradient: "deepBlue" }));
+      blocks.push(quickText({ x: 374, y: y + 18, w: 148, h: 26, text: label, size: 19, weight: 720, gradient: "deepBlue", className: "lvg-quick-copy" }));
+      blocks.push(quickText({ x: 374, y: y + 47, w: 230, h: 32, text: heading, size: 27, weight: 740, gradient: "brand", className: "lvg-quick-heading" }));
+      blocks.push(quickText({ x: 628, y: y + 25, w: chips.length ? 374 : 604, h: 42, text: body, size: 21, weight: 500, color: "#aeb7c7", lineHeight: 1.3, className: "lvg-quick-copy" }));
+      chips.forEach((chip, chipIndex) => {
+        const chipX = 1042 + chipIndex * 88;
+        blocks.push(shapeBlock({ x: chipX, y: y + 27, w: 74, h: 32, fill: "rgba(255,255,255,0.04)", radius: "6px", border: "1px solid rgba(62,195,247,0.30)" }));
+        blocks.push(quickText({ x: chipX, y: y + 35, w: 74, h: 18, text: chip, size: 13, weight: 620, align: "center", color: "#dceeff", className: "lvg-quick-copy" }));
+      });
+    });
+    return visualLayout({ title, sourceSlide, className: "lvg-quick-slide lvg-quick-todo", blocks });
+  }
+
+  function visualCaseFlow({ title, subtitle = "", prompt = "", steps = [], sourceSlide } = {}) {
+    const visibleSteps = Array.from(steps).slice(0, 4);
+    const grid = layoutGrid({ x: 230, y: 500, w: 1140, columns: Math.min(Math.max(visibleSteps.length, 1), 4), gap: 54 });
+    const blocks = [
+      ...visualBackgroundBlocks(),
+      quickText({ x: 240, y: 100, w: 1120, h: 74, text: title, size: 60, weight: 760, align: "center", gradient: "brand", className: "lvg-quick-heading" }),
+      quickText({ x: 330, y: 190, w: 940, h: 42, text: subtitle, size: 28, weight: 500, align: "center", color: "#aeb7c7", lineHeight: 1.36, className: "lvg-quick-copy" }),
+      quickText({ x: 260, y: 304, w: 1080, h: 46, text: prompt, size: 36, weight: 680, align: "center", color: tokens.colors.white, className: "lvg-quick-copy" }),
+      shapeBlock({ x: 580, y: 394, w: 440, h: 2, fill: tokens.gradients.deepBlue, radius: "999px", opacity: 0.78 }),
+    ];
+    visibleSteps.forEach((step, index) => {
+      const col = grid.col(index);
+      blocks.push(quickText({ x: col.x, y: grid.y, w: col.w, h: 26, text: String(index + 1).padStart(2, "0"), size: 20, weight: 700, align: "center", gradient: "deepBlue", className: "lvg-quick-copy" }));
+      blocks.push(quickText({ x: col.x, y: grid.y + 50, w: col.w, h: 34, text: step.title || "", size: 28, weight: 740, align: "center", gradient: "brand", className: "lvg-quick-heading" }));
+      blocks.push(quickText({ x: col.x - 8, y: grid.y + 114, w: col.w + 16, h: 84, text: step.body || "", size: 21, weight: 500, align: "center", color: "#aeb7c7", lineHeight: 1.36, className: "lvg-quick-copy" }));
+      if (index < visibleSteps.length - 1) {
+        blocks.push(shapeBlock({ x: col.x + col.w + 24, y: grid.y + 66, w: 38, h: 1, fill: "rgba(206,234,254,0.24)" }));
+      }
+    });
+    return visualLayout({ title, sourceSlide, className: "lvg-quick-slide lvg-quick-apple lvg-quick-flow", blocks });
+  }
+
+  function createDeckFromOutline({ title = "", description = "", theme = "larkVisual", slides = [], meta = {} } = {}) {
+    const renderedSlides = Array.from(slides).map((slide) => {
+      const type = slide.type || slide.template || "statement";
+      if (type === "statement" || type === "title") return visualStatement(slide);
+      if (type === "todo" || type === "todoList") return visualTodoList(slide);
+      if (type === "caseFlow" || type === "flow") return visualCaseFlow(slide);
+      if (templateRegistry[type]) return create(type, slide);
+      return visualStatement(slide);
+    });
+    return deckSpec({ title, description, theme, slides: renderedSlides, meta });
   }
 
   function visualCover({ title, subtitle, caption, sourceSlide } = {}) {
@@ -819,6 +1097,9 @@
     twoColumn,
     visualSlide,
     visualLayout,
+    visualStatement,
+    visualTodoList,
+    visualCaseFlow,
     visualCover,
     visualHero,
     visualQuote,
@@ -839,7 +1120,32 @@
     visualMilestone,
   };
 
-  Object.entries(builtInTemplates).forEach(([name, renderer]) => defineTemplate(name, renderer));
+  const builtInContracts = {
+    cover: { intent: "Simple opening slide.", limits: { maxTitleChars: 34, maxBodyChars: 140 }, slots: { title: "required", subtitle: "optional" } },
+    metric: { intent: "Metric summary slide.", limits: { maxItems: 4, maxBodyChars: 180 }, slots: { title: "required", metrics: "1-4 items" } },
+    twoColumn: { intent: "Two balanced content columns.", limits: { maxItems: 10, maxBodyChars: 420 }, slots: { title: "required", left: "up to 5 items", right: "up to 5 items" } },
+    visualLayout: { intent: "Precision 1600x900 editable block layout.", limits: { maxBlocks: 96, maxBodyChars: 2800 }, slots: { blocks: "absolute image/text/shape/vector blocks" } },
+    visualStatement: {
+      intent: "Fast keynote statement slide.",
+      limits: { maxTitleChars: 42, maxSubtitleChars: 96, maxBodyChars: 180 },
+      slots: { title: "required", subtitle: "optional", kicker: "optional" },
+      guidance: ["Use one dominant claim.", "Avoid body copy and decorative cards.", "Keep subtitle short enough to breathe at 28px or larger."],
+    },
+    visualTodoList: {
+      intent: "Stable checklist/process slide for Agent plans.",
+      limits: { maxItems: 5, maxBodyChars: 520 },
+      slots: { title: "required", subtitle: "optional", items: "up to 5 todo rows" },
+      guidance: ["Use only when each column is a real step.", "Prefer 3-4 items for stage presentation.", "Shorten body text before adding more boxes."],
+    },
+    visualCaseFlow: {
+      intent: "Prompt-to-actions case story.",
+      limits: { maxItems: 4, maxBodyChars: 560 },
+      slots: { title: "required", prompt: "required", steps: "up to 4 action cards" },
+      guidance: ["Show user goal to executed action.", "Keep the prompt centered and readable.", "Do not mix separate product narratives on this slide."],
+    },
+  };
+
+  Object.entries(builtInTemplates).forEach(([name, renderer]) => defineTemplate(name, renderer, builtInContracts[name]));
 
   const components = {
     editable,
@@ -858,9 +1164,16 @@
     tokens,
     components,
     templates: templateRegistry,
+    contracts: templateContracts,
+    qualityRules,
+    designGuidance,
     defineTemplate,
     create,
     templateNames,
+    getTemplateContract,
+    getDesignGuidance,
+    validateDeckSpec,
+    createDeckFromOutline,
     asset,
     deckSpec,
   };
@@ -873,6 +1186,10 @@
     create,
     defineTemplate,
     templateNames,
+    getTemplateContract,
+    getDesignGuidance,
+    validateDeckSpec,
+    createDeckFromOutline,
     asset,
     deckSpec,
     createDeck(options) {
