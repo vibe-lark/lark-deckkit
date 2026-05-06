@@ -59,6 +59,34 @@
 <link rel="stylesheet" href="../sdk/lark-slides.css" />
 ```
 
+## CDN 引入
+
+如果只是想快速试一下，可以用 loader 一次性加载 SDK：
+
+```html
+<script src="https://cdn.jsdelivr.net/gh/vibe-lark/lark-deckkit@main/sdk/lark-deckkit-loader.js"></script>
+```
+
+然后在 `LarkDeckKitReady` 之后创建 deck：
+
+```html
+<div id="deck" data-lark-deck></div>
+
+<script src="https://cdn.jsdelivr.net/gh/vibe-lark/lark-deckkit@main/sdk/lark-deckkit-loader.js"></script>
+<script>
+  window.LarkDeckKitReady.then(() => {
+    const deck = LarkSlideTemplates.createDeckFromOutline({
+      title: "业务分享",
+      slides: [{ type: "statement", title: "把飞书 PPT 规范写成 HTML" }],
+    });
+
+    LarkSlides.createDeck({ mount: "#deck", deck });
+  });
+</script>
+```
+
+正式页面建议把 `@main` 换成固定版本或 commit hash。
+
 ## 最快成稿：Outline -> Deck
 
 做新 PPT 时，优先让 AI 生成结构化 outline，不要从空白 HTML/CSS 写起。`createDeckFromOutline` 会把常见页面映射到稳定模板：`statement` 适合金句/观点页，`todo` 适合步骤/计划页，`caseFlow` 适合案例链路页。
@@ -224,13 +252,6 @@ const deck = LarkSlides.createDeckSpec({
 font-family: var(--ld-font-display); /* 英文标题、金句、强视觉标题 */
 font-family: var(--ld-font-zh);      /* 中文标题、标签、指标说明 */
 font-family: var(--ld-font-ui);      /* 播放壳与轻量模板 */
-```
-
-如果选择妙笔空间发布，并且希望线上页面不依赖本地 `fonts/` 目录，可以先上传字体，再生成妙笔 HTML。这个流程是发布选项，不是 SDK 制作 HTML PPT 的硬约束：
-
-```bash
-node scripts/upload_magic_assets.js --asset-dir sdk/fonts --manifest dist/magic-fonts-manifest.json
-python3 scripts/build_magic_page.py
 ```
 
 ## Lark 视觉模板
