@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lark Product Mocks</title>
+    <link rel="stylesheet" href="../sdk/fonts.css">
+    <link rel="stylesheet" href="./lark-product-mocks.css">
+    <style>
+      body {
+        margin: 0;
+        padding: 32px;
+        background: #111217;
+        font-family: var(--ld-font-ui);
+      }
+
+      .demo-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+      }
+
+      .demo-card {
+        height: 420px;
+        min-width: 0;
+      }
+
+      .demo-card.is-wide {
+        grid-column: span 2;
+        height: 460px;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="demo-grid">
+      <section class="demo-card is-wide lpm-prototype" data-product="chat">
+        <div class="lpm-window">
+          <div class="lpm-chat">
+            <aside class="lpm-chat-list">
+              <div class="lpm-chat-list-header">
+                <div class="lpm-title">消息</div>
+                <div class="lpm-search">搜索联系人、群组或消息</div>
+              </div>
+              <div class="lpm-chat-item is-active">
+                <div class="lpm-avatar">项</div>
+                <div>
+                  <div class="lpm-chat-item-title">项目推进群</div>
+                  <div class="lpm-chat-item-preview">AI 已生成本周待办清单</div>
+                </div>
+                <div class="lpm-chat-time">09:42</div>
+              </div>
+              <div class="lpm-chat-item">
+                <div class="lpm-avatar" data-tone="green">会</div>
+                <div>
+                  <div class="lpm-chat-item-title">会议纪要助手</div>
+                  <div class="lpm-chat-item-preview">3 条行动项等待确认</div>
+                </div>
+                <div class="lpm-chat-time">昨天</div>
+              </div>
+            </aside>
+            <main class="lpm-chat-main">
+              <div class="lpm-topbar">
+                <h2 class="lpm-title">项目推进群</h2>
+                <div class="lpm-toolbar">
+                  <span class="lpm-chip is-blue">群聊</span>
+                  <button class="lpm-button">更多</button>
+                </div>
+              </div>
+              <section class="lpm-chat-thread">
+                <div class="lpm-message">
+                  <div class="lpm-avatar">明</div>
+                  <div class="lpm-message-stack">
+                    <div class="lpm-message-author">明日门店助手</div>
+                    <div class="lpm-message-bubble">已读取妙记，提取 6 个待办。</div>
+                  </div>
+                </div>
+                <div class="lpm-message is-me">
+                  <div class="lpm-avatar" data-tone="green">我</div>
+                  <div class="lpm-message-stack">
+                    <div class="lpm-message-author">我</div>
+                    <div class="lpm-message-bubble">创建任务后同步到这个群。</div>
+                  </div>
+                </div>
+              </section>
+              <div class="lpm-chat-composer">
+                <div class="lpm-composer-box">输入消息...</div>
+                <button class="lpm-button is-primary">发送</button>
+              </div>
+            </main>
+          </div>
+        </div>
+      </section>
+
+      <section class="demo-card lpm-prototype" data-product="doc">
+        <div class="lpm-window">
+          <div class="lpm-doc">
+            <aside class="lpm-doc-outline">
+              <p class="lpm-doc-outline-title">文档大纲</p>
+              <div class="lpm-doc-outline-item is-active">项目目标</div>
+              <div class="lpm-doc-outline-item">执行计划</div>
+              <div class="lpm-doc-outline-item">风险与依赖</div>
+            </aside>
+            <main class="lpm-doc-canvas">
+              <article class="lpm-doc-page">
+                <h1 class="lpm-doc-title">AI 门店运营方案</h1>
+                <div class="lpm-doc-meta">今天 10:24 更新 · 12 人协作</div>
+                <p class="lpm-doc-block">把门店巡检、群消息、任务跟进统一到一个可追踪工作流。</p>
+                <h2 class="lpm-doc-heading">关键结论</h2>
+                <div class="lpm-doc-callout"><span>i</span><span>先覆盖高频场景，再沉淀标准操作。</span></div>
+              </article>
+            </main>
+            <aside class="lpm-doc-side">
+              <div class="lpm-doc-comment">张三：建议补充试点门店数据。</div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="demo-card lpm-prototype" data-product="drive">
+        <div class="lpm-window">
+          <div class="lpm-drive">
+            <aside class="lpm-sidebar">
+              <div class="lpm-brand"><div class="lpm-brand-mark">云</div><div><div class="lpm-title">云盘</div><div class="lpm-subtitle">Drive</div></div></div>
+              <div class="lpm-nav"><div class="lpm-nav-item is-active">最近</div><div class="lpm-nav-item">我的空间</div><div class="lpm-nav-item">共享空间</div></div>
+            </aside>
+            <main class="lpm-drive-main">
+              <div class="lpm-drive-toolbar">
+                <div class="lpm-drive-breadcrumb">云盘 / <strong>项目资料</strong></div>
+                <button class="lpm-button is-primary">上传</button>
+              </div>
+              <div class="lpm-drive-view-tabs">
+                <div class="lpm-drive-view-tab is-active">全部</div>
+                <div class="lpm-drive-view-tab">文档</div>
+                <div class="lpm-drive-view-tab">表格</div>
+              </div>
+              <div class="lpm-drive-list">
+                <table class="lpm-drive-table">
+                  <thead><tr><th>名称</th><th>所有者</th><th>更新时间</th></tr></thead>
+                  <tbody>
+                    <tr><td><div class="lpm-drive-name"><span class="lpm-drive-icon" data-type="folder">夹</span><span class="lpm-drive-file-title">门店运营资料</span></div></td><td>王明</td><td>今天 09:12</td></tr>
+                    <tr><td><div class="lpm-drive-name"><span class="lpm-drive-icon">文</span><span class="lpm-drive-file-title">AI 巡检方案</span></div></td><td>李楠</td><td>昨天 18:20</td></tr>
+                    <tr><td><div class="lpm-drive-name"><span class="lpm-drive-icon" data-type="sheet">表</span><span class="lpm-drive-file-title">试点门店数据</span></div></td><td>张三</td><td>周二 14:08</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </main>
+          </div>
+        </div>
+      </section>
+
+      <section class="demo-card lpm-prototype" data-product="bitable">
+        <div class="lpm-window">
+          <div class="lpm-bitable">
+            <div class="lpm-bitable-tabs">
+              <div class="lpm-bitable-tab is-active">门店清单</div>
+              <div class="lpm-bitable-tab">任务跟进</div>
+            </div>
+            <div class="lpm-bitable-toolbar">
+              <div class="lpm-search">筛选、分组、排序</div>
+              <button class="lpm-button is-primary">新增记录</button>
+            </div>
+            <div class="lpm-bitable-table-wrap">
+              <table class="lpm-bitable-table">
+                <thead>
+                  <tr><th class="lpm-bitable-index">#</th><th>门店</th><th>状态</th><th>负责人</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td class="lpm-bitable-index">1</td><td>上海大融城店</td><td><span class="lpm-status is-green">正常</span></td><td>王明</td></tr>
+                  <tr><td class="lpm-bitable-index">2</td><td>杭州万象汇店</td><td><span class="lpm-status is-orange">跟进中</span></td><td>李楠</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="demo-card lpm-prototype" data-product="meeting">
+        <div class="lpm-window">
+          <div class="lpm-meeting">
+            <main class="lpm-meeting-stage">
+              <div class="lpm-meeting-grid">
+                <div class="lpm-meeting-tile is-speaking"><div class="lpm-meeting-avatar">张</div><div class="lpm-meeting-name">张三</div></div>
+                <div class="lpm-meeting-tile"><div class="lpm-meeting-avatar">李</div><div class="lpm-meeting-name">李楠</div></div>
+                <div class="lpm-meeting-tile"><div class="lpm-meeting-avatar">王</div><div class="lpm-meeting-name">王明</div></div>
+                <div class="lpm-meeting-tile"><div class="lpm-meeting-avatar">AI</div><div class="lpm-meeting-name">纪要助手</div></div>
+              </div>
+              <div class="lpm-meeting-controls">
+                <div class="lpm-meeting-control">M</div>
+                <div class="lpm-meeting-control">C</div>
+                <div class="lpm-meeting-control is-danger">E</div>
+              </div>
+            </main>
+            <aside class="lpm-meeting-side">
+              <h3 class="lpm-meeting-panel-title">实时纪要</h3>
+              <div class="lpm-meeting-transcript">
+                <div class="lpm-meeting-line">张三：本周先覆盖 20 家试点门店。</div>
+                <div class="lpm-meeting-line">AI：已识别 3 条待办。</div>
+              </div>
+              <div class="lpm-meeting-summary">会后自动生成任务并发送到群。</div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="demo-card lpm-prototype" data-product="task">
+        <div class="lpm-window">
+          <div class="lpm-task">
+            <aside class="lpm-sidebar">
+              <div class="lpm-brand"><div class="lpm-brand-mark">任</div><div><div class="lpm-title">任务</div><div class="lpm-subtitle">Task</div></div></div>
+              <div class="lpm-nav"><div class="lpm-nav-item is-active">今天</div><div class="lpm-nav-item">我负责的</div><div class="lpm-nav-item">已完成</div></div>
+            </aside>
+            <main class="lpm-task-list">
+              <section class="lpm-task-section">
+                <h3 class="lpm-task-section-title">今天 <span>3</span></h3>
+                <div class="lpm-task-row"><span class="lpm-task-checkbox"></span><div><div class="lpm-task-title">提取妙记待办</div><div class="lpm-task-meta">10:00 截止</div></div><span class="lpm-task-priority is-high"></span></div>
+                <div class="lpm-task-row is-done"><span class="lpm-task-checkbox">✓</span><div><div class="lpm-task-title">同步项目群</div><div class="lpm-task-meta">已完成</div></div><span class="lpm-task-priority"></span></div>
+              </section>
+            </main>
+          </div>
+        </div>
+      </section>
+
+      <section class="demo-card lpm-prototype" data-product="calendar">
+        <div class="lpm-window">
+          <div class="lpm-calendar">
+            <main class="lpm-calendar-main">
+              <div class="lpm-calendar-header">
+                <h3 class="lpm-title">五月第二周</h3>
+                <button class="lpm-button">今天</button>
+              </div>
+              <div class="lpm-calendar-week">
+                <div></div><div class="lpm-calendar-day">周一</div><div class="lpm-calendar-day">周二</div><div class="lpm-calendar-day">周三</div><div class="lpm-calendar-day">周四</div><div class="lpm-calendar-day">周五</div><div class="lpm-calendar-day">周六</div><div class="lpm-calendar-day">周日</div>
+              </div>
+              <div class="lpm-calendar-grid">
+                <div class="lpm-calendar-time">09:00</div><div class="lpm-calendar-cell"><div class="lpm-calendar-event">项目例会</div></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div>
+                <div class="lpm-calendar-time">10:00</div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"><div class="lpm-calendar-event is-green">门店复盘</div></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div>
+                <div class="lpm-calendar-time">11:00</div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div>
+                <div class="lpm-calendar-time">12:00</div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div>
+                <div class="lpm-calendar-time">13:00</div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"><div class="lpm-calendar-event is-orange">方案评审</div></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div>
+                <div class="lpm-calendar-time">14:00</div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div>
+                <div class="lpm-calendar-time">15:00</div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div>
+                <div class="lpm-calendar-time">16:00</div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div>
+              </div>
+            </main>
+            <aside class="lpm-calendar-side">
+              <div class="lpm-calendar-mini">
+                <div class="lpm-calendar-mini-day">1</div><div class="lpm-calendar-mini-day">2</div><div class="lpm-calendar-mini-day">3</div><div class="lpm-calendar-mini-day">4</div><div class="lpm-calendar-mini-day is-today">5</div><div class="lpm-calendar-mini-day">6</div><div class="lpm-calendar-mini-day">7</div>
+              </div>
+              <div class="lpm-calendar-agenda">
+                <div class="lpm-calendar-agenda-item">09:00 项目例会</div>
+                <div class="lpm-calendar-agenda-item">13:00 方案评审</div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
