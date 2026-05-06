@@ -53,22 +53,6 @@ node scripts/validate_deck.js <html-file> --expect-slides N
 再用浏览器截图看一遍版式。
 ```
 
-### 3. 本地预览
-
-```bash
-git clone https://github.com/vibe-lark/lark-deckkit.git
-cd lark-deckkit
-python3 -m http.server 4173 --bind 127.0.0.1
-```
-
-打开：
-
-```text
-http://127.0.0.1:4173/dist/lark-visual-sample.html
-```
-
-不会用 Git 的话，也可以在 GitHub 页面点 `Code` -> `Download ZIP`，解压后运行上面的本地预览命令。想看最小模板写法，再打开 `http://127.0.0.1:4173/sdk/quickstart.html`。
-
 ## 技术解释
 
 ### 这套规范拆成了什么
@@ -193,6 +177,30 @@ node scripts/validate_deck.js sdk/quickstart.html --expect-slides 3
 ```
 
 `validate_deck.js` 只能检查结构问题。页面好不好看，还是要打开浏览器看截图。
+
+### 本地预览
+
+需要在本地看样板或调试 SDK 时，再运行：
+
+```bash
+git clone https://github.com/vibe-lark/lark-deckkit.git
+cd lark-deckkit
+python3 -m http.server 4173 --bind 127.0.0.1
+```
+
+不会用 Git 的话，也可以在 GitHub 页面点 `Code` -> `Download ZIP`，解压后再运行本地预览命令。
+
+样板页：
+
+```text
+http://127.0.0.1:4173/dist/lark-visual-sample.html
+```
+
+最小模板页：
+
+```text
+http://127.0.0.1:4173/sdk/quickstart.html
+```
 
 ## 目录
 
