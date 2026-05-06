@@ -243,22 +243,21 @@
         ];
       }
 
-      function stageCard({ x, y, w, h, label, title, body, code = "", className = "" }) {
+      function todoItem({ x, y, w, label, title, body, chips = [], className = "" }) {
         const blocks = [
-          panel({ x, y, w, h, className }),
-          text({ x: x + 28, y: y + 28, w: w - 56, h: 28, value: label, size: 20, weight: 720, gradient: "deepBlue" }),
-          text({ x: x + 28, y: y + 72, w: w - 56, h: 40, value: title, size: 30, weight: 740, gradient: "brand" }),
-          text({ x: x + 28, y: y + 128, w: w - 56, h: code ? 64 : h - 150, value: body, size: 21, weight: 480, color: "#aeb7c7", lineHeight: 1.35, className: "cli-muted" }),
+          C.shapeBlock({ x, y, w, h: 94, fill: "rgba(3,10,23,0.62)", radius: "8px", border: "1.1px solid rgba(62,195,247,0.22)", className }),
+          C.shapeBlock({ x: x + 26, y: y + 31, w: 32, h: 32, fill: "rgba(62,195,247,0.12)", radius: "6px", border: "1.2px solid rgba(62,195,247,0.62)" }),
+          text({ x: x + 26, y: y + 33, w: 32, h: 28, value: "✓", size: 22, weight: 760, align: "center", gradient: "deepBlue" }),
+          text({ x: x + 82, y: y + 20, w: 138, h: 28, value: label, size: 20, weight: 720, gradient: "deepBlue" }),
+          text({ x: x + 82, y: y + 50, w: 224, h: 32, value: title, size: 27, weight: 740, gradient: "brand" }),
+          text({ x: x + 322, y: y + 26, w: chips.length ? 376 : w - 356, h: 44, value: body, size: 21, weight: 500, color: "#aeb7c7", lineHeight: 1.3, className: "cli-muted" }),
         ];
-        if (code) {
-          blocks.push(htmlText({
-            x: x + 28,
-            y: y + h - 76,
-            w: w - 56,
-            h: 54,
-            className: "cli-stage-code",
-            html: `<div class="cli-stage-code">${code}</div>`,
-          }));
+        if (chips.length) {
+          chips.forEach((chip, index) => {
+            const chipX = x + 728 + index * 156;
+            blocks.push(C.shapeBlock({ x: chipX, y: y + 29, w: 132, h: 36, fill: "rgba(255,255,255,0.04)", radius: "6px", border: "1px solid rgba(62,195,247,0.30)" }));
+            blocks.push(text({ x: chipX, y: y + 37, w: 132, h: 20, value: chip, size: 15, weight: 620, align: "center", color: "#dceeff", className: "cli-code" }));
+          });
         }
         return blocks;
       }
@@ -356,24 +355,13 @@
             blocks: [
               ...bg(),
               ...title({ title: "用户说目标，Agent 把它拆成飞书动作", subtitle: "CLI 的价值不是展示一条命令，而是让每一步执行都可验证、可继续、可写回。" }),
-              ...(() => {
-                const grid = C.layoutGrid({ x: FRAME.x, y: 286, w: FRAME.w, columns: 4, gap: 38 });
-                const labels = [
-                  { label: "用户目标", title: "一句自然语言", body: "帮我约下周项目复盘，把纪要模板建好，再通知项目群。" },
-                  { label: "Agent 规划", title: "拆成动作计划", body: "先查忙闲，再建日程；随后创建文档模板，最后把链接发到群里。" },
-                  { label: "CLI 执行", title: "按权限调用飞书", body: "每个动作对应明确命令；结果返回后继续下一步。", code: '<span class="muted">$</span> calendar +freebusy<br><span class="muted">$</span> docs +create<br><span class="muted">$</span> im messages-reply' },
-                  { label: "飞书回写", title: "落到真实空间", body: "日程、文档、群消息都在飞书里生成，团队直接接着协作。" },
-                ];
-                return labels.flatMap((item, index) => {
-                  const col = grid.col(index);
-                  return [
-                    ...stageCard({ x: col.x, y: grid.y, w: col.w, h: 284, label: item.label, title: item.title, body: item.body, code: item.code, className: `cli-rise-${["a", "b", "c", "d"][index]}` }),
-                    ...(index < 3 ? [flowLine({ x: col.x + col.w + 12, y: 415, w: 14, id: `what-${index}` })] : []),
-                  ];
-                });
-              })(),
-              panel({ x: 238, y: 660, w: 1124, h: 86, border: "rgba(62,195,247,0.34)", fill: "rgba(62,195,247,0.045)" }),
-              text({ x: 278, y: 684, w: 1044, h: 34, value: "你看到的是目标，Agent 看到的是一组可执行、可检查、可恢复的飞书操作。", size: 26, weight: 620, align: "center", gradient: "soft" }),
+              panel({ x: 238, y: 250, w: 1124, h: 528, border: "rgba(62,195,247,0.34)", fill: "rgba(255,255,255,0.035)" }),
+              text({ x: 290, y: 286, w: 500, h: 34, value: "Agent 生成的执行待办", size: 30, weight: 740, gradient: "brand" }),
+              text({ x: 290, y: 326, w: 930, h: 28, value: "自然语言目标会被拆成一组可以顺序执行、可以检查结果的飞书任务。", size: 20, weight: 480, color: "#aeb7c7", className: "cli-muted" }),
+              ...todoItem({ x: 292, y: 370, w: 1016, label: "用户目标", title: "收到需求", body: "帮我约下周项目复盘，把纪要模板建好，再通知项目群。", className: "cli-rise-a" }),
+              ...todoItem({ x: 292, y: 470, w: 1016, label: "Agent 规划", title: "拆成步骤", body: "查忙闲、建日程、创建文档模板、把链接发到群里。", className: "cli-rise-b" }),
+              ...todoItem({ x: 292, y: 570, w: 1016, label: "CLI 执行", title: "调用命令", body: "按权限调用飞书能力，拿到结构化结果后继续执行。", chips: ["calendar", "docs", "im"], className: "cli-rise-c" }),
+              ...todoItem({ x: 292, y: 670, w: 1016, label: "飞书回写", title: "完成同步", body: "日程、文档、群消息都落到真实工作空间，团队直接接着协作。", className: "cli-rise-d" }),
             ],
           }),
           T.visualLayout({
@@ -400,7 +388,6 @@
                   ];
                 });
               })(),
-              text({ x: 180, y: 754, w: 1240, h: 34, value: "关键点：CLI 不替代 Agent 思考，它把 Agent 的计划变成真实飞书操作。", size: 25, weight: 560, align: "center", color: "#aeb7c7", className: "cli-muted" }),
             ],
           }),
         ],

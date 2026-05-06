@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lark DeckKit Quickstart</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./fonts.css" />
+    <link rel="stylesheet" href="./lark-slides.css" />
+  </head>
+  <body>
+    <div id="deck" data-lark-deck></div>
+    <script src="./lark-slides.js"></script>
+    <script src="./templates.js"></script>
+    <script>
+      const deck = LarkSlideTemplates.createDeckFromOutline({
+        title: "快速生成高质量 HTML PPT",
+        description: "从结构化内容直接生成可演示页面。",
+        slides: [
+          {
+            type: "statement",
+            kicker: "Lark DeckKit",
+            title: "先确定叙事，再选择稳定模板",
+            subtitle: "AI 只需要填结构化内容，版式、字体、渐变和画布规则由 SDK 接管。",
+          },
+          {
+            type: "todo",
+            title: "一页内容先拆成可检查待办",
+            subtitle: "适合介绍 Agent、CLI、产品流程或项目计划。",
+            items: [
+              { label: "目标", title: "读材料", body: "读取文档、会议纪要或需求背景，提炼主要叙事。" },
+              { label: "规划", title: "拆页面", body: "把信息拆成封面、流程、案例、价值四类页面。" },
+              { label: "生成", title: "套模板", body: "优先使用 statement、todo、caseFlow 等稳定模板。", chips: ["statement", "todo", "flow"] },
+              { label: "检查", title: "跑验证", body: "用 validateDeckSpec 和 validate_deck.js 检查页数、密度和入口。" },
+            ],
+          },
+          {
+            type: "caseFlow",
+            title: "从一句需求到一套演示稿",
+            subtitle: "保持页面可编辑，不回退成截图播放壳。",
+            prompt: "根据这篇文档做一套 5 页以内的 HTML PPT",
+            steps: [
+              { title: "抽主线", body: "先确定听众、目标和页面顺序。" },
+              { title: "填结构", body: "把每页内容写成 title、subtitle、items、steps。" },
+              { title: "生成页面", body: "由模板控制对齐、字号、颜色和间距。" },
+              { title: "验证预览", body: "浏览器截图检查，再执行验证脚本。", command: "node scripts/validate_deck.js sdk/quickstart.html --expect-slides 3" },
+            ],
+          },
+        ],
+      });
+
+      const validation = LarkSlideTemplates.validateDeckSpec(deck);
+      if (!validation.ok) console.warn("Deck validation failed", validation.issues);
+
+      LarkSlides.createDeck({ mount: "#deck", deck });
+    </script>
+  </body>
+</html>
