@@ -28,10 +28,12 @@ cd lark-deckkit
 开始前先读取这两个文件：
 - design.md：https://github.com/vibe-lark/lark-deckkit/blob/main/design.md
 - sdk/README.md：https://github.com/vibe-lark/lark-deckkit/blob/main/sdk/README.md
+- 如果要做飞书产品原型示意，再读取 product-mocks/README.md：https://github.com/vibe-lark/lark-deckkit/blob/main/product-mocks/README.md
 
 如果已经 clone 到本地，就直接读取：
 - ./design.md
 - ./sdk/README.md
+- ./product-mocks/README.md
 
 如果只做单页 HTML，也可以用 CDN 一键引入：
 <script src="https://cdn.jsdelivr.net/gh/vibe-lark/lark-deckkit@main/sdk/lark-deckkit-loader.js"></script>
@@ -61,6 +63,7 @@ node scripts/validate_deck.js <html-file> --expect-slides N
 
 - `design.md`：写给人和 AI 看的设计规范。包括字体、字号、渐变、留白、卡片形状、页面密度。
 - `sdk/`：真正做 HTML PPT 的 SDK。负责播放、缩放、翻页、全屏、模板和基础组件。
+- `product-mocks/`：飞书产品原型 CSS 扩展。适合在 PPT 里画可编辑的聊天、文档、多维表格、会议、任务、日历界面示意。
 - `dist/lark-visual-sample.html`：按这套规范复刻出来的完整样板。
 
 做新 PPT 时，不建议从空白 HTML 写起。先让 AI 生成结构化内容，再交给模板排版。这样稳定很多。
@@ -133,6 +136,50 @@ node scripts/validate_deck.js <html-file> --expect-slides N
 ```
 
 正式项目建议把 `@main` 换成固定版本或 commit hash，避免线上页面跟着主分支变化。
+
+### 飞书产品原型 CSS
+
+如果 PPT 里需要展示飞书产品功能，不建议放整页截图。可以引入 `product-mocks`，用普通 HTML 画可编辑的产品界面。产品原型默认按飞书页面的“中黑”观感设置字重，具体 token 在 `product-mocks/tokens.css`。
+
+```html
+<link rel="stylesheet" href="./sdk/fonts.css" />
+<link rel="stylesheet" href="./product-mocks/lark-product-mocks.css" />
+```
+
+然后使用 `.lpm-*` 类名：
+
+```html
+<div class="lpm-prototype" style="width: 960px; height: 540px;">
+  <div class="lpm-window">
+    <main class="lpm-chat">
+      <aside class="lpm-chat-list">
+        <div class="lpm-chat-item is-active">
+          <div class="lpm-avatar">项</div>
+          <div>
+            <div class="lpm-chat-item-title">项目推进群</div>
+            <div class="lpm-chat-item-preview">AI 已生成本周待办清单</div>
+          </div>
+          <div class="lpm-chat-time">09:42</div>
+        </div>
+      </aside>
+      <section class="lpm-chat-main">
+        <div class="lpm-topbar"><h3 class="lpm-title">项目推进群</h3></div>
+        <div class="lpm-chat-thread">
+          <div class="lpm-message">
+            <div class="lpm-avatar">明</div>
+            <div class="lpm-message-stack">
+              <div class="lpm-message-author">明日门店助手</div>
+              <div class="lpm-message-bubble">已提取 6 个待办。</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</div>
+```
+
+目前覆盖：飞书聊天、飞书云盘、飞书文档、飞书多维表格、飞书会议、飞书任务、飞书日历。样例见 `product-mocks/example.html`。
 
 ### SDK 里有哪些入口
 
@@ -219,6 +266,11 @@ http://127.0.0.1:4173/sdk/quickstart.html
 │   ├── templates.js
 │   ├── quickstart.html
 │   └── README.md
+├── product-mocks/
+│   ├── tokens.css
+│   ├── lark-product-mocks.css
+│   ├── example.html
+│   └── products/
 ├── scripts/
 │   ├── convert_pptx_to_html.py
 │   └── validate_deck.js

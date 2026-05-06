@@ -1,0 +1,65 @@
+:root {
+  --lpm-font: var(--ld-font-zh, "FZLanTingHeiPro_GB18030", "Inter", "PingFang SC", "Microsoft YaHei", Arial, sans-serif);
+  --lpm-font-medium: "FZLanTingHeiPro_GB18030 Medium", var(--lpm-font);
+  --lpm-font-zh: var(--ld-font-zh, "FZLanTingHeiPro_GB18030", "PingFang SC", "Microsoft YaHei", Arial, sans-serif);
+  --lpm-weight-body: 500;
+  --lpm-weight-label: 500;
+  --lpm-weight-strong: 600;
+  --lpm-weight-title: 650;
+  --lpm-weight-display: 760;
+  --lpm-blue: #1456f0;
+  --lpm-blue-hover: #0f48d8;
+  --lpm-blue-soft: #e8f3ff;
+  --lpm-cyan: #3ec3f7;
+  --lpm-green: #14b56b;
+  --lpm-orange: #ff8f1f;
+  --lpm-red: #f54a45;
+  --lpm-purple: #7b61ff;
+  --lpm-ink: #1f2329;
+  --lpm-text: #343943;
+  --lpm-secondary: #646a73;
+  --lpm-tertiary: #8f959e;
+  --lpm-muted: #c9ced6;
+  --lpm-border: #dee3eb;
+  --lpm-border-soft: #edf1f7;
+  --lpm-bg: #f6f8fb;
+  --lpm-surface: #ffffff;
+  --lpm-surface-soft: #fafbfc;
+  --lpm-surface-blue: #f4f9ff;
+  --lpm-shadow-sm: 0 2px 8px rgba(31, 35, 41, 0.06);
+  --lpm-shadow-md: 0 8px 28px rgba(31, 35, 41, 0.10);
+  --lpm-shadow-pop: 0 18px 52px rgba(31, 35, 41, 0.16);
+  --lpm-radius-xs: 4px;
+  --lpm-radius-sm: 6px;
+  --lpm-radius-md: 8px;
+  --lpm-radius-lg: 12px;
+  --lpm-radius-xl: 16px;
+  --lpm-space-1: 4px;
+  --lpm-space-2: 8px;
+  --lpm-space-3: 12px;
+  --lpm-space-4: 16px;
+  --lpm-space-5: 20px;
+  --lpm-space-6: 24px;
+  --lpm-space-8: 32px;
+  --lpm-space-10: 40px;
+  --lpm-line: 1px solid var(--lpm-border);
+  --lpm-line-soft: 1px solid var(--lpm-border-soft);
+  --lpm-focus: 0 0 0 3px rgba(20, 86, 240, 0.18);
+}
+
+.lpm-dark {
+  --lpm-ink: #f7f8fb;
+  --lpm-text: #e8ebf2;
+  --lpm-secondary: #b8bfca;
+  --lpm-tertiary: #858b96;
+  --lpm-muted: rgba(255, 255, 255, 0.28);
+  --lpm-border: rgba(255, 255, 255, 0.14);
+  --lpm-border-soft: rgba(255, 255, 255, 0.08);
+  --lpm-bg: #111217;
+  --lpm-surface: #171a21;
+  --lpm-surface-soft: #1f232c;
+  --lpm-surface-blue: rgba(20, 86, 240, 0.16);
+  --lpm-shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.18);
+  --lpm-shadow-md: 0 12px 34px rgba(0, 0, 0, 0.28);
+  --lpm-shadow-pop: 0 24px 58px rgba(0, 0, 0, 0.42);
+}

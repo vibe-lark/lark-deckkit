@@ -7,6 +7,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT / "dist"
 SDK = ROOT / "sdk"
+PRODUCT_MOCKS = ROOT / "product-mocks"
 
 
 def assert_loads_before(testcase, html, first, second):
@@ -218,6 +219,66 @@ class GeneratedArtifactsTest(unittest.TestCase):
         self.assertIn("scripts/validate_deck.js", readme)
         self.assertIn("https://bytedance.larkoffice.com/wiki/PdkgwdJO9iKS49k57pDcEcGxnad", readme)
         self.assertIn("仓库里不需要提交原始 PPTX", readme)
+
+    def test_product_mocks_css_package_covers_lark_product_prototypes(self):
+        package_readme = PRODUCT_MOCKS / "README.md"
+        tokens = PRODUCT_MOCKS / "tokens.css"
+        entry = PRODUCT_MOCKS / "lark-product-mocks.css"
+        example = PRODUCT_MOCKS / "example.html"
+        product_files = {
+            "chat": PRODUCT_MOCKS / "products" / "chat.css",
+            "drive": PRODUCT_MOCKS / "products" / "drive.css",
+            "doc": PRODUCT_MOCKS / "products" / "doc.css",
+            "bitable": PRODUCT_MOCKS / "products" / "bitable.css",
+            "meeting": PRODUCT_MOCKS / "products" / "meeting.css",
+            "task": PRODUCT_MOCKS / "products" / "task.css",
+            "calendar": PRODUCT_MOCKS / "products" / "calendar.css",
+        }
+
+        for path in [package_readme, tokens, entry, example, *product_files.values()]:
+            self.assertTrue(path.exists(), f"missing {path.relative_to(ROOT)}")
+
+        token_css = tokens.read_text(encoding="utf-8")
+        entry_css = entry.read_text(encoding="utf-8")
+        readme = package_readme.read_text(encoding="utf-8")
+        html = example.read_text(encoding="utf-8")
+        root_readme = (ROOT / "README.md").read_text(encoding="utf-8")
+        product_css = entry_css + "\n" + "\n".join(path.read_text(encoding="utf-8") for path in product_files.values())
+
+        for token in [
+            "--lpm-font",
+            "--lpm-blue",
+            "--lpm-radius-md",
+            "--lpm-shadow-md",
+            "--lpm-weight-body",
+            "--lpm-weight-title",
+            ".lpm-dark",
+        ]:
+            self.assertIn(token, token_css)
+
+        for product, path in product_files.items():
+            self.assertIn(f'@import url("./products/{product}.css")', entry_css)
+            self.assertIn(f'data-product="{product}"', html)
+
+        for selector in [
+            ".lpm-prototype",
+            ".lpm-window",
+            ".lpm-chat",
+            ".lpm-message-bubble",
+            ".lpm-drive-table",
+            ".lpm-doc-page",
+            ".lpm-bitable-table",
+            ".lpm-meeting-tile",
+            ".lpm-task-row",
+            ".lpm-calendar-event",
+        ]:
+            self.assertIn(selector, product_css)
+
+        self.assertIn("飞书产品原型", readme)
+        self.assertIn("不是飞书线上 CSS 的复制版", readme)
+        self.assertIn("中黑", readme)
+        self.assertIn("lark-product-mocks.css", root_readme)
+        self.assertIn("product-mocks/example.html", root_readme)
 
     def test_public_preview_entrypoints_are_cloud_ready(self):
         index = (ROOT / "index.html").read_text(encoding="utf-8")
