@@ -19,6 +19,12 @@ __pycache__/
 # Local screenshots and smoke-test artifacts
 *.log
 
+# Browser-extracted real product mock artifacts.
+# These can contain computed styles from logged-in Feishu/Lark pages and should
+# stay local unless explicitly sanitized for an internal-only repo.
+product-mocks/generated/
+product-mocks/captures/
+
 # Oversized offline artifact. Regenerate with:
 # python3 scripts/build_magic_preview.py
 dist/lark-deckkit-preview.html

@@ -121,3 +121,380 @@
   border: 1px solid rgba(62, 195, 247, 0.30);
   border-radius: var(--lpm-radius-md);
 }
+
+/* First-screen Feishu Meeting reference layout. */
+.lpm-meeting-live {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  color: #1f2329;
+  background: #f5f5f9;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.lpm-meeting-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 34px;
+  padding: 0 18px;
+  color: #1f2329;
+  background: #f5f5f9;
+  font-size: 14px;
+}
+
+.lpm-meeting-topbar > div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.lpm-meeting-signal {
+  width: 18px;
+  height: 16px;
+  background:
+    linear-gradient(#21c15e, #21c15e) 2px 10px / 3px 6px no-repeat,
+    linear-gradient(#21c15e, #21c15e) 8px 6px / 3px 10px no-repeat,
+    linear-gradient(#21c15e, #21c15e) 14px 2px / 3px 14px no-repeat;
+}
+
+.lpm-meeting-canvas {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  margin: 0 8px;
+  overflow: hidden;
+  background: #f1f3f4;
+  border-radius: 10px 10px 0 0;
+}
+
+.lpm-meeting-photo {
+  background:
+    radial-gradient(circle at 50% 28%, #222 0 12%, transparent 13%),
+    radial-gradient(circle at 50% 47%, #f1b46d 0 18%, transparent 19%),
+    linear-gradient(180deg, #d8ded6 0 45%, #bdd3d0 45% 70%, #92b782 70% 100%);
+  background-color: #d7d9da;
+  border-radius: 50%;
+}
+
+.lpm-meeting-photo.is-main {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 260px;
+  height: 260px;
+  transform: translate(-50%, -52%);
+}
+
+.lpm-meeting-thumb {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 224px;
+  height: 124px;
+  background: rgba(255, 255, 255, 0.72);
+  border-radius: 10px;
+  box-shadow: 0 10px 34px rgba(31, 35, 41, 0.08);
+}
+
+.lpm-meeting-photo.is-small {
+  width: 64px;
+  height: 64px;
+  margin: 26px auto 0;
+}
+
+.lpm-meeting-thumb span,
+.lpm-meeting-nameplate {
+  display: inline-flex;
+  align-items: center;
+  height: 20px;
+  padding: 0 5px;
+  color: #1f2329;
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid #dee0e3;
+  border-radius: 4px;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.lpm-meeting-thumb span {
+  position: absolute;
+  left: 4px;
+  bottom: 4px;
+}
+
+.lpm-meeting-nameplate {
+  position: absolute;
+  left: 8px;
+  bottom: 8px;
+  gap: 3px;
+}
+
+.lpm-meeting-nameplate .lpm-icon {
+  color: #f54a45;
+}
+
+.lpm-meeting-bottom {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  height: 60px;
+  padding: 0 18px;
+  background: #ffffff;
+}
+
+.lpm-meeting-reactions,
+.lpm-meeting-main-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.lpm-meeting-reactions button,
+.lpm-meeting-main-controls button,
+.lpm-meeting-more {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 32px;
+  min-width: 32px;
+  padding: 0 10px;
+  color: #1f2329;
+  background: #f1f3f4;
+  border: 0;
+  border-radius: 6px;
+  font: inherit;
+}
+
+.lpm-meeting-reactions button:nth-child(2),
+.lpm-meeting-reactions button:nth-child(3) {
+  color: #ff5a00;
+  font-style: italic;
+  font-weight: 700;
+}
+
+.lpm-meeting-main-controls {
+  justify-self: center;
+}
+
+.lpm-meeting-main-controls .is-danger {
+  color: #ffffff;
+  background: #f54a45;
+}
+
+.lpm-meeting-more {
+  justify-self: end;
+}
+
+/* Ended meeting / AI minutes reference layout. */
+.lpm-meeting-live.lpm-meeting-ended {
+  display: grid;
+  grid-template-columns: 337px minmax(0, 1fr);
+  gap: 0;
+  padding: 6px 6px 6px 0;
+  color: #1f2329;
+  background: #f5f6fa;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.lpm-meeting-ended .lpm-meeting-ended-left {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-width: 0;
+  height: 100%;
+  background:
+    radial-gradient(circle at 50% 44%, rgba(51, 112, 255, 0.04), transparent 0 118px),
+    #f8f9fb;
+  border-right: 1px solid #eff0f1;
+}
+
+.lpm-meeting-ended-empty {
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+  color: #8f959e;
+  font-size: 14px;
+  line-height: 20px;
+  transform: translateY(-14px);
+}
+
+.lpm-meeting-ended-empty p {
+  margin: 0;
+}
+
+.lpm-meeting-ended-illustration {
+  position: relative;
+  width: 112px;
+  height: 86px;
+}
+
+.lpm-meeting-ended-illustration::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 24px;
+  width: 72px;
+  height: 42px;
+  background: #dce3ee;
+  border-radius: 10px;
+  transform: rotate(-8deg);
+}
+
+.lpm-meeting-ended-illustration::after {
+  content: "";
+  position: absolute;
+  left: 46px;
+  top: 34px;
+  width: 0;
+  height: 0;
+  border-top: 11px solid transparent;
+  border-bottom: 11px solid transparent;
+  border-left: 18px solid #8f9bb1;
+}
+
+.lpm-meeting-ended-illustration span,
+.lpm-meeting-ended-illustration i {
+  position: absolute;
+  display: block;
+  border-radius: 999px;
+}
+
+.lpm-meeting-ended-illustration span {
+  left: 0;
+  top: 42px;
+  width: 86px;
+  height: 28px;
+  border: 5px solid #3370ff;
+  border-right-color: transparent;
+  transform: rotate(20deg);
+}
+
+.lpm-meeting-ended-illustration i {
+  right: 0;
+  top: 22px;
+  width: 12px;
+  height: 32px;
+  background: linear-gradient(180deg, #33d6a6, #3370ff);
+  transform: rotate(28deg);
+}
+
+.lpm-meeting-minutes-card {
+  position: relative;
+  min-width: 0;
+  height: 100%;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #eff0f1;
+  border-radius: 8px;
+}
+
+.lpm-meeting-minutes-content {
+  width: 697px;
+  margin: 214px 0 0 80px;
+  color: #1f2329;
+}
+
+.lpm-meeting-minutes-content header {
+  margin-bottom: 36px;
+}
+
+.lpm-meeting-minutes-content h1 {
+  margin: 0 0 4px;
+  color: #1f2329;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+.lpm-meeting-minutes-content header p {
+  margin: 0;
+  color: #8f959e;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.lpm-meeting-minutes-content h2 {
+  margin: 0 0 18px;
+  color: #1f2329;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 26px;
+}
+
+.lpm-meeting-minutes-content section p,
+.lpm-meeting-minutes-content li {
+  margin: 0;
+  color: #2b2f36;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.lpm-meeting-minutes-content ul {
+  display: grid;
+  gap: 8px;
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lpm-meeting-minutes-content li {
+  position: relative;
+  padding-left: 16px;
+}
+
+.lpm-meeting-minutes-content li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 4px;
+  height: 4px;
+  background: #3370ff;
+  border-radius: 50%;
+}
+
+.lpm-meeting-minutes-content strong {
+  font-weight: 600;
+}
+
+.lpm-meeting-minutes-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  height: 32px;
+  margin-top: 18px;
+  padding: 0 14px;
+  color: #3370ff;
+  background: #ffffff;
+  border: 1px solid #eff0f1;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(31, 35, 41, 0.10);
+  font: inherit;
+  font-size: 13px;
+  line-height: 32px;
+}
+
+.lpm-meeting-minutes-fab {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  color: #3370ff;
+  background: #ffffff;
+  border: 1px solid #dee0e3;
+  border-radius: 50%;
+  box-shadow: 0 6px 18px rgba(31, 35, 41, 0.12);
+}
+
+.lpm-meeting-ended .lpm-meeting-bottom {
+  display: none;
+}

@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lark Product Mock Preview</title>
+    <link rel="stylesheet" href="../sdk/fonts.css">
+    <link rel="stylesheet" href="./lark-product-mocks.css">
+    <style>
+      body {
+        margin: 0;
+        background: #ffffff;
+        font-family: var(--lpm-font);
+      }
+
+      .demo-card,
+      .lpm-single-preview {
+        width: 1200px;
+        height: 846px;
+        min-width: 0;
+        overflow: hidden;
+        background: #ffffff;
+        border: 0;
+      }
+
+      .lpm-preview-error {
+        display: grid;
+        place-items: center;
+        width: 100vw;
+        height: 100vh;
+        color: #646a73;
+        background: #f5f6f7;
+        font-size: 14px;
+        line-height: 22px;
+        text-align: center;
+      }
+
+      .lpm-preview-error strong {
+        display: block;
+        margin-bottom: 8px;
+        color: #1f2329;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      const PRODUCT_LABELS = {
+        chat: "飞书消息",
+        doc: "飞书文档",
+        drive: "飞书云盘",
+        bitable: "飞书多维表格",
+        meeting: "飞书会议",
+        task: "飞书任务",
+        calendar: "飞书日历"
+      };
+
+      function productFromUrl() {
+        const params = new URLSearchParams(window.location.search);
+        const queryProduct = params.get("product");
+        if (queryProduct) return queryProduct;
+
+        const match = window.location.pathname.match(/\/previews\/([a-z-]+)\.html$/);
+        return match ? match[1] : "chat";
+      }
+
+      function showError(message) {
+        document.body.innerHTML = "";
+        const error = document.createElement("main");
+        error.className = "lpm-preview-error";
+        error.innerHTML = `<div><strong>预览加载失败</strong>${message}</div>`;
+        document.body.appendChild(error);
+      }
+
+      async function renderPreview() {
+        const product = productFromUrl();
+        const label = PRODUCT_LABELS[product];
+        if (!label) {
+          showError(`未知产品：${product}`);
+          return;
+        }
+
+        let html;
+        try {
+          const response = await fetch("./example.html", { cache: "no-cache" });
+          if (!response.ok) throw new Error(`HTTP ${response.status}`);
+          html = await response.text();
+        } catch (error) {
+          showError("请通过本地静态服务访问，例如 http://127.0.0.1:4175/product-mocks/preview.html?product=chat");
+          return;
+        }
+
+        const source = new DOMParser().parseFromString(html, "text/html");
+        const sprite = source.querySelector(".lpm-icon-sprite");
+        const card = source.querySelector(`[data-product="${product}"]`);
+        if (!card) {
+          showError(`example.html 中没有 data-product="${product}" 的区块`);
+          return;
+        }
+
+        document.title = `${label} - Lark Product Mock Preview`;
+        document.body.innerHTML = "";
+        if (sprite) document.body.appendChild(sprite.cloneNode(true));
+
+        const preview = card.cloneNode(true);
+        preview.classList.add("lpm-single-preview");
+        document.body.appendChild(preview);
+      }
+
+      renderPreview();
+    </script>
+  </body>
+</html>

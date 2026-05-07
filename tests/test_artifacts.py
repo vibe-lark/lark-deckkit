@@ -225,6 +225,11 @@ class GeneratedArtifactsTest(unittest.TestCase):
         tokens = PRODUCT_MOCKS / "tokens.css"
         entry = PRODUCT_MOCKS / "lark-product-mocks.css"
         example = PRODUCT_MOCKS / "example.html"
+        preview = PRODUCT_MOCKS / "preview.html"
+        extractor = PRODUCT_MOCKS / "real-css-extractor.js"
+        extract_script = ROOT / "scripts" / "extract_real_product_mock.py"
+        simulate_script = ROOT / "scripts" / "simulate_real_product_mock.py"
+        gitignore = ROOT / ".gitignore"
         product_files = {
             "chat": PRODUCT_MOCKS / "products" / "chat.css",
             "drive": PRODUCT_MOCKS / "products" / "drive.css",
@@ -234,14 +239,23 @@ class GeneratedArtifactsTest(unittest.TestCase):
             "task": PRODUCT_MOCKS / "products" / "task.css",
             "calendar": PRODUCT_MOCKS / "products" / "calendar.css",
         }
+        preview_files = {
+            product: PRODUCT_MOCKS / "previews" / f"{product}.html"
+            for product in product_files
+        }
 
-        for path in [package_readme, tokens, entry, example, *product_files.values()]:
+        for path in [package_readme, tokens, entry, example, preview, extractor, extract_script, simulate_script, *product_files.values(), *preview_files.values()]:
             self.assertTrue(path.exists(), f"missing {path.relative_to(ROOT)}")
 
         token_css = tokens.read_text(encoding="utf-8")
         entry_css = entry.read_text(encoding="utf-8")
         readme = package_readme.read_text(encoding="utf-8")
         html = example.read_text(encoding="utf-8")
+        preview_html = preview.read_text(encoding="utf-8")
+        extractor_js = extractor.read_text(encoding="utf-8")
+        extract_script_py = extract_script.read_text(encoding="utf-8")
+        simulate_script_py = simulate_script.read_text(encoding="utf-8")
+        gitignore_text = gitignore.read_text(encoding="utf-8")
         root_readme = (ROOT / "README.md").read_text(encoding="utf-8")
         product_css = entry_css + "\n" + "\n".join(path.read_text(encoding="utf-8") for path in product_files.values())
 
@@ -263,6 +277,7 @@ class GeneratedArtifactsTest(unittest.TestCase):
         for product, path in product_files.items():
             self.assertIn(f'@import url("./products/{product}.css")', entry_css)
             self.assertIn(f'data-product="{product}"', html)
+            self.assertIn(f"product={product}", preview_files[product].read_text(encoding="utf-8"))
 
         for selector in [
             ".lpm-prototype",
@@ -275,14 +290,59 @@ class GeneratedArtifactsTest(unittest.TestCase):
             ".lpm-meeting-tile",
             ".lpm-task-row",
             ".lpm-calendar-event",
+            ".lpm-messenger",
+            ".lpm-messenger-rail-footer",
+            ".lpm-drive-home-head",
+            ".lpm-drive-action-card",
+            ".lpm-docx-toolbar",
+            ".lpm-docx-outline",
+            ".lpm-calendar-sidebar",
+            ".lpm-calendar-time-grid",
+            ".lpm-icon",
+            ".lpm-bitable-real",
+            ".lpm-bitable-docbar",
+            ".lpm-task-real",
+            ".lpm-task-sidebar",
+            ".lpm-meeting-live",
+            ".lpm-meeting-bottom",
         ]:
             self.assertIn(selector, product_css)
 
+        for snippet in [
+            'id="lpm-i-search"',
+            'href="#lpm-i-table"',
+            'href="#lpm-i-mic"',
+            'href="#lpm-i-check-square"',
+        ]:
+            self.assertIn(snippet, html)
+
         self.assertIn("飞书产品原型", readme)
-        self.assertIn("不是飞书线上 CSS 的复制版", readme)
+        self.assertIn("不复制飞书私有 DOM", readme)
+        self.assertIn("真实页面样式抽取", readme)
+        self.assertIn("单产品预览", readme)
+        self.assertIn("preview.html?product=chat", readme)
+        self.assertIn("simulate_real_product_mock.py", readme)
+        self.assertIn("保留抽取页的飞书导航", readme)
         self.assertIn("中黑", readme)
+        self.assertIn("PRODUCT_LABELS", preview_html)
+        self.assertIn('fetch("./example.html"', preview_html)
+        self.assertIn("data-product", preview_html)
         self.assertIn("lark-product-mocks.css", root_readme)
         self.assertIn("product-mocks/example.html", root_readme)
+        self.assertIn("LarkDeckKitRealCssExtractor", extractor_js)
+        self.assertIn("getComputedStyle", extractor_js)
+        self.assertIn("renderStandalone", extractor_js)
+        self.assertIn('data-ldk-original-tag", originalTag', extractor_js)
+        self.assertIn("browser-harness", extract_script_py)
+        self.assertIn("TASK_SIMULATED_TEXT", simulate_script_py)
+        self.assertIn("ldk-sim-task-main", simulate_script_py)
+        self.assertIn("来自飞书项目", simulate_script_py)
+        self.assertIn("任务标题", simulate_script_py)
+        self.assertNotIn("批量操作", simulate_script_py)
+        self.assertIn("PLACEHOLDER_RE.sub", simulate_script_py)
+        self.assertNotIn("from lxml", simulate_script_py)
+        self.assertIn("product-mocks/generated/", gitignore_text)
+        self.assertIn("product-mocks/captures/", gitignore_text)
 
     def test_public_preview_entrypoints_are_cloud_ready(self):
         index = (ROOT / "index.html").read_text(encoding="utf-8")

@@ -9,8 +9,8 @@
     <style>
       body {
         margin: 0;
-        padding: 32px 0 64px;
-        background: #f5f6f7;
+        padding: 0;
+        background: #ffffff;
         font-family: var(--lpm-font);
       }
 
@@ -19,7 +19,7 @@
         grid-template-columns: minmax(0, 1fr);
         gap: 32px;
         width: 1200px;
-        margin: 0 auto;
+        margin: 0 auto 64px;
       }
 
       .demo-card {
@@ -27,7 +27,7 @@
         min-width: 0;
         overflow: hidden;
         background: #fff;
-        border: 1px solid #dee0e3;
+        border: 0;
       }
 
       .demo-card.is-wide {
@@ -37,59 +37,215 @@
     </style>
   </head>
   <body>
+    <svg class="lpm-icon-sprite" aria-hidden="true">
+      <symbol id="lpm-i-menu" viewBox="0 0 24 24"><path d="M4 12h16"/><path d="M4 6h16"/><path d="M4 18h16"/></symbol>
+      <symbol id="lpm-i-home" viewBox="0 0 24 24"><path d="m3 10 9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></symbol>
+      <symbol id="lpm-i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+      <symbol id="lpm-i-plus" viewBox="0 0 24 24"><path d="M12 5v14"/><path d="M5 12h14"/></symbol>
+      <symbol id="lpm-i-more" viewBox="0 0 24 24"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></symbol>
+      <symbol id="lpm-i-settings" viewBox="0 0 24 24"><path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1A1.7 1.7 0 0 0 4.6 15 1.7 1.7 0 0 0 3 14H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9L4.3 7a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H9a1.7 1.7 0 0 0 1-1.6V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.6 1.7 1.7 0 0 0 1.9-.3l.1-.1A2 2 0 1 1 19.8 7l-.1.1a1.7 1.7 0 0 0-.3 1.9v.1a1.7 1.7 0 0 0 1.6 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1Z"/></symbol>
+      <symbol id="lpm-i-message" viewBox="0 0 24 24"><path d="M21 15a4 4 0 0 1-4 4H7l-4 4V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4Z"/></symbol>
+      <symbol id="lpm-i-bot" viewBox="0 0 24 24"><path d="M12 8V4"/><rect x="4" y="8" width="16" height="12" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M9 13h.01"/><path d="M15 13h.01"/><path d="M9 17h6"/></symbol>
+      <symbol id="lpm-i-video" viewBox="0 0 24 24"><path d="m22 8-6 4 6 4V8Z"/><rect x="2" y="6" width="14" height="12" rx="2"/></symbol>
+      <symbol id="lpm-i-calendar" viewBox="0 0 24 24"><path d="M8 2v4"/><path d="M16 2v4"/><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/></symbol>
+      <symbol id="lpm-i-file" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></symbol>
+      <symbol id="lpm-i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9"/><path d="M16 3.1a4 4 0 0 1 0 7.8"/></symbol>
+      <symbol id="lpm-i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+      <symbol id="lpm-i-check-square" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="m9 12 2 2 4-4"/></symbol>
+      <symbol id="lpm-i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></symbol>
+      <symbol id="lpm-i-table" viewBox="0 0 24 24"><path d="M3 3h18v18H3Z"/><path d="M3 9h18"/><path d="M3 15h18"/><path d="M9 3v18"/><path d="M15 3v18"/></symbol>
+      <symbol id="lpm-i-folder" viewBox="0 0 24 24"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7l-2-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2Z"/></symbol>
+      <symbol id="lpm-i-filter" viewBox="0 0 24 24"><path d="M22 3H2l8 9.5V20l4 2v-9.5Z"/></symbol>
+      <symbol id="lpm-i-sort" viewBox="0 0 24 24"><path d="m7 15 5 5 5-5"/><path d="M12 20V4"/><path d="m17 9-5-5-5 5"/></symbol>
+      <symbol id="lpm-i-link" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.1 0l2-2a5 5 0 0 0-7.1-7.1l-1.1 1.1"/><path d="M14 11a5 5 0 0 0-7.1 0l-2 2A5 5 0 0 0 12 20.1l1.1-1.1"/></symbol>
+      <symbol id="lpm-i-lock" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+      <symbol id="lpm-i-bell" viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></symbol>
+      <symbol id="lpm-i-star" viewBox="0 0 24 24"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3L5.8 21 7 14.2 2 9.3l6.9-1Z"/></symbol>
+      <symbol id="lpm-i-share" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4"/><path d="m15.4 6.5-6.8 4"/></symbol>
+      <symbol id="lpm-i-list" viewBox="0 0 24 24"><path d="M8 6h13"/><path d="M8 12h13"/><path d="M8 18h13"/><path d="M3 6h.01"/><path d="M3 12h.01"/><path d="M3 18h.01"/></symbol>
+      <symbol id="lpm-i-kanban" viewBox="0 0 24 24"><path d="M6 5v14"/><path d="M12 5v10"/><path d="M18 5v6"/></symbol>
+      <symbol id="lpm-i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></symbol>
+      <symbol id="lpm-i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 0 0-16 0"/></symbol>
+      <symbol id="lpm-i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+      <symbol id="lpm-i-mic" viewBox="0 0 24 24"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><path d="M12 19v3"/></symbol>
+      <symbol id="lpm-i-mic-off" viewBox="0 0 24 24"><path d="m2 2 20 20"/><path d="M9 9v3a3 3 0 0 0 5.1 2.1"/><path d="M15 9.3V5a3 3 0 0 0-5.6-1.5"/><path d="M19 10v2a7 7 0 0 1-.6 2.8"/><path d="M5 10v2a7 7 0 0 0 9.3 6.6"/><path d="M12 19v3"/></symbol>
+      <symbol id="lpm-i-video-off" viewBox="0 0 24 24"><path d="m2 2 20 20"/><path d="M10.7 6H4a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12"/><path d="M16 10.2 22 6v12l-3.2-2.2"/><path d="M16 6v7"/></symbol>
+      <symbol id="lpm-i-screen" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8"/><path d="M12 16v4"/></symbol>
+      <symbol id="lpm-i-maximize" viewBox="0 0 24 24"><path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/></symbol>
+      <symbol id="lpm-i-phone-off" viewBox="0 0 24 24"><path d="m2 2 20 20"/><path d="M14 10.5a8 8 0 0 0-4.5-4.5L7 8.5a2 2 0 0 1-2.4.4L3 8.2a2 2 0 0 1-1-2.3L3 2"/><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1"/></symbol>
+      <symbol id="lpm-i-smile" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><path d="M9 9h.01"/><path d="M15 9h.01"/></symbol>
+      <symbol id="lpm-i-thumbs-up" viewBox="0 0 24 24"><path d="M7 10v11"/><path d="M15 5.9 14 10h5.8a2 2 0 0 1 2 2.4l-1.4 7a2 2 0 0 1-2 1.6H7a4 4 0 0 1-4-4v-1a4 4 0 0 1 4-4h1l4-7a2 2 0 0 1 3 1.9Z"/></symbol>
+      <symbol id="lpm-i-chevron-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+      <symbol id="lpm-i-chevron-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+      <symbol id="lpm-i-chevron-up" viewBox="0 0 24 24"><path d="m18 15-6-6-6 6"/></symbol>
+      <symbol id="lpm-i-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+      <symbol id="lpm-i-edit" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></symbol>
+      <symbol id="lpm-i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.1 9a3 3 0 1 1 5.2 2c-.9.8-1.3 1.2-1.3 2.5"/><path d="M12 17h.01"/></symbol>
+      <symbol id="lpm-i-sidebar" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M9 4v16"/></symbol>
+      <symbol id="lpm-i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.9 4.9 1.4 1.4"/><path d="m17.7 17.7 1.4 1.4"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m4.9 19.1 1.4-1.4"/><path d="m17.7 6.3 1.4-1.4"/></symbol>
+      <symbol id="lpm-i-moon" viewBox="0 0 24 24"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.7 6.7 0 0 0 21 12.8Z"/></symbol>
+      <symbol id="lpm-i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+    </svg>
     <main class="demo-grid">
       <section class="demo-card is-wide lpm-prototype" data-product="chat">
         <div class="lpm-window">
-          <div class="lpm-chat">
-            <aside class="lpm-chat-list">
-              <div class="lpm-chat-list-header">
-                <div class="lpm-title">消息</div>
-                <div class="lpm-search">搜索联系人、群组或消息</div>
+          <div class="lpm-messenger">
+            <aside class="lpm-messenger-rail">
+              <div class="lpm-messenger-profile">
+                <div class="lpm-avatar">明</div>
+                <div class="lpm-messenger-add"><svg class="lpm-icon is-sm"><use href="#lpm-i-plus"></use></svg></div>
               </div>
-              <div class="lpm-chat-item is-active">
-                <div class="lpm-avatar">项</div>
-                <div>
-                  <div class="lpm-chat-item-title">项目推进群</div>
-                  <div class="lpm-chat-item-preview">AI 已生成本周待办清单</div>
-                </div>
-                <div class="lpm-chat-time">09:42</div>
-              </div>
-              <div class="lpm-chat-item">
-                <div class="lpm-avatar" data-tone="green">会</div>
-                <div>
-                  <div class="lpm-chat-item-title">会议纪要助手</div>
-                  <div class="lpm-chat-item-preview">3 条行动项等待确认</div>
-                </div>
-                <div class="lpm-chat-time">昨天</div>
+              <div class="lpm-messenger-search-dark"><svg class="lpm-icon is-sm"><use href="#lpm-i-search"></use></svg>搜索 (⌘+K)</div>
+              <nav class="lpm-messenger-nav">
+                <div class="lpm-messenger-nav-item is-active"><svg class="lpm-icon"><use href="#lpm-i-message"></use></svg><span>消息</span><svg class="lpm-icon is-sm"><use href="#lpm-i-more"></use></svg></div>
+                <div class="lpm-messenger-nav-item"><svg class="lpm-icon"><use href="#lpm-i-bot"></use></svg><span>知识问答</span></div>
+                <div class="lpm-messenger-nav-item"><svg class="lpm-icon"><use href="#lpm-i-video"></use></svg><span>会议</span></div>
+                <div class="lpm-messenger-nav-item"><svg class="lpm-icon"><use href="#lpm-i-calendar"></use></svg><span>日历</span></div>
+                <div class="lpm-messenger-nav-item"><svg class="lpm-icon"><use href="#lpm-i-file"></use></svg><span>云文档</span></div>
+                <div class="lpm-messenger-nav-item"><svg class="lpm-icon"><use href="#lpm-i-users"></use></svg><span>通讯录</span></div>
+                <div class="lpm-messenger-nav-item"><svg class="lpm-icon"><use href="#lpm-i-mail"></use></svg><span>邮箱</span></div>
+                <div class="lpm-messenger-nav-item"><svg class="lpm-icon"><use href="#lpm-i-check-square"></use></svg><span>任务</span><span class="lpm-messenger-badge">3</span></div>
+                <div class="lpm-messenger-nav-item"><svg class="lpm-icon"><use href="#lpm-i-grid"></use></svg><span>工作台</span></div>
+              </nav>
+              <div class="lpm-messenger-rail-footer">
+                <div><svg class="lpm-icon"><use href="#lpm-i-grid"></use></svg><svg class="lpm-icon"><use href="#lpm-i-star"></use></svg></div>
+                <div>下载飞书客户端</div>
               </div>
             </aside>
-            <main class="lpm-chat-main">
-              <div class="lpm-topbar">
-                <h2 class="lpm-title">项目推进群</h2>
-                <div class="lpm-toolbar">
-                  <span class="lpm-chip is-blue">群聊</span>
-                  <button class="lpm-button">更多</button>
-                </div>
+            <aside class="lpm-messenger-group-nav">
+              <div class="lpm-messenger-group-title"><span><svg class="lpm-icon"><use href="#lpm-i-menu"></use></svg> 分组</span><svg class="lpm-icon"><use href="#lpm-i-settings"></use></svg></div>
+              <div class="lpm-messenger-group-items">
+                <div class="lpm-messenger-group-item is-active"><svg class="lpm-icon is-sm"><use href="#lpm-i-message"></use></svg>消息</div>
+                <div class="lpm-messenger-group-item"><svg class="lpm-icon is-sm"><use href="#lpm-i-folder"></use></svg>标签</div>
+                <div class="lpm-messenger-group-item"><svg class="lpm-icon is-sm"><use href="#lpm-i-folder"></use></svg>工作空间</div>
+                <div class="lpm-messenger-group-item"><svg class="lpm-icon is-sm"><use href="#lpm-i-folder"></use></svg>通用助手</div>
+                <div class="lpm-messenger-group-item"><svg class="lpm-icon is-sm"><use href="#lpm-i-folder"></use></svg>飞书通知</div>
+                <div class="lpm-messenger-group-item"><svg class="lpm-icon is-sm"><use href="#lpm-i-folder"></use></svg>传统 AI</div>
+                <div class="lpm-messenger-group-item"><svg class="lpm-icon is-sm"><use href="#lpm-i-folder"></use></svg>Quarterly</div>
+                <div class="lpm-messenger-group-item"><svg class="lpm-icon is-sm"><use href="#lpm-i-folder"></use></svg>subagent</div>
+                <div class="lpm-messenger-group-item"><svg class="lpm-icon is-sm"><use href="#lpm-i-folder"></use></svg>magic</div>
+                <div class="lpm-messenger-group-item"><svg class="lpm-icon is-sm"><use href="#lpm-i-folder"></use></svg>SS</div>
+                <div class="lpm-messenger-group-item"><svg class="lpm-icon is-sm"><use href="#lpm-i-message"></use></svg>未读</div>
+                <div class="lpm-messenger-group-item"><svg class="lpm-icon is-sm"><use href="#lpm-i-file"></use></svg>云文档</div>
               </div>
-              <section class="lpm-chat-thread">
-                <div class="lpm-message">
-                  <div class="lpm-avatar">明</div>
-                  <div class="lpm-message-stack">
-                    <div class="lpm-message-author">明日门店助手</div>
-                    <div class="lpm-message-bubble">已读取妙记，提取 6 个待办。</div>
+            </aside>
+            <aside class="lpm-messenger-list">
+              <div class="lpm-messenger-list-title">消息</div>
+              <div class="lpm-messenger-shortcuts">
+                <div class="lpm-messenger-shortcut"><div class="lpm-avatar" data-tone="rainbow">知</div><span>知识问答</span></div>
+                <div class="lpm-messenger-shortcut"><div class="lpm-avatar" data-tone="gold">H</div><span>hermes</span></div>
+                <div class="lpm-messenger-shortcut"><div class="lpm-avatar" data-tone="blue">小</div><span>小明没在</span></div>
+                <div class="lpm-messenger-shortcut"><div class="lpm-avatar" data-tone="ice">龙</div><span>小明不掉</span></div>
+                <div class="lpm-messenger-shortcut"><div class="lpm-avatar" data-tone="orange">AI</div><span>AI solutio</span></div>
+                <div class="lpm-messenger-shortcut"><div class="lpm-avatar" data-tone="lime">A</div><span>Aime 个人</span></div>
+                <div class="lpm-messenger-shortcut"><div class="lpm-avatar" data-tone="cyan">飞</div><span>飞书客户</span></div>
+                <div class="lpm-messenger-shortcut"><div class="lpm-avatar" data-tone="black">T</div><span>TRAE cli</span></div>
+                <div class="lpm-messenger-shortcut"><div class="lpm-avatar" data-tone="violet">C</div><span>codex</span></div>
+                <div class="lpm-messenger-shortcut"><div class="lpm-avatar" data-tone="indigo">M</div><span>Mira</span></div>
+              </div>
+              <div class="lpm-messenger-chat-row is-active">
+                <div class="lpm-avatar" data-tone="violet">群</div>
+                <div>
+                  <div class="lpm-messenger-row-title">明日奶茶-上海大融城店-运营群</div>
+                  <div class="lpm-messenger-row-desc">明日茶饮: 本周门店卫生标准复核通知</div>
+                </div>
+                <div class="lpm-messenger-row-time">21:33</div>
+              </div>
+              <div class="lpm-messenger-chat-row">
+                <div class="lpm-avatar" data-tone="blue">安</div>
+                <div>
+                  <div class="lpm-messenger-row-title">账号安全中心</div>
+                  <div class="lpm-messenger-row-desc">授权操作通知</div>
+                </div>
+                <div class="lpm-messenger-row-time">21:30</div>
+              </div>
+              <div class="lpm-messenger-chat-row">
+                <div class="lpm-avatar" data-tone="cyan">开</div>
+                <div>
+                  <div class="lpm-messenger-row-title">开发者小助手</div>
+                  <div class="lpm-messenger-row-desc">应用审批通过，已发布成功</div>
+                </div>
+                <div class="lpm-messenger-row-time">21:24</div>
+              </div>
+              <div class="lpm-messenger-chat-row">
+                <div class="lpm-avatar" data-tone="indigo">AI</div>
+                <div>
+                  <div class="lpm-messenger-row-title">AI 魔方用户反馈群</div>
+                  <div class="lpm-messenger-row-desc">夏语: [图片] AI 魔方又崩啦</div>
+                </div>
+                <div class="lpm-messenger-row-time">20:54</div>
+              </div>
+              <div class="lpm-messenger-chat-row">
+                <div class="lpm-avatar" data-tone="ice">服</div>
+                <div>
+                  <div class="lpm-messenger-row-title">AI 服务售卖 · 珍享</div>
+                  <div class="lpm-messenger-row-desc">蒋蔡淼: 方案确认到终版...</div>
+                </div>
+                <div class="lpm-messenger-row-time">14:28</div>
+              </div>
+              <div class="lpm-messenger-chat-row">
+                <div class="lpm-avatar" data-tone="cyan">协</div>
+                <div>
+                  <div class="lpm-messenger-row-title">蒋荔淼: @许嘉明 @付...</div>
+                  <div class="lpm-messenger-row-desc">专项服务: 我看大家晚上...</div>
+                </div>
+                <div class="lpm-messenger-row-time">14:26</div>
+              </div>
+              <div class="lpm-messenger-chat-row">
+                <div class="lpm-avatar" data-tone="violet">培</div>
+                <div>
+                  <div class="lpm-messenger-row-title">Nerida UT反馈群...</div>
+                  <div class="lpm-messenger-row-desc">杨佳雯: 灰度打开...</div>
+                </div>
+                <div class="lpm-messenger-row-time">14:26</div>
+              </div>
+              <div class="lpm-messenger-chat-row">
+                <div class="lpm-avatar" data-tone="gold">多</div>
+                <div>
+                  <div class="lpm-messenger-row-title">多语言培训交付</div>
+                  <div class="lpm-messenger-row-desc">多语言培训交付: 你的...</div>
+                </div>
+                <div class="lpm-messenger-row-time">14:25</div>
+              </div>
+            </aside>
+            <main class="lpm-messenger-thread">
+              <div class="lpm-messenger-thread-head">
+                <div class="lpm-messenger-thread-name"><span class="lpm-avatar" data-tone="violet">群</span><span>明日奶茶-上海大融城店-运营群</span><span>3</span><span>1</span></div>
+                <div class="lpm-messenger-thread-actions"><svg class="lpm-icon"><use href="#lpm-i-search"></use></svg><svg class="lpm-icon"><use href="#lpm-i-settings"></use></svg><svg class="lpm-icon"><use href="#lpm-i-user"></use></svg><svg class="lpm-icon"><use href="#lpm-i-file"></use></svg><svg class="lpm-icon"><use href="#lpm-i-more"></use></svg></div>
+              </div>
+              <div class="lpm-messenger-topic-tabs"><span class="is-active">消息</span><span>今日任务</span><span>巡检整改</span><span>差评处理</span><span>+</span></div>
+              <section class="lpm-messenger-messages">
+                <div class="lpm-messenger-bubble-row">
+                  <div class="lpm-avatar" data-tone="blue">茶</div>
+                  <div class="lpm-messenger-bubble-stack">
+                    <div class="lpm-messenger-author">明日茶饮 · 门店运营 bot</div>
+                    <div class="lpm-messenger-bubble">欢迎加入明日奶茶门店运营群。群菜单已固定今日任务、巡检整改、差评处理和 AI 运营总览入口。</div>
                   </div>
                 </div>
-                <div class="lpm-message is-me">
+                <div class="lpm-messenger-bubble-row">
+                  <div class="lpm-avatar" data-tone="blue">茶</div>
+                  <div class="lpm-messenger-bubble-stack">
+                    <div class="lpm-messenger-author">明日茶饮 · 门店运营 bot</div>
+                    <div class="lpm-messenger-bubble">本周门店卫生标准复核通知</div>
+                    <div class="lpm-messenger-bubble">请各门店在今日闭店前完成吧台、后厨、门头三项照片上传。</div>
+                  </div>
+                </div>
+                <div class="lpm-messenger-bubble-row is-me">
                   <div class="lpm-avatar" data-tone="green">我</div>
-                  <div class="lpm-message-stack">
-                    <div class="lpm-message-author">我</div>
-                    <div class="lpm-message-bubble">创建任务后同步到这个群。</div>
+                  <div class="lpm-messenger-bubble-stack">
+                    <div class="lpm-messenger-author">我</div>
+                    <div class="lpm-messenger-bubble">收到，我先同步给值班店长，晚高峰前回填整改照片。</div>
+                  </div>
+                </div>
+                <div class="lpm-messenger-bubble-row">
+                  <div class="lpm-avatar">明</div>
+                  <div class="lpm-messenger-bubble-stack">
+                    <div class="lpm-messenger-bubble">AI 总览里已经看到待办，今天会把逾期项单独标红。</div>
                   </div>
                 </div>
               </section>
-              <div class="lpm-chat-composer">
-                <div class="lpm-composer-box">输入消息...</div>
-                <button class="lpm-button is-primary">发送</button>
+              <div class="lpm-messenger-composer">
+                <div class="lpm-messenger-input"><span>发送给 明日奶茶-上海大融城店-运营群</span><span class="lpm-messenger-compose-actions">Aa <svg class="lpm-icon is-sm"><use href="#lpm-i-smile"></use></svg> @ <svg class="lpm-icon is-sm"><use href="#lpm-i-plus"></use></svg><svg class="lpm-icon is-sm"><use href="#lpm-i-share"></use></svg><svg class="lpm-icon is-sm"><use href="#lpm-i-video"></use></svg></span></div>
               </div>
             </main>
           </div>
@@ -98,25 +254,62 @@
 
       <section class="demo-card lpm-prototype" data-product="doc">
         <div class="lpm-window">
-          <div class="lpm-doc">
-            <aside class="lpm-doc-outline">
-              <p class="lpm-doc-outline-title">文档大纲</p>
-              <div class="lpm-doc-outline-item is-active">项目目标</div>
-              <div class="lpm-doc-outline-item">执行计划</div>
-              <div class="lpm-doc-outline-item">风险与依赖</div>
-            </aside>
-            <main class="lpm-doc-canvas">
-              <article class="lpm-doc-page">
-                <h1 class="lpm-doc-title">AI 门店运营方案</h1>
-                <div class="lpm-doc-meta">今天 10:24 更新 · 12 人协作</div>
-                <p class="lpm-doc-block">把门店巡检、群消息、任务跟进统一到一个可追踪工作流。</p>
-                <h2 class="lpm-doc-heading">关键结论</h2>
-                <div class="lpm-doc-callout"><span>i</span><span>先覆盖高频场景，再沉淀标准操作。</span></div>
-              </article>
-            </main>
-            <aside class="lpm-doc-side">
-              <div class="lpm-doc-comment">张三：建议补充试点门店数据。</div>
-            </aside>
+          <div class="lpm-docx-shell">
+            <header class="lpm-docx-toolbar">
+              <div class="lpm-docx-left-tools"><svg class="lpm-icon"><use href="#lpm-i-menu"></use></svg><svg class="lpm-icon"><use href="#lpm-i-home"></use></svg></div>
+              <div class="lpm-docx-breadcrumb">
+                <span>ByteDance</span><svg class="lpm-icon is-sm lpm-breadcrumb-sep"><use href="#lpm-i-chevron-right"></use></svg><span>Jiaming Xu</span><svg class="lpm-icon is-sm lpm-breadcrumb-sep"><use href="#lpm-i-chevron-right"></use></svg><strong>企业 AI 架构师训练营客户需求洞察与备课建议</strong>
+                <span class="lpm-docx-meta-line"><svg class="lpm-icon is-sm"><use href="#lpm-i-file"></use></svg>Drive　·　L3-Confidential　|　Last modified: 11:54 AM May 5　|　Communicate responsibly. Ens...</span>
+              </div>
+              <div class="lpm-docx-actions"><button>Share</button><span class="lpm-docx-editing"><svg class="lpm-icon is-sm"><use href="#lpm-i-edit"></use></svg>Editing<svg class="lpm-icon is-sm"><use href="#lpm-i-chevron-down"></use></svg></span><svg class="lpm-icon"><use href="#lpm-i-file"></use></svg><svg class="lpm-icon"><use href="#lpm-i-bell"></use></svg><svg class="lpm-icon"><use href="#lpm-i-more"></use></svg><svg class="lpm-icon"><use href="#lpm-i-search"></use></svg><svg class="lpm-icon"><use href="#lpm-i-plus"></use></svg><span class="lpm-avatar">明</span></div>
+            </header>
+            <div class="lpm-docx-body">
+              <aside class="lpm-docx-outline">
+                <div class="lpm-docx-collapse"><svg class="lpm-icon"><use href="#lpm-i-sidebar"></use></svg></div>
+                <div class="lpm-docx-outline-title is-active">企业 AI 架构师训练营客户需求...</div>
+                <div class="lpm-docx-outline-item">一页结论</div>
+                <div class="lpm-docx-outline-item">样本与方法</div>
+                <div class="lpm-docx-outline-item">底层矛盾</div>
+                <div class="lpm-docx-outline-sub">1. 高层目标很大，组织拆解能力...</div>
+                <div class="lpm-docx-outline-sub">2. 试点很多，但能复制的少</div>
+                <div class="lpm-docx-outline-sub">3. 业务想快，治理怕失控</div>
+                <div class="lpm-docx-outline-sub">4. AI 改的是工作，不只是系统</div>
+                <div class="lpm-docx-outline-item">Top 共性需求</div>
+                <div class="lpm-docx-outline-sub">1. 从战略口号到 AI 价值地图</div>
+                <div class="lpm-docx-outline-sub">2. 场景选择与 ROI 是最大公约数</div>
+                <div class="lpm-docx-outline-sub">3. 数据和知识底座决定 Agent ...</div>
+                <div class="lpm-docx-outline-sub is-active">5. 数字员工的本质是岗位和流...</div>
+                <div class="lpm-docx-outline-item">客户分层差异</div>
+                <div class="lpm-docx-outline-sub">战略高管型</div>
+                <div class="lpm-docx-outline-sub">数字化/AI 平台牵头型</div>
+              </aside>
+              <main class="lpm-docx-canvas">
+                <article class="lpm-docx-page">
+                  <h1>企业 AI 架构师训练营客户需求洞察与备课建议</h1>
+                  <div class="lpm-docx-author"><span class="lpm-avatar">明</span><span>Jiaming Xu</span><span>Modified May 5</span></div>
+                  <h2>一页结论</h2>
+                  <p>这批客户不是 AI 入门用户。大多数企业已经做过培训、比赛、智能体、AI 小组、知识库、Agent 试点或平台规划。真正的共同问题是：AI 怎么从“大家都在试”变成“企业真的变了”。</p>
+                  <p>他们最需要训练营解决 7 类问题：</p>
+                  <ol>
+                    <li><strong>战略怎么定：</strong>AI 是提效工具，还是流程、岗位、组织和业务模式重构？</li>
+                    <li><strong>场景怎么选：</strong>哪些场景值得先做，怎么证明 ROI，怎么避免大平台先行？</li>
+                    <li><strong>底座怎么补：</strong>数据口径、知识治理、语义层、权限、评测不清，Agent 很难可靠。</li>
+                    <li><strong>Agent 怎么管：</strong>企业里已有很多 Agent，但缺目录、权限、审计、复用和业务边界。</li>
+                    <li><strong>流程怎么变：</strong>数字员工不是一个机器人，而是岗位任务、数据权限、工具调用和人工接管的重新设计。</li>
+                    <li><strong>组织怎么推：</strong>AI BP、先锋机制、心理安全、知识贡献激励、财务/HR/安全协同是落地关键。</li>
+                    <li><strong>课程怎么交付：</strong>客户要真实案例、模板、工作坊、行业对标和可带回公司汇报的项目包。</li>
+                  </ol>
+                  <p>一句话建议：训练营主线应从“企业 AI 架构怎么设计”升级为“企业 AI 变革项目怎么跑通”。工具和 Agent 要讲，但要放在业务价值、数据知识底座、组织治理和最小闭环里讲。</p>
+                  <h2>样本与方法</h2>
+                  <ul>
+                    <li>样本来源：源 Base 当前视图前 25 条访谈。</li>
+                    <li>当前可读材料：24 条 pretalk/文字记录已完成结构化抽取。</li>
+                    <li>证据规模：当前已沉淀 133 条真实证据，每条包含原话或近原话。</li>
+                  </ul>
+                </article>
+              </main>
+              <div class="lpm-docx-floating"><span><svg class="lpm-icon"><use href="#lpm-i-file"></use></svg></span><span><svg class="lpm-icon"><use href="#lpm-i-help"></use></svg></span></div>
+            </div>
           </div>
         </div>
       </section>
@@ -124,27 +317,60 @@
       <section class="demo-card lpm-prototype" data-product="drive">
         <div class="lpm-window">
           <div class="lpm-drive">
-            <aside class="lpm-sidebar">
-              <div class="lpm-brand"><div class="lpm-brand-mark">云</div><div><div class="lpm-title">云盘</div><div class="lpm-subtitle">Drive</div></div></div>
-              <div class="lpm-nav"><div class="lpm-nav-item is-active">最近</div><div class="lpm-nav-item">我的空间</div><div class="lpm-nav-item">共享空间</div></div>
+            <aside class="lpm-drive-sidebar">
+              <div class="lpm-drive-logo"><svg class="lpm-icon"><use href="#lpm-i-menu"></use></svg><span class="lpm-drive-logo-mark" aria-hidden="true"></span><span>Feishu Docs</span></div>
+              <div class="lpm-drive-search"><svg class="lpm-icon is-sm"><use href="#lpm-i-search"></use></svg><span>Search</span></div>
+              <nav class="lpm-drive-sidebar-nav">
+                <div class="lpm-drive-sidebar-item is-active"><svg class="lpm-icon"><use href="#lpm-i-home"></use></svg><span>Home</span></div>
+                <div class="lpm-drive-sidebar-item"><svg class="lpm-icon"><use href="#lpm-i-folder"></use></svg><span>Drive</span></div>
+                <div class="lpm-drive-sidebar-item"><svg class="lpm-icon"><use href="#lpm-i-file"></use></svg><span>Wiki</span></div>
+                <div class="lpm-drive-sidebar-item"><svg class="lpm-icon"><use href="#lpm-i-list"></use></svg><span>AI Notes</span></div>
+              </nav>
+              <div class="lpm-drive-pinned-title">Pinned Docs <svg class="lpm-icon is-sm"><use href="#lpm-i-chevron-down"></use></svg></div>
+              <div class="lpm-drive-pinned-list">
+                <div class="lpm-drive-pinned-item"><svg class="lpm-icon is-sm"><use href="#lpm-i-file"></use></svg><span>从 Manus 到 OpenClaw：拆开所有 AI...</span></div>
+                <div class="lpm-drive-pinned-item"><svg class="lpm-icon is-sm"><use href="#lpm-i-file"></use></svg><span>开放平台的方向策略思考（WIP/6...</span></div>
+                <div class="lpm-drive-pinned-item"><svg class="lpm-icon is-sm"><use href="#lpm-i-star"></use></svg><span>飞书 AI 增值服务解决方案库 &amp; 服...</span></div>
+                <div class="lpm-drive-pinned-item"><svg class="lpm-icon is-sm"><use href="#lpm-i-file"></use></svg><span>服务伙伴体系思路</span></div>
+                <div class="lpm-drive-pinned-item is-selected"><svg class="lpm-icon is-sm"><use href="#lpm-i-file"></use></svg><span>飞书智能伙伴问答支持的数据...</span><svg class="lpm-icon is-sm"><use href="#lpm-i-more"></use></svg></div>
+                <div class="lpm-drive-pinned-item"><svg class="lpm-icon is-sm"><use href="#lpm-i-file"></use></svg><span>[OpenAPI] Aily x Alfred 示例</span></div>
+                <div class="lpm-drive-pinned-item"><svg class="lpm-icon is-sm"><use href="#lpm-i-file"></use></svg><span>协同 LTC 插件提效量化分析</span></div>
+              </div>
+              <div class="lpm-drive-sidebar-bottom"><span><svg class="lpm-icon is-sm"><use href="#lpm-i-file"></use></svg></span><span><svg class="lpm-icon is-sm"><use href="#lpm-i-home"></use></svg></span><span><svg class="lpm-icon is-sm"><use href="#lpm-i-grid"></use></svg></span></div>
             </aside>
             <main class="lpm-drive-main">
-              <div class="lpm-drive-toolbar">
-                <div class="lpm-drive-breadcrumb">云盘 / <strong>项目资料</strong></div>
-                <button class="lpm-button is-primary">上传</button>
+              <div class="lpm-drive-home-head">
+                <h1 class="lpm-drive-home-title">Home</h1>
+                <div class="lpm-drive-head-actions"><svg class="lpm-icon"><use href="#lpm-i-search"></use></svg><svg class="lpm-icon"><use href="#lpm-i-share"></use></svg><svg class="lpm-icon"><use href="#lpm-i-bell"></use></svg><svg class="lpm-icon"><use href="#lpm-i-grid"></use></svg><span class="lpm-avatar">明</span></div>
+              </div>
+              <div class="lpm-drive-action-cards">
+                <div class="lpm-drive-action-card"><span class="lpm-drive-action-icon"><svg class="lpm-icon is-sm"><use href="#lpm-i-plus"></use></svg></span><span><strong>New</strong><em>Create a new document</em></span><svg class="lpm-icon is-sm"><use href="#lpm-i-chevron-down"></use></svg></div>
+                <div class="lpm-drive-action-card"><span class="lpm-drive-action-icon is-orange"><svg class="lpm-icon is-sm"><use href="#lpm-i-folder"></use></svg></span><span><strong>Upload</strong><em>Upload local files</em></span><svg class="lpm-icon is-sm"><use href="#lpm-i-chevron-down"></use></svg></div>
+                <div class="lpm-drive-action-card"><span class="lpm-drive-action-icon is-template"><svg class="lpm-icon is-sm"><use href="#lpm-i-star"></use></svg></span><span><strong>Templates</strong><em>Go to template gallery</em></span><span></span></div>
               </div>
               <div class="lpm-drive-view-tabs">
-                <div class="lpm-drive-view-tab is-active">全部</div>
-                <div class="lpm-drive-view-tab">文档</div>
-                <div class="lpm-drive-view-tab">表格</div>
+                <div class="lpm-drive-view-tab is-active">Recent</div>
+                <div class="lpm-drive-view-tab">Owned by Me</div>
+                <div class="lpm-drive-view-tab">Shared With Me</div>
+                <div class="lpm-drive-view-tab">Favorites</div>
+                <div class="lpm-drive-view-tab">汇报汇总</div>
+                <div class="lpm-drive-view-tab"><svg class="lpm-icon is-sm"><use href="#lpm-i-plus"></use></svg></div>
+                <div class="lpm-drive-table-tools"><svg class="lpm-icon"><use href="#lpm-i-filter"></use></svg><svg class="lpm-icon"><use href="#lpm-i-list"></use></svg><svg class="lpm-icon"><use href="#lpm-i-grid"></use></svg><svg class="lpm-icon"><use href="#lpm-i-more"></use></svg></div>
               </div>
               <div class="lpm-drive-list">
                 <table class="lpm-drive-table">
-                  <thead><tr><th>名称</th><th>所有者</th><th>更新时间</th></tr></thead>
+                  <thead><tr><th>Name</th><th>Location</th><th>Owner</th><th>Created</th><th>Recent ↓</th><th></th></tr></thead>
                   <tbody>
-                    <tr><td><div class="lpm-drive-name"><span class="lpm-drive-icon" data-type="folder">夹</span><span class="lpm-drive-file-title">门店运营资料</span></div></td><td>王明</td><td>今天 09:12</td></tr>
-                    <tr><td><div class="lpm-drive-name"><span class="lpm-drive-icon">文</span><span class="lpm-drive-file-title">AI 巡检方案</span></div></td><td>李楠</td><td>昨天 18:20</td></tr>
-                    <tr><td><div class="lpm-drive-name"><span class="lpm-drive-icon" data-type="sheet">表</span><span class="lpm-drive-file-title">试点门店数据</span></div></td><td>张三</td><td>周二 14:08</td></tr>
+                    <tr><td><div class="lpm-drive-name"><span class="lpm-drive-icon"><svg class="lpm-icon is-sm"><use href="#lpm-i-file"></use></svg></span><span class="lpm-drive-file-title">珍海学渡-服务说明书-20260504</span></div></td><td>Jinye Wu'...</td><td><span class="lpm-avatar">吴</span> Jinye Wu</td><td>11:46 AM Ma...</td><td>11:26 Today</td><td><svg class="lpm-icon is-sm"><use href="#lpm-i-more"></use></svg></td></tr>
+                    <tr><td><div class="lpm-drive-name"><span class="lpm-drive-icon"><svg class="lpm-icon is-sm"><use href="#lpm-i-file"></use></svg></span><span class="lpm-drive-file-title">文字记录：对下珍李AI服务、经销商方案及...</span></div></td><td>Shared W...</td><td><span class="lpm-avatar" data-tone="green">刘</span> Zixi Liu</td><td>10:53 Today</td><td>11:13 Today</td><td><svg class="lpm-icon is-sm"><use href="#lpm-i-more"></use></svg></td></tr>
+                    <tr><td><div class="lpm-drive-name"><span class="lpm-drive-icon"><svg class="lpm-icon is-sm"><use href="#lpm-i-file"></use></svg></span><span class="lpm-drive-file-title">智能纪要：对下珍李AI服务、经销商方案及...</span></div></td><td>Shared W...</td><td><span class="lpm-avatar" data-tone="green">刘</span> Zixi Liu</td><td>10:53 Today</td><td>11:10 Today</td><td><svg class="lpm-icon is-sm"><use href="#lpm-i-more"></use></svg></td></tr>
+                    <tr><td><div class="lpm-drive-name"><span class="lpm-drive-icon"><svg class="lpm-icon is-sm"><use href="#lpm-i-file"></use></svg></span><span class="lpm-drive-file-title">郝宇播|self-intro</span></div></td><td>Yufan Ha...</td><td><span class="lpm-avatar" data-tone="ice">郝</span> Yufan Hao</td><td>16:52 Yesterday...</td><td>10:01 Today</td><td><svg class="lpm-icon is-sm"><use href="#lpm-i-more"></use></svg></td></tr>
+                    <tr><td><div class="lpm-drive-name"><span class="lpm-drive-icon"><svg class="lpm-icon is-sm"><use href="#lpm-i-file"></use></svg></span><span class="lpm-drive-file-title">企业 AI 架构师训练营客户需求洞察与备课...</span></div></td><td>Drive</td><td><span class="lpm-avatar">明</span> Jiaming Xu</td><td>11:54 AM Ma...</td><td>02:59 Today</td><td><svg class="lpm-icon is-sm"><use href="#lpm-i-more"></use></svg></td></tr>
+                    <tr><td><div class="lpm-drive-name"><span class="lpm-drive-icon" data-type="code"><svg class="lpm-icon is-sm"><use href="#lpm-i-table"></use></svg></span><span class="lpm-drive-file-title">飞书 AI solution 团队说明书</span></div></td><td>Lark GTM...</td><td><span class="lpm-avatar" data-tone="cyan">张</span> Yafeng Zha...</td><td>8:56 AM Apr 7</td><td>02:57 Today</td><td><svg class="lpm-icon is-sm"><use href="#lpm-i-more"></use></svg></td></tr>
+                    <tr><td><div class="lpm-drive-name"><span class="lpm-drive-icon" data-type="diamond"><svg class="lpm-icon is-sm"><use href="#lpm-i-link"></use></svg></span><span class="lpm-drive-file-title">Linear 新手入门教程：重点掌握 AI 工作流</span></div></td><td>Drive</td><td><span class="lpm-avatar">明</span> Jiaming Xu</td><td>2:34 PM May 3</td><td>02:56 Today</td><td><svg class="lpm-icon is-sm"><use href="#lpm-i-more"></use></svg></td></tr>
+                    <tr><td><div class="lpm-drive-name"><span class="lpm-drive-icon"><svg class="lpm-icon is-sm"><use href="#lpm-i-file"></use></svg></span><span class="lpm-drive-file-title">Untitled document</span></div></td><td>My Docu...</td><td><span class="lpm-avatar">明</span> Jiaming Xu</td><td>02:53 Today</td><td>02:53 Today</td><td><svg class="lpm-icon is-sm"><use href="#lpm-i-more"></use></svg></td></tr>
+                    <tr><td><div class="lpm-drive-name"><span class="lpm-drive-icon"><svg class="lpm-icon is-sm"><use href="#lpm-i-file"></use></svg></span><span class="lpm-drive-file-title">【新版】飞书门店经营管理方案使...</span></div></td><td>Shared W...</td><td><span class="lpm-avatar" data-tone="violet">王</span> Qiongwang</td><td>Nov 26, 2024</td><td>02:34 Today</td><td><svg class="lpm-icon is-sm"><use href="#lpm-i-more"></use></svg></td></tr>
+                    <tr><td><div class="lpm-drive-name"><span class="lpm-drive-icon" data-type="palette"><svg class="lpm-icon is-sm"><use href="#lpm-i-grid"></use></svg></span><span class="lpm-drive-file-title">飞书 Pitch Deck 母版 / 模板 3.2</span></div></td><td>飞书 Mark...</td><td><span class="lpm-avatar" data-tone="ice">吴</span> Chuhan Wu</td><td>Nov 13, 2024</td><td>02:03 Today</td><td><svg class="lpm-icon is-sm"><use href="#lpm-i-more"></use></svg></td></tr>
                   </tbody>
                 </table>
               </div>
@@ -155,25 +381,85 @@
 
       <section class="demo-card lpm-prototype" data-product="bitable">
         <div class="lpm-window">
-          <div class="lpm-bitable">
-            <div class="lpm-bitable-tabs">
-              <div class="lpm-bitable-tab is-active">门店清单</div>
-              <div class="lpm-bitable-tab">任务跟进</div>
-            </div>
-            <div class="lpm-bitable-toolbar">
-              <div class="lpm-search">筛选、分组、排序</div>
-              <button class="lpm-button is-primary">新增记录</button>
-            </div>
-            <div class="lpm-bitable-table-wrap">
-              <table class="lpm-bitable-table">
-                <thead>
-                  <tr><th class="lpm-bitable-index">#</th><th>门店</th><th>状态</th><th>负责人</th></tr>
-                </thead>
-                <tbody>
-                  <tr><td class="lpm-bitable-index">1</td><td>上海大融城店</td><td><span class="lpm-status is-green">正常</span></td><td>王明</td></tr>
-                  <tr><td class="lpm-bitable-index">2</td><td>杭州万象汇店</td><td><span class="lpm-status is-orange">跟进中</span></td><td>李楠</td></tr>
-                </tbody>
-              </table>
+          <div class="lpm-bitable-real">
+            <header class="lpm-bitable-docbar">
+              <div class="lpm-docx-left-tools"><svg class="lpm-icon"><use href="#lpm-i-menu"></use></svg><svg class="lpm-icon"><use href="#lpm-i-home"></use></svg></div>
+              <div class="lpm-docx-breadcrumb">
+                <span>ByteDance</span><svg class="lpm-icon is-sm lpm-breadcrumb-sep"><use href="#lpm-i-chevron-right"></use></svg><span>Project Space</span><svg class="lpm-icon is-sm lpm-breadcrumb-sep"><use href="#lpm-i-chevron-right"></use></svg><strong>AI 服务团队项目跟进表</strong>
+                <span class="lpm-docx-meta-line"><svg class="lpm-icon is-sm"><use href="#lpm-i-lock"></use></svg>L2 - Internal　|　Last modified: 3:26 PM Apr 30　|　Communicate clearly.</span>
+              </div>
+              <div class="lpm-bitable-doc-actions">
+                <button class="is-share">Share</button>
+                <button><svg class="lpm-icon"><use href="#lpm-i-settings"></use></svg> Automations</button>
+                <svg class="lpm-icon"><use href="#lpm-i-file"></use></svg>
+                <svg class="lpm-icon"><use href="#lpm-i-bell"></use></svg>
+                <svg class="lpm-icon"><use href="#lpm-i-search"></use></svg>
+                <svg class="lpm-icon"><use href="#lpm-i-plus"></use></svg>
+                <span class="lpm-avatar">明</span>
+              </div>
+            </header>
+            <div class="lpm-bitable-body">
+              <aside class="lpm-bitable-sidebar">
+                <div class="lpm-bitable-search"><svg class="lpm-icon is-sm"><use href="#lpm-i-search"></use></svg><span>Search</span><svg class="lpm-icon is-sm"><use href="#lpm-i-plus"></use></svg></div>
+                <nav class="lpm-bitable-side-nav">
+                  <div><svg class="lpm-icon"><use href="#lpm-i-list"></use></svg>项目列表</div>
+                  <div><svg class="lpm-icon"><use href="#lpm-i-chart"></use></svg>仪表盘</div>
+                  <div><svg class="lpm-icon"><use href="#lpm-i-users"></use></svg>BaseAgent</div>
+                  <div><svg class="lpm-icon"><use href="#lpm-i-file"></use></svg>用户反馈</div>
+                  <div><svg class="lpm-icon"><use href="#lpm-i-users"></use></svg>用户反馈收集</div>
+                  <div class="is-active"><svg class="lpm-icon"><use href="#lpm-i-table"></use></svg>Release Note <svg class="lpm-icon is-sm"><use href="#lpm-i-more"></use></svg></div>
+                  <div><svg class="lpm-icon"><use href="#lpm-i-table"></use></svg>Topic</div>
+                  <div><svg class="lpm-icon"><use href="#lpm-i-table"></use></svg>Issue</div>
+                  <div><svg class="lpm-icon"><use href="#lpm-i-users"></use></svg>Workflow</div>
+                </nav>
+                <button class="lpm-bitable-new"><svg class="lpm-icon"><use href="#lpm-i-plus"></use></svg> New</button>
+              </aside>
+              <main class="lpm-bitable-main">
+                <div class="lpm-bitable-viewbar">
+                  <div class="lpm-bitable-view-tab is-active"><svg class="lpm-icon"><use href="#lpm-i-table"></use></svg>表格视图 1</div>
+                  <div class="lpm-bitable-view-tab"><svg class="lpm-icon"><use href="#lpm-i-table"></use></svg>本周更新</div>
+                  <div class="lpm-bitable-view-tab"><svg class="lpm-icon"><use href="#lpm-i-table"></use></svg>按产品线查看</div>
+                  <svg class="lpm-icon"><use href="#lpm-i-plus"></use></svg>
+                </div>
+                <div class="lpm-bitable-controlbar">
+                  <button><svg class="lpm-icon"><use href="#lpm-i-plus"></use></svg></button>
+                  <button><svg class="lpm-icon"><use href="#lpm-i-settings"></use></svg></button>
+                  <button><svg class="lpm-icon"><use href="#lpm-i-filter"></use></svg></button>
+                  <button><svg class="lpm-icon"><use href="#lpm-i-sort"></use></svg></button>
+                  <span></span>
+                  <button><svg class="lpm-icon"><use href="#lpm-i-star"></use></svg></button>
+                  <button><svg class="lpm-icon"><use href="#lpm-i-share"></use></svg></button>
+                  <button><svg class="lpm-icon"><use href="#lpm-i-message"></use></svg></button>
+                </div>
+                <div class="lpm-bitable-table-wrap">
+                  <table class="lpm-bitable-table is-real">
+                    <thead>
+                      <tr>
+                        <th class="lpm-bitable-index"><svg class="lpm-icon is-sm"><use href="#lpm-i-check-square"></use></svg></th>
+                        <th><svg class="lpm-icon is-sm"><use href="#lpm-i-lock"></use></svg> Release 标题</th>
+                        <th>Blockers</th>
+                        <th>下周计划</th>
+                        <th><svg class="lpm-icon is-sm"><use href="#lpm-i-link"></use></svg> 产物链接</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr><td class="lpm-bitable-index">1</td><td>modelhub proxy 添加 models API 及配套工具，支持 agent 获取最新能力</td><td></td><td></td><td><a>ClaudeHub Proxy 使用说明</a></td></tr>
+                      <tr><td class="lpm-bitable-index">2</td><td>claude sub2API 账号并联机制上线，目前双账号稳定试运行中</td><td></td><td></td><td><a>接口联调记录</a></td></tr>
+                      <tr><td class="lpm-bitable-index">3</td><td>方案交接，迁移到妙搭</td><td></td><td>暂无新需求</td><td></td></tr>
+                      <tr><td class="lpm-bitable-index">4</td><td>互动卡片 - AI 功能</td><td>目前觉得互动卡片是一个轻量级工具，感觉可继续验证</td><td></td><td><a>互动卡片已上线飞书文档小组件</a></td></tr>
+                      <tr><td class="lpm-bitable-index">5</td><td>部门 AI 知识 IP 打造</td><td>选定内容+账号 IP</td><td>创建账号，准备 2-3 篇内容</td><td><a>知识服务方案草稿</a></td></tr>
+                      <tr><td class="lpm-bitable-index">6</td><td>MCP × CLI AI 知识分享</td><td>目前视频感觉需要人工制作，先调整视频脚本</td><td>调整好视频以后不知道文字要不要改</td><td><a>演示页面</a></td></tr>
+                      <tr><td class="lpm-bitable-index">7</td><td>计划把 Excalidraw 改成飞书云组件</td><td></td><td>开发上线测试</td><td></td></tr>
+                      <tr><td class="lpm-bitable-index">8</td><td>构建虚拟工厂数据集</td><td></td><td>调测 agent 助手，看一下 Lark agent SDK</td><td><a>虚拟工厂 - 样板间</a></td></tr>
+                      <tr><td class="lpm-bitable-index">9</td><td>DIY 会议纪要 × lark-cli skill</td><td>感觉这个 skill 还是需要本地 coding agent 跑</td><td></td><td></td></tr>
+                      <tr><td class="lpm-bitable-index">10</td><td>妙笔首页发布</td><td>html box 其他的内容跑不起来</td><td></td><td></td></tr>
+                      <tr><td class="lpm-bitable-index">11</td><td>妙笔页面跨域隔离</td><td></td><td></td><td></td></tr>
+                      <tr><td class="lpm-bitable-index">12</td><td>妙笔支持技能管理</td><td></td><td></td><td></td></tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="lpm-bitable-footer">31 records <svg class="lpm-icon is-sm"><use href="#lpm-i-chevron-down"></use></svg></div>
+              </main>
             </div>
           </div>
         </div>
@@ -181,44 +467,116 @@
 
       <section class="demo-card lpm-prototype" data-product="meeting">
         <div class="lpm-window">
-          <div class="lpm-meeting">
-            <main class="lpm-meeting-stage">
-              <div class="lpm-meeting-grid">
-                <div class="lpm-meeting-tile is-speaking"><div class="lpm-meeting-avatar">张</div><div class="lpm-meeting-name">张三</div></div>
-                <div class="lpm-meeting-tile"><div class="lpm-meeting-avatar">李</div><div class="lpm-meeting-name">李楠</div></div>
-                <div class="lpm-meeting-tile"><div class="lpm-meeting-avatar">王</div><div class="lpm-meeting-name">王明</div></div>
-                <div class="lpm-meeting-tile"><div class="lpm-meeting-avatar">AI</div><div class="lpm-meeting-name">纪要助手</div></div>
+          <div class="lpm-meeting-live lpm-meeting-ended">
+            <aside class="lpm-meeting-ended-left">
+              <div class="lpm-meeting-ended-empty">
+                <div class="lpm-meeting-ended-illustration" aria-hidden="true">
+                  <span></span>
+                  <i></i>
+                </div>
+                <p>会议已结束</p>
               </div>
-              <div class="lpm-meeting-controls">
-                <div class="lpm-meeting-control">M</div>
-                <div class="lpm-meeting-control">C</div>
-                <div class="lpm-meeting-control is-danger">E</div>
-              </div>
-            </main>
-            <aside class="lpm-meeting-side">
-              <h3 class="lpm-meeting-panel-title">实时纪要</h3>
-              <div class="lpm-meeting-transcript">
-                <div class="lpm-meeting-line">张三：本周先覆盖 20 家试点门店。</div>
-                <div class="lpm-meeting-line">AI：已识别 3 条待办。</div>
-              </div>
-              <div class="lpm-meeting-summary">会后自动生成任务并发送到群。</div>
             </aside>
+            <main class="lpm-meeting-minutes-card">
+              <article class="lpm-meeting-minutes-content">
+                <header>
+                  <h1>智能会议纪要</h1>
+                  <p>当前为 AI 生成的会议摘要和纪要，完整录制稍后推送</p>
+                </header>
+                <section>
+                  <h2>总结</h2>
+                  <p>会议讨论了元气森林用 AI 做数字审批员的需求，以及审批业务存在的数据上传、开放性评估、安全性等问题，还提及客户因审批问题引发的具体事件。主要内容包括：</p>
+                  <ul>
+                    <li><strong>元气森林需求：</strong>许嘉明表示刚从 CSM 处接到元气森林用 AI 做数字审批员的需求，并确认此需求属于数字员工范畴。</li>
+                    <li><strong>审批业务问题：</strong>审批业务需要上传业务数据，对审批开放性评估的完整性存疑，认为产品中还存在信息补充、风险判断和流程追踪问题。</li>
+                  </ul>
+                </section>
+                <button class="lpm-meeting-minutes-more"><svg class="lpm-icon is-sm"><use href="#lpm-i-chevron-down"></use></svg>查看更多</button>
+              </article>
+              <div class="lpm-meeting-minutes-fab"><svg class="lpm-icon"><use href="#lpm-i-bot"></use></svg></div>
+            </main>
+            <footer class="lpm-meeting-bottom" aria-hidden="true">
+              <div class="lpm-meeting-reactions"></div>
+              <div class="lpm-meeting-main-controls"><svg class="lpm-icon"><use href="#lpm-i-mic"></use></svg></div>
+              <button class="lpm-meeting-more"><svg class="lpm-icon"><use href="#lpm-i-more"></use></svg></button>
+            </footer>
           </div>
         </div>
       </section>
 
       <section class="demo-card lpm-prototype" data-product="task">
         <div class="lpm-window">
-          <div class="lpm-task">
-            <aside class="lpm-sidebar">
-              <div class="lpm-brand"><div class="lpm-brand-mark">任</div><div><div class="lpm-title">任务</div><div class="lpm-subtitle">Task</div></div></div>
-              <div class="lpm-nav"><div class="lpm-nav-item is-active">今天</div><div class="lpm-nav-item">我负责的</div><div class="lpm-nav-item">已完成</div></div>
+          <div class="lpm-task-real">
+            <aside class="lpm-task-rail">
+              <div class="lpm-messenger-profile">
+                <div class="lpm-avatar">明</div>
+                <div class="lpm-messenger-add"><svg class="lpm-icon is-sm"><use href="#lpm-i-plus"></use></svg></div>
+              </div>
+              <div class="lpm-messenger-search-dark"><svg class="lpm-icon is-sm"><use href="#lpm-i-search"></use></svg>搜索 (⌘+K)</div>
+              <nav class="lpm-messenger-nav">
+                <div class="lpm-messenger-nav-item"><svg class="lpm-icon"><use href="#lpm-i-message"></use></svg><span>消息</span><span class="lpm-messenger-badge">6</span></div>
+                <div class="lpm-messenger-nav-item"><svg class="lpm-icon"><use href="#lpm-i-bot"></use></svg><span>知识问答</span></div>
+                <div class="lpm-messenger-nav-item"><svg class="lpm-icon"><use href="#lpm-i-video"></use></svg><span>会议</span></div>
+                <div class="lpm-messenger-nav-item"><svg class="lpm-icon"><use href="#lpm-i-calendar"></use></svg><span>日历</span></div>
+                <div class="lpm-messenger-nav-item"><svg class="lpm-icon"><use href="#lpm-i-file"></use></svg><span>云文档</span></div>
+                <div class="lpm-messenger-nav-item"><svg class="lpm-icon"><use href="#lpm-i-users"></use></svg><span>通讯录</span></div>
+                <div class="lpm-messenger-nav-item"><svg class="lpm-icon"><use href="#lpm-i-mail"></use></svg><span>邮箱</span></div>
+                <div class="lpm-messenger-nav-item is-active"><svg class="lpm-icon"><use href="#lpm-i-check-square"></use></svg><span>任务</span><span class="lpm-messenger-badge">3</span></div>
+                <div class="lpm-messenger-nav-item"><svg class="lpm-icon"><use href="#lpm-i-grid"></use></svg><span>工作台</span></div>
+              </nav>
+              <div class="lpm-messenger-rail-footer">
+                <div><svg class="lpm-icon"><use href="#lpm-i-grid"></use></svg><svg class="lpm-icon"><use href="#lpm-i-star"></use></svg></div>
+                <div>下载飞书客户端</div>
+              </div>
             </aside>
-            <main class="lpm-task-list">
-              <section class="lpm-task-section">
-                <h3 class="lpm-task-section-title">今天 <span>3</span></h3>
-                <div class="lpm-task-row"><span class="lpm-task-checkbox"></span><div><div class="lpm-task-title">提取妙记待办</div><div class="lpm-task-meta">10:00 截止</div></div><span class="lpm-task-priority is-high"></span></div>
-                <div class="lpm-task-row is-done"><span class="lpm-task-checkbox">✓</span><div><div class="lpm-task-title">同步项目群</div><div class="lpm-task-meta">已完成</div></div><span class="lpm-task-priority"></span></div>
+            <aside class="lpm-task-sidebar">
+              <div class="lpm-task-side-head"><svg class="lpm-icon"><use href="#lpm-i-menu"></use></svg><strong>任务</strong><svg class="lpm-icon"><use href="#lpm-i-more"></use></svg></div>
+              <nav class="lpm-task-side-nav">
+                <div class="is-active"><svg class="lpm-icon"><use href="#lpm-i-user"></use></svg><span>我负责的</span><b>6</b></div>
+                <div><svg class="lpm-icon"><use href="#lpm-i-star"></use></svg><span>我关注的</span></div>
+                <div><svg class="lpm-icon"><use href="#lpm-i-clock"></use></svg><span>动态</span></div>
+                <div><svg class="lpm-icon"><use href="#lpm-i-grid"></use></svg><span>来自飞书项目</span></div>
+              </nav>
+              <div class="lpm-task-side-section">
+                <p><span>快速访问</span></p>
+                <div>全部任务</div>
+                <div>我创建的</div>
+                <div>我分配的</div>
+                <div>已完成</div>
+              </div>
+              <div class="lpm-task-side-section">
+                <p><span>任务清单</span><svg class="lpm-icon is-sm"><use href="#lpm-i-plus"></use></svg></p>
+                <div class="is-indent"><svg class="lpm-icon is-sm"><use href="#lpm-i-check-square"></use></svg>AI Solution 周会 TODO</div>
+              </div>
+              <div class="lpm-task-create-group"><svg class="lpm-icon is-sm"><use href="#lpm-i-plus"></use></svg>新建分组</div>
+            </aside>
+            <main class="lpm-task-main">
+              <header class="lpm-task-top">
+                <h1>我负责的</h1>
+                <button>新建 <svg class="lpm-icon is-sm"><use href="#lpm-i-plus"></use></svg></button>
+              </header>
+              <div class="lpm-task-tabs">
+                <span class="is-active"><svg class="lpm-icon is-sm"><use href="#lpm-i-list"></use></svg>列表</span>
+                <span><svg class="lpm-icon is-sm"><use href="#lpm-i-kanban"></use></svg>看板</span>
+                <span><svg class="lpm-icon is-sm"><use href="#lpm-i-chart"></use></svg>仪表盘</span>
+              </div>
+              <div class="lpm-task-toolbar">
+                <button><svg class="lpm-icon is-sm"><use href="#lpm-i-plus"></use></svg>新建任务</button>
+                <svg class="lpm-icon"><use href="#lpm-i-list"></use></svg>
+                <span class="is-active"><svg class="lpm-icon"><use href="#lpm-i-filter"></use></svg></span>
+                <svg class="lpm-icon"><use href="#lpm-i-sort"></use></svg>
+                <svg class="lpm-icon"><use href="#lpm-i-table"></use></svg>
+                <svg class="lpm-icon"><use href="#lpm-i-settings"></use></svg>
+              </div>
+              <section class="lpm-task-table">
+                <div class="lpm-task-table-head"><span>任务标题</span><span><svg class="lpm-icon is-sm"><use href="#lpm-i-user"></use></svg>负责人</span><span># 估分</span><span><svg class="lpm-icon is-sm"><use href="#lpm-i-calendar"></use></svg>截止时间</span></div>
+                <div class="lpm-task-row"><span class="lpm-task-checkbox"></span><strong>部门知识库梳理</strong><span><i class="lpm-avatar">明</i>许嘉明</span><span>-</span><time>4月20日</time></div>
+                <div class="lpm-task-row"><span class="lpm-task-checkbox"></span><strong>企业级 agent 搭建分享 <em>1</em></strong><span><i class="lpm-avatar">明</i>许嘉明</span><span>-</span><time>4月28日</time></div>
+                <div class="lpm-task-row"><span class="lpm-task-checkbox"></span><strong>一店一群</strong><span><i class="lpm-avatar">明</i>许嘉明</span><span>-</span><time>5月2日</time></div>
+                <div class="lpm-task-row"><span class="lpm-task-checkbox"></span><strong>培训、评委邀请</strong><span><i class="lpm-avatar">明</i>许嘉明</span><span>-</span><time class="is-muted"><svg class="lpm-icon is-sm"><use href="#lpm-i-calendar"></use></svg></time></div>
+                <div class="lpm-task-row"><span class="lpm-task-checkbox"></span><strong>阅读 Cat Wu 专访逐字稿（英文原版+中文对照）</strong><span><i class="lpm-avatar">明</i>许嘉明</span><span>-</span><time class="is-muted"><svg class="lpm-icon is-sm"><use href="#lpm-i-calendar"></use></svg></time></div>
+                <div class="lpm-task-row"><span class="lpm-task-checkbox"></span><strong>everything Claude code</strong><span><i class="lpm-avatar">明</i>许嘉明</span><span>-</span><time class="is-muted"><svg class="lpm-icon is-sm"><use href="#lpm-i-calendar"></use></svg></time></div>
+                <div class="lpm-task-new-row">新建任务</div>
               </section>
             </main>
           </div>
@@ -228,34 +586,72 @@
       <section class="demo-card lpm-prototype" data-product="calendar">
         <div class="lpm-window">
           <div class="lpm-calendar">
-            <main class="lpm-calendar-main">
-              <div class="lpm-calendar-header">
-                <h3 class="lpm-title">五月第二周</h3>
-                <button class="lpm-button">今天</button>
-              </div>
-              <div class="lpm-calendar-week">
-                <div></div><div class="lpm-calendar-day">周一</div><div class="lpm-calendar-day">周二</div><div class="lpm-calendar-day">周三</div><div class="lpm-calendar-day">周四</div><div class="lpm-calendar-day">周五</div><div class="lpm-calendar-day">周六</div><div class="lpm-calendar-day">周日</div>
-              </div>
-              <div class="lpm-calendar-grid">
-                <div class="lpm-calendar-time">09:00</div><div class="lpm-calendar-cell"><div class="lpm-calendar-event">项目例会</div></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div>
-                <div class="lpm-calendar-time">10:00</div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"><div class="lpm-calendar-event is-green">门店复盘</div></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div>
-                <div class="lpm-calendar-time">11:00</div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div>
-                <div class="lpm-calendar-time">12:00</div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div>
-                <div class="lpm-calendar-time">13:00</div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"><div class="lpm-calendar-event is-orange">方案评审</div></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div>
-                <div class="lpm-calendar-time">14:00</div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div>
-                <div class="lpm-calendar-time">15:00</div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div>
-                <div class="lpm-calendar-time">16:00</div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div><div class="lpm-calendar-cell"></div>
-              </div>
-            </main>
-            <aside class="lpm-calendar-side">
+            <aside class="lpm-calendar-sidebar">
+              <div class="lpm-calendar-mini-head"><span>2026年5月</span><span class="lpm-calendar-mini-controls"><svg class="lpm-icon is-sm"><use href="#lpm-i-chevron-left"></use></svg><svg class="lpm-icon is-sm"><use href="#lpm-i-chevron-right"></use></svg><svg class="lpm-icon is-sm"><use href="#lpm-i-chevron-up"></use></svg></span></div>
+              <div class="lpm-calendar-mini-week"><span>日</span><span>一</span><span>二</span><span>三</span><span>四</span><span>五</span><span>六</span></div>
               <div class="lpm-calendar-mini">
-                <div class="lpm-calendar-mini-day">1</div><div class="lpm-calendar-mini-day">2</div><div class="lpm-calendar-mini-day">3</div><div class="lpm-calendar-mini-day">4</div><div class="lpm-calendar-mini-day is-today">5</div><div class="lpm-calendar-mini-day">6</div><div class="lpm-calendar-mini-day">7</div>
+                <div class="is-muted">26</div><div class="is-muted">27</div><div class="is-muted">28</div><div class="is-muted">29</div><div class="is-muted">30</div><div>1</div><div>2</div>
+                <div>3</div><div>4</div><div>5</div><div>6</div><div class="is-today">7</div><div>8</div><div>9</div>
+                <div>10</div><div>11</div><div>12</div><div>13</div><div>14</div><div>15</div><div>16</div>
+                <div>17</div><div>18</div><div>19</div><div>20</div><div>21</div><div>22</div><div>23</div>
+                <div>24</div><div>25</div><div>26</div><div>27</div><div>28</div><div>29</div><div>30</div>
+                <div>31</div><div class="is-muted">1</div><div class="is-muted">2</div><div class="is-muted">3</div><div class="is-muted">4</div><div class="is-muted">5</div><div class="is-muted">6</div>
               </div>
-              <div class="lpm-calendar-agenda">
-                <div class="lpm-calendar-agenda-item">09:00 项目例会</div>
-                <div class="lpm-calendar-agenda-item">13:00 方案评审</div>
+              <div class="lpm-calendar-timezones">
+                <div><span>中国标准时间 - 北京</span><span><svg class="lpm-icon is-sm"><use href="#lpm-i-sun"></use></svg>14:32</span></div>
+                <div><span>北美东部时间 - 纽约</span><span><svg class="lpm-icon is-sm"><use href="#lpm-i-moon"></use></svg>02:32</span></div>
+              </div>
+              <div class="lpm-calendar-search"><span><svg class="lpm-icon is-sm"><use href="#lpm-i-search"></use></svg>搜索联系人、会议室</span><svg class="lpm-icon is-sm"><use href="#lpm-i-plus"></use></svg></div>
+              <div class="lpm-calendar-list-title">我管理的 <svg class="lpm-icon is-sm"><use href="#lpm-i-chevron-up"></use></svg></div>
+              <div class="lpm-calendar-list">
+                <div><i data-color="blue"></i>许嘉明</div>
+                <div><i data-color="yellow"></i>安全厂解见客日历</div>
+                <div class="is-active"><i data-color="pink"></i>百望云合作 <span class="lpm-calendar-row-actions"><svg class="lpm-icon is-sm"><use href="#lpm-i-x"></use></svg><svg class="lpm-icon is-sm"><use href="#lpm-i-more"></use></svg></span></div>
+                <div><i data-color="blue"></i>傅铮铭</div>
+                <div><i data-color="cyan"></i>Monetization宣贯日历</div>
+                <div><i data-color="green"></i>Partnership &amp; Open Platform 见...</div>
+                <div><i data-color="blue"></i>孙奇</div>
+                <div><i data-color="blue"></i>谭洁</div>
+                <div><i data-color="blue"></i>田泽坤</div>
               </div>
             </aside>
+            <main class="lpm-calendar-main">
+              <div class="lpm-calendar-topbar">
+                <div><button>今天</button><span class="lpm-calendar-topbar-nav"><svg class="lpm-icon is-sm"><use href="#lpm-i-chevron-left"></use></svg><svg class="lpm-icon is-sm"><use href="#lpm-i-chevron-right"></use></svg></span><strong>2026年5月</strong></div>
+                <div class="lpm-calendar-switch"><span>日</span><span class="is-active">周</span><span>月</span></div>
+                <div class="lpm-calendar-icons"><svg class="lpm-icon"><use href="#lpm-i-grid"></use></svg><svg class="lpm-icon"><use href="#lpm-i-more"></use></svg><span class="lpm-avatar">明</span></div>
+              </div>
+              <div class="lpm-calendar-week-head">
+                <div class="lpm-calendar-zone-head">GMT-4</div><div class="lpm-calendar-zone-head">GMT+8</div>
+                <div><span>周日</span><strong>3</strong></div>
+                <div><span>周一</span><strong>4</strong></div>
+                <div><span>周二</span><strong>5</strong></div>
+                <div><span>周三</span><strong>6</strong></div>
+                <div class="is-today"><span>周四</span><strong>7</strong></div>
+                <div><span>周五</span><strong>8</strong></div>
+                <div><span>周六</span><strong>9</strong></div>
+                <div class="lpm-calendar-holiday">公共假期中（5天）/ 5-Days on public holiday 00:00 - 23:59</div>
+                <div class="lpm-calendar-hotel">入住上海虹桥水城路亚朵果野酒店（6号到7号）</div>
+              </div>
+              <div class="lpm-calendar-time-grid">
+                <div class="lpm-calendar-grid-cols"><span></span><span></span><span></span><span></span><span></span><span></span><span class="is-today"></span><span></span><span></span></div>
+                <div class="lpm-calendar-time-row" style="top:34px"><span>13:00</span><span>01:00</span></div>
+                <div class="lpm-calendar-time-row" style="top:82px"><span>14:00</span><span>02:00</span></div>
+                <div class="lpm-calendar-time-row" style="top:130px"><span>15:00</span><span>03:00</span></div>
+                <div class="lpm-calendar-time-row" style="top:178px"><span>16:00</span><span>04:00</span></div>
+                <div class="lpm-calendar-time-row" style="top:226px"><span>17:00</span><span>05:00</span></div>
+                <div class="lpm-calendar-time-row" style="top:274px"><span>18:00</span><span>06:00</span></div>
+                <div class="lpm-calendar-time-row" style="top:322px"><span>19:00</span><span>07:00</span></div>
+                <div class="lpm-calendar-time-row" style="top:370px"><span>20:00</span><span>08:00</span></div>
+                <div class="lpm-calendar-time-row" style="top:418px"><span>21:00</span><span>09:00</span></div>
+                <div class="lpm-calendar-time-row" style="top:466px"><span>22:00</span><span>10:00</span></div>
+                <div class="lpm-calendar-time-row" style="top:514px"><span>23:00</span><span>11:00</span></div>
+                <div class="lpm-calendar-time-row" style="top:562px"><span>00:00</span><span>12:00</span></div>
+                <div class="lpm-calendar-event-card" style="left:52.8%; top:438px; width:104px; height:76px;">联学一店一群<br>前置沟通<br>10:00 雨虹股份</div>
+                <div class="lpm-calendar-event-card is-compact" style="left:75.8%; top:486px; width:116px; height:24px;">聊聊 HTML, 11:00</div>
+                <button class="lpm-calendar-add"><svg class="lpm-icon"><use href="#lpm-i-plus"></use></svg></button>
+              </div>
+            </main>
           </div>
         </div>
       </section>
