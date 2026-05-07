@@ -141,6 +141,15 @@ node scripts/validate_deck.js <html-file> --expect-slides N
 
 如果 PPT 里需要展示飞书产品功能，不建议放整页截图。可以引入 `product-mocks`，用普通 HTML 画可编辑的产品界面。产品原型 token 按真实飞书页面抽样收敛：正文 400，标题和强调使用中黑观感，具体在 `product-mocks/tokens.css`。
 
+这部分还没有做完，当前更准确地说是“可用的实验扩展”，不是稳定的 SDK API。它不会被 `sdk/lark-deckkit-loader.js` 默认加载，也不会影响已有 HTMLDeck 页面；只有页面主动引入 `product-mocks/lark-product-mocks.css` 时才会生效。
+
+现阶段建议这样使用：
+
+- 用在演示稿里的飞书产品示意、方案原型和 Agent 操作流程页。
+- 每次使用前打开对应预览页截图检查，不要默认认为已经 1:1 还原真实飞书页面。
+- 可以改文字、列表、状态和局部结构，但 `.lpm-*` 类名、组件结构和部分产品样式后续还可能调整。
+- 不要把从真实飞书页面抽取、未清洗的 DOM/CSS 直接提交到公开仓库。
+
 ```html
 <link rel="stylesheet" href="./sdk/fonts.css" />
 <link rel="stylesheet" href="./product-mocks/lark-product-mocks.css" />

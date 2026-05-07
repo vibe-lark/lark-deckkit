@@ -133,3 +133,238 @@
   color: var(--lpm-secondary);
   font-size: 13px;
 }
+
+/* First-screen Feishu Docs reference layout. */
+.lpm-docx-shell {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.lpm-docx-toolbar {
+  display: grid;
+  grid-template-columns: 82px minmax(0, 1fr) auto;
+  align-items: center;
+  height: 64px;
+  padding: 0 18px;
+  color: #646a73;
+  border-bottom: 1px solid #eff0f1;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.lpm-docx-left-tools {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #646a73;
+  font-size: 20px;
+}
+
+.lpm-docx-breadcrumb {
+  min-width: 0;
+  color: #646a73;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.lpm-docx-breadcrumb span,
+.lpm-docx-breadcrumb strong {
+  margin-right: 10px;
+}
+
+.lpm-docx-breadcrumb > .lpm-icon {
+  margin-right: 10px;
+  vertical-align: -2px;
+}
+
+.lpm-docx-breadcrumb strong {
+  color: #2b2f36;
+  font-weight: 400;
+}
+
+.lpm-docx-meta-line {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 2px;
+  color: #646a73;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.lpm-docx-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 14px;
+  min-width: 458px;
+  color: #1f2329;
+  font-size: 18px;
+}
+
+.lpm-docx-actions button {
+  height: 34px;
+  padding: 0 14px;
+  color: #ffffff;
+  background: #1456f0;
+  border: 0;
+  border-radius: 6px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.lpm-docx-editing {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 34px;
+  padding: 0 12px;
+  border: 1px solid #dee0e3;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.lpm-docx-body {
+  position: relative;
+  display: grid;
+  grid-template-columns: 256px minmax(0, 1fr);
+  flex: 1;
+  min-height: 0;
+}
+
+.lpm-docx-outline {
+  min-width: 0;
+  padding: 92px 8px 0 18px;
+  color: #646a73;
+  border-right: 1px solid #eff0f1;
+  overflow: hidden;
+  font-size: 14px;
+  line-height: 30px;
+}
+
+.lpm-docx-collapse {
+  position: absolute;
+  top: 72px;
+  left: 18px;
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  color: #646a73;
+}
+
+.lpm-docx-outline-title,
+.lpm-docx-outline-item,
+.lpm-docx-outline-sub {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.lpm-docx-outline-title {
+  color: #1456f0;
+  font-weight: 500;
+}
+
+.lpm-docx-outline-item {
+  color: #646a73;
+}
+
+.lpm-docx-outline-sub {
+  padding-left: 14px;
+  color: #646a73;
+}
+
+.lpm-docx-outline-sub.is-active {
+  color: #1456f0;
+}
+
+.lpm-docx-canvas {
+  min-width: 0;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.lpm-docx-page {
+  width: 826px;
+  margin-left: 52px;
+  padding-top: 54px;
+  color: #2b2f36;
+}
+
+.lpm-docx-page h1 {
+  margin: 0 0 20px;
+  color: #1f2329;
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 44px;
+  letter-spacing: 0;
+}
+
+.lpm-docx-author {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 28px;
+  color: #646a73;
+  font-size: 14px;
+}
+
+.lpm-docx-author .lpm-avatar {
+  width: 22px;
+  height: 22px;
+  font-size: 10px;
+}
+
+.lpm-docx-page h2 {
+  margin: 24px 0 10px;
+  color: #1f2329;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 34px;
+}
+
+.lpm-docx-page p,
+.lpm-docx-page li {
+  margin: 0 0 8px;
+  color: #2b2f36;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+.lpm-docx-page ol,
+.lpm-docx-page ul {
+  margin: 0 0 8px 23px;
+  padding: 0;
+}
+
+.lpm-docx-page ol li::marker,
+.lpm-docx-page ul li::marker {
+  color: #1456f0;
+}
+
+.lpm-docx-floating {
+  position: absolute;
+  right: 22px;
+  bottom: 38px;
+  display: grid;
+  gap: 14px;
+}
+
+.lpm-docx-floating span {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  color: #646a73;
+  background: #ffffff;
+  border: 1px solid #dee0e3;
+  border-radius: 50%;
+  box-shadow: 0 4px 14px rgba(31, 35, 41, 0.12);
+}

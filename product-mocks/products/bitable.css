@@ -130,3 +130,259 @@
   border-radius: var(--lpm-radius-md);
   box-shadow: var(--lpm-shadow-sm);
 }
+
+/* First-screen Feishu Bitable-in-Docs reference layout. */
+.lpm-bitable-real {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  color: #1f2329;
+  background: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.lpm-bitable-docbar {
+  display: grid;
+  grid-template-columns: 82px minmax(0, 1fr) auto;
+  align-items: center;
+  height: 64px;
+  padding: 0 18px;
+  border-bottom: 1px solid #eff0f1;
+}
+
+.lpm-bitable-doc-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #1f2329;
+}
+
+.lpm-bitable-doc-actions button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 34px;
+  padding: 0 12px;
+  color: #1f2329;
+  background: #ffffff;
+  border: 1px solid #dee0e3;
+  border-radius: 6px;
+  font: inherit;
+}
+
+.lpm-bitable-doc-actions .is-share {
+  color: #ffffff;
+  background: #1456f0;
+  border-color: #1456f0;
+  font-weight: 500;
+}
+
+.lpm-bitable-doc-actions .lpm-avatar {
+  width: 32px;
+  height: 32px;
+  font-size: 12px;
+}
+
+.lpm-bitable-body {
+  display: grid;
+  grid-template-columns: 356px minmax(0, 1fr);
+  flex: 1;
+  min-height: 0;
+}
+
+.lpm-bitable-sidebar {
+  position: relative;
+  min-width: 0;
+  padding: 12px;
+  background: #ffffff;
+  border-right: 1px solid #dee0e3;
+  overflow: hidden;
+}
+
+.lpm-bitable-search {
+  display: grid;
+  grid-template-columns: 18px minmax(0, 1fr) 18px;
+  align-items: center;
+  height: 32px;
+  margin-bottom: 18px;
+  color: #646a73;
+  font-size: 14px;
+}
+
+.lpm-bitable-side-nav {
+  display: grid;
+  gap: 2px;
+}
+
+.lpm-bitable-side-nav div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 36px;
+  padding: 0 10px;
+  color: #1f2329;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.lpm-bitable-side-nav .is-active .lpm-icon:last-child {
+  margin-left: auto;
+}
+
+.lpm-bitable-side-nav div:not(.is-active) .lpm-icon:last-child:not(:only-child) {
+  display: none;
+}
+
+.lpm-bitable-side-nav .is-active {
+  color: #1456f0;
+  background: #f0f4ff;
+}
+
+.lpm-bitable-new {
+  position: absolute;
+  right: 12px;
+  bottom: 16px;
+  left: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 32px;
+  color: #1f2329;
+  background: #ffffff;
+  border: 1px solid #dee0e3;
+  border-radius: 6px;
+  font: inherit;
+}
+
+.lpm-bitable-main {
+  display: flex;
+  min-width: 0;
+  min-height: 0;
+  flex-direction: column;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.lpm-bitable-viewbar {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  height: 44px;
+  padding-left: 24px;
+  border-bottom: 1px solid #dee0e3;
+}
+
+.lpm-bitable-view-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 44px;
+  padding: 0 24px;
+  color: #646a73;
+  border-right: 1px solid #eff0f1;
+  font-size: 14px;
+}
+
+.lpm-bitable-view-tab.is-active {
+  color: #1f2329;
+  background: #ffffff;
+  box-shadow: inset 0 -2px 0 #1456f0;
+}
+
+.lpm-bitable-controlbar {
+  display: grid;
+  grid-template-columns: repeat(4, 36px) minmax(0, 1fr) repeat(3, 36px);
+  align-items: center;
+  height: 42px;
+  padding: 0 24px;
+  border-bottom: 1px solid #dee0e3;
+}
+
+.lpm-bitable-controlbar button {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  color: #646a73;
+  background: transparent;
+  border: 0;
+  border-radius: 6px;
+}
+
+.lpm-bitable-table.is-real {
+  min-width: 1120px;
+  color: #1f2329;
+  font-size: 14px;
+}
+
+.lpm-bitable-table.is-real th,
+.lpm-bitable-table.is-real td {
+  height: 54px;
+  padding: 0 12px;
+  color: #1f2329;
+  border-right: 1px solid #dee0e3;
+  border-bottom: 1px solid #dee0e3;
+  vertical-align: top;
+  white-space: normal;
+}
+
+.lpm-bitable-table.is-real th {
+  height: 42px;
+  color: #646a73;
+  background: #ffffff;
+  font-weight: 400;
+  line-height: 42px;
+  white-space: nowrap;
+}
+
+.lpm-bitable-table.is-real th:nth-child(1),
+.lpm-bitable-table.is-real td:nth-child(1) {
+  width: 54px;
+  text-align: center;
+}
+
+.lpm-bitable-table.is-real th:nth-child(2),
+.lpm-bitable-table.is-real td:nth-child(2) {
+  width: 330px;
+}
+
+.lpm-bitable-table.is-real th:nth-child(3),
+.lpm-bitable-table.is-real td:nth-child(3) {
+  width: 180px;
+}
+
+.lpm-bitable-table.is-real th:nth-child(4),
+.lpm-bitable-table.is-real td:nth-child(4) {
+  width: 180px;
+}
+
+.lpm-bitable-table.is-real th:nth-child(5),
+.lpm-bitable-table.is-real td:nth-child(5) {
+  width: 330px;
+}
+
+.lpm-bitable-table.is-real td {
+  padding-top: 10px;
+  line-height: 20px;
+}
+
+.lpm-bitable-table.is-real a {
+  color: #1456f0;
+  text-decoration: none;
+}
+
+.lpm-bitable-footer {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 36px;
+  padding-left: 250px;
+  color: #646a73;
+  border-top: 1px solid #dee0e3;
+  font-size: 13px;
+  line-height: 36px;
+}
