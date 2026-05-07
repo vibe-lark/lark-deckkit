@@ -255,6 +255,10 @@ class GeneratedArtifactsTest(unittest.TestCase):
             ".lpm-dark",
         ]:
             self.assertIn(token, token_css)
+        self.assertIn("--lpm-weight-body: 400", token_css)
+        self.assertIn("--lpm-weight-strong: 500", token_css)
+        self.assertIn("--lpm-blue-action: #3370ff", token_css)
+        self.assertIn("--lpm-bg: #f5f6f7", token_css)
 
         for product, path in product_files.items():
             self.assertIn(f'@import url("./products/{product}.css")', entry_css)

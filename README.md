@@ -139,7 +139,7 @@ node scripts/validate_deck.js <html-file> --expect-slides N
 
 ### 飞书产品原型 CSS
 
-如果 PPT 里需要展示飞书产品功能，不建议放整页截图。可以引入 `product-mocks`，用普通 HTML 画可编辑的产品界面。产品原型默认按飞书页面的“中黑”观感设置字重，具体 token 在 `product-mocks/tokens.css`。
+如果 PPT 里需要展示飞书产品功能，不建议放整页截图。可以引入 `product-mocks`，用普通 HTML 画可编辑的产品界面。产品原型 token 按真实飞书页面抽样收敛：正文 400，标题和强调使用中黑观感，具体在 `product-mocks/tokens.css`。
 
 ```html
 <link rel="stylesheet" href="./sdk/fonts.css" />

@@ -20,7 +20,7 @@
   font-family: var(--lpm-font);
   font-size: 14px;
   font-weight: var(--lpm-weight-body);
-  line-height: 1.45;
+  line-height: 20px;
   -webkit-font-smoothing: antialiased;
   text-rendering: geometricPrecision;
 }
@@ -32,22 +32,23 @@
   min-height: 0;
   overflow: hidden;
   background: var(--lpm-surface);
-  border: var(--lpm-line);
-  border-radius: var(--lpm-radius-lg);
-  box-shadow: var(--lpm-shadow-md);
-}
-
-.lpm-window[data-chrome="flat"] {
-  border-radius: var(--lpm-radius-md);
+  border: 0;
+  border-radius: 0;
   box-shadow: none;
 }
 
+.lpm-window[data-chrome="slide"] {
+  border: var(--lpm-line);
+  border-radius: var(--lpm-radius-md);
+  box-shadow: var(--lpm-shadow-md);
+}
+
 .lpm-sidebar {
-  width: 232px;
-  min-width: 232px;
+  width: 236px;
+  min-width: 236px;
   height: 100%;
-  padding: var(--lpm-space-4) var(--lpm-space-3);
-  background: #f7f9fc;
+  padding: 12px 8px;
+  background: var(--lpm-surface);
   border-right: var(--lpm-line-soft);
   overflow: hidden;
 }
@@ -69,7 +70,7 @@
   align-items: center;
   justify-content: space-between;
   min-height: 56px;
-  padding: 0 var(--lpm-space-5);
+  padding: 0 20px;
   border-bottom: var(--lpm-line-soft);
   background: rgba(255, 255, 255, 0.92);
 }
@@ -82,9 +83,9 @@
   margin: 0;
   color: var(--lpm-ink);
   font-family: var(--lpm-font-zh);
-  font-size: 17px;
+  font-size: 16px;
   font-weight: var(--lpm-weight-title);
-  line-height: 1.35;
+  line-height: 22px;
 }
 
 .lpm-subtitle {
@@ -104,7 +105,7 @@
   align-items: center;
   gap: var(--lpm-space-3);
   min-height: 40px;
-  margin-bottom: var(--lpm-space-4);
+  margin-bottom: 12px;
 }
 
 .lpm-brand-mark {
@@ -113,7 +114,7 @@
   width: 32px;
   height: 32px;
   color: #fff;
-  background: linear-gradient(135deg, var(--lpm-blue), var(--lpm-cyan));
+  background: var(--lpm-blue);
   border-radius: var(--lpm-radius-md);
   font-size: 15px;
   font-weight: var(--lpm-weight-display);
@@ -129,7 +130,7 @@
   align-items: center;
   gap: var(--lpm-space-3);
   min-height: 36px;
-  padding: 0 var(--lpm-space-3);
+  padding: 0 8px;
   color: var(--lpm-secondary);
   border-radius: var(--lpm-radius-sm);
   font-size: 14px;
@@ -137,7 +138,7 @@
 
 .lpm-nav-item.is-active {
   color: var(--lpm-blue);
-  background: var(--lpm-blue-soft);
+  background: var(--lpm-blue-active);
   font-weight: var(--lpm-weight-strong);
 }
 
@@ -159,11 +160,11 @@
   justify-content: center;
   gap: var(--lpm-space-2);
   min-height: 32px;
-  padding: 0 var(--lpm-space-3);
+  padding: 0 12px;
   color: var(--lpm-text);
   background: var(--lpm-surface);
   border: var(--lpm-line);
-  border-radius: var(--lpm-radius-sm);
+  border-radius: var(--lpm-radius-md);
   font: inherit;
   font-weight: var(--lpm-weight-label);
 }
@@ -187,12 +188,12 @@
 .lpm-search {
   display: flex;
   align-items: center;
-  min-height: 34px;
-  padding: 0 var(--lpm-space-3);
+  min-height: 32px;
+  padding: 0 8px;
   color: var(--lpm-tertiary);
   background: var(--lpm-surface-soft);
   border: var(--lpm-line-soft);
-  border-radius: var(--lpm-radius-sm);
+  border-radius: var(--lpm-radius-md);
 }
 
 .lpm-avatar {
@@ -202,18 +203,18 @@
   height: 32px;
   flex: 0 0 auto;
   color: #fff;
-  background: linear-gradient(135deg, #3ec3f7, #1456f0);
+  background: #465069;
   border-radius: 50%;
   font-size: 13px;
   font-weight: var(--lpm-weight-strong);
 }
 
 .lpm-avatar[data-tone="green"] {
-  background: linear-gradient(135deg, #47d59a, #14b56b);
+  background: var(--lpm-teal);
 }
 
 .lpm-avatar[data-tone="orange"] {
-  background: linear-gradient(135deg, #ffbf66, #ff8f1f);
+  background: var(--lpm-orange);
 }
 
 .lpm-chip,
@@ -222,7 +223,7 @@
   align-items: center;
   justify-content: center;
   min-height: 22px;
-  padding: 0 var(--lpm-space-2);
+  padding: 0 8px;
   color: var(--lpm-secondary);
   background: var(--lpm-surface-soft);
   border: var(--lpm-line-soft);
@@ -234,15 +235,15 @@
 .lpm-chip.is-blue,
 .lpm-tag.is-blue {
   color: var(--lpm-blue);
-  background: var(--lpm-blue-soft);
-  border-color: #cfe1ff;
+  background: var(--lpm-blue-active);
+  border-color: transparent;
 }
 
 .lpm-chip.is-green,
 .lpm-tag.is-green {
   color: var(--lpm-green);
-  background: #e8fff3;
-  border-color: #bfefd5;
+  background: rgba(45, 190, 171, 0.16);
+  border-color: transparent;
 }
 
 .lpm-card {

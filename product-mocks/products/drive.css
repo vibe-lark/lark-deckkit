@@ -18,8 +18,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 58px;
-  padding: 0 var(--lpm-space-5);
+  min-height: 56px;
+  padding: 0 20px;
   border-bottom: var(--lpm-line-soft);
 }
 
@@ -28,7 +28,7 @@
   align-items: center;
   gap: var(--lpm-space-2);
   color: var(--lpm-secondary);
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .lpm-drive-breadcrumb strong {
@@ -38,15 +38,15 @@
 
 .lpm-drive-view-tabs {
   display: flex;
-  gap: var(--lpm-space-2);
-  padding: var(--lpm-space-4) var(--lpm-space-5) 0;
+  gap: 8px;
+  padding: 12px 20px 0;
 }
 
 .lpm-drive-view-tab {
   display: inline-flex;
   align-items: center;
-  min-height: 30px;
-  padding: 0 var(--lpm-space-3);
+  min-height: 28px;
+  padding: 0 12px;
   color: var(--lpm-secondary);
   border-radius: var(--lpm-radius-sm);
   font-size: 13px;
@@ -55,13 +55,13 @@
 
 .lpm-drive-view-tab.is-active {
   color: var(--lpm-blue);
-  background: var(--lpm-blue-soft);
+  background: var(--lpm-blue-active);
 }
 
 .lpm-drive-list {
   flex: 1;
   min-height: 0;
-  padding: var(--lpm-space-4) var(--lpm-space-5) var(--lpm-space-5);
+  padding: 12px 20px 20px;
   overflow: hidden;
 }
 
@@ -71,13 +71,13 @@
   border-spacing: 0;
   table-layout: fixed;
   color: var(--lpm-text);
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .lpm-drive-table th,
 .lpm-drive-table td {
-  height: 46px;
-  padding: 0 12px;
+  height: 56px;
+  padding: 0 8px;
   overflow: hidden;
   border-bottom: var(--lpm-line-soft);
   text-align: left;
@@ -87,7 +87,7 @@
 
 .lpm-drive-table th {
   color: var(--lpm-tertiary);
-  font-weight: var(--lpm-weight-label);
+  font-weight: var(--lpm-weight-body);
 }
 
 .lpm-drive-name {
@@ -100,12 +100,12 @@
 .lpm-drive-icon {
   display: grid;
   place-items: center;
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
   flex: 0 0 auto;
   color: #fff;
-  background: linear-gradient(135deg, var(--lpm-cyan), var(--lpm-blue));
-  border-radius: var(--lpm-radius-sm);
+  background: var(--lpm-blue);
+  border-radius: 6px;
   font-size: 12px;
   font-weight: var(--lpm-weight-strong);
 }
@@ -116,14 +116,14 @@
 }
 
 .lpm-drive-icon[data-type="sheet"] {
-  background: linear-gradient(135deg, #47d59a, #14b56b);
+  background: var(--lpm-teal);
 }
 
 .lpm-drive-file-title {
   min-width: 0;
   color: var(--lpm-ink);
   overflow: hidden;
-  font-weight: var(--lpm-weight-strong);
+  font-weight: var(--lpm-weight-body);
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -142,15 +142,15 @@
   padding: var(--lpm-space-4);
   background: var(--lpm-surface);
   border: var(--lpm-line-soft);
-  border-radius: var(--lpm-radius-lg);
+  border-radius: 6px;
   box-shadow: var(--lpm-shadow-sm);
 }
 
 .lpm-drive-card-preview {
   height: 64px;
-  background: linear-gradient(135deg, #f7faff, #edf4ff);
+  background: #f5f6f7;
   border: var(--lpm-line-soft);
-  border-radius: var(--lpm-radius-md);
+  border-radius: 6px;
 }
 
 .lpm-drive-card-title {

@@ -36,12 +36,12 @@
 
 ## 字体和字重
 
-产品原型默认按飞书产品页面的“中黑”观感处理：
+产品原型 token 按真实飞书页面抽样收敛。抽样里大部分正文 computed weight 是 `400`，标题、活动项和强调控件会更接近“中黑”观感：
 
-- 普通正文、列表、标签：`--lpm-weight-body: 500`
-- 强调字段、文件名、会话标题：`--lpm-weight-strong: 600`
-- 页面标题：`--lpm-weight-title: 650`
-- 大数字或强视觉标识：`--lpm-weight-display: 760`
+- 普通正文、列表、标签：`--lpm-weight-body: 400`
+- 强调字段、文件名、会话标题：`--lpm-weight-strong: 500`
+- 页面标题：`--lpm-weight-title: 500`
+- 大数字或强视觉标识：`--lpm-weight-display: 700`
 
 这些变量都定义在 `tokens.css`，后续如果真实页面抽样得到更精确的 computed style，只需要改 token，不需要逐个改产品 CSS。
 
@@ -50,7 +50,7 @@
 - 适合：PPT 中的产品功能示意、方案页、流程页、Agent 操作回写页。
 - 不适合：真实飞书网页复刻、线上产品前端、直接复制飞书私有 CSS。
 - 类名统一使用 `.lpm-*`，避免污染 `LarkSlides` 和 `LarkSlideTemplates`。
-- 字体统一复用 `sdk/fonts.css` 里的 `--ld-font-zh` 和兰亭黑中黑字重。
+- 字体优先使用飞书线上字体栈；没有线上字体时，回退到 `sdk/fonts.css` 里的兰亭黑。
 
 ## 示例
 
