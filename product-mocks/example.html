@@ -9,25 +9,30 @@
     <style>
       body {
         margin: 0;
-        padding: 32px;
-        background: #111217;
-        font-family: var(--ld-font-ui);
+        padding: 32px 0 64px;
+        background: #f5f6f7;
+        font-family: var(--lpm-font);
       }
 
       .demo-grid {
         display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 24px;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 32px;
+        width: 1200px;
+        margin: 0 auto;
       }
 
       .demo-card {
-        height: 420px;
+        height: 846px;
         min-width: 0;
+        overflow: hidden;
+        background: #fff;
+        border: 1px solid #dee0e3;
       }
 
       .demo-card.is-wide {
-        grid-column: span 2;
-        height: 460px;
+        grid-column: span 1;
+        height: 846px;
       }
     </style>
   </head>
