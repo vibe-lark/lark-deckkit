@@ -1,0 +1,59 @@
+{
+  "generatedAt": "2026-05-13T18:42:19.498Z",
+  "items": {
+    "USAGE.md": {
+      "name": "USAGE.md",
+      "tosKey": "gtm/pptx-media/v1/USAGE.md",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/USAGE.md",
+      "uploadedAt": "2026-05-14T16:59:01.808Z"
+    },
+    "assets-index.csv": {
+      "name": "assets-index.csv",
+      "tosKey": "gtm/pptx-media/v1/assets-index.csv",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/assets-index.csv",
+      "uploadedAt": "2026-05-14T16:59:01.964Z"
+    },
+    "not-needed-now.md": {
+      "name": "not-needed-now.md",
+      "tosKey": "gtm/pptx-media/v1/not-needed-now.md",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/not-needed-now.md",
+      "uploadedAt": "2026-05-14T16:59:00.607Z"
+    },
+    "assets-index.json": {
+      "name": "assets-index.json",
+      "tosKey": "gtm/pptx-media/v1/assets-index.json",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/assets-index.json",
+      "uploadedAt": "2026-05-14T16:58:59.826Z"
+    },
+    "index.html": {
+      "name": "index.html",
+      "tosKey": "gtm/pptx-media/v1/index.html",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/index.html",
+      "uploadedAt": "2026-05-14T16:58:59.366Z"
+    },
+    "logos.json": {
+      "name": "logos.json",
+      "tosKey": "gtm/pptx-media/v1/logos.json",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos.json",
+      "uploadedAt": "2026-05-14T16:58:59.210Z"
+    },
+    "llms.txt": {
+      "name": "llms.txt",
+      "tosKey": "gtm/pptx-media/v1/llms.txt",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/llms.txt",
+      "uploadedAt": "2026-05-14T16:58:59.214Z"
+    },
+    "icons.json": {
+      "name": "icons.json",
+      "tosKey": "gtm/pptx-media/v1/icons.json",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons.json",
+      "uploadedAt": "2026-05-14T16:59:01.225Z"
+    },
+    "excluded.json": {
+      "name": "excluded.json",
+      "tosKey": "gtm/pptx-media/v1/excluded.json",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/excluded.json",
+      "uploadedAt": "2026-05-14T16:58:59.750Z"
+    }
+  }
+}

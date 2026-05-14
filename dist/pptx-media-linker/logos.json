@@ -1,0 +1,1057 @@
+{
+  "summary": {
+    "total": 52,
+    "generatedAt": "2026-05-14T16:59:01.965Z"
+  },
+  "items": [
+    {
+      "id": "feishu-knowledge-ai-m3-logo",
+      "name": "飞书知识问答 M3",
+      "type": "logo",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-knowledge-ai-m3-logo-25a78cdf.png",
+      "tags": [
+        "feishu",
+        "knowledge",
+        "ai",
+        "m3",
+        "logo"
+      ],
+      "usage": "用于 GTM 材料中的产品、客户或伙伴标识引用；不要拉伸变形，优先保留透明背景。",
+      "sourceFile": "0749c41196e45f5d.png",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-knowledge-ai-m3-logo-25a78cdf.png",
+      "size": {
+        "width": 3034,
+        "height": 735,
+        "bytes": 229716
+      }
+    },
+    {
+      "id": "feishu-logo-en",
+      "name": "Feishu",
+      "type": "logo",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-logo-en-0ff6c1a4.png",
+      "tags": [
+        "feishu",
+        "logo",
+        "en"
+      ],
+      "usage": "用于 GTM 材料中的产品、客户或伙伴标识引用；不要拉伸变形，优先保留透明背景。",
+      "sourceFile": "08bf3a9e90ef777f.png",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-logo-en-0ff6c1a4.png",
+      "size": {
+        "width": 1235,
+        "height": 418,
+        "bytes": 16618
+      }
+    },
+    {
+      "id": "feishu-ai-logo-cn",
+      "name": "飞书 AI",
+      "type": "logo",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-ai-logo-cn-7d74d4f8.png",
+      "tags": [
+        "feishu",
+        "ai",
+        "logo",
+        "cn"
+      ],
+      "usage": "用于 GTM 材料中的产品、客户或伙伴标识引用；不要拉伸变形，优先保留透明背景。",
+      "sourceFile": "14cfd839ad465a63.png",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-ai-logo-cn-7d74d4f8.png",
+      "size": {
+        "width": 1185,
+        "height": 417,
+        "bytes": 89180
+      }
+    },
+    {
+      "id": "feishu-logo-cn-dark",
+      "name": "飞书深色字标",
+      "type": "logo",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-logo-cn-dark-9754923f.png",
+      "tags": [
+        "feishu",
+        "logo",
+        "cn",
+        "dark"
+      ],
+      "usage": "用于 GTM 材料中的产品、客户或伙伴标识引用；不要拉伸变形，优先保留透明背景。",
+      "sourceFile": "1f910f6c8f80b9c1.png",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-logo-cn-dark-9754923f.png",
+      "size": {
+        "width": 1034,
+        "height": 326,
+        "bytes": 14139
+      }
+    },
+    {
+      "id": "feishu-knowledge-ai-m3-logo-alt",
+      "name": "飞书知识问答 M3",
+      "type": "logo",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-knowledge-ai-m3-logo-alt-8057a7d5.png",
+      "tags": [
+        "feishu",
+        "knowledge",
+        "ai",
+        "m3",
+        "logo",
+        "alt"
+      ],
+      "usage": "用于 GTM 材料中的产品、客户或伙伴标识引用；不要拉伸变形，优先保留透明背景。",
+      "sourceFile": "218fa5b929300c78.png",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-knowledge-ai-m3-logo-alt-8057a7d5.png",
+      "size": {
+        "width": 2235,
+        "height": 417,
+        "bytes": 106718
+      }
+    },
+    {
+      "id": "feishu-spark-preview-logo",
+      "name": "Feishu Spark Preview",
+      "type": "logo",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-spark-preview-logo-5b6af8c2.png",
+      "tags": [
+        "feishu",
+        "spark",
+        "preview",
+        "logo"
+      ],
+      "usage": "用于 GTM 材料中的产品、客户或伙伴标识引用；不要拉伸变形，优先保留透明背景。",
+      "sourceFile": "2593e92000a220ec.png",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-spark-preview-logo-5b6af8c2.png",
+      "size": {
+        "width": 2333,
+        "height": 418,
+        "bytes": 46717
+      }
+    },
+    {
+      "id": "feishu-people-logo-en",
+      "name": "Feishu People",
+      "type": "logo",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-people-logo-en-fe170e8b.png",
+      "tags": [
+        "feishu",
+        "people",
+        "logo",
+        "en"
+      ],
+      "usage": "用于 GTM 材料中的产品、客户或伙伴标识引用；不要拉伸变形，优先保留透明背景。",
+      "sourceFile": "2d2b36c2ee485ac7.png",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-people-logo-en-fe170e8b.png",
+      "size": {
+        "width": 2003,
+        "height": 418,
+        "bytes": 26000
+      }
+    },
+    {
+      "id": "feishu-logo-cn",
+      "name": "飞书",
+      "type": "logo",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-logo-cn-93c15b8b.png",
+      "tags": [
+        "feishu",
+        "logo",
+        "cn"
+      ],
+      "usage": "用于 GTM 材料中的产品、客户或伙伴标识引用；不要拉伸变形，优先保留透明背景。",
+      "sourceFile": "306e3e3f8fc9e59b.png",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-logo-cn-93c15b8b.png",
+      "size": {
+        "width": 932,
+        "height": 418,
+        "bytes": 13309
+      }
+    },
+    {
+      "id": "feishu-integration-platform-logo",
+      "name": "飞书集成平台",
+      "type": "logo",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-integration-platform-logo-619cc495.png",
+      "tags": [
+        "feishu",
+        "integration",
+        "platform",
+        "logo"
+      ],
+      "usage": "用于 GTM 材料中的产品、客户或伙伴标识引用；不要拉伸变形，优先保留透明背景。",
+      "sourceFile": "33c6da4f7a6f63d2.png",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-integration-platform-logo-619cc495.png",
+      "size": {
+        "width": 1913,
+        "height": 418,
+        "bytes": 25179
+      }
+    },
+    {
+      "id": "feishu-hire-logo-en",
+      "name": "Feishu Hire",
+      "type": "logo",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-hire-logo-en-a0c1376f.png",
+      "tags": [
+        "feishu",
+        "hire",
+        "logo",
+        "en"
+      ],
+      "usage": "用于 GTM 材料中的产品、客户或伙伴标识引用；不要拉伸变形，优先保留透明背景。",
+      "sourceFile": "346c5453de44f9eb.png",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-hire-logo-en-a0c1376f.png",
+      "size": {
+        "width": 1771,
+        "height": 418,
+        "bytes": 21829
+      }
+    },
+    {
+      "id": "feishu-minutes-logo-cn-dark",
+      "name": "飞书妙记深色字标",
+      "type": "logo",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-minutes-logo-cn-dark-a076d491.png",
+      "tags": [
+        "feishu",
+        "minutes",
+        "logo",
+        "cn",
+        "dark"
+      ],
+      "usage": "用于 GTM 材料中的产品、客户或伙伴标识引用；不要拉伸变形，优先保留透明背景。",
+      "sourceFile": "3904b80d255a1608.png",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-minutes-logo-cn-dark-a076d491.png",
+      "size": {
+        "width": 2168,
+        "height": 543,
+        "bytes": 79747
+      }
+    },
+    {
+      "id": "feishu-minutes-preview-logo-cn",
+      "name": "飞书妙搭预览",
+      "type": "logo",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-minutes-preview-logo-cn-90609ea0.png",
+      "tags": [
+        "feishu",
+        "minutes",
+        "preview",
+        "logo",
+        "cn"
+      ],
+      "usage": "用于 GTM 材料中的产品、客户或伙伴标识引用；不要拉伸变形，优先保留透明背景。",
+      "sourceFile": "3acfb7fc5171ce0e.png",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-minutes-preview-logo-cn-90609ea0.png",
+      "size": {
+        "width": 1760,
+        "height": 418,
+        "bytes": 42888
+      }
+    },
+    {
+      "id": "feishu-apaas-logo-cn",
+      "name": "飞书 aPaaS",
+      "type": "logo",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-apaas-logo-cn-73eac58c.png",
+      "tags": [
+        "feishu",
+        "apaas",
+        "logo",
+        "cn"
+      ],
+      "usage": "用于 GTM 材料中的产品、客户或伙伴标识引用；不要拉伸变形，优先保留透明背景。",
+      "sourceFile": "3b957b1496c9b927.png",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-apaas-logo-cn-73eac58c.png",
+      "size": {
+        "width": 1681,
+        "height": 417,
+        "bytes": 43234
+      }
+    },
+    {
+      "id": "feishu-base-logo-en",
+      "name": "Feishu Base",
+      "type": "logo",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-base-logo-en-9907c50b.png",
+      "tags": [
+        "feishu",
+        "base",
+        "logo",
+        "en"
+      ],
+      "usage": "用于 GTM 材料中的产品、客户或伙伴标识引用；不要拉伸变形，优先保留透明背景。",
+      "sourceFile": "4cfbf4d0ab64daf4.png",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-base-logo-en-9907c50b.png",
+      "size": {
+        "width": 1847,
+        "height": 417,
+        "bytes": 24537
+      }
+    },
+    {
+      "id": "feishu-aily-m3-logo-cn",
+      "name": "飞书 aily M3",
+      "type": "logo",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-aily-m3-logo-cn-1ef33fb5.png",
+      "tags": [
+        "feishu",
+        "aily",
+        "m3",
+        "logo",
+        "cn"
+      ],
+      "usage": "用于 GTM 材料中的产品、客户或伙伴标识引用；不要拉伸变形，优先保留透明背景。",
+      "sourceFile": "4f4afc2549aa721c.png",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-aily-m3-logo-cn-1ef33fb5.png",
+      "size": {
+        "width": 3034,
+        "height": 735,
+        "bytes": 144689
+      }
+    },
+    {
+      "id": "kaojiang-logo",
+      "name": "烤匠麻辣烤鱼",
+      "type": "logo",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/kaojiang-logo-e8bc7318.png",
+      "tags": [
+        "kaojiang",
+        "logo"
+      ],
+      "usage": "用于 GTM 材料中的产品、客户或伙伴标识引用；不要拉伸变形，优先保留透明背景。",
+      "sourceFile": "55adb414daa2a42b.png",
+      "tosKey": "gtm/pptx-media/v1/logos/kaojiang-logo-e8bc7318.png",
+      "size": {
+        "width": 442,
+        "height": 149,
+        "bytes": 6652
+      }
+    },
+    {
+      "id": "feishu-ai-meeting-minutes-m4-logo-cn",
+      "name": "飞书智能会议纪要 M4",
+      "type": "logo",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-ai-meeting-minutes-m4-logo-cn-6b2f93c5.png",
+      "tags": [
+        "feishu",
+        "ai",
+        "meeting",
+        "minutes",
+        "m4",
+        "logo",
+        "cn"
+      ],
+      "usage": "用于 GTM 材料中的产品、客户或伙伴标识引用；不要拉伸变形，优先保留透明背景。",
+      "sourceFile": "57a9fc797aecd8c6.png",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-ai-meeting-minutes-m4-logo-cn-6b2f93c5.png",
+      "size": {
+        "width": 2684,
+        "height": 418,
+        "bytes": 47669
+      }
+    },
+    {
+      "id": "haidilao-logo",
+      "name": "海底捞",
+      "type": "logo",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/haidilao-logo-a4edaec6.png",
+      "tags": [
+        "haidilao",
+        "logo"
+      ],
+      "usage": "用于 GTM 材料中的产品、客户或伙伴标识引用；不要拉伸变形，优先保留透明背景。",
+      "sourceFile": "5cfa40729e3c636e.png",
+      "tosKey": "gtm/pptx-media/v1/logos/haidilao-logo-a4edaec6.png",
+      "size": {
+        "width": 425,
+        "height": 199,
+        "bytes": 17041
+      }
+    },
+    {
+      "id": "feishu-apaas-logo-en",
+      "name": "Feishu aPaaS",
+      "type": "logo",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-apaas-logo-en-558cce60.png",
+      "tags": [
+        "feishu",
+        "apaas",
+        "logo",
+        "en"
+      ],
+      "usage": "用于 GTM 材料中的产品、客户或伙伴标识引用；不要拉伸变形，优先保留透明背景。",
+      "sourceFile": "6094a3077e72335d.png",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-apaas-logo-en-558cce60.png",
+      "size": {
+        "width": 2000,
+        "height": 417,
+        "bytes": 45874
+      }
+    },
+    {
+      "id": "feishu-ai-logo-en",
+      "name": "Feishu AI",
+      "type": "logo",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-ai-logo-en-beb4f540.png",
+      "tags": [
+        "feishu",
+        "ai",
+        "logo",
+        "en"
+      ],
+      "usage": "用于 GTM 材料中的产品、客户或伙伴标识引用；不要拉伸变形，优先保留透明背景。",
+      "sourceFile": "628b9ff97a86d46e.png",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-ai-logo-en-beb4f540.png",
+      "size": {
+        "width": 1511,
+        "height": 417,
+        "bytes": 93045
+      }
+    },
+    {
+      "id": "feishu-office-logo-en",
+      "name": "Feishu Office",
+      "type": "logo",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-office-logo-en-d7c41322.png",
+      "tags": [
+        "feishu",
+        "office",
+        "logo",
+        "en"
+      ],
+      "usage": "用于 GTM 材料中的产品、客户或伙伴标识引用；不要拉伸变形，优先保留透明背景。",
+      "sourceFile": "629a9a311157f43c.png",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-office-logo-en-d7c41322.png",
+      "size": {
+        "width": 1722,
+        "height": 418,
+        "bytes": 23784
+      }
+    },
+    {
+      "id": "feishu-logo-cn-blue",
+      "name": "飞书",
+      "type": "logo",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-logo-cn-blue-15d13e24.png",
+      "tags": [
+        "feishu",
+        "logo",
+        "cn",
+        "blue"
+      ],
+      "usage": "用于 GTM 材料中的产品、客户或伙伴标识引用；不要拉伸变形，优先保留透明背景。",
+      "sourceFile": "64a5ca2b4a3aab78.png",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-logo-cn-blue-15d13e24.png",
+      "size": {
+        "width": 888,
+        "height": 236,
+        "bytes": 21153
+      }
+    },
+    {
+      "id": "feishu-ai-meetings-logo-en",
+      "name": "Feishu AI Meetings",
+      "type": "logo",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-ai-meetings-logo-en-9a53dbba.png",
+      "tags": [
+        "feishu",
+        "ai",
+        "meetings",
+        "logo",
+        "en"
+      ],
+      "usage": "用于 GTM 材料中的产品、客户或伙伴标识引用；不要拉伸变形，优先保留透明背景。",
+      "sourceFile": "65d2f061d654acae.png",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-ai-meetings-logo-en-9a53dbba.png",
+      "size": {
+        "width": 2620,
+        "height": 418,
+        "bytes": 40952
+      }
+    },
+    {
+      "id": "feishu-corehr-logo-en",
+      "name": "Feishu CoreHR",
+      "type": "logo",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-corehr-logo-en-a37db9d8.png",
+      "tags": [
+        "feishu",
+        "corehr",
+        "logo",
+        "en"
+      ],
+      "usage": "用于 GTM 材料中的产品、客户或伙伴标识引用；不要拉伸变形，优先保留透明背景。",
+      "sourceFile": "6646fc17314ef42a.png",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-corehr-logo-en-a37db9d8.png",
+      "size": {
+        "width": 2192,
+        "height": 417,
+        "bytes": 26704
+      }
+    },
+    {
+      "id": "feishu-dev-suite-logo-cn",
+      "name": "飞书开发套件",
+      "type": "logo",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-dev-suite-logo-cn-ac81828c.png",
+      "tags": [
+        "feishu",
+        "dev",
+        "suite",
+        "logo",
+        "cn"
+      ],
+      "usage": "用于 GTM 材料中的产品、客户或伙伴标识引用；不要拉伸变形，优先保留透明背景。",
+      "sourceFile": "6763ff489114bf3c.png",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-dev-suite-logo-cn-ac81828c.png",
+      "size": {
+        "width": 1932,
+        "height": 418,
+        "bytes": 26912
+      }
+    },
+    {
+      "id": "feishu-aily-m3-logo-en",
+      "name": "Feishu aily M3",
+      "type": "logo",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-aily-m3-logo-en-2b944016.png",
+      "tags": [
+        "feishu",
+        "aily",
+        "m3",
+        "logo",
+        "en"
+      ],
+      "usage": "用于 GTM 材料中的产品、客户或伙伴标识引用；不要拉伸变形，优先保留透明背景。",
+      "sourceFile": "68c87366f3f2c0f1.png",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-aily-m3-logo-en-2b944016.png",
+      "size": {
+        "width": 1983,
+        "height": 417,
+        "bytes": 55894
+      }
+    },
+    {
+      "id": "feishu-ai-meeting-logo-cn",
+      "name": "飞书 AI 会议",
+      "type": "logo",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-ai-meeting-logo-cn-d30a3428.png",
+      "tags": [
+        "feishu",
+        "ai",
+        "meeting",
+        "logo",
+        "cn"
+      ],
+      "usage": "用于 GTM 材料中的产品、客户或伙伴标识引用；不要拉伸变形，优先保留透明背景。",
+      "sourceFile": "727edf778ae14b93.png",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-ai-meeting-logo-cn-d30a3428.png",
+      "size": {
+        "width": 1688,
+        "height": 417,
+        "bytes": 34763
+      }
+    },
+    {
+      "id": "feishu-apaas-logo-cn-small",
+      "name": "飞书 aPaaS",
+      "type": "logo",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-apaas-logo-cn-small-2407da38.png",
+      "tags": [
+        "feishu",
+        "apaas",
+        "logo",
+        "cn",
+        "small"
+      ],
+      "usage": "用于 GTM 材料中的产品、客户或伙伴标识引用；不要拉伸变形，优先保留透明背景。",
+      "sourceFile": "783f624ca78241ef.png",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-apaas-logo-cn-small-2407da38.png",
+      "size": {
+        "width": 927,
+        "height": 224,
+        "bytes": 29969
+      }
+    },
+    {
+      "id": "feishu-base-logo-cn",
+      "name": "飞书多维表格",
+      "type": "logo",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-base-logo-cn-e86b64f0.png",
+      "tags": [
+        "feishu",
+        "base",
+        "logo",
+        "cn"
+      ],
+      "usage": "用于 GTM 材料中的产品、客户或伙伴标识引用；不要拉伸变形，优先保留透明背景。",
+      "sourceFile": "7abe93b4391fc455.png",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-base-logo-cn-e86b64f0.png",
+      "size": {
+        "width": 1187,
+        "height": 215,
+        "bytes": 35889
+      }
+    },
+    {
+      "id": "yueman-dajiang-logo",
+      "name": "月满大江千层肚火锅",
+      "type": "logo",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/yueman-dajiang-logo-5a944ba7.png",
+      "tags": [
+        "yueman",
+        "dajiang",
+        "logo"
+      ],
+      "usage": "用于 GTM 材料中的产品、客户或伙伴标识引用；不要拉伸变形，优先保留透明背景。",
+      "sourceFile": "7b3a916b4f85c635.png",
+      "tosKey": "gtm/pptx-media/v1/logos/yueman-dajiang-logo-5a944ba7.png",
+      "size": {
+        "width": 1023,
+        "height": 423,
+        "bytes": 50528
+      }
+    },
+    {
+      "id": "feishu-anycross-logo-en",
+      "name": "Feishu AnyCross",
+      "type": "logo",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-anycross-logo-en-b73bf7ce.png",
+      "tags": [
+        "feishu",
+        "anycross",
+        "logo",
+        "en"
+      ],
+      "usage": "用于 GTM 材料中的产品、客户或伙伴标识引用；不要拉伸变形，优先保留透明背景。",
+      "sourceFile": "8379a50c7287aa1c.png",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-anycross-logo-en-b73bf7ce.png",
+      "size": {
+        "width": 2420,
+        "height": 417,
+        "bytes": 32771
+      }
+    },
+    {
+      "id": "sangu-maocai-logo",
+      "name": "三顾冒菜",
+      "type": "logo",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/sangu-maocai-logo-9c67b7fe.png",
+      "tags": [
+        "sangu",
+        "maocai",
+        "logo"
+      ],
+      "usage": "用于 GTM 材料中的产品、客户或伙伴标识引用；不要拉伸变形，优先保留透明背景。",
+      "sourceFile": "84f13ead6f5b7026.png",
+      "tosKey": "gtm/pptx-media/v1/logos/sangu-maocai-logo-9c67b7fe.png",
+      "size": {
+        "width": 300,
+        "height": 148,
+        "bytes": 3393
+      }
+    },
+    {
+      "id": "feishu-performance-logo-en",
+      "name": "Feishu Performance",
+      "type": "logo",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-performance-logo-en-535cefb9.png",
+      "tags": [
+        "feishu",
+        "performance",
+        "logo",
+        "en"
+      ],
+      "usage": "用于 GTM 材料中的产品、客户或伙伴标识引用；不要拉伸变形，优先保留透明背景。",
+      "sourceFile": "86a42cf94fdfdaa7.png",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-performance-logo-en-535cefb9.png",
+      "size": {
+        "width": 2782,
+        "height": 417,
+        "bytes": 32775
+      }
+    },
+    {
+      "id": "landspace-logo-cn",
+      "name": "蓝箭航天",
+      "type": "logo",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/landspace-logo-cn-fe5c6fbd.png",
+      "tags": [
+        "landspace",
+        "logo",
+        "cn"
+      ],
+      "usage": "用于 GTM 材料中的产品、客户或伙伴标识引用；不要拉伸变形，优先保留透明背景。",
+      "sourceFile": "9034d2ae6aaf0c2b.png",
+      "tosKey": "gtm/pptx-media/v1/logos/landspace-logo-cn-fe5c6fbd.png",
+      "size": {
+        "width": 2016,
+        "height": 672,
+        "bytes": 150454
+      }
+    },
+    {
+      "id": "feishu-people-logo-cn",
+      "name": "飞书人事",
+      "type": "logo",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-people-logo-cn-9823bec2.png",
+      "tags": [
+        "feishu",
+        "people",
+        "logo",
+        "cn"
+      ],
+      "usage": "用于 GTM 材料中的产品、客户或伙伴标识引用；不要拉伸变形，优先保留透明背景。",
+      "sourceFile": "9140a4bcad1a9c4a.png",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-people-logo-cn-9823bec2.png",
+      "size": {
+        "width": 1420,
+        "height": 417,
+        "bytes": 18378
+      }
+    },
+    {
+      "id": "feishu-people-logo-en-alt",
+      "name": "Feishu People",
+      "type": "logo",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-people-logo-en-alt-b8269064.png",
+      "tags": [
+        "feishu",
+        "people",
+        "logo",
+        "en",
+        "alt"
+      ],
+      "usage": "用于 GTM 材料中的产品、客户或伙伴标识引用；不要拉伸变形，优先保留透明背景。",
+      "sourceFile": "928e69bfa628313e.png",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-people-logo-en-alt-b8269064.png",
+      "size": {
+        "width": 1683,
+        "height": 418,
+        "bytes": 23588
+      }
+    },
+    {
+      "id": "feishu-base-logo-cn-alt",
+      "name": "飞书多维表格",
+      "type": "logo",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-base-logo-cn-alt-1d12f38d.png",
+      "tags": [
+        "feishu",
+        "base",
+        "logo",
+        "cn",
+        "alt"
+      ],
+      "usage": "用于 GTM 材料中的产品、客户或伙伴标识引用；不要拉伸变形，优先保留透明背景。",
+      "sourceFile": "9633c624c96b21bf.png",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-base-logo-cn-alt-1d12f38d.png",
+      "size": {
+        "width": 1946,
+        "height": 417,
+        "bytes": 31965
+      }
+    },
+    {
+      "id": "yitang-logo",
+      "name": "益禾堂",
+      "type": "logo",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/yitang-logo-d6d758cc.png",
+      "tags": [
+        "yitang",
+        "logo"
+      ],
+      "usage": "用于 GTM 材料中的产品、客户或伙伴标识引用；不要拉伸变形，优先保留透明背景。",
+      "sourceFile": "98d057d0474ae4b2.png",
+      "tosKey": "gtm/pptx-media/v1/logos/yitang-logo-d6d758cc.png",
+      "size": {
+        "width": 760,
+        "height": 240,
+        "bytes": 18184
+      }
+    },
+    {
+      "id": "pengfei-group-logo",
+      "name": "鹏飞集团",
+      "type": "logo",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/pengfei-group-logo-47488ca4.png",
+      "tags": [
+        "pengfei",
+        "group",
+        "logo"
+      ],
+      "usage": "用于 GTM 材料中的产品、客户或伙伴标识引用；不要拉伸变形，优先保留透明背景。",
+      "sourceFile": "a16f29d7442612c7.png",
+      "tosKey": "gtm/pptx-media/v1/logos/pengfei-group-logo-47488ca4.png",
+      "size": {
+        "width": 1050,
+        "height": 312,
+        "bytes": 103482
+      }
+    },
+    {
+      "id": "feishu-logo-white",
+      "name": "飞书白色字标",
+      "type": "logo",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-logo-white-495688bf.png",
+      "tags": [
+        "feishu",
+        "logo",
+        "white"
+      ],
+      "usage": "用于 GTM 材料中的产品、客户或伙伴标识引用；不要拉伸变形，优先保留透明背景。",
+      "sourceFile": "add8ee3f2e5106c7.png",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-logo-white-495688bf.png",
+      "size": {
+        "width": 1061,
+        "height": 318,
+        "bytes": 12922
+      }
+    },
+    {
+      "id": "feishu-logo-cn-color",
+      "name": "飞书",
+      "type": "logo",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-logo-cn-color-b6ea59cb.png",
+      "tags": [
+        "feishu",
+        "logo",
+        "cn",
+        "color"
+      ],
+      "usage": "用于 GTM 材料中的产品、客户或伙伴标识引用；不要拉伸变形，优先保留透明背景。",
+      "sourceFile": "bf0d486a2f2f144a.png",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-logo-cn-color-b6ea59cb.png",
+      "size": {
+        "width": 1034,
+        "height": 326,
+        "bytes": 14612
+      }
+    },
+    {
+      "id": "feishu-logo-cn-small",
+      "name": "飞书",
+      "type": "logo",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-logo-cn-small-7ac3f4db.png",
+      "tags": [
+        "feishu",
+        "logo",
+        "cn",
+        "small"
+      ],
+      "usage": "用于 GTM 材料中的产品、客户或伙伴标识引用；不要拉伸变形，优先保留透明背景。",
+      "sourceFile": "c79530d42bdf7e25.png",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-logo-cn-small-7ac3f4db.png",
+      "size": {
+        "width": 582,
+        "height": 183,
+        "bytes": 7718
+      }
+    },
+    {
+      "id": "feishu-project-logo-cn",
+      "name": "飞书项目",
+      "type": "logo",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-project-logo-cn-571a7089.png",
+      "tags": [
+        "feishu",
+        "project",
+        "logo",
+        "cn"
+      ],
+      "usage": "用于 GTM 材料中的产品、客户或伙伴标识引用；不要拉伸变形，优先保留透明背景。",
+      "sourceFile": "c84e950fb4330f5b.png",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-project-logo-cn-571a7089.png",
+      "size": {
+        "width": 1404,
+        "height": 418,
+        "bytes": 17636
+      }
+    },
+    {
+      "id": "feishu-hire-logo-cn",
+      "name": "飞书招聘",
+      "type": "logo",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-hire-logo-cn-986fb5e9.png",
+      "tags": [
+        "feishu",
+        "hire",
+        "logo",
+        "cn"
+      ],
+      "usage": "用于 GTM 材料中的产品、客户或伙伴标识引用；不要拉伸变形，优先保留透明背景。",
+      "sourceFile": "d2a1101762b7aa3a.png",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-hire-logo-cn-986fb5e9.png",
+      "size": {
+        "width": 1425,
+        "height": 418,
+        "bytes": 19805
+      }
+    },
+    {
+      "id": "feishu-logo-cn-large",
+      "name": "飞书",
+      "type": "logo",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-logo-cn-large-0d158da2.png",
+      "tags": [
+        "feishu",
+        "logo",
+        "cn",
+        "large"
+      ],
+      "usage": "用于 GTM 材料中的产品、客户或伙伴标识引用；不要拉伸变形，优先保留透明背景。",
+      "sourceFile": "d6589325e30cc912.png",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-logo-cn-large-0d158da2.png",
+      "size": {
+        "width": 2185,
+        "height": 689,
+        "bytes": 36302
+      }
+    },
+    {
+      "id": "feishu-logo-cn-black",
+      "name": "飞书黑色字标",
+      "type": "logo",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-logo-cn-black-37ecfef9.png",
+      "tags": [
+        "feishu",
+        "logo",
+        "cn",
+        "black"
+      ],
+      "usage": "用于 GTM 材料中的产品、客户或伙伴标识引用；不要拉伸变形，优先保留透明背景。",
+      "sourceFile": "d6ef9c0153913d4d.png",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-logo-cn-black-37ecfef9.png",
+      "size": {
+        "width": 1061,
+        "height": 318,
+        "bytes": 12371
+      }
+    },
+    {
+      "id": "feishu-aily-m3-logo-en-alt",
+      "name": "Feishu aily M3",
+      "type": "logo",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-aily-m3-logo-en-alt-be229969.png",
+      "tags": [
+        "feishu",
+        "aily",
+        "m3",
+        "logo",
+        "en",
+        "alt"
+      ],
+      "usage": "用于 GTM 材料中的产品、客户或伙伴标识引用；不要拉伸变形，优先保留透明背景。",
+      "sourceFile": "da79e7dc06db0901.png",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-aily-m3-logo-en-alt-be229969.png",
+      "size": {
+        "width": 1709,
+        "height": 417,
+        "bytes": 53443
+      }
+    },
+    {
+      "id": "feishu-meeting-room-logo-cn",
+      "name": "飞书会议室",
+      "type": "logo",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-meeting-room-logo-cn-b85a8165.png",
+      "tags": [
+        "feishu",
+        "meeting",
+        "room",
+        "logo",
+        "cn"
+      ],
+      "usage": "用于 GTM 材料中的产品、客户或伙伴标识引用；不要拉伸变形，优先保留透明背景。",
+      "sourceFile": "dfd9487073435ec9.png",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-meeting-room-logo-cn-b85a8165.png",
+      "size": {
+        "width": 2951,
+        "height": 543,
+        "bytes": 95394
+      }
+    },
+    {
+      "id": "feishu-project-logo-en",
+      "name": "Feishu Project",
+      "type": "logo",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-project-logo-en-ba947375.png",
+      "tags": [
+        "feishu",
+        "project",
+        "logo",
+        "en"
+      ],
+      "usage": "用于 GTM 材料中的产品、客户或伙伴标识引用；不要拉伸变形，优先保留透明背景。",
+      "sourceFile": "e95eafae2f279bb8.png",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-project-logo-en-ba947375.png",
+      "size": {
+        "width": 2142,
+        "height": 418,
+        "bytes": 27829
+      }
+    },
+    {
+      "id": "feishu-knowledge-ai-m5-logo-en",
+      "name": "Feishu Knowledge AI M5",
+      "type": "logo",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-knowledge-ai-m5-logo-en-6931c30f.png",
+      "tags": [
+        "feishu",
+        "knowledge",
+        "ai",
+        "m5",
+        "logo",
+        "en"
+      ],
+      "usage": "用于 GTM 材料中的产品、客户或伙伴标识引用；不要拉伸变形，优先保留透明背景。",
+      "sourceFile": "efd08a8c0a333f1f.png",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-knowledge-ai-m5-logo-en-6931c30f.png",
+      "size": {
+        "width": 3024,
+        "height": 417,
+        "bytes": 118012
+      }
+    },
+    {
+      "id": "feishu-performance-logo-cn",
+      "name": "飞书绩效",
+      "type": "logo",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-performance-logo-cn-d279bdbf.png",
+      "tags": [
+        "feishu",
+        "performance",
+        "logo",
+        "cn"
+      ],
+      "usage": "用于 GTM 材料中的产品、客户或伙伴标识引用；不要拉伸变形，优先保留透明背景。",
+      "sourceFile": "f3d01182424ad03c.png",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-performance-logo-cn-d279bdbf.png",
+      "size": {
+        "width": 1440,
+        "height": 417,
+        "bytes": 24996
+      }
+    },
+    {
+      "id": "feishu-office-logo-en-alt",
+      "name": "Feishu Office",
+      "type": "logo",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-office-logo-en-alt-4fb29f92.png",
+      "tags": [
+        "feishu",
+        "office",
+        "logo",
+        "en",
+        "alt"
+      ],
+      "usage": "用于 GTM 材料中的产品、客户或伙伴标识引用；不要拉伸变形，优先保留透明背景。",
+      "sourceFile": "f86cd25986881291.png",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-office-logo-en-alt-4fb29f92.png",
+      "size": {
+        "width": 2041,
+        "height": 418,
+        "bytes": 26071
+      }
+    }
+  ]
+}

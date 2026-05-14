@@ -1,0 +1,1725 @@
+{
+  "generatedAt": "2026-05-13T18:42:19.497Z",
+  "items": {
+    "0081b693f8e229dc.png": {
+      "file": "0081b693f8e229dc.png",
+      "displayName": "安全锁",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/lock-security-line-fe919930.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/lock-security-line-fe919930.png",
+      "uploadedAt": "2026-05-13T18:42:20.115Z"
+    },
+    "007c9627af7e0fe8.png": {
+      "file": "007c9627af7e0fe8.png",
+      "displayName": "飞书招聘应用图标",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/feishu-hire-app-icon-f745f43f.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/feishu-hire-app-icon-f745f43f.png",
+      "uploadedAt": "2026-05-13T18:42:20.143Z"
+    },
+    "00b007938d7b80bd.png": {
+      "file": "00b007938d7b80bd.png",
+      "displayName": "办公楼",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/office-building-line-0009b008.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/office-building-line-0009b008.png",
+      "uploadedAt": "2026-05-13T18:42:20.150Z"
+    },
+    "00ad799ca0f5b0f9.png": {
+      "file": "00ad799ca0f5b0f9.png",
+      "displayName": "云文档应用图标",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/document-cloud-app-icon-9fda45d7.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/document-cloud-app-icon-9fda45d7.png",
+      "uploadedAt": "2026-05-13T18:42:20.206Z"
+    },
+    "015725b38d8cbe66.png": {
+      "file": "015725b38d8cbe66.png",
+      "displayName": "柱状图",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/bar-chart-line-f86c74ae.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/bar-chart-line-f86c74ae.png",
+      "uploadedAt": "2026-05-13T18:42:20.594Z"
+    },
+    "019f6500aa3ac44c.png": {
+      "file": "019f6500aa3ac44c.png",
+      "displayName": "飞书 AnyCross 应用图标",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/feishu-anycross-app-icon-large-c631e5b1.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/feishu-anycross-app-icon-large-c631e5b1.png",
+      "uploadedAt": "2026-05-13T18:42:20.600Z"
+    },
+    "039298b1d47d5f5c.png": {
+      "file": "039298b1d47d5f5c.png",
+      "displayName": "组织架构",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/org-chart-line-2d5723f3.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/org-chart-line-2d5723f3.png",
+      "uploadedAt": "2026-05-13T18:42:20.614Z"
+    },
+    "059e3fbf526f097c.png": {
+      "file": "059e3fbf526f097c.png",
+      "displayName": "循环刷新",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/sync-refresh-line-019a04cb.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/sync-refresh-line-019a04cb.png",
+      "uploadedAt": "2026-05-13T18:42:21.027Z"
+    },
+    "0749c41196e45f5d.png": {
+      "file": "0749c41196e45f5d.png",
+      "displayName": "飞书知识问答 M3",
+      "type": "logo",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-knowledge-ai-m3-logo-25a78cdf.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-knowledge-ai-m3-logo-25a78cdf.png",
+      "uploadedAt": "2026-05-13T18:42:21.145Z"
+    },
+    "0558f754dba3bfdf.png": {
+      "file": "0558f754dba3bfdf.png",
+      "displayName": "图层应用图标",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/stack-layers-app-icon-78185a14.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/stack-layers-app-icon-78185a14.png",
+      "uploadedAt": "2026-05-13T18:42:21.551Z"
+    },
+    "08bf3a9e90ef777f.png": {
+      "file": "08bf3a9e90ef777f.png",
+      "displayName": "Feishu",
+      "type": "logo",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-logo-en-0ff6c1a4.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-logo-en-0ff6c1a4.png",
+      "uploadedAt": "2026-05-13T18:42:21.625Z"
+    },
+    "0ac4a972380156a6.png": {
+      "file": "0ac4a972380156a6.png",
+      "displayName": "用户头像",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/user-profile-line-18c05640.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/user-profile-line-18c05640.png",
+      "uploadedAt": "2026-05-13T18:42:21.942Z"
+    },
+    "0d8c4d5e4fb2af64.png": {
+      "file": "0d8c4d5e4fb2af64.png",
+      "displayName": "数据与用户",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/data-user-line-f8090d56.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/data-user-line-f8090d56.png",
+      "uploadedAt": "2026-05-13T18:42:22.428Z"
+    },
+    "0e84cc002d656b8d.png": {
+      "file": "0e84cc002d656b8d.png",
+      "displayName": "六边形图表",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/hexagon-chart-line-dd5b8653.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/hexagon-chart-line-dd5b8653.png",
+      "uploadedAt": "2026-05-13T18:42:22.843Z"
+    },
+    "0985820158633f16.png": {
+      "file": "0985820158633f16.png",
+      "displayName": "连接插头",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/plug-connection-line-8a0fde4d.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/plug-connection-line-8a0fde4d.png",
+      "uploadedAt": "2026-05-13T18:42:23.169Z"
+    },
+    "0f9f6f7f863e2558.png": {
+      "file": "0f9f6f7f863e2558.png",
+      "displayName": "数据库",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/database-line-329d821c.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/database-line-329d821c.png",
+      "uploadedAt": "2026-05-13T18:42:23.275Z"
+    },
+    "02bc9c904821ed62.png": {
+      "file": "02bc9c904821ed62.png",
+      "displayName": "盾牌确认应用图标",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/shield-check-app-icon-cbef5c1b.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/shield-check-app-icon-cbef5c1b.png",
+      "uploadedAt": "2026-05-13T18:42:23.777Z"
+    },
+    "152dadcf7e952d4e.png": {
+      "file": "152dadcf7e952d4e.png",
+      "displayName": "目标命中",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/target-arrow-line-87cfdba8.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/target-arrow-line-87cfdba8.png",
+      "uploadedAt": "2026-05-13T18:42:23.806Z"
+    },
+    "14cfd839ad465a63.png": {
+      "file": "14cfd839ad465a63.png",
+      "displayName": "飞书 AI",
+      "type": "logo",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-ai-logo-cn-7d74d4f8.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-ai-logo-cn-7d74d4f8.png",
+      "uploadedAt": "2026-05-13T18:42:23.832Z"
+    },
+    "0b4c0d3891f4dd34.png": {
+      "file": "0b4c0d3891f4dd34.png",
+      "displayName": "集成交叉",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/cross-integration-line-f334ad05.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/cross-integration-line-f334ad05.png",
+      "uploadedAt": "2026-05-13T18:42:23.868Z"
+    },
+    "16a4761efc8c063f.png": {
+      "file": "16a4761efc8c063f.png",
+      "displayName": "增长图表",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/growth-chart-line-e544f049.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/growth-chart-line-e544f049.png",
+      "uploadedAt": "2026-05-13T18:42:24.198Z"
+    },
+    "1dfe6e9880e63abb.png": {
+      "file": "1dfe6e9880e63abb.png",
+      "displayName": "选区框",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/selection-box-line-7ce64be9.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/selection-box-line-7ce64be9.png",
+      "uploadedAt": "2026-05-13T18:42:24.214Z"
+    },
+    "197bffb3cd81c93f.png": {
+      "file": "197bffb3cd81c93f.png",
+      "displayName": "文档应用图标",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/document-note-app-icon-8831291a.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/document-note-app-icon-8831291a.png",
+      "uploadedAt": "2026-05-13T18:42:24.221Z"
+    },
+    "1ec0487b12e47ba3.png": {
+      "file": "1ec0487b12e47ba3.png",
+      "displayName": "用户轮廓",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/user-silhouette-line-c904a88a.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/user-silhouette-line-c904a88a.png",
+      "uploadedAt": "2026-05-13T18:42:24.242Z"
+    },
+    "221b6d1eb7e63021.png": {
+      "file": "221b6d1eb7e63021.png",
+      "displayName": "团队广播",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/team-broadcast-line-1a611e51.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/team-broadcast-line-1a611e51.png",
+      "uploadedAt": "2026-05-13T18:42:24.608Z"
+    },
+    "1f910f6c8f80b9c1.png": {
+      "file": "1f910f6c8f80b9c1.png",
+      "displayName": "飞书深色字标",
+      "type": "logo",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-logo-cn-dark-9754923f.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-logo-cn-dark-9754923f.png",
+      "uploadedAt": "2026-05-13T18:42:24.614Z"
+    },
+    "1f9e13756ae21f1e.png": {
+      "file": "1f9e13756ae21f1e.png",
+      "displayName": "文档笔记",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/document-note-solid-2dc9183a.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/document-note-solid-2dc9183a.png",
+      "uploadedAt": "2026-05-13T18:42:24.621Z"
+    },
+    "218fa5b929300c78.png": {
+      "file": "218fa5b929300c78.png",
+      "displayName": "飞书知识问答 M3",
+      "type": "logo",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-knowledge-ai-m3-logo-alt-8057a7d5.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-knowledge-ai-m3-logo-alt-8057a7d5.png",
+      "uploadedAt": "2026-05-13T18:42:24.683Z"
+    },
+    "2351aaabe2f614e8.png": {
+      "file": "2351aaabe2f614e8.png",
+      "displayName": "流程节点",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/workflow-nodes-line-065087a1.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/workflow-nodes-line-065087a1.png",
+      "uploadedAt": "2026-05-13T18:42:24.995Z"
+    },
+    "25722f297895d4ae.png": {
+      "file": "25722f297895d4ae.png",
+      "displayName": "蓝紫确认图标",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/checkmark-purple-blue-solid-64970090.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/checkmark-purple-blue-solid-64970090.png",
+      "uploadedAt": "2026-05-13T18:42:25.035Z"
+    },
+    "2593e92000a220ec.png": {
+      "file": "2593e92000a220ec.png",
+      "displayName": "Feishu Spark Preview",
+      "type": "logo",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-spark-preview-logo-5b6af8c2.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-spark-preview-logo-5b6af8c2.png",
+      "uploadedAt": "2026-05-13T18:42:25.072Z"
+    },
+    "254ef41520870317.png": {
+      "file": "254ef41520870317.png",
+      "displayName": "绿色确认大图标",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/check-green-solid-large-c8b131e6.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/check-green-solid-large-c8b131e6.png",
+      "uploadedAt": "2026-05-13T18:42:25.129Z"
+    },
+    "269b73e502bb726c.png": {
+      "file": "269b73e502bb726c.png",
+      "displayName": "路径切换",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/switch-path-line-8daa4a30.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/switch-path-line-8daa4a30.png",
+      "uploadedAt": "2026-05-13T18:42:25.329Z"
+    },
+    "2a1d158b6e98428f.png": {
+      "file": "2a1d158b6e98428f.png",
+      "displayName": "话题消息",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/hashtag-chat-line-05e596d8.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/hashtag-chat-line-05e596d8.png",
+      "uploadedAt": "2026-05-13T18:42:25.391Z"
+    },
+    "274841c034e38a03.png": {
+      "file": "274841c034e38a03.png",
+      "displayName": "消息气泡",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/chat-message-line-5dec8a82.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/chat-message-line-5dec8a82.png",
+      "uploadedAt": "2026-05-13T18:42:25.410Z"
+    },
+    "2bf6f9b662ff534e.png": {
+      "file": "2bf6f9b662ff534e.png",
+      "displayName": "橙色波形应用图标",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/orange-wave-app-icon-f83dddb3.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/orange-wave-app-icon-f83dddb3.png",
+      "uploadedAt": "2026-05-13T18:42:25.526Z"
+    },
+    "2d2b36c2ee485ac7.png": {
+      "file": "2d2b36c2ee485ac7.png",
+      "displayName": "Feishu People",
+      "type": "logo",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-people-logo-en-fe170e8b.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-people-logo-en-fe170e8b.png",
+      "uploadedAt": "2026-05-13T18:42:25.875Z"
+    },
+    "2fe88ce0dd93a4b2.png": {
+      "file": "2fe88ce0dd93a4b2.png",
+      "displayName": "团队层级",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/team-hierarchy-line-8a082731.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/team-hierarchy-line-8a082731.png",
+      "uploadedAt": "2026-05-13T18:42:25.907Z"
+    },
+    "306e3e3f8fc9e59b.png": {
+      "file": "306e3e3f8fc9e59b.png",
+      "displayName": "飞书",
+      "type": "logo",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-logo-cn-93c15b8b.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-logo-cn-93c15b8b.png",
+      "uploadedAt": "2026-05-13T18:42:25.924Z"
+    },
+    "32ec464138375dbe.png": {
+      "file": "32ec464138375dbe.png",
+      "displayName": "连接路径",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/route-connector-line-bb35be2d.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/route-connector-line-bb35be2d.png",
+      "uploadedAt": "2026-05-13T18:42:26.116Z"
+    },
+    "3697b3f2edc44ee9.png": {
+      "file": "3697b3f2edc44ee9.png",
+      "displayName": "购物车",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/shopping-cart-line-e4af71b5.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/shopping-cart-line-e4af71b5.png",
+      "uploadedAt": "2026-05-13T18:42:26.248Z"
+    },
+    "33c6da4f7a6f63d2.png": {
+      "file": "33c6da4f7a6f63d2.png",
+      "displayName": "飞书集成平台",
+      "type": "logo",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-integration-platform-logo-619cc495.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-integration-platform-logo-619cc495.png",
+      "uploadedAt": "2026-05-13T18:42:26.291Z"
+    },
+    "346c5453de44f9eb.png": {
+      "file": "346c5453de44f9eb.png",
+      "displayName": "Feishu Hire",
+      "type": "logo",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-hire-logo-en-a0c1376f.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-hire-logo-en-a0c1376f.png",
+      "uploadedAt": "2026-05-13T18:42:26.317Z"
+    },
+    "38134e9b2e811efa.png": {
+      "file": "38134e9b2e811efa.png",
+      "displayName": "奖杯",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/trophy-line-707e9a00.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/trophy-line-707e9a00.png",
+      "uploadedAt": "2026-05-13T18:42:26.487Z"
+    },
+    "38c49b3cea755150.png": {
+      "file": "38c49b3cea755150.png",
+      "displayName": "搜索",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/search-magnifier-line-b9818c68.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/search-magnifier-line-b9818c68.png",
+      "uploadedAt": "2026-05-13T18:42:26.648Z"
+    },
+    "397fe590b39154b4.png": {
+      "file": "397fe590b39154b4.png",
+      "displayName": "双消息气泡",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/chat-bubbles-line-246fc7cc.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/chat-bubbles-line-246fc7cc.png",
+      "uploadedAt": "2026-05-13T18:42:26.684Z"
+    },
+    "3904b80d255a1608.png": {
+      "file": "3904b80d255a1608.png",
+      "displayName": "飞书妙记深色字标",
+      "type": "logo",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-minutes-logo-cn-dark-a076d491.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-minutes-logo-cn-dark-a076d491.png",
+      "uploadedAt": "2026-05-13T18:42:26.693Z"
+    },
+    "3acfb7fc5171ce0e.png": {
+      "file": "3acfb7fc5171ce0e.png",
+      "displayName": "飞书妙搭预览",
+      "type": "logo",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-minutes-preview-logo-cn-90609ea0.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-minutes-preview-logo-cn-90609ea0.png",
+      "uploadedAt": "2026-05-13T18:42:27.014Z"
+    },
+    "3b957b1496c9b927.png": {
+      "file": "3b957b1496c9b927.png",
+      "displayName": "飞书 aPaaS",
+      "type": "logo",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-apaas-logo-cn-73eac58c.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-apaas-logo-cn-73eac58c.png",
+      "uploadedAt": "2026-05-13T18:42:27.033Z"
+    },
+    "3dcaf1285290267a.png": {
+      "file": "3dcaf1285290267a.png",
+      "displayName": "立方体",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/cube-box-line-ab647a1c.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/cube-box-line-ab647a1c.png",
+      "uploadedAt": "2026-05-13T18:42:27.046Z"
+    },
+    "410cc507df1e03cf.png": {
+      "file": "410cc507df1e03cf.png",
+      "displayName": "链接",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/chain-link-line-c36a0536.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/chain-link-line-c36a0536.png",
+      "uploadedAt": "2026-05-13T18:42:27.068Z"
+    },
+    "45f88bb9977acc63.png": {
+      "file": "45f88bb9977acc63.png",
+      "displayName": "分析窗口",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/analytics-window-line-7068c1f9.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/analytics-window-line-7068c1f9.png",
+      "uploadedAt": "2026-05-13T18:42:27.394Z"
+    },
+    "4cfbf4d0ab64daf4.png": {
+      "file": "4cfbf4d0ab64daf4.png",
+      "displayName": "Feishu Base",
+      "type": "logo",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-base-logo-en-9907c50b.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-base-logo-en-9907c50b.png",
+      "uploadedAt": "2026-05-13T18:42:27.482Z"
+    },
+    "47185783db7b73e3.png": {
+      "file": "47185783db7b73e3.png",
+      "displayName": "分支节点",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/branch-node-line-7ea0f511.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/branch-node-line-7ea0f511.png",
+      "uploadedAt": "2026-05-13T18:42:27.504Z"
+    },
+    "4f4afc2549aa721c.png": {
+      "file": "4f4afc2549aa721c.png",
+      "displayName": "飞书 aily M3",
+      "type": "logo",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-aily-m3-logo-cn-1ef33fb5.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-aily-m3-logo-cn-1ef33fb5.png",
+      "uploadedAt": "2026-05-13T18:42:28.109Z"
+    },
+    "4e674d95af6566e1.png": {
+      "file": "4e674d95af6566e1.png",
+      "displayName": "数据库锁",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/database-lock-line-85b88c18.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/database-lock-line-85b88c18.png",
+      "uploadedAt": "2026-05-13T18:42:28.167Z"
+    },
+    "4fd246f92ff8af99.png": {
+      "file": "4fd246f92ff8af99.png",
+      "displayName": "视频应用图标",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/video-camera-app-icon-738458f6.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/video-camera-app-icon-738458f6.png",
+      "uploadedAt": "2026-05-13T18:42:28.622Z"
+    },
+    "55adb414daa2a42b.png": {
+      "file": "55adb414daa2a42b.png",
+      "displayName": "烤匠麻辣烤鱼",
+      "type": "logo",
+      "tosKey": "gtm/pptx-media/v1/logos/kaojiang-logo-e8bc7318.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/kaojiang-logo-e8bc7318.png",
+      "uploadedAt": "2026-05-13T18:42:29.028Z"
+    },
+    "569668d9d0f33387.png": {
+      "file": "569668d9d0f33387.png",
+      "displayName": "设置齿轮",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/settings-gear-line-8de1314a.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/settings-gear-line-8de1314a.png",
+      "uploadedAt": "2026-05-13T18:42:29.548Z"
+    },
+    "56cdfd9d3d5a7cdf.png": {
+      "file": "56cdfd9d3d5a7cdf.png",
+      "displayName": "同步刷新",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/refresh-sync-line-ba6517cf.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/refresh-sync-line-ba6517cf.png",
+      "uploadedAt": "2026-05-13T18:42:30.166Z"
+    },
+    "57435b10d51be8ad.png": {
+      "file": "57435b10d51be8ad.png",
+      "displayName": "门店",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/storefront-line-b0fcf2a0.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/storefront-line-b0fcf2a0.png",
+      "uploadedAt": "2026-05-13T18:42:30.721Z"
+    },
+    "5155306be12707a8.png": {
+      "file": "5155306be12707a8.png",
+      "displayName": "卡片应用图标",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/stack-cards-app-icon-069e9fb0.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/stack-cards-app-icon-069e9fb0.png",
+      "uploadedAt": "2026-05-13T18:42:30.748Z"
+    },
+    "49da7f3dd752f52b.png": {
+      "file": "49da7f3dd752f52b.png",
+      "displayName": "链路",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/chain-link-alt-line-14f7550f.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/chain-link-alt-line-14f7550f.png",
+      "uploadedAt": "2026-05-13T18:42:30.753Z"
+    },
+    "4de48b7a2bc4ba6c.png": {
+      "file": "4de48b7a2bc4ba6c.png",
+      "displayName": "邮件应用图标",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/mail-envelope-app-icon-82a6e195.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/mail-envelope-app-icon-82a6e195.png",
+      "uploadedAt": "2026-05-13T18:42:30.757Z"
+    },
+    "59d8e6f929dfcdaf.png": {
+      "file": "59d8e6f929dfcdaf.png",
+      "displayName": "告警铃",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/alert-siren-line-85514750.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/alert-siren-line-85514750.png",
+      "uploadedAt": "2026-05-13T18:42:31.135Z"
+    },
+    "57a9fc797aecd8c6.png": {
+      "file": "57a9fc797aecd8c6.png",
+      "displayName": "飞书智能会议纪要 M4",
+      "type": "logo",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-ai-meeting-minutes-m4-logo-cn-6b2f93c5.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-ai-meeting-minutes-m4-logo-cn-6b2f93c5.png",
+      "uploadedAt": "2026-05-13T18:42:31.164Z"
+    },
+    "5773381ab52790fb.png": {
+      "file": "5773381ab52790fb.png",
+      "displayName": "添加选区",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/add-focus-line-ff7e52ed.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/add-focus-line-ff7e52ed.png",
+      "uploadedAt": "2026-05-13T18:42:31.226Z"
+    },
+    "59bfc32a2191d2b9.png": {
+      "file": "59bfc32a2191d2b9.png",
+      "displayName": "翻译对话",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/translation-chat-line-d3e4b7e4.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/translation-chat-line-d3e4b7e4.png",
+      "uploadedAt": "2026-05-13T18:42:31.291Z"
+    },
+    "5be6d8ddee1958d5.png": {
+      "file": "5be6d8ddee1958d5.png",
+      "displayName": "宫格布局",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/grid-layout-line-d6666cc8.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/grid-layout-line-d6666cc8.png",
+      "uploadedAt": "2026-05-13T18:42:31.489Z"
+    },
+    "5b88486e739bbc7b.png": {
+      "file": "5b88486e739bbc7b.png",
+      "displayName": "上升箭头",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/up-arrow-circle-line-4cbae0a1.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/up-arrow-circle-line-4cbae0a1.png",
+      "uploadedAt": "2026-05-13T18:42:31.533Z"
+    },
+    "5c77177ba3127208.png": {
+      "file": "5c77177ba3127208.png",
+      "displayName": "连接线",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/connector-line-ef2b2d8a.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/connector-line-ef2b2d8a.png",
+      "uploadedAt": "2026-05-13T18:42:31.657Z"
+    },
+    "5cfa40729e3c636e.png": {
+      "file": "5cfa40729e3c636e.png",
+      "displayName": "海底捞",
+      "type": "logo",
+      "tosKey": "gtm/pptx-media/v1/logos/haidilao-logo-a4edaec6.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/haidilao-logo-a4edaec6.png",
+      "uploadedAt": "2026-05-13T18:42:31.699Z"
+    },
+    "5cfef117c6af51ea.png": {
+      "file": "5cfef117c6af51ea.png",
+      "displayName": "云端确认",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/cloud-check-line-0703b156.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/cloud-check-line-0703b156.png",
+      "uploadedAt": "2026-05-13T18:42:31.800Z"
+    },
+    "6094a3077e72335d.png": {
+      "file": "6094a3077e72335d.png",
+      "displayName": "Feishu aPaaS",
+      "type": "logo",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-apaas-logo-en-558cce60.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-apaas-logo-en-558cce60.png",
+      "uploadedAt": "2026-05-13T18:42:31.913Z"
+    },
+    "6126b2089946ea7d.png": {
+      "file": "6126b2089946ea7d.png",
+      "displayName": "书签",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/bookmark-line-880295c1.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/bookmark-line-880295c1.png",
+      "uploadedAt": "2026-05-13T18:42:32.024Z"
+    },
+    "628b9ff97a86d46e.png": {
+      "file": "628b9ff97a86d46e.png",
+      "displayName": "Feishu AI",
+      "type": "logo",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-ai-logo-en-beb4f540.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-ai-logo-en-beb4f540.png",
+      "uploadedAt": "2026-05-13T18:42:32.269Z"
+    },
+    "62974cee3c7526b4.png": {
+      "file": "62974cee3c7526b4.png",
+      "displayName": "沙漏",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/hourglass-line-164ef826.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/hourglass-line-164ef826.png",
+      "uploadedAt": "2026-05-13T18:42:32.360Z"
+    },
+    "629b68634a5b28df.png": {
+      "file": "629b68634a5b28df.png",
+      "displayName": "表格应用图标",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/spreadsheet-app-icon-large-1dbfedea.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/spreadsheet-app-icon-large-1dbfedea.png",
+      "uploadedAt": "2026-05-13T18:42:32.581Z"
+    },
+    "64a5ca2b4a3aab78.png": {
+      "file": "64a5ca2b4a3aab78.png",
+      "displayName": "飞书",
+      "type": "logo",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-logo-cn-blue-15d13e24.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-logo-cn-blue-15d13e24.png",
+      "uploadedAt": "2026-05-13T18:42:32.683Z"
+    },
+    "629a9a311157f43c.png": {
+      "file": "629a9a311157f43c.png",
+      "displayName": "Feishu Office",
+      "type": "logo",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-office-logo-en-d7c41322.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-office-logo-en-d7c41322.png",
+      "uploadedAt": "2026-05-13T18:42:32.702Z"
+    },
+    "65d2f061d654acae.png": {
+      "file": "65d2f061d654acae.png",
+      "displayName": "Feishu AI Meetings",
+      "type": "logo",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-ai-meetings-logo-en-9a53dbba.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-ai-meetings-logo-en-9a53dbba.png",
+      "uploadedAt": "2026-05-13T18:42:32.773Z"
+    },
+    "6646fc17314ef42a.png": {
+      "file": "6646fc17314ef42a.png",
+      "displayName": "Feishu CoreHR",
+      "type": "logo",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-corehr-logo-en-a37db9d8.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-corehr-logo-en-a37db9d8.png",
+      "uploadedAt": "2026-05-13T18:42:32.998Z"
+    },
+    "67a250c510052d8f.png": {
+      "file": "67a250c510052d8f.png",
+      "displayName": "商务用户",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/business-user-line-e5f5ff62.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/business-user-line-e5f5ff62.png",
+      "uploadedAt": "2026-05-13T18:42:33.019Z"
+    },
+    "6763ff489114bf3c.png": {
+      "file": "6763ff489114bf3c.png",
+      "displayName": "飞书开发套件",
+      "type": "logo",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-dev-suite-logo-cn-ac81828c.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-dev-suite-logo-cn-ac81828c.png",
+      "uploadedAt": "2026-05-13T18:42:33.045Z"
+    },
+    "68c87366f3f2c0f1.png": {
+      "file": "68c87366f3f2c0f1.png",
+      "displayName": "Feishu aily M3",
+      "type": "logo",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-aily-m3-logo-en-2b944016.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-aily-m3-logo-en-2b944016.png",
+      "uploadedAt": "2026-05-13T18:42:33.186Z"
+    },
+    "6ab74fdce2f432a7.png": {
+      "file": "6ab74fdce2f432a7.png",
+      "displayName": "文档搜索",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/document-search-line-a33c521b.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/document-search-line-a33c521b.png",
+      "uploadedAt": "2026-05-13T18:42:33.349Z"
+    },
+    "693432e14452ee90.png": {
+      "file": "693432e14452ee90.png",
+      "displayName": "彩色消息气泡",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/chat-bubbles-color-icon-7e732a21.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/chat-bubbles-color-icon-7e732a21.png",
+      "uploadedAt": "2026-05-13T18:42:33.381Z"
+    },
+    "6d89be707e8e87dd.png": {
+      "file": "6d89be707e8e87dd.png",
+      "displayName": "飞书会议室应用图标",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/feishu-meeting-room-app-icon-4a3d9a87.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/feishu-meeting-room-app-icon-4a3d9a87.png",
+      "uploadedAt": "2026-05-13T18:42:33.482Z"
+    },
+    "70261b4ec331edb9.png": {
+      "file": "70261b4ec331edb9.png",
+      "displayName": "飞书 AnyCross 方形图标",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/feishu-anycross-app-icon-square-f00e7c99.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/feishu-anycross-app-icon-square-f00e7c99.png",
+      "uploadedAt": "2026-05-13T18:42:33.642Z"
+    },
+    "70f40590943bfa16.png": {
+      "file": "70f40590943bfa16.png",
+      "displayName": "红色叉号大图标",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/x-red-solid-large-f80ac00d.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/x-red-solid-large-f80ac00d.png",
+      "uploadedAt": "2026-05-13T18:42:33.764Z"
+    },
+    "727edf778ae14b93.png": {
+      "file": "727edf778ae14b93.png",
+      "displayName": "飞书 AI 会议",
+      "type": "logo",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-ai-meeting-logo-cn-d30a3428.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-ai-meeting-logo-cn-d30a3428.png",
+      "uploadedAt": "2026-05-13T18:42:33.777Z"
+    },
+    "72b865cb08503d22.png": {
+      "file": "72b865cb08503d22.png",
+      "displayName": "时钟",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/clock-line-f78cd60f.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/clock-line-f78cd60f.png",
+      "uploadedAt": "2026-05-13T18:42:33.848Z"
+    },
+    "7301005f37f21d42.png": {
+      "file": "7301005f37f21d42.png",
+      "displayName": "飞书 AnyCross 图标",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/feishu-anycross-app-icon-c632a01c.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/feishu-anycross-app-icon-c632a01c.png",
+      "uploadedAt": "2026-05-13T18:42:34.025Z"
+    },
+    "73244d313c20ed0b.png": {
+      "file": "73244d313c20ed0b.png",
+      "displayName": "表格应用图标",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/spreadsheet-app-icon-117e094c.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/spreadsheet-app-icon-117e094c.png",
+      "uploadedAt": "2026-05-13T18:42:34.096Z"
+    },
+    "73c341f46b9816ce.png": {
+      "file": "73c341f46b9816ce.png",
+      "displayName": "折线图",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/line-chart-line-ad13a048.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/line-chart-line-ad13a048.png",
+      "uploadedAt": "2026-05-13T18:42:34.158Z"
+    },
+    "744ebf066c8cc432.png": {
+      "file": "744ebf066c8cc432.png",
+      "displayName": "钥匙",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/key-line-f064708e.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/key-line-f064708e.png",
+      "uploadedAt": "2026-05-13T18:42:34.167Z"
+    },
+    "748861cbc203d394.png": {
+      "file": "748861cbc203d394.png",
+      "displayName": "盾牌确认",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/shield-check-line-8686aa09.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/shield-check-line-8686aa09.png",
+      "uploadedAt": "2026-05-13T18:42:34.549Z"
+    },
+    "782654115b739b4c.png": {
+      "file": "782654115b739b4c.png",
+      "displayName": "仪表盘",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/dashboard-gauge-line-34425b3a.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/dashboard-gauge-line-34425b3a.png",
+      "uploadedAt": "2026-05-13T18:42:34.648Z"
+    },
+    "7546062c7214735f.png": {
+      "file": "7546062c7214735f.png",
+      "displayName": "飞书人事应用图标",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/feishu-people-app-icon-a29bb3d1.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/feishu-people-app-icon-a29bb3d1.png",
+      "uploadedAt": "2026-05-13T18:42:34.663Z"
+    },
+    "783f624ca78241ef.png": {
+      "file": "783f624ca78241ef.png",
+      "displayName": "飞书 aPaaS",
+      "type": "logo",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-apaas-logo-cn-small-2407da38.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-apaas-logo-cn-small-2407da38.png",
+      "uploadedAt": "2026-05-13T18:42:34.734Z"
+    },
+    "7abe93b4391fc455.png": {
+      "file": "7abe93b4391fc455.png",
+      "displayName": "飞书多维表格",
+      "type": "logo",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-base-logo-cn-e86b64f0.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-base-logo-cn-e86b64f0.png",
+      "uploadedAt": "2026-05-13T18:42:35.008Z"
+    },
+    "7b3a916b4f85c635.png": {
+      "file": "7b3a916b4f85c635.png",
+      "displayName": "月满大江千层肚火锅",
+      "type": "logo",
+      "tosKey": "gtm/pptx-media/v1/logos/yueman-dajiang-logo-5a944ba7.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/yueman-dajiang-logo-5a944ba7.png",
+      "uploadedAt": "2026-05-13T18:42:35.040Z"
+    },
+    "79537a3295e5735a.png": {
+      "file": "79537a3295e5735a.png",
+      "displayName": "橙色感叹号",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/exclamation-orange-solid-69b17c23.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/exclamation-orange-solid-69b17c23.png",
+      "uploadedAt": "2026-05-13T18:42:35.045Z"
+    },
+    "7f66c7f7d21aad17.png": {
+      "file": "7f66c7f7d21aad17.png",
+      "displayName": "语言翻译",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/language-translation-line-0d9e9fde.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/language-translation-line-0d9e9fde.png",
+      "uploadedAt": "2026-05-13T18:42:35.354Z"
+    },
+    "7c9d4b72dcf17a6b.png": {
+      "file": "7c9d4b72dcf17a6b.png",
+      "displayName": "地球",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/globe-line-8bc0fc90.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/globe-line-8bc0fc90.png",
+      "uploadedAt": "2026-05-13T18:42:35.391Z"
+    },
+    "80a90c8bb3348e66.png": {
+      "file": "80a90c8bb3348e66.png",
+      "displayName": "柱状统计",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/bar-chart-alt-line-e1815493.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/bar-chart-alt-line-e1815493.png",
+      "uploadedAt": "2026-05-13T18:42:35.538Z"
+    },
+    "80cef12ea710a61e.png": {
+      "file": "80cef12ea710a61e.png",
+      "displayName": "全球网络",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/globe-grid-line-9ffbd272.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/globe-grid-line-9ffbd272.png",
+      "uploadedAt": "2026-05-13T18:42:35.756Z"
+    },
+    "84c699d6c4f1d99f.png": {
+      "file": "84c699d6c4f1d99f.png",
+      "displayName": "客服耳机",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/headset-line-1a0156a9.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/headset-line-1a0156a9.png",
+      "uploadedAt": "2026-05-13T18:42:35.954Z"
+    },
+    "8379a50c7287aa1c.png": {
+      "file": "8379a50c7287aa1c.png",
+      "displayName": "Feishu AnyCross",
+      "type": "logo",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-anycross-logo-en-b73bf7ce.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-anycross-logo-en-b73bf7ce.png",
+      "uploadedAt": "2026-05-13T18:42:35.987Z"
+    },
+    "84f13ead6f5b7026.png": {
+      "file": "84f13ead6f5b7026.png",
+      "displayName": "三顾冒菜",
+      "type": "logo",
+      "tosKey": "gtm/pptx-media/v1/logos/sangu-maocai-logo-9c67b7fe.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/sangu-maocai-logo-9c67b7fe.png",
+      "uploadedAt": "2026-05-13T18:42:36.131Z"
+    },
+    "86a42cf94fdfdaa7.png": {
+      "file": "86a42cf94fdfdaa7.png",
+      "displayName": "Feishu Performance",
+      "type": "logo",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-performance-logo-en-535cefb9.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-performance-logo-en-535cefb9.png",
+      "uploadedAt": "2026-05-13T18:42:36.316Z"
+    },
+    "8820aa6f3719cf1d.png": {
+      "file": "8820aa6f3719cf1d.png",
+      "displayName": "上升趋势",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/growth-arrow-line-33908ede.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/growth-arrow-line-33908ede.png",
+      "uploadedAt": "2026-05-13T18:42:36.354Z"
+    },
+    "8cf6ffe459a7ec56.png": {
+      "file": "8cf6ffe459a7ec56.png",
+      "displayName": "八边形警告",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/warning-octagon-line-a3207075.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/warning-octagon-line-a3207075.png",
+      "uploadedAt": "2026-05-13T18:42:36.589Z"
+    },
+    "9034d2ae6aaf0c2b.png": {
+      "file": "9034d2ae6aaf0c2b.png",
+      "displayName": "蓝箭航天",
+      "type": "logo",
+      "tosKey": "gtm/pptx-media/v1/logos/landspace-logo-cn-fe5c6fbd.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/landspace-logo-cn-fe5c6fbd.png",
+      "uploadedAt": "2026-05-13T18:42:36.972Z"
+    },
+    "7d27d110df1eea5e.png": {
+      "file": "7d27d110df1eea5e.png",
+      "displayName": "学士帽",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/graduation-cap-line-299ff914.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/graduation-cap-line-299ff914.png",
+      "uploadedAt": "2026-05-13T18:42:37.129Z"
+    },
+    "9140a4bcad1a9c4a.png": {
+      "file": "9140a4bcad1a9c4a.png",
+      "displayName": "飞书人事",
+      "type": "logo",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-people-logo-cn-9823bec2.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-people-logo-cn-9823bec2.png",
+      "uploadedAt": "2026-05-13T18:42:37.537Z"
+    },
+    "9046520727b55e57.png": {
+      "file": "9046520727b55e57.png",
+      "displayName": "数据看板",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/analytics-card-line-406c6af3.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/analytics-card-line-406c6af3.png",
+      "uploadedAt": "2026-05-13T18:42:37.972Z"
+    },
+    "8cf9918876acc13f.png": {
+      "file": "8cf9918876acc13f.png",
+      "displayName": "蓝色卡片应用图标",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/blue-card-app-icon-9e653c15.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/blue-card-app-icon-9e653c15.png",
+      "uploadedAt": "2026-05-13T18:42:38.009Z"
+    },
+    "9249fa111beee451.png": {
+      "file": "9249fa111beee451.png",
+      "displayName": "彩色产品图标",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/product-app-color-icon-df333c38.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/product-app-color-icon-df333c38.png",
+      "uploadedAt": "2026-05-13T18:42:38.326Z"
+    },
+    "928e69bfa628313e.png": {
+      "file": "928e69bfa628313e.png",
+      "displayName": "Feishu People",
+      "type": "logo",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-people-logo-en-alt-b8269064.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-people-logo-en-alt-b8269064.png",
+      "uploadedAt": "2026-05-13T18:42:38.417Z"
+    },
+    "95503602738d9e22.png": {
+      "file": "95503602738d9e22.png",
+      "displayName": "旗帜",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/flag-line-c3fe9e61.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/flag-line-c3fe9e61.png",
+      "uploadedAt": "2026-05-13T18:42:38.873Z"
+    },
+    "9633c624c96b21bf.png": {
+      "file": "9633c624c96b21bf.png",
+      "displayName": "飞书多维表格",
+      "type": "logo",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-base-logo-cn-alt-1d12f38d.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-base-logo-cn-alt-1d12f38d.png",
+      "uploadedAt": "2026-05-13T18:42:39.008Z"
+    },
+    "964f28cc7c209d19.png": {
+      "file": "964f28cc7c209d19.png",
+      "displayName": "飞书绩效应用图标",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/feishu-performance-app-icon-50070845.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/feishu-performance-app-icon-50070845.png",
+      "uploadedAt": "2026-05-13T18:42:39.255Z"
+    },
+    "966d67ff63dbcc59.png": {
+      "file": "966d67ff63dbcc59.png",
+      "displayName": "分支立方体",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/cube-branch-line-b31f3636.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/cube-branch-line-b31f3636.png",
+      "uploadedAt": "2026-05-13T18:42:39.456Z"
+    },
+    "913ffc9d345ae1b1.png": {
+      "file": "913ffc9d345ae1b1.png",
+      "displayName": "广播天线",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/broadcast-antenna-line-7e1667db.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/broadcast-antenna-line-7e1667db.png",
+      "uploadedAt": "2026-05-13T18:42:39.540Z"
+    },
+    "978fcb8d795b97cf.png": {
+      "file": "978fcb8d795b97cf.png",
+      "displayName": "难过表情",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/sad-face-line-19f0c2c3.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/sad-face-line-19f0c2c3.png",
+      "uploadedAt": "2026-05-13T18:42:39.619Z"
+    },
+    "97c71f315c3919a9.png": {
+      "file": "97c71f315c3919a9.png",
+      "displayName": "网络集群",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/network-cluster-line-ff74d4b6.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/network-cluster-line-ff74d4b6.png",
+      "uploadedAt": "2026-05-13T18:42:39.867Z"
+    },
+    "9795af3ccf6eb151.png": {
+      "file": "9795af3ccf6eb151.png",
+      "displayName": "彩色滑杆图标",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/sliders-color-icon-2154d751.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/sliders-color-icon-2154d751.png",
+      "uploadedAt": "2026-05-13T18:42:39.916Z"
+    },
+    "98d057d0474ae4b2.png": {
+      "file": "98d057d0474ae4b2.png",
+      "displayName": "益禾堂",
+      "type": "logo",
+      "tosKey": "gtm/pptx-media/v1/logos/yitang-logo-d6d758cc.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/yitang-logo-d6d758cc.png",
+      "uploadedAt": "2026-05-13T18:42:39.977Z"
+    },
+    "98d9096d0e722f90.png": {
+      "file": "98d9096d0e722f90.png",
+      "displayName": "锁",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/lock-line-f212ec5b.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/lock-line-f212ec5b.png",
+      "uploadedAt": "2026-05-13T18:42:40.269Z"
+    },
+    "9d0e262f50905444.png": {
+      "file": "9d0e262f50905444.png",
+      "displayName": "证书",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/certificate-line-110443d5.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/certificate-line-110443d5.png",
+      "uploadedAt": "2026-05-13T18:42:40.295Z"
+    },
+    "9d43f3e97a8af812.png": {
+      "file": "9d43f3e97a8af812.png",
+      "displayName": "彩色消息气泡",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/chat-bubbles-color-icon-alt-aa0fa92e.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/chat-bubbles-color-icon-alt-aa0fa92e.png",
+      "uploadedAt": "2026-05-13T18:42:40.371Z"
+    },
+    "a0141c60b9a4f794.png": {
+      "file": "a0141c60b9a4f794.png",
+      "displayName": "笑脸",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/smile-face-line-1137f7cc.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/smile-face-line-1137f7cc.png",
+      "uploadedAt": "2026-05-13T18:42:40.663Z"
+    },
+    "9ea9f4536b6f5a71.png": {
+      "file": "9ea9f4536b6f5a71.png",
+      "displayName": "人民币",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/yuan-currency-line-62b7b674.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/yuan-currency-line-62b7b674.png",
+      "uploadedAt": "2026-05-13T18:42:40.913Z"
+    },
+    "a036319fe61f83ae.png": {
+      "file": "a036319fe61f83ae.png",
+      "displayName": "飞书多维表格应用图标",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/feishu-base-app-icon-e3040d7f.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/feishu-base-app-icon-e3040d7f.png",
+      "uploadedAt": "2026-05-13T18:42:40.920Z"
+    },
+    "a0d4bded88cf974e.png": {
+      "file": "a0d4bded88cf974e.png",
+      "displayName": "列表添加",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/list-add-line-41b7440e.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/list-add-line-41b7440e.png",
+      "uploadedAt": "2026-05-13T18:42:41.152Z"
+    },
+    "91490351f79cf2cf.png": {
+      "file": "91490351f79cf2cf.png",
+      "displayName": "用户",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/user-outline-line-bb0487f1.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/user-outline-line-bb0487f1.png",
+      "uploadedAt": "2026-05-13T18:42:41.249Z"
+    },
+    "a16f29d7442612c7.png": {
+      "file": "a16f29d7442612c7.png",
+      "displayName": "鹏飞集团",
+      "type": "logo",
+      "tosKey": "gtm/pptx-media/v1/logos/pengfei-group-logo-47488ca4.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/pengfei-group-logo-47488ca4.png",
+      "uploadedAt": "2026-05-13T18:42:41.367Z"
+    },
+    "a1c9c5fb4ab505a0.png": {
+      "file": "a1c9c5fb4ab505a0.png",
+      "displayName": "环形网络",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/network-circle-line-3fc34f94.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/network-circle-line-3fc34f94.png",
+      "uploadedAt": "2026-05-13T18:42:41.563Z"
+    },
+    "a2215f724dd5e556.png": {
+      "file": "a2215f724dd5e556.png",
+      "displayName": "日历 26 应用图标",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/calendar-26-app-icon-9b8c312f.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/calendar-26-app-icon-9b8c312f.png",
+      "uploadedAt": "2026-05-13T18:42:41.670Z"
+    },
+    "a26ddb71787f1259.png": {
+      "file": "a26ddb71787f1259.png",
+      "displayName": "节点选区",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/selection-nodes-line-9b5a4c45.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/selection-nodes-line-9b5a4c45.png",
+      "uploadedAt": "2026-05-13T18:42:41.693Z"
+    },
+    "a4540d81cce4891e.png": {
+      "file": "a4540d81cce4891e.png",
+      "displayName": "绿色确认",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/check-green-solid-8aeb2c55.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/check-green-solid-8aeb2c55.png",
+      "uploadedAt": "2026-05-13T18:42:42.023Z"
+    },
+    "a35878b6800821b0.png": {
+      "file": "a35878b6800821b0.png",
+      "displayName": "主页",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/home-line-587e9cd7.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/home-line-587e9cd7.png",
+      "uploadedAt": "2026-05-13T18:42:42.040Z"
+    },
+    "a360cbf0c9bf4e39.png": {
+      "file": "a360cbf0c9bf4e39.png",
+      "displayName": "开关目标",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/toggle-target-line-b07d5ae1.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/toggle-target-line-b07d5ae1.png",
+      "uploadedAt": "2026-05-13T18:42:42.051Z"
+    },
+    "a11731bb8bf38b84.png": {
+      "file": "a11731bb8bf38b84.png",
+      "displayName": "耳机",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/earbud-line-a0b2fb5b.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/earbud-line-a0b2fb5b.png",
+      "uploadedAt": "2026-05-13T18:42:42.117Z"
+    },
+    "a4c32b0e1e0b41db.png": {
+      "file": "a4c32b0e1e0b41db.png",
+      "displayName": "云文档应用图标",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/document-cloud-app-icon-alt-3975b1ea.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/document-cloud-app-icon-alt-3975b1ea.png",
+      "uploadedAt": "2026-05-13T18:42:42.391Z"
+    },
+    "a7543037dc0e7a14.png": {
+      "file": "a7543037dc0e7a14.png",
+      "displayName": "书签添加",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/bookmark-plus-line-ede9b8a1.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/bookmark-plus-line-ede9b8a1.png",
+      "uploadedAt": "2026-05-13T18:42:42.452Z"
+    },
+    "a5c6c32b12759806.png": {
+      "file": "a5c6c32b12759806.png",
+      "displayName": "闪电",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/lightning-line-7665b40e.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/lightning-line-7665b40e.png",
+      "uploadedAt": "2026-05-13T18:42:42.584Z"
+    },
+    "a4a25724019e3484.png": {
+      "file": "a4a25724019e3484.png",
+      "displayName": "收藏识别",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/favorite-scan-line-e6873132.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/favorite-scan-line-e6873132.png",
+      "uploadedAt": "2026-05-13T18:42:42.725Z"
+    },
+    "a7d93a6b4c77762c.png": {
+      "file": "a7d93a6b4c77762c.png",
+      "displayName": "多层应用图标",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/multi-layer-app-icon-38520dc1.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/multi-layer-app-icon-38520dc1.png",
+      "uploadedAt": "2026-05-13T18:42:42.758Z"
+    },
+    "a8a8226737bd1b6e.png": {
+      "file": "a8a8226737bd1b6e.png",
+      "displayName": "播放卡片",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/play-card-line-8973223b.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/play-card-line-8973223b.png",
+      "uploadedAt": "2026-05-13T18:42:42.821Z"
+    },
+    "a94d3c74a8d7b9e7.png": {
+      "file": "a94d3c74a8d7b9e7.png",
+      "displayName": "代码窗口",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/code-window-line-c19e7743.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/code-window-line-c19e7743.png",
+      "uploadedAt": "2026-05-13T18:42:43.075Z"
+    },
+    "aabe6e7f8feb1bec.png": {
+      "file": "aabe6e7f8feb1bec.png",
+      "displayName": "准星目标",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/target-crosshair-line-99f93351.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/target-crosshair-line-99f93351.png",
+      "uploadedAt": "2026-05-13T18:42:43.206Z"
+    },
+    "add8ee3f2e5106c7.png": {
+      "file": "add8ee3f2e5106c7.png",
+      "displayName": "飞书白色字标",
+      "type": "logo",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-logo-white-495688bf.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-logo-white-495688bf.png",
+      "uploadedAt": "2026-05-13T18:42:43.297Z"
+    },
+    "b215d7e496a08eed.png": {
+      "file": "b215d7e496a08eed.png",
+      "displayName": "浏览器窗口",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/browser-window-line-a1d47b5a.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/browser-window-line-a1d47b5a.png",
+      "uploadedAt": "2026-05-13T18:42:43.477Z"
+    },
+    "b002c8999f649004.png": {
+      "file": "b002c8999f649004.png",
+      "displayName": "流程应用图标",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/workflow-app-icon-9a742e35.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/workflow-app-icon-9a742e35.png",
+      "uploadedAt": "2026-05-13T18:42:43.480Z"
+    },
+    "b261e6a7dca84624.png": {
+      "file": "b261e6a7dca84624.png",
+      "displayName": "饼图",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/pie-chart-line-757291af.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/pie-chart-line-757291af.png",
+      "uploadedAt": "2026-05-13T18:42:43.595Z"
+    },
+    "b275ffc57932a81d.png": {
+      "file": "b275ffc57932a81d.png",
+      "displayName": "人事应用图标",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/people-app-icon-6f540bce.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/people-app-icon-6f540bce.png",
+      "uploadedAt": "2026-05-13T18:42:43.673Z"
+    },
+    "b9c3169c32b18e71.png": {
+      "file": "b9c3169c32b18e71.png",
+      "displayName": "层级结构",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/hierarchy-line-538c91c3.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/hierarchy-line-538c91c3.png",
+      "uploadedAt": "2026-05-13T18:42:43.809Z"
+    },
+    "b92e6560f73efe4e.png": {
+      "file": "b92e6560f73efe4e.png",
+      "displayName": "移动箭头",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/move-arrows-line-dec942d1.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/move-arrows-line-dec942d1.png",
+      "uploadedAt": "2026-05-13T18:42:43.858Z"
+    },
+    "ba1be3d39bce7b5e.png": {
+      "file": "ba1be3d39bce7b5e.png",
+      "displayName": "调色盘",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/palette-line-40a93781.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/palette-line-40a93781.png",
+      "uploadedAt": "2026-05-13T18:42:43.950Z"
+    },
+    "bc6a8b51bd6c0215.png": {
+      "file": "bc6a8b51bd6c0215.png",
+      "displayName": "录制目标",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/record-target-line-332eeef9.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/record-target-line-332eeef9.png",
+      "uploadedAt": "2026-05-13T18:42:44.031Z"
+    },
+    "bd71f9c4bf3cc425.png": {
+      "file": "bd71f9c4bf3cc425.png",
+      "displayName": "第一名奖牌",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/medal-number-one-line-67a42816.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/medal-number-one-line-67a42816.png",
+      "uploadedAt": "2026-05-13T18:42:44.177Z"
+    },
+    "bc6d0cecfe422fb7.png": {
+      "file": "bc6d0cecfe422fb7.png",
+      "displayName": "购物袋",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/shopping-bag-line-d2463c60.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/shopping-bag-line-d2463c60.png",
+      "uploadedAt": "2026-05-13T18:42:44.287Z"
+    },
+    "be8695dcb6bf4536.png": {
+      "file": "be8695dcb6bf4536.png",
+      "displayName": "购物袋图标",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/shopping-bag-color-icon-b0ff633b.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/shopping-bag-color-icon-b0ff633b.png",
+      "uploadedAt": "2026-05-13T18:42:44.380Z"
+    },
+    "be428d6fa45b6bfe.png": {
+      "file": "be428d6fa45b6bfe.png",
+      "displayName": "宫格列表",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/grid-list-line-33a8d2a4.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/grid-list-line-33a8d2a4.png",
+      "uploadedAt": "2026-05-13T18:42:44.441Z"
+    },
+    "bf0d486a2f2f144a.png": {
+      "file": "bf0d486a2f2f144a.png",
+      "displayName": "飞书",
+      "type": "logo",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-logo-cn-color-b6ea59cb.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-logo-cn-color-b6ea59cb.png",
+      "uploadedAt": "2026-05-13T18:42:44.719Z"
+    },
+    "c2e9a240923e7d86.png": {
+      "file": "c2e9a240923e7d86.png",
+      "displayName": "点赞",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/thumbs-up-line-05644b45.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/thumbs-up-line-05644b45.png",
+      "uploadedAt": "2026-05-13T18:42:44.760Z"
+    },
+    "c01e4ac0dff96592.png": {
+      "file": "c01e4ac0dff96592.png",
+      "displayName": "消息气泡",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/chat-bubbles-alt-line-e4198086.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/chat-bubbles-alt-line-e4198086.png",
+      "uploadedAt": "2026-05-13T18:42:44.790Z"
+    },
+    "c52c7954cfd05608.png": {
+      "file": "c52c7954cfd05608.png",
+      "displayName": "形状组合",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/shapes-line-94e7be5e.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/shapes-line-94e7be5e.png",
+      "uploadedAt": "2026-05-13T18:42:44.794Z"
+    },
+    "c62aa96c25032012.png": {
+      "file": "c62aa96c25032012.png",
+      "displayName": "通知铃",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/bell-line-7d0be2e6.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/bell-line-7d0be2e6.png",
+      "uploadedAt": "2026-05-13T18:42:45.259Z"
+    },
+    "c66f4d48760bfe0b.png": {
+      "file": "c66f4d48760bfe0b.png",
+      "displayName": "用户轮廓",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/user-outline-alt-line-46af661e.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/user-outline-alt-line-46af661e.png",
+      "uploadedAt": "2026-05-13T18:42:45.320Z"
+    },
+    "c56260bde525697f.png": {
+      "file": "c56260bde525697f.png",
+      "displayName": "接口调试",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/api-debug-line-36853aa9.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/api-debug-line-36853aa9.png",
+      "uploadedAt": "2026-05-13T18:42:45.324Z"
+    },
+    "c537c1f1d108908d.png": {
+      "file": "c537c1f1d108908d.png",
+      "displayName": "日历 26 应用图标",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/calendar-26-app-icon-alt-3384e996.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/calendar-26-app-icon-alt-3384e996.png",
+      "uploadedAt": "2026-05-13T18:42:45.431Z"
+    },
+    "c99b47f042524ca6.png": {
+      "file": "c99b47f042524ca6.png",
+      "displayName": "循环节点",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/cycle-nodes-line-4f0e8c6e.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/cycle-nodes-line-4f0e8c6e.png",
+      "uploadedAt": "2026-05-13T18:42:45.634Z"
+    },
+    "c84e950fb4330f5b.png": {
+      "file": "c84e950fb4330f5b.png",
+      "displayName": "飞书项目",
+      "type": "logo",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-project-logo-cn-571a7089.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-project-logo-cn-571a7089.png",
+      "uploadedAt": "2026-05-13T18:42:45.669Z"
+    },
+    "c79530d42bdf7e25.png": {
+      "file": "c79530d42bdf7e25.png",
+      "displayName": "飞书",
+      "type": "logo",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-logo-cn-small-7ac3f4db.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-logo-cn-small-7ac3f4db.png",
+      "uploadedAt": "2026-05-13T18:42:45.706Z"
+    },
+    "cc25d5ae3f749683.png": {
+      "file": "cc25d5ae3f749683.png",
+      "displayName": "用户盾牌",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/shield-user-line-5359698c.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/shield-user-line-5359698c.png",
+      "uploadedAt": "2026-05-13T18:42:45.751Z"
+    },
+    "cd69f7f30e01daeb.png": {
+      "file": "cd69f7f30e01daeb.png",
+      "displayName": "多人协作",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/group-line-372e02eb.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/group-line-372e02eb.png",
+      "uploadedAt": "2026-05-13T18:42:46.057Z"
+    },
+    "d0432830da6feb79.png": {
+      "file": "d0432830da6feb79.png",
+      "displayName": "点阵",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/dot-grid-line-5c521a36.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/dot-grid-line-5c521a36.png",
+      "uploadedAt": "2026-05-13T18:42:46.071Z"
+    },
+    "cf4299f82972c2b0.png": {
+      "file": "cf4299f82972c2b0.png",
+      "displayName": "堆叠图层",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/stack-layers-line-6e266859.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/stack-layers-line-6e266859.png",
+      "uploadedAt": "2026-05-13T18:42:46.105Z"
+    },
+    "cc6c8846edc9c189.png": {
+      "file": "cc6c8846edc9c189.png",
+      "displayName": "检查清单",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/checklist-line-0bbd092d.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/checklist-line-0bbd092d.png",
+      "uploadedAt": "2026-05-13T18:42:46.155Z"
+    },
+    "d1341ad3939e1248.png": {
+      "file": "d1341ad3939e1248.png",
+      "displayName": "用户头像",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/user-profile-alt-line-d4627cd5.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/user-profile-alt-line-d4627cd5.png",
+      "uploadedAt": "2026-05-13T18:42:46.438Z"
+    },
+    "d2a1101762b7aa3a.png": {
+      "file": "d2a1101762b7aa3a.png",
+      "displayName": "飞书招聘",
+      "type": "logo",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-hire-logo-cn-986fb5e9.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-hire-logo-cn-986fb5e9.png",
+      "uploadedAt": "2026-05-13T18:42:46.452Z"
+    },
+    "d6589325e30cc912.png": {
+      "file": "d6589325e30cc912.png",
+      "displayName": "飞书",
+      "type": "logo",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-logo-cn-large-0d158da2.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-logo-cn-large-0d158da2.png",
+      "uploadedAt": "2026-05-13T18:42:46.514Z"
+    },
+    "d13ea668c3d3a608.png": {
+      "file": "d13ea668c3d3a608.png",
+      "displayName": "三角警告",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/warning-triangle-line-117e89df.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/warning-triangle-line-117e89df.png",
+      "uploadedAt": "2026-05-13T18:42:46.599Z"
+    },
+    "d6ef9c0153913d4d.png": {
+      "file": "d6ef9c0153913d4d.png",
+      "displayName": "飞书黑色字标",
+      "type": "logo",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-logo-cn-black-37ecfef9.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-logo-cn-black-37ecfef9.png",
+      "uploadedAt": "2026-05-13T18:42:46.754Z"
+    },
+    "d7a1a3a3b463d4b6.png": {
+      "file": "d7a1a3a3b463d4b6.png",
+      "displayName": "靶心应用图标",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/target-ring-app-icon-c0a65fa7.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/target-ring-app-icon-c0a65fa7.png",
+      "uploadedAt": "2026-05-13T18:42:46.851Z"
+    },
+    "d878c7867c7b9e88.png": {
+      "file": "d878c7867c7b9e88.png",
+      "displayName": "邮件图标",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/mail-envelope-color-icon-18a4b587.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/mail-envelope-color-icon-18a4b587.png",
+      "uploadedAt": "2026-05-13T18:42:46.900Z"
+    },
+    "da79e7dc06db0901.png": {
+      "file": "da79e7dc06db0901.png",
+      "displayName": "Feishu aily M3",
+      "type": "logo",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-aily-m3-logo-en-alt-be229969.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-aily-m3-logo-en-alt-be229969.png",
+      "uploadedAt": "2026-05-13T18:42:46.985Z"
+    },
+    "db530e9b2022142b.png": {
+      "file": "db530e9b2022142b.png",
+      "displayName": "监控看板",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/monitor-analytics-line-67a7671d.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/monitor-analytics-line-67a7671d.png",
+      "uploadedAt": "2026-05-13T18:42:47.244Z"
+    },
+    "dd8813686c79649d.png": {
+      "file": "dd8813686c79649d.png",
+      "displayName": "确认应用图标",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/checkmark-app-icon-f84f91bd.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/checkmark-app-icon-f84f91bd.png",
+      "uploadedAt": "2026-05-13T18:42:47.401Z"
+    },
+    "dfd9487073435ec9.png": {
+      "file": "dfd9487073435ec9.png",
+      "displayName": "飞书会议室",
+      "type": "logo",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-meeting-room-logo-cn-b85a8165.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-meeting-room-logo-cn-b85a8165.png",
+      "uploadedAt": "2026-05-13T18:42:47.643Z"
+    },
+    "e04936988e3ce7e5.png": {
+      "file": "e04936988e3ce7e5.png",
+      "displayName": "飞书妙记应用图标",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/feishu-minutes-app-icon-3770cfc4.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/feishu-minutes-app-icon-3770cfc4.png",
+      "uploadedAt": "2026-05-13T18:42:47.956Z"
+    },
+    "e54651be3b930869.png": {
+      "file": "e54651be3b930869.png",
+      "displayName": "书本",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/book-line-4c0300aa.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/book-line-4c0300aa.png",
+      "uploadedAt": "2026-05-13T18:42:47.962Z"
+    },
+    "e31c46b1b4868c10.png": {
+      "file": "e31c46b1b4868c10.png",
+      "displayName": "更多",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/ellipsis-circle-line-17aa187e.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/ellipsis-circle-line-17aa187e.png",
+      "uploadedAt": "2026-05-13T18:42:47.973Z"
+    },
+    "ea73d0a4b3f5ad9e.png": {
+      "file": "ea73d0a4b3f5ad9e.png",
+      "displayName": "菜单收起",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/menu-collapse-line-1ebb63c0.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/menu-collapse-line-1ebb63c0.png",
+      "uploadedAt": "2026-05-13T18:42:48.329Z"
+    },
+    "e95eafae2f279bb8.png": {
+      "file": "e95eafae2f279bb8.png",
+      "displayName": "Feishu Project",
+      "type": "logo",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-project-logo-en-ba947375.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-project-logo-en-ba947375.png",
+      "uploadedAt": "2026-05-13T18:42:48.359Z"
+    },
+    "e6b1304700eed38d.png": {
+      "file": "e6b1304700eed38d.png",
+      "displayName": "AI 窗口",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/ai-window-line-41e0077a.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/ai-window-line-41e0077a.png",
+      "uploadedAt": "2026-05-13T18:42:48.440Z"
+    },
+    "f036c268f4df72b6.png": {
+      "file": "f036c268f4df72b6.png",
+      "displayName": "爱心",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/heart-line-0c6cb756.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/heart-line-0c6cb756.png",
+      "uploadedAt": "2026-05-13T18:42:48.741Z"
+    },
+    "f10520cf6eff41a0.png": {
+      "file": "f10520cf6eff41a0.png",
+      "displayName": "盾牌添加",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/shield-plus-line-bd6510ef.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/shield-plus-line-bd6510ef.png",
+      "uploadedAt": "2026-05-13T18:42:48.755Z"
+    },
+    "efd08a8c0a333f1f.png": {
+      "file": "efd08a8c0a333f1f.png",
+      "displayName": "Feishu Knowledge AI M5",
+      "type": "logo",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-knowledge-ai-m5-logo-en-6931c30f.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-knowledge-ai-m5-logo-en-6931c30f.png",
+      "uploadedAt": "2026-05-13T18:42:48.936Z"
+    },
+    "dbf4c9262b825388.png": {
+      "file": "dbf4c9262b825388.png",
+      "displayName": "AI 刷新",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/ai-refresh-line-e9debbf5.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/ai-refresh-line-e9debbf5.png",
+      "uploadedAt": "2026-05-13T18:42:48.953Z"
+    },
+    "f1c5234a10c60691.png": {
+      "file": "f1c5234a10c60691.png",
+      "displayName": "红色叉号",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/x-red-solid-e8fd763f.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/x-red-solid-e8fd763f.png",
+      "uploadedAt": "2026-05-13T18:42:49.148Z"
+    },
+    "f149639a17f83ac5.png": {
+      "file": "f149639a17f83ac5.png",
+      "displayName": "机器人",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/robot-line-bc98fb50.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/robot-line-bc98fb50.png",
+      "uploadedAt": "2026-05-13T18:42:49.246Z"
+    },
+    "f1cc2419640a2e24.png": {
+      "file": "f1cc2419640a2e24.png",
+      "displayName": "数据资产",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/database-coins-line-4bd0dbd4.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/database-coins-line-4bd0dbd4.png",
+      "uploadedAt": "2026-05-13T18:42:49.251Z"
+    },
+    "f1d7eaf936ed47e3.png": {
+      "file": "f1d7eaf936ed47e3.png",
+      "displayName": "代码括号",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/code-brackets-line-6d249c9a.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/code-brackets-line-6d249c9a.png",
+      "uploadedAt": "2026-05-13T18:42:49.266Z"
+    },
+    "f2eee9a72061d1bf.png": {
+      "file": "f2eee9a72061d1bf.png",
+      "displayName": "仪表盘",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/gauge-line-e6bc3899.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/gauge-line-e6bc3899.png",
+      "uploadedAt": "2026-05-13T18:42:49.608Z"
+    },
+    "f3d01182424ad03c.png": {
+      "file": "f3d01182424ad03c.png",
+      "displayName": "飞书绩效",
+      "type": "logo",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-performance-logo-cn-d279bdbf.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-performance-logo-cn-d279bdbf.png",
+      "uploadedAt": "2026-05-13T18:42:49.766Z"
+    },
+    "f8c54e3abd30b1b1.png": {
+      "file": "f8c54e3abd30b1b1.png",
+      "displayName": "四点宫格",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/four-dot-grid-line-929dc1d0.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/four-dot-grid-line-929dc1d0.png",
+      "uploadedAt": "2026-05-13T18:42:49.795Z"
+    },
+    "f86cd25986881291.png": {
+      "file": "f86cd25986881291.png",
+      "displayName": "Feishu Office",
+      "type": "logo",
+      "tosKey": "gtm/pptx-media/v1/logos/feishu-office-logo-en-alt-4fb29f92.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-office-logo-en-alt-4fb29f92.png",
+      "uploadedAt": "2026-05-13T18:42:49.872Z"
+    },
+    "fadd92cee4d27fa3.png": {
+      "file": "fadd92cee4d27fa3.png",
+      "displayName": "握手",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/handshake-line-745fc590.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/handshake-line-745fc590.png",
+      "uploadedAt": "2026-05-13T18:42:49.934Z"
+    },
+    "fd0cdb640750c21a.png": {
+      "file": "fd0cdb640750c21a.png",
+      "displayName": "菱形确认",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/diamond-check-line-07511425.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/diamond-check-line-07511425.png",
+      "uploadedAt": "2026-05-13T18:42:50.129Z"
+    },
+    "fc28c003b91367ee.png": {
+      "file": "fc28c003b91367ee.png",
+      "displayName": "搜索",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/search-line-3f87e7c3.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/search-line-3f87e7c3.png",
+      "uploadedAt": "2026-05-13T18:42:50.267Z"
+    },
+    "fda00381edcabad5.png": {
+      "file": "fda00381edcabad5.png",
+      "displayName": "解锁",
+      "type": "icon",
+      "tosKey": "gtm/pptx-media/v1/icons/unlock-line-8053bd06.png",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/unlock-line-8053bd06.png",
+      "uploadedAt": "2026-05-13T18:42:50.298Z"
+    }
+  }
+}

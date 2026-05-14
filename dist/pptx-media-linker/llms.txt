@@ -1,0 +1,131 @@
+# GTM PPTX Media Assets
+
+Purpose: public TOS asset index for Feishu GTM PPTX media. Use this file as the lightweight entrypoint. Do not load the CSV or full JSON unless needed.
+
+Preview page: https://magic.solutionsuite.cn/html-box/vjC9AsKydQw
+
+## Load Strategy
+
+1. Read this llms.txt first for scope, rules, and routing.
+2. If you need icons only, fetch icons.json.
+3. If you need logos only, fetch logos.json.
+4. If you need excluded/not-now assets, fetch excluded.json or not-needed-now.md.
+5. Use assets-index.csv only for spreadsheet review. Use assets-index.json only for full automation.
+
+## Public URLs
+
+- Search page: https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/index.html
+- Icons JSON: https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons.json
+- Logos JSON: https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos.json
+- Excluded JSON: https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/excluded.json
+- CSV table: https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/assets-index.csv
+- Full JSON: https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/assets-index.json
+- Usage: https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/USAGE.md
+- Not needed now: https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/not-needed-now.md
+
+## Summary
+
+- Original images: 299
+- Included public assets: 215
+- Uploaded public TOS links: 215
+- Icons: 163
+- Logos: 52
+- Excluded for now: 84
+
+## Rules
+
+- Public pool includes only high-reuse icons and logos.
+- Do not treat screenshots, marketing slogans, metrics text, photos, decorative lines, or placeholder logos as reusable assets.
+- Logo assets should not be stretched, cropped, recolored, or used without brand authorization where applicable.
+- Icon assets are for concepts, process nodes, status labels, and capability matrices; pair them with short labels.
+- Every asset URL is public. Do not upload sensitive customer material to this pool.
+
+## High-Frequency Icons
+
+- 安全锁 (lock-security-line): https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/lock-security-line-fe919930.png
+- 柱状图 (bar-chart-line): https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/bar-chart-line-f86c74ae.png
+- 组织架构 (org-chart-line): https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/org-chart-line-2d5723f3.png
+- 用户头像 (user-profile-line): https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/user-profile-line-18c05640.png
+- 数据与用户 (data-user-line): https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/data-user-line-f8090d56.png
+- 六边形图表 (hexagon-chart-line): https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/hexagon-chart-line-dd5b8653.png
+- 数据库 (database-line): https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/database-line-329d821c.png
+- 增长图表 (growth-chart-line): https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/growth-chart-line-e544f049.png
+- 用户轮廓 (user-silhouette-line): https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/user-silhouette-line-c904a88a.png
+- 流程节点 (workflow-nodes-line): https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/workflow-nodes-line-065087a1.png
+- 消息气泡 (chat-message-line): https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/chat-message-line-5dec8a82.png
+- 话题消息 (hashtag-chat-line): https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/hashtag-chat-line-05e596d8.png
+- 搜索 (search-magnifier-line): https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/search-magnifier-line-b9818c68.png
+- 双消息气泡 (chat-bubbles-line): https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/chat-bubbles-line-246fc7cc.png
+- 数据库锁 (database-lock-line): https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/database-lock-line-85b88c18.png
+- 翻译对话 (translation-chat-line): https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/translation-chat-line-d3e4b7e4.png
+- 商务用户 (business-user-line): https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/business-user-line-e5f5ff62.png
+- 彩色消息气泡 (chat-bubbles-color-icon): https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/chat-bubbles-color-icon-7e732a21.png
+- 文档搜索 (document-search-line): https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/document-search-line-a33c521b.png
+- 折线图 (line-chart-line): https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/line-chart-line-ad13a048.png
+- 柱状统计 (bar-chart-alt-line): https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/bar-chart-alt-line-e1815493.png
+- 用户 (user-outline-line): https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/user-outline-line-bb0487f1.png
+- 锁 (lock-line): https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/lock-line-f212ec5b.png
+- 彩色消息气泡 (chat-bubbles-color-icon-alt): https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/chat-bubbles-color-icon-alt-aa0fa92e.png
+
+## High-Frequency Logos
+
+- 飞书知识问答 M3 (feishu-knowledge-ai-m3-logo): https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-knowledge-ai-m3-logo-25a78cdf.png
+- Feishu (feishu-logo-en): https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-logo-en-0ff6c1a4.png
+- 飞书 AI (feishu-ai-logo-cn): https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-ai-logo-cn-7d74d4f8.png
+- 飞书深色字标 (feishu-logo-cn-dark): https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-logo-cn-dark-9754923f.png
+- 飞书知识问答 M3 (feishu-knowledge-ai-m3-logo-alt): https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-knowledge-ai-m3-logo-alt-8057a7d5.png
+- Feishu Spark Preview (feishu-spark-preview-logo): https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-spark-preview-logo-5b6af8c2.png
+- Feishu People (feishu-people-logo-en): https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-people-logo-en-fe170e8b.png
+- 飞书 (feishu-logo-cn): https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-logo-cn-93c15b8b.png
+- 飞书集成平台 (feishu-integration-platform-logo): https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-integration-platform-logo-619cc495.png
+- Feishu Hire (feishu-hire-logo-en): https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-hire-logo-en-a0c1376f.png
+- 飞书妙记深色字标 (feishu-minutes-logo-cn-dark): https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-minutes-logo-cn-dark-a076d491.png
+- 飞书妙搭预览 (feishu-minutes-preview-logo-cn): https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-minutes-preview-logo-cn-90609ea0.png
+- 飞书 aPaaS (feishu-apaas-logo-cn): https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-apaas-logo-cn-73eac58c.png
+- Feishu Base (feishu-base-logo-en): https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-base-logo-en-9907c50b.png
+- 飞书 aily M3 (feishu-aily-m3-logo-cn): https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-aily-m3-logo-cn-1ef33fb5.png
+- 飞书智能会议纪要 M4 (feishu-ai-meeting-minutes-m4-logo-cn): https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-ai-meeting-minutes-m4-logo-cn-6b2f93c5.png
+- Feishu aPaaS (feishu-apaas-logo-en): https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-apaas-logo-en-558cce60.png
+- Feishu AI (feishu-ai-logo-en): https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-ai-logo-en-beb4f540.png
+- Feishu Office (feishu-office-logo-en): https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-office-logo-en-d7c41322.png
+- 飞书 (feishu-logo-cn-blue): https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-logo-cn-blue-15d13e24.png
+- Feishu AI Meetings (feishu-ai-meetings-logo-en): https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-ai-meetings-logo-en-9a53dbba.png
+- Feishu CoreHR (feishu-corehr-logo-en): https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-corehr-logo-en-a37db9d8.png
+- 飞书开发套件 (feishu-dev-suite-logo-cn): https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-dev-suite-logo-cn-ac81828c.png
+- Feishu aily M3 (feishu-aily-m3-logo-en): https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/feishu-aily-m3-logo-en-2b944016.png
+
+## Machine Summary
+
+```json
+{
+  "total": 299,
+  "selected": 215,
+  "excluded": 84,
+  "selectedUploaded": 215,
+  "byType": {
+    "icon": 163,
+    "excluded": 84,
+    "logo": 52
+  },
+  "byBucket": {
+    "large-icon-or-logo-candidate": 49,
+    "icon-candidate": 134,
+    "other-candidate": 59,
+    "logo-candidate": 57
+  },
+  "byDecision": {
+    "include": 215,
+    "exclude": 84
+  },
+  "generatedAt": "2026-05-14T16:59:01.965Z",
+  "files": {
+    "llms": "gtm/pptx-media/v1/llms.txt",
+    "icons": "gtm/pptx-media/v1/icons.json",
+    "logos": "gtm/pptx-media/v1/logos.json",
+    "excluded": "gtm/pptx-media/v1/excluded.json",
+    "csv": "gtm/pptx-media/v1/assets-index.csv",
+    "fullJson": "gtm/pptx-media/v1/assets-index.json",
+    "html": "gtm/pptx-media/v1/index.html"
+  }
+}
+```

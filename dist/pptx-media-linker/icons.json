@@ -1,0 +1,3162 @@
+{
+  "summary": {
+    "total": 163,
+    "generatedAt": "2026-05-14T16:59:01.965Z"
+  },
+  "items": [
+    {
+      "id": "feishu-hire-app-icon",
+      "name": "飞书招聘应用图标",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/feishu-hire-app-icon-f745f43f.png",
+      "tags": [
+        "feishu",
+        "hire",
+        "app",
+        "icon",
+        "app-icon"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "007c9627af7e0fe8.png",
+      "tosKey": "gtm/pptx-media/v1/icons/feishu-hire-app-icon-f745f43f.png",
+      "size": {
+        "width": 788,
+        "height": 788,
+        "bytes": 38609
+      }
+    },
+    {
+      "id": "lock-security-line",
+      "name": "安全锁",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/lock-security-line-fe919930.png",
+      "tags": [
+        "lock",
+        "security",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "0081b693f8e229dc.png",
+      "tosKey": "gtm/pptx-media/v1/icons/lock-security-line-fe919930.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1620
+      }
+    },
+    {
+      "id": "document-cloud-app-icon",
+      "name": "云文档应用图标",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/document-cloud-app-icon-9fda45d7.png",
+      "tags": [
+        "document",
+        "cloud",
+        "app",
+        "icon",
+        "app-icon"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "00ad799ca0f5b0f9.png",
+      "tosKey": "gtm/pptx-media/v1/icons/document-cloud-app-icon-9fda45d7.png",
+      "size": {
+        "width": 784,
+        "height": 784,
+        "bytes": 28989
+      }
+    },
+    {
+      "id": "office-building-line",
+      "name": "办公楼",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/office-building-line-0009b008.png",
+      "tags": [
+        "office",
+        "building",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "00b007938d7b80bd.png",
+      "tosKey": "gtm/pptx-media/v1/icons/office-building-line-0009b008.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1172
+      }
+    },
+    {
+      "id": "bar-chart-line",
+      "name": "柱状图",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/bar-chart-line-f86c74ae.png",
+      "tags": [
+        "bar",
+        "chart",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "015725b38d8cbe66.png",
+      "tosKey": "gtm/pptx-media/v1/icons/bar-chart-line-f86c74ae.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 901
+      }
+    },
+    {
+      "id": "feishu-anycross-app-icon-large",
+      "name": "飞书 AnyCross 应用图标",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/feishu-anycross-app-icon-large-c631e5b1.png",
+      "tags": [
+        "feishu",
+        "anycross",
+        "app",
+        "icon",
+        "large",
+        "app-icon"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "019f6500aa3ac44c.png",
+      "tosKey": "gtm/pptx-media/v1/icons/feishu-anycross-app-icon-large-c631e5b1.png",
+      "size": {
+        "width": 784,
+        "height": 784,
+        "bytes": 31902
+      }
+    },
+    {
+      "id": "shield-check-app-icon",
+      "name": "盾牌确认应用图标",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/shield-check-app-icon-cbef5c1b.png",
+      "tags": [
+        "shield",
+        "check",
+        "app",
+        "icon",
+        "app-icon"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "02bc9c904821ed62.png",
+      "tosKey": "gtm/pptx-media/v1/icons/shield-check-app-icon-cbef5c1b.png",
+      "size": {
+        "width": 784,
+        "height": 784,
+        "bytes": 37287
+      }
+    },
+    {
+      "id": "org-chart-line",
+      "name": "组织架构",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/org-chart-line-2d5723f3.png",
+      "tags": [
+        "org",
+        "chart",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "039298b1d47d5f5c.png",
+      "tosKey": "gtm/pptx-media/v1/icons/org-chart-line-2d5723f3.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 988
+      }
+    },
+    {
+      "id": "stack-layers-app-icon",
+      "name": "图层应用图标",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/stack-layers-app-icon-78185a14.png",
+      "tags": [
+        "stack",
+        "layers",
+        "app",
+        "icon",
+        "app-icon"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "0558f754dba3bfdf.png",
+      "tosKey": "gtm/pptx-media/v1/icons/stack-layers-app-icon-78185a14.png",
+      "size": {
+        "width": 788,
+        "height": 788,
+        "bytes": 37763
+      }
+    },
+    {
+      "id": "sync-refresh-line",
+      "name": "循环刷新",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/sync-refresh-line-019a04cb.png",
+      "tags": [
+        "sync",
+        "refresh",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "059e3fbf526f097c.png",
+      "tosKey": "gtm/pptx-media/v1/icons/sync-refresh-line-019a04cb.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1706
+      }
+    },
+    {
+      "id": "plug-connection-line",
+      "name": "连接插头",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/plug-connection-line-8a0fde4d.png",
+      "tags": [
+        "plug",
+        "connection",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "0985820158633f16.png",
+      "tosKey": "gtm/pptx-media/v1/icons/plug-connection-line-8a0fde4d.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1592
+      }
+    },
+    {
+      "id": "user-profile-line",
+      "name": "用户头像",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/user-profile-line-18c05640.png",
+      "tags": [
+        "user",
+        "profile",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "0ac4a972380156a6.png",
+      "tosKey": "gtm/pptx-media/v1/icons/user-profile-line-18c05640.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1830
+      }
+    },
+    {
+      "id": "cross-integration-line",
+      "name": "集成交叉",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/cross-integration-line-f334ad05.png",
+      "tags": [
+        "cross",
+        "integration",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "0b4c0d3891f4dd34.png",
+      "tosKey": "gtm/pptx-media/v1/icons/cross-integration-line-f334ad05.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1680
+      }
+    },
+    {
+      "id": "data-user-line",
+      "name": "数据与用户",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/data-user-line-f8090d56.png",
+      "tags": [
+        "data",
+        "user",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "0d8c4d5e4fb2af64.png",
+      "tosKey": "gtm/pptx-media/v1/icons/data-user-line-f8090d56.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 2129
+      }
+    },
+    {
+      "id": "hexagon-chart-line",
+      "name": "六边形图表",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/hexagon-chart-line-dd5b8653.png",
+      "tags": [
+        "hexagon",
+        "chart",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "0e84cc002d656b8d.png",
+      "tosKey": "gtm/pptx-media/v1/icons/hexagon-chart-line-dd5b8653.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1365
+      }
+    },
+    {
+      "id": "database-line",
+      "name": "数据库",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/database-line-329d821c.png",
+      "tags": [
+        "database",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "0f9f6f7f863e2558.png",
+      "tosKey": "gtm/pptx-media/v1/icons/database-line-329d821c.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 2045
+      }
+    },
+    {
+      "id": "target-arrow-line",
+      "name": "目标命中",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/target-arrow-line-87cfdba8.png",
+      "tags": [
+        "target",
+        "arrow",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "152dadcf7e952d4e.png",
+      "tosKey": "gtm/pptx-media/v1/icons/target-arrow-line-87cfdba8.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 2210
+      }
+    },
+    {
+      "id": "growth-chart-line",
+      "name": "增长图表",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/growth-chart-line-e544f049.png",
+      "tags": [
+        "growth",
+        "chart",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "16a4761efc8c063f.png",
+      "tosKey": "gtm/pptx-media/v1/icons/growth-chart-line-e544f049.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1570
+      }
+    },
+    {
+      "id": "document-note-app-icon",
+      "name": "文档应用图标",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/document-note-app-icon-8831291a.png",
+      "tags": [
+        "document",
+        "note",
+        "app",
+        "icon",
+        "app-icon"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "197bffb3cd81c93f.png",
+      "tosKey": "gtm/pptx-media/v1/icons/document-note-app-icon-8831291a.png",
+      "size": {
+        "width": 788,
+        "height": 788,
+        "bytes": 25766
+      }
+    },
+    {
+      "id": "selection-box-line",
+      "name": "选区框",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/selection-box-line-7ce64be9.png",
+      "tags": [
+        "selection",
+        "box",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "1dfe6e9880e63abb.png",
+      "tosKey": "gtm/pptx-media/v1/icons/selection-box-line-7ce64be9.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1491
+      }
+    },
+    {
+      "id": "user-silhouette-line",
+      "name": "用户轮廓",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/user-silhouette-line-c904a88a.png",
+      "tags": [
+        "user",
+        "silhouette",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "1ec0487b12e47ba3.png",
+      "tosKey": "gtm/pptx-media/v1/icons/user-silhouette-line-c904a88a.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1612
+      }
+    },
+    {
+      "id": "document-note-solid",
+      "name": "文档笔记",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/document-note-solid-2dc9183a.png",
+      "tags": [
+        "document",
+        "note",
+        "solid",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "1f9e13756ae21f1e.png",
+      "tosKey": "gtm/pptx-media/v1/icons/document-note-solid-2dc9183a.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1616
+      }
+    },
+    {
+      "id": "team-broadcast-line",
+      "name": "团队广播",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/team-broadcast-line-1a611e51.png",
+      "tags": [
+        "team",
+        "broadcast",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "221b6d1eb7e63021.png",
+      "tosKey": "gtm/pptx-media/v1/icons/team-broadcast-line-1a611e51.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1784
+      }
+    },
+    {
+      "id": "workflow-nodes-line",
+      "name": "流程节点",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/workflow-nodes-line-065087a1.png",
+      "tags": [
+        "workflow",
+        "nodes",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "2351aaabe2f614e8.png",
+      "tosKey": "gtm/pptx-media/v1/icons/workflow-nodes-line-065087a1.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1698
+      }
+    },
+    {
+      "id": "check-green-solid-large",
+      "name": "绿色确认大图标",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/check-green-solid-large-c8b131e6.png",
+      "tags": [
+        "check",
+        "green",
+        "solid",
+        "large",
+        "app-icon"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "254ef41520870317.png",
+      "tosKey": "gtm/pptx-media/v1/icons/check-green-solid-large-c8b131e6.png",
+      "size": {
+        "width": 580,
+        "height": 580,
+        "bytes": 286311
+      }
+    },
+    {
+      "id": "checkmark-purple-blue-solid",
+      "name": "蓝紫确认图标",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/checkmark-purple-blue-solid-64970090.png",
+      "tags": [
+        "checkmark",
+        "purple",
+        "blue",
+        "solid",
+        "app-icon"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "25722f297895d4ae.png",
+      "tosKey": "gtm/pptx-media/v1/icons/checkmark-purple-blue-solid-64970090.png",
+      "size": {
+        "width": 1024,
+        "height": 1024,
+        "bytes": 39333
+      }
+    },
+    {
+      "id": "switch-path-line",
+      "name": "路径切换",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/switch-path-line-8daa4a30.png",
+      "tags": [
+        "switch",
+        "path",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "269b73e502bb726c.png",
+      "tosKey": "gtm/pptx-media/v1/icons/switch-path-line-8daa4a30.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1398
+      }
+    },
+    {
+      "id": "chat-message-line",
+      "name": "消息气泡",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/chat-message-line-5dec8a82.png",
+      "tags": [
+        "chat",
+        "message",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "274841c034e38a03.png",
+      "tosKey": "gtm/pptx-media/v1/icons/chat-message-line-5dec8a82.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 957
+      }
+    },
+    {
+      "id": "hashtag-chat-line",
+      "name": "话题消息",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/hashtag-chat-line-05e596d8.png",
+      "tags": [
+        "hashtag",
+        "chat",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "2a1d158b6e98428f.png",
+      "tosKey": "gtm/pptx-media/v1/icons/hashtag-chat-line-05e596d8.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 2178
+      }
+    },
+    {
+      "id": "orange-wave-app-icon",
+      "name": "橙色波形应用图标",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/orange-wave-app-icon-f83dddb3.png",
+      "tags": [
+        "orange",
+        "wave",
+        "app",
+        "icon",
+        "app-icon"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "2bf6f9b662ff534e.png",
+      "tosKey": "gtm/pptx-media/v1/icons/orange-wave-app-icon-f83dddb3.png",
+      "size": {
+        "width": 784,
+        "height": 788,
+        "bytes": 29668
+      }
+    },
+    {
+      "id": "team-hierarchy-line",
+      "name": "团队层级",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/team-hierarchy-line-8a082731.png",
+      "tags": [
+        "team",
+        "hierarchy",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "2fe88ce0dd93a4b2.png",
+      "tosKey": "gtm/pptx-media/v1/icons/team-hierarchy-line-8a082731.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1827
+      }
+    },
+    {
+      "id": "route-connector-line",
+      "name": "连接路径",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/route-connector-line-bb35be2d.png",
+      "tags": [
+        "route",
+        "connector",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "32ec464138375dbe.png",
+      "tosKey": "gtm/pptx-media/v1/icons/route-connector-line-bb35be2d.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1611
+      }
+    },
+    {
+      "id": "shopping-cart-line",
+      "name": "购物车",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/shopping-cart-line-e4af71b5.png",
+      "tags": [
+        "shopping",
+        "cart",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "3697b3f2edc44ee9.png",
+      "tosKey": "gtm/pptx-media/v1/icons/shopping-cart-line-e4af71b5.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1433
+      }
+    },
+    {
+      "id": "trophy-line",
+      "name": "奖杯",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/trophy-line-707e9a00.png",
+      "tags": [
+        "trophy",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "38134e9b2e811efa.png",
+      "tosKey": "gtm/pptx-media/v1/icons/trophy-line-707e9a00.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1494
+      }
+    },
+    {
+      "id": "search-magnifier-line",
+      "name": "搜索",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/search-magnifier-line-b9818c68.png",
+      "tags": [
+        "search",
+        "magnifier",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "38c49b3cea755150.png",
+      "tosKey": "gtm/pptx-media/v1/icons/search-magnifier-line-b9818c68.png",
+      "size": {
+        "width": 96,
+        "height": 97,
+        "bytes": 4621
+      }
+    },
+    {
+      "id": "chat-bubbles-line",
+      "name": "双消息气泡",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/chat-bubbles-line-246fc7cc.png",
+      "tags": [
+        "chat",
+        "bubbles",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "397fe590b39154b4.png",
+      "tosKey": "gtm/pptx-media/v1/icons/chat-bubbles-line-246fc7cc.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1193
+      }
+    },
+    {
+      "id": "cube-box-line",
+      "name": "立方体",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/cube-box-line-ab647a1c.png",
+      "tags": [
+        "cube",
+        "box",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "3dcaf1285290267a.png",
+      "tosKey": "gtm/pptx-media/v1/icons/cube-box-line-ab647a1c.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1581
+      }
+    },
+    {
+      "id": "chain-link-line",
+      "name": "链接",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/chain-link-line-c36a0536.png",
+      "tags": [
+        "chain",
+        "link",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "410cc507df1e03cf.png",
+      "tosKey": "gtm/pptx-media/v1/icons/chain-link-line-c36a0536.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1514
+      }
+    },
+    {
+      "id": "analytics-window-line",
+      "name": "分析窗口",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/analytics-window-line-7068c1f9.png",
+      "tags": [
+        "analytics",
+        "window",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "45f88bb9977acc63.png",
+      "tosKey": "gtm/pptx-media/v1/icons/analytics-window-line-7068c1f9.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1145
+      }
+    },
+    {
+      "id": "branch-node-line",
+      "name": "分支节点",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/branch-node-line-7ea0f511.png",
+      "tags": [
+        "branch",
+        "node",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "47185783db7b73e3.png",
+      "tosKey": "gtm/pptx-media/v1/icons/branch-node-line-7ea0f511.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1315
+      }
+    },
+    {
+      "id": "chain-link-alt-line",
+      "name": "链路",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/chain-link-alt-line-14f7550f.png",
+      "tags": [
+        "chain",
+        "link",
+        "alt",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "49da7f3dd752f52b.png",
+      "tosKey": "gtm/pptx-media/v1/icons/chain-link-alt-line-14f7550f.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1684
+      }
+    },
+    {
+      "id": "mail-envelope-app-icon",
+      "name": "邮件应用图标",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/mail-envelope-app-icon-82a6e195.png",
+      "tags": [
+        "mail",
+        "envelope",
+        "app",
+        "icon",
+        "app-icon"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "4de48b7a2bc4ba6c.png",
+      "tosKey": "gtm/pptx-media/v1/icons/mail-envelope-app-icon-82a6e195.png",
+      "size": {
+        "width": 784,
+        "height": 784,
+        "bytes": 26580
+      }
+    },
+    {
+      "id": "database-lock-line",
+      "name": "数据库锁",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/database-lock-line-85b88c18.png",
+      "tags": [
+        "database",
+        "lock",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "4e674d95af6566e1.png",
+      "tosKey": "gtm/pptx-media/v1/icons/database-lock-line-85b88c18.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1850
+      }
+    },
+    {
+      "id": "video-camera-app-icon",
+      "name": "视频应用图标",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/video-camera-app-icon-738458f6.png",
+      "tags": [
+        "video",
+        "camera",
+        "app",
+        "icon",
+        "app-icon"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "4fd246f92ff8af99.png",
+      "tosKey": "gtm/pptx-media/v1/icons/video-camera-app-icon-738458f6.png",
+      "size": {
+        "width": 784,
+        "height": 788,
+        "bytes": 27706
+      }
+    },
+    {
+      "id": "stack-cards-app-icon",
+      "name": "卡片应用图标",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/stack-cards-app-icon-069e9fb0.png",
+      "tags": [
+        "stack",
+        "cards",
+        "app",
+        "icon",
+        "app-icon"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "5155306be12707a8.png",
+      "tosKey": "gtm/pptx-media/v1/icons/stack-cards-app-icon-069e9fb0.png",
+      "size": {
+        "width": 784,
+        "height": 784,
+        "bytes": 31294
+      }
+    },
+    {
+      "id": "settings-gear-line",
+      "name": "设置齿轮",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/settings-gear-line-8de1314a.png",
+      "tags": [
+        "settings",
+        "gear",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "569668d9d0f33387.png",
+      "tosKey": "gtm/pptx-media/v1/icons/settings-gear-line-8de1314a.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 2128
+      }
+    },
+    {
+      "id": "refresh-sync-line",
+      "name": "同步刷新",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/refresh-sync-line-ba6517cf.png",
+      "tags": [
+        "refresh",
+        "sync",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "56cdfd9d3d5a7cdf.png",
+      "tosKey": "gtm/pptx-media/v1/icons/refresh-sync-line-ba6517cf.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1595
+      }
+    },
+    {
+      "id": "storefront-line",
+      "name": "门店",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/storefront-line-b0fcf2a0.png",
+      "tags": [
+        "storefront",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "57435b10d51be8ad.png",
+      "tosKey": "gtm/pptx-media/v1/icons/storefront-line-b0fcf2a0.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1076
+      }
+    },
+    {
+      "id": "add-focus-line",
+      "name": "添加选区",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/add-focus-line-ff7e52ed.png",
+      "tags": [
+        "add",
+        "focus",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "5773381ab52790fb.png",
+      "tosKey": "gtm/pptx-media/v1/icons/add-focus-line-ff7e52ed.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1099
+      }
+    },
+    {
+      "id": "translation-chat-line",
+      "name": "翻译对话",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/translation-chat-line-d3e4b7e4.png",
+      "tags": [
+        "translation",
+        "chat",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "59bfc32a2191d2b9.png",
+      "tosKey": "gtm/pptx-media/v1/icons/translation-chat-line-d3e4b7e4.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1478
+      }
+    },
+    {
+      "id": "alert-siren-line",
+      "name": "告警铃",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/alert-siren-line-85514750.png",
+      "tags": [
+        "alert",
+        "siren",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "59d8e6f929dfcdaf.png",
+      "tosKey": "gtm/pptx-media/v1/icons/alert-siren-line-85514750.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1316
+      }
+    },
+    {
+      "id": "up-arrow-circle-line",
+      "name": "上升箭头",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/up-arrow-circle-line-4cbae0a1.png",
+      "tags": [
+        "up",
+        "arrow",
+        "circle",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "5b88486e739bbc7b.png",
+      "tosKey": "gtm/pptx-media/v1/icons/up-arrow-circle-line-4cbae0a1.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 2074
+      }
+    },
+    {
+      "id": "grid-layout-line",
+      "name": "宫格布局",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/grid-layout-line-d6666cc8.png",
+      "tags": [
+        "grid",
+        "layout",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "5be6d8ddee1958d5.png",
+      "tosKey": "gtm/pptx-media/v1/icons/grid-layout-line-d6666cc8.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1509
+      }
+    },
+    {
+      "id": "connector-line",
+      "name": "连接线",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/connector-line-ef2b2d8a.png",
+      "tags": [
+        "connector",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "5c77177ba3127208.png",
+      "tosKey": "gtm/pptx-media/v1/icons/connector-line-ef2b2d8a.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1695
+      }
+    },
+    {
+      "id": "cloud-check-line",
+      "name": "云端确认",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/cloud-check-line-0703b156.png",
+      "tags": [
+        "cloud",
+        "check",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "5cfef117c6af51ea.png",
+      "tosKey": "gtm/pptx-media/v1/icons/cloud-check-line-0703b156.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1573
+      }
+    },
+    {
+      "id": "bookmark-line",
+      "name": "书签",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/bookmark-line-880295c1.png",
+      "tags": [
+        "bookmark",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "6126b2089946ea7d.png",
+      "tosKey": "gtm/pptx-media/v1/icons/bookmark-line-880295c1.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1288
+      }
+    },
+    {
+      "id": "hourglass-line",
+      "name": "沙漏",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/hourglass-line-164ef826.png",
+      "tags": [
+        "hourglass",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "62974cee3c7526b4.png",
+      "tosKey": "gtm/pptx-media/v1/icons/hourglass-line-164ef826.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1637
+      }
+    },
+    {
+      "id": "spreadsheet-app-icon-large",
+      "name": "表格应用图标",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/spreadsheet-app-icon-large-1dbfedea.png",
+      "tags": [
+        "spreadsheet",
+        "app",
+        "icon",
+        "large",
+        "app-icon"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "629b68634a5b28df.png",
+      "tosKey": "gtm/pptx-media/v1/icons/spreadsheet-app-icon-large-1dbfedea.png",
+      "size": {
+        "width": 788,
+        "height": 788,
+        "bytes": 26474
+      }
+    },
+    {
+      "id": "business-user-line",
+      "name": "商务用户",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/business-user-line-e5f5ff62.png",
+      "tags": [
+        "business",
+        "user",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "67a250c510052d8f.png",
+      "tosKey": "gtm/pptx-media/v1/icons/business-user-line-e5f5ff62.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1933
+      }
+    },
+    {
+      "id": "chat-bubbles-color-icon",
+      "name": "彩色消息气泡",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/chat-bubbles-color-icon-7e732a21.png",
+      "tags": [
+        "chat",
+        "bubbles",
+        "color",
+        "icon",
+        "app-icon"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "693432e14452ee90.png",
+      "tosKey": "gtm/pptx-media/v1/icons/chat-bubbles-color-icon-7e732a21.png",
+      "size": {
+        "width": 808,
+        "height": 720,
+        "bytes": 34351
+      }
+    },
+    {
+      "id": "document-search-line",
+      "name": "文档搜索",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/document-search-line-a33c521b.png",
+      "tags": [
+        "document",
+        "search",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "6ab74fdce2f432a7.png",
+      "tosKey": "gtm/pptx-media/v1/icons/document-search-line-a33c521b.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1480
+      }
+    },
+    {
+      "id": "feishu-meeting-room-app-icon",
+      "name": "飞书会议室应用图标",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/feishu-meeting-room-app-icon-4a3d9a87.png",
+      "tags": [
+        "feishu",
+        "meeting",
+        "room",
+        "app",
+        "icon",
+        "app-icon"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "6d89be707e8e87dd.png",
+      "tosKey": "gtm/pptx-media/v1/icons/feishu-meeting-room-app-icon-4a3d9a87.png",
+      "size": {
+        "width": 788,
+        "height": 788,
+        "bytes": 32365
+      }
+    },
+    {
+      "id": "feishu-anycross-app-icon-square",
+      "name": "飞书 AnyCross 方形图标",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/feishu-anycross-app-icon-square-f00e7c99.png",
+      "tags": [
+        "feishu",
+        "anycross",
+        "app",
+        "icon",
+        "square",
+        "app-icon"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "70261b4ec331edb9.png",
+      "tosKey": "gtm/pptx-media/v1/icons/feishu-anycross-app-icon-square-f00e7c99.png",
+      "size": {
+        "width": 788,
+        "height": 788,
+        "bytes": 29582
+      }
+    },
+    {
+      "id": "x-red-solid-large",
+      "name": "红色叉号大图标",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/x-red-solid-large-f80ac00d.png",
+      "tags": [
+        "x",
+        "red",
+        "solid",
+        "large",
+        "app-icon"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "70f40590943bfa16.png",
+      "tosKey": "gtm/pptx-media/v1/icons/x-red-solid-large-f80ac00d.png",
+      "size": {
+        "width": 580,
+        "height": 580,
+        "bytes": 24613
+      }
+    },
+    {
+      "id": "clock-line",
+      "name": "时钟",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/clock-line-f78cd60f.png",
+      "tags": [
+        "clock",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "72b865cb08503d22.png",
+      "tosKey": "gtm/pptx-media/v1/icons/clock-line-f78cd60f.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1898
+      }
+    },
+    {
+      "id": "feishu-anycross-app-icon",
+      "name": "飞书 AnyCross 图标",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/feishu-anycross-app-icon-c632a01c.png",
+      "tags": [
+        "feishu",
+        "anycross",
+        "app",
+        "icon",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "7301005f37f21d42.png",
+      "tosKey": "gtm/pptx-media/v1/icons/feishu-anycross-app-icon-c632a01c.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 2356
+      }
+    },
+    {
+      "id": "spreadsheet-app-icon",
+      "name": "表格应用图标",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/spreadsheet-app-icon-117e094c.png",
+      "tags": [
+        "spreadsheet",
+        "app",
+        "icon",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "73244d313c20ed0b.png",
+      "tosKey": "gtm/pptx-media/v1/icons/spreadsheet-app-icon-117e094c.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1901
+      }
+    },
+    {
+      "id": "line-chart-line",
+      "name": "折线图",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/line-chart-line-ad13a048.png",
+      "tags": [
+        "line",
+        "chart"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "73c341f46b9816ce.png",
+      "tosKey": "gtm/pptx-media/v1/icons/line-chart-line-ad13a048.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1493
+      }
+    },
+    {
+      "id": "key-line",
+      "name": "钥匙",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/key-line-f064708e.png",
+      "tags": [
+        "key",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "744ebf066c8cc432.png",
+      "tosKey": "gtm/pptx-media/v1/icons/key-line-f064708e.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1377
+      }
+    },
+    {
+      "id": "shield-check-line",
+      "name": "盾牌确认",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/shield-check-line-8686aa09.png",
+      "tags": [
+        "shield",
+        "check",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "748861cbc203d394.png",
+      "tosKey": "gtm/pptx-media/v1/icons/shield-check-line-8686aa09.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1894
+      }
+    },
+    {
+      "id": "feishu-people-app-icon",
+      "name": "飞书人事应用图标",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/feishu-people-app-icon-a29bb3d1.png",
+      "tags": [
+        "feishu",
+        "people",
+        "app",
+        "icon",
+        "app-icon"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "7546062c7214735f.png",
+      "tosKey": "gtm/pptx-media/v1/icons/feishu-people-app-icon-a29bb3d1.png",
+      "size": {
+        "width": 784,
+        "height": 784,
+        "bytes": 33204
+      }
+    },
+    {
+      "id": "dashboard-gauge-line",
+      "name": "仪表盘",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/dashboard-gauge-line-34425b3a.png",
+      "tags": [
+        "dashboard",
+        "gauge",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "782654115b739b4c.png",
+      "tosKey": "gtm/pptx-media/v1/icons/dashboard-gauge-line-34425b3a.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1847
+      }
+    },
+    {
+      "id": "exclamation-orange-solid",
+      "name": "橙色感叹号",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/exclamation-orange-solid-69b17c23.png",
+      "tags": [
+        "exclamation",
+        "orange",
+        "solid",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "79537a3295e5735a.png",
+      "tosKey": "gtm/pptx-media/v1/icons/exclamation-orange-solid-69b17c23.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 2277
+      }
+    },
+    {
+      "id": "globe-line",
+      "name": "地球",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/globe-line-8bc0fc90.png",
+      "tags": [
+        "globe",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "7c9d4b72dcf17a6b.png",
+      "tosKey": "gtm/pptx-media/v1/icons/globe-line-8bc0fc90.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 2694
+      }
+    },
+    {
+      "id": "graduation-cap-line",
+      "name": "学士帽",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/graduation-cap-line-299ff914.png",
+      "tags": [
+        "graduation",
+        "cap",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "7d27d110df1eea5e.png",
+      "tosKey": "gtm/pptx-media/v1/icons/graduation-cap-line-299ff914.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1547
+      }
+    },
+    {
+      "id": "language-translation-line",
+      "name": "语言翻译",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/language-translation-line-0d9e9fde.png",
+      "tags": [
+        "language",
+        "translation",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "7f66c7f7d21aad17.png",
+      "tosKey": "gtm/pptx-media/v1/icons/language-translation-line-0d9e9fde.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1592
+      }
+    },
+    {
+      "id": "bar-chart-alt-line",
+      "name": "柱状统计",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/bar-chart-alt-line-e1815493.png",
+      "tags": [
+        "bar",
+        "chart",
+        "alt",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "80a90c8bb3348e66.png",
+      "tosKey": "gtm/pptx-media/v1/icons/bar-chart-alt-line-e1815493.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 849
+      }
+    },
+    {
+      "id": "globe-grid-line",
+      "name": "全球网络",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/globe-grid-line-9ffbd272.png",
+      "tags": [
+        "globe",
+        "grid",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "80cef12ea710a61e.png",
+      "tosKey": "gtm/pptx-media/v1/icons/globe-grid-line-9ffbd272.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 2596
+      }
+    },
+    {
+      "id": "headset-line",
+      "name": "客服耳机",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/headset-line-1a0156a9.png",
+      "tags": [
+        "headset",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "84c699d6c4f1d99f.png",
+      "tosKey": "gtm/pptx-media/v1/icons/headset-line-1a0156a9.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1735
+      }
+    },
+    {
+      "id": "growth-arrow-line",
+      "name": "上升趋势",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/growth-arrow-line-33908ede.png",
+      "tags": [
+        "growth",
+        "arrow",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "8820aa6f3719cf1d.png",
+      "tosKey": "gtm/pptx-media/v1/icons/growth-arrow-line-33908ede.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1088
+      }
+    },
+    {
+      "id": "warning-octagon-line",
+      "name": "八边形警告",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/warning-octagon-line-a3207075.png",
+      "tags": [
+        "warning",
+        "octagon",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "8cf6ffe459a7ec56.png",
+      "tosKey": "gtm/pptx-media/v1/icons/warning-octagon-line-a3207075.png",
+      "size": {
+        "width": 89,
+        "height": 89,
+        "bytes": 3651
+      }
+    },
+    {
+      "id": "blue-card-app-icon",
+      "name": "蓝色卡片应用图标",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/blue-card-app-icon-9e653c15.png",
+      "tags": [
+        "blue",
+        "card",
+        "app",
+        "icon",
+        "app-icon"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "8cf9918876acc13f.png",
+      "tosKey": "gtm/pptx-media/v1/icons/blue-card-app-icon-9e653c15.png",
+      "size": {
+        "width": 788,
+        "height": 784,
+        "bytes": 28277
+      }
+    },
+    {
+      "id": "analytics-card-line",
+      "name": "数据看板",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/analytics-card-line-406c6af3.png",
+      "tags": [
+        "analytics",
+        "card",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "9046520727b55e57.png",
+      "tosKey": "gtm/pptx-media/v1/icons/analytics-card-line-406c6af3.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 994
+      }
+    },
+    {
+      "id": "broadcast-antenna-line",
+      "name": "广播天线",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/broadcast-antenna-line-7e1667db.png",
+      "tags": [
+        "broadcast",
+        "antenna",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "913ffc9d345ae1b1.png",
+      "tosKey": "gtm/pptx-media/v1/icons/broadcast-antenna-line-7e1667db.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 2363
+      }
+    },
+    {
+      "id": "user-outline-line",
+      "name": "用户",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/user-outline-line-bb0487f1.png",
+      "tags": [
+        "user",
+        "outline",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "91490351f79cf2cf.png",
+      "tosKey": "gtm/pptx-media/v1/icons/user-outline-line-bb0487f1.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1764
+      }
+    },
+    {
+      "id": "product-app-color-icon",
+      "name": "彩色产品图标",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/product-app-color-icon-df333c38.png",
+      "tags": [
+        "product",
+        "app",
+        "color",
+        "icon",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "9249fa111beee451.png",
+      "tosKey": "gtm/pptx-media/v1/icons/product-app-color-icon-df333c38.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1599
+      }
+    },
+    {
+      "id": "flag-line",
+      "name": "旗帜",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/flag-line-c3fe9e61.png",
+      "tags": [
+        "flag",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "95503602738d9e22.png",
+      "tosKey": "gtm/pptx-media/v1/icons/flag-line-c3fe9e61.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1114
+      }
+    },
+    {
+      "id": "feishu-performance-app-icon",
+      "name": "飞书绩效应用图标",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/feishu-performance-app-icon-50070845.png",
+      "tags": [
+        "feishu",
+        "performance",
+        "app",
+        "icon",
+        "app-icon"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "964f28cc7c209d19.png",
+      "tosKey": "gtm/pptx-media/v1/icons/feishu-performance-app-icon-50070845.png",
+      "size": {
+        "width": 784,
+        "height": 788,
+        "bytes": 36085
+      }
+    },
+    {
+      "id": "cube-branch-line",
+      "name": "分支立方体",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/cube-branch-line-b31f3636.png",
+      "tags": [
+        "cube",
+        "branch",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "966d67ff63dbcc59.png",
+      "tosKey": "gtm/pptx-media/v1/icons/cube-branch-line-b31f3636.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1477
+      }
+    },
+    {
+      "id": "sad-face-line",
+      "name": "难过表情",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/sad-face-line-19f0c2c3.png",
+      "tags": [
+        "sad",
+        "face",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "978fcb8d795b97cf.png",
+      "tosKey": "gtm/pptx-media/v1/icons/sad-face-line-19f0c2c3.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 2024
+      }
+    },
+    {
+      "id": "sliders-color-icon",
+      "name": "彩色滑杆图标",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/sliders-color-icon-2154d751.png",
+      "tags": [
+        "sliders",
+        "color",
+        "icon",
+        "app-icon"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "9795af3ccf6eb151.png",
+      "tosKey": "gtm/pptx-media/v1/icons/sliders-color-icon-2154d751.png",
+      "size": {
+        "width": 784,
+        "height": 784,
+        "bytes": 38543
+      }
+    },
+    {
+      "id": "network-cluster-line",
+      "name": "网络集群",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/network-cluster-line-ff74d4b6.png",
+      "tags": [
+        "network",
+        "cluster",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "97c71f315c3919a9.png",
+      "tosKey": "gtm/pptx-media/v1/icons/network-cluster-line-ff74d4b6.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1824
+      }
+    },
+    {
+      "id": "lock-line",
+      "name": "锁",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/lock-line-f212ec5b.png",
+      "tags": [
+        "lock",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "98d9096d0e722f90.png",
+      "tosKey": "gtm/pptx-media/v1/icons/lock-line-f212ec5b.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1194
+      }
+    },
+    {
+      "id": "certificate-line",
+      "name": "证书",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/certificate-line-110443d5.png",
+      "tags": [
+        "certificate",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "9d0e262f50905444.png",
+      "tosKey": "gtm/pptx-media/v1/icons/certificate-line-110443d5.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1086
+      }
+    },
+    {
+      "id": "chat-bubbles-color-icon-alt",
+      "name": "彩色消息气泡",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/chat-bubbles-color-icon-alt-aa0fa92e.png",
+      "tags": [
+        "chat",
+        "bubbles",
+        "color",
+        "icon",
+        "alt",
+        "app-icon"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "9d43f3e97a8af812.png",
+      "tosKey": "gtm/pptx-media/v1/icons/chat-bubbles-color-icon-alt-aa0fa92e.png",
+      "size": {
+        "width": 784,
+        "height": 784,
+        "bytes": 31784
+      }
+    },
+    {
+      "id": "yuan-currency-line",
+      "name": "人民币",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/yuan-currency-line-62b7b674.png",
+      "tags": [
+        "yuan",
+        "currency",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "9ea9f4536b6f5a71.png",
+      "tosKey": "gtm/pptx-media/v1/icons/yuan-currency-line-62b7b674.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1983
+      }
+    },
+    {
+      "id": "smile-face-line",
+      "name": "笑脸",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/smile-face-line-1137f7cc.png",
+      "tags": [
+        "smile",
+        "face",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "a0141c60b9a4f794.png",
+      "tosKey": "gtm/pptx-media/v1/icons/smile-face-line-1137f7cc.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1876
+      }
+    },
+    {
+      "id": "feishu-base-app-icon",
+      "name": "飞书多维表格应用图标",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/feishu-base-app-icon-e3040d7f.png",
+      "tags": [
+        "feishu",
+        "base",
+        "app",
+        "icon",
+        "app-icon"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "a036319fe61f83ae.png",
+      "tosKey": "gtm/pptx-media/v1/icons/feishu-base-app-icon-e3040d7f.png",
+      "size": {
+        "width": 784,
+        "height": 788,
+        "bytes": 34220
+      }
+    },
+    {
+      "id": "list-add-line",
+      "name": "列表添加",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/list-add-line-41b7440e.png",
+      "tags": [
+        "list",
+        "add",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "a0d4bded88cf974e.png",
+      "tosKey": "gtm/pptx-media/v1/icons/list-add-line-41b7440e.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 841
+      }
+    },
+    {
+      "id": "earbud-line",
+      "name": "耳机",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/earbud-line-a0b2fb5b.png",
+      "tags": [
+        "earbud",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "a11731bb8bf38b84.png",
+      "tosKey": "gtm/pptx-media/v1/icons/earbud-line-a0b2fb5b.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1584
+      }
+    },
+    {
+      "id": "network-circle-line",
+      "name": "环形网络",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/network-circle-line-3fc34f94.png",
+      "tags": [
+        "network",
+        "circle",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "a1c9c5fb4ab505a0.png",
+      "tosKey": "gtm/pptx-media/v1/icons/network-circle-line-3fc34f94.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1913
+      }
+    },
+    {
+      "id": "calendar-26-app-icon",
+      "name": "日历 26 应用图标",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/calendar-26-app-icon-9b8c312f.png",
+      "tags": [
+        "calendar",
+        "26",
+        "app",
+        "icon",
+        "app-icon"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "a2215f724dd5e556.png",
+      "tosKey": "gtm/pptx-media/v1/icons/calendar-26-app-icon-9b8c312f.png",
+      "size": {
+        "width": 784,
+        "height": 784,
+        "bytes": 31249
+      }
+    },
+    {
+      "id": "selection-nodes-line",
+      "name": "节点选区",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/selection-nodes-line-9b5a4c45.png",
+      "tags": [
+        "selection",
+        "nodes",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "a26ddb71787f1259.png",
+      "tosKey": "gtm/pptx-media/v1/icons/selection-nodes-line-9b5a4c45.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1797
+      }
+    },
+    {
+      "id": "home-line",
+      "name": "主页",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/home-line-587e9cd7.png",
+      "tags": [
+        "home",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "a35878b6800821b0.png",
+      "tosKey": "gtm/pptx-media/v1/icons/home-line-587e9cd7.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1114
+      }
+    },
+    {
+      "id": "toggle-target-line",
+      "name": "开关目标",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/toggle-target-line-b07d5ae1.png",
+      "tags": [
+        "toggle",
+        "target",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "a360cbf0c9bf4e39.png",
+      "tosKey": "gtm/pptx-media/v1/icons/toggle-target-line-b07d5ae1.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1754
+      }
+    },
+    {
+      "id": "check-green-solid",
+      "name": "绿色确认",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/check-green-solid-8aeb2c55.png",
+      "tags": [
+        "check",
+        "green",
+        "solid",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "a4540d81cce4891e.png",
+      "tosKey": "gtm/pptx-media/v1/icons/check-green-solid-8aeb2c55.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 2747
+      }
+    },
+    {
+      "id": "favorite-scan-line",
+      "name": "收藏识别",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/favorite-scan-line-e6873132.png",
+      "tags": [
+        "favorite",
+        "scan",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "a4a25724019e3484.png",
+      "tosKey": "gtm/pptx-media/v1/icons/favorite-scan-line-e6873132.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1459
+      }
+    },
+    {
+      "id": "document-cloud-app-icon-alt",
+      "name": "云文档应用图标",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/document-cloud-app-icon-alt-3975b1ea.png",
+      "tags": [
+        "document",
+        "cloud",
+        "app",
+        "icon",
+        "alt",
+        "app-icon"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "a4c32b0e1e0b41db.png",
+      "tosKey": "gtm/pptx-media/v1/icons/document-cloud-app-icon-alt-3975b1ea.png",
+      "size": {
+        "width": 664,
+        "height": 640,
+        "bytes": 23331
+      }
+    },
+    {
+      "id": "lightning-line",
+      "name": "闪电",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/lightning-line-7665b40e.png",
+      "tags": [
+        "lightning",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "a5c6c32b12759806.png",
+      "tosKey": "gtm/pptx-media/v1/icons/lightning-line-7665b40e.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1567
+      }
+    },
+    {
+      "id": "bookmark-plus-line",
+      "name": "书签添加",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/bookmark-plus-line-ede9b8a1.png",
+      "tags": [
+        "bookmark",
+        "plus",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "a7543037dc0e7a14.png",
+      "tosKey": "gtm/pptx-media/v1/icons/bookmark-plus-line-ede9b8a1.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1372
+      }
+    },
+    {
+      "id": "multi-layer-app-icon",
+      "name": "多层应用图标",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/multi-layer-app-icon-38520dc1.png",
+      "tags": [
+        "multi",
+        "layer",
+        "app",
+        "icon",
+        "app-icon"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "a7d93a6b4c77762c.png",
+      "tosKey": "gtm/pptx-media/v1/icons/multi-layer-app-icon-38520dc1.png",
+      "size": {
+        "width": 784,
+        "height": 788,
+        "bytes": 25166
+      }
+    },
+    {
+      "id": "play-card-line",
+      "name": "播放卡片",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/play-card-line-8973223b.png",
+      "tags": [
+        "play",
+        "card",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "a8a8226737bd1b6e.png",
+      "tosKey": "gtm/pptx-media/v1/icons/play-card-line-8973223b.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1513
+      }
+    },
+    {
+      "id": "code-window-line",
+      "name": "代码窗口",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/code-window-line-c19e7743.png",
+      "tags": [
+        "code",
+        "window",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "a94d3c74a8d7b9e7.png",
+      "tosKey": "gtm/pptx-media/v1/icons/code-window-line-c19e7743.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1655
+      }
+    },
+    {
+      "id": "target-crosshair-line",
+      "name": "准星目标",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/target-crosshair-line-99f93351.png",
+      "tags": [
+        "target",
+        "crosshair",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "aabe6e7f8feb1bec.png",
+      "tosKey": "gtm/pptx-media/v1/icons/target-crosshair-line-99f93351.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 2325
+      }
+    },
+    {
+      "id": "workflow-app-icon",
+      "name": "流程应用图标",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/workflow-app-icon-9a742e35.png",
+      "tags": [
+        "workflow",
+        "app",
+        "icon",
+        "app-icon"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "b002c8999f649004.png",
+      "tosKey": "gtm/pptx-media/v1/icons/workflow-app-icon-9a742e35.png",
+      "size": {
+        "width": 784,
+        "height": 784,
+        "bytes": 32020
+      }
+    },
+    {
+      "id": "browser-window-line",
+      "name": "浏览器窗口",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/browser-window-line-a1d47b5a.png",
+      "tags": [
+        "browser",
+        "window",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "b215d7e496a08eed.png",
+      "tosKey": "gtm/pptx-media/v1/icons/browser-window-line-a1d47b5a.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1178
+      }
+    },
+    {
+      "id": "pie-chart-line",
+      "name": "饼图",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/pie-chart-line-757291af.png",
+      "tags": [
+        "pie",
+        "chart",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "b261e6a7dca84624.png",
+      "tosKey": "gtm/pptx-media/v1/icons/pie-chart-line-757291af.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1860
+      }
+    },
+    {
+      "id": "people-app-icon",
+      "name": "人事应用图标",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/people-app-icon-6f540bce.png",
+      "tags": [
+        "people",
+        "app",
+        "icon",
+        "app-icon"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "b275ffc57932a81d.png",
+      "tosKey": "gtm/pptx-media/v1/icons/people-app-icon-6f540bce.png",
+      "size": {
+        "width": 784,
+        "height": 784,
+        "bytes": 34781
+      }
+    },
+    {
+      "id": "move-arrows-line",
+      "name": "移动箭头",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/move-arrows-line-dec942d1.png",
+      "tags": [
+        "move",
+        "arrows",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "b92e6560f73efe4e.png",
+      "tosKey": "gtm/pptx-media/v1/icons/move-arrows-line-dec942d1.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1347
+      }
+    },
+    {
+      "id": "hierarchy-line",
+      "name": "层级结构",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/hierarchy-line-538c91c3.png",
+      "tags": [
+        "hierarchy",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "b9c3169c32b18e71.png",
+      "tosKey": "gtm/pptx-media/v1/icons/hierarchy-line-538c91c3.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 890
+      }
+    },
+    {
+      "id": "palette-line",
+      "name": "调色盘",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/palette-line-40a93781.png",
+      "tags": [
+        "palette",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "ba1be3d39bce7b5e.png",
+      "tosKey": "gtm/pptx-media/v1/icons/palette-line-40a93781.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 2333
+      }
+    },
+    {
+      "id": "record-target-line",
+      "name": "录制目标",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/record-target-line-332eeef9.png",
+      "tags": [
+        "record",
+        "target",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "bc6a8b51bd6c0215.png",
+      "tosKey": "gtm/pptx-media/v1/icons/record-target-line-332eeef9.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 2269
+      }
+    },
+    {
+      "id": "shopping-bag-line",
+      "name": "购物袋",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/shopping-bag-line-d2463c60.png",
+      "tags": [
+        "shopping",
+        "bag",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "bc6d0cecfe422fb7.png",
+      "tosKey": "gtm/pptx-media/v1/icons/shopping-bag-line-d2463c60.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1531
+      }
+    },
+    {
+      "id": "medal-number-one-line",
+      "name": "第一名奖牌",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/medal-number-one-line-67a42816.png",
+      "tags": [
+        "medal",
+        "number",
+        "one",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "bd71f9c4bf3cc425.png",
+      "tosKey": "gtm/pptx-media/v1/icons/medal-number-one-line-67a42816.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 2121
+      }
+    },
+    {
+      "id": "grid-list-line",
+      "name": "宫格列表",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/grid-list-line-33a8d2a4.png",
+      "tags": [
+        "grid",
+        "list",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "be428d6fa45b6bfe.png",
+      "tosKey": "gtm/pptx-media/v1/icons/grid-list-line-33a8d2a4.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1264
+      }
+    },
+    {
+      "id": "shopping-bag-color-icon",
+      "name": "购物袋图标",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/shopping-bag-color-icon-b0ff633b.png",
+      "tags": [
+        "shopping",
+        "bag",
+        "color",
+        "icon",
+        "app-icon"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "be8695dcb6bf4536.png",
+      "tosKey": "gtm/pptx-media/v1/icons/shopping-bag-color-icon-b0ff633b.png",
+      "size": {
+        "width": 784,
+        "height": 784,
+        "bytes": 32112
+      }
+    },
+    {
+      "id": "chat-bubbles-alt-line",
+      "name": "消息气泡",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/chat-bubbles-alt-line-e4198086.png",
+      "tags": [
+        "chat",
+        "bubbles",
+        "alt",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "c01e4ac0dff96592.png",
+      "tosKey": "gtm/pptx-media/v1/icons/chat-bubbles-alt-line-e4198086.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1165
+      }
+    },
+    {
+      "id": "thumbs-up-line",
+      "name": "点赞",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/thumbs-up-line-05644b45.png",
+      "tags": [
+        "thumbs",
+        "up",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "c2e9a240923e7d86.png",
+      "tosKey": "gtm/pptx-media/v1/icons/thumbs-up-line-05644b45.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1665
+      }
+    },
+    {
+      "id": "shapes-line",
+      "name": "形状组合",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/shapes-line-94e7be5e.png",
+      "tags": [
+        "shapes",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "c52c7954cfd05608.png",
+      "tosKey": "gtm/pptx-media/v1/icons/shapes-line-94e7be5e.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1705
+      }
+    },
+    {
+      "id": "calendar-26-app-icon-alt",
+      "name": "日历 26 应用图标",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/calendar-26-app-icon-alt-3384e996.png",
+      "tags": [
+        "calendar",
+        "26",
+        "app",
+        "icon",
+        "alt",
+        "app-icon"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "c537c1f1d108908d.png",
+      "tosKey": "gtm/pptx-media/v1/icons/calendar-26-app-icon-alt-3384e996.png",
+      "size": {
+        "width": 680,
+        "height": 684,
+        "bytes": 27262
+      }
+    },
+    {
+      "id": "api-debug-line",
+      "name": "接口调试",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/api-debug-line-36853aa9.png",
+      "tags": [
+        "api",
+        "debug",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "c56260bde525697f.png",
+      "tosKey": "gtm/pptx-media/v1/icons/api-debug-line-36853aa9.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1722
+      }
+    },
+    {
+      "id": "bell-line",
+      "name": "通知铃",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/bell-line-7d0be2e6.png",
+      "tags": [
+        "bell",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "c62aa96c25032012.png",
+      "tosKey": "gtm/pptx-media/v1/icons/bell-line-7d0be2e6.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1207
+      }
+    },
+    {
+      "id": "user-outline-alt-line",
+      "name": "用户轮廓",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/user-outline-alt-line-46af661e.png",
+      "tags": [
+        "user",
+        "outline",
+        "alt",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "c66f4d48760bfe0b.png",
+      "tosKey": "gtm/pptx-media/v1/icons/user-outline-alt-line-46af661e.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1707
+      }
+    },
+    {
+      "id": "cycle-nodes-line",
+      "name": "循环节点",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/cycle-nodes-line-4f0e8c6e.png",
+      "tags": [
+        "cycle",
+        "nodes",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "c99b47f042524ca6.png",
+      "tosKey": "gtm/pptx-media/v1/icons/cycle-nodes-line-4f0e8c6e.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 2126
+      }
+    },
+    {
+      "id": "shield-user-line",
+      "name": "用户盾牌",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/shield-user-line-5359698c.png",
+      "tags": [
+        "shield",
+        "user",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "cc25d5ae3f749683.png",
+      "tosKey": "gtm/pptx-media/v1/icons/shield-user-line-5359698c.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 2083
+      }
+    },
+    {
+      "id": "checklist-line",
+      "name": "检查清单",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/checklist-line-0bbd092d.png",
+      "tags": [
+        "checklist",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "cc6c8846edc9c189.png",
+      "tosKey": "gtm/pptx-media/v1/icons/checklist-line-0bbd092d.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 990
+      }
+    },
+    {
+      "id": "group-line",
+      "name": "多人协作",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/group-line-372e02eb.png",
+      "tags": [
+        "group",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "cd69f7f30e01daeb.png",
+      "tosKey": "gtm/pptx-media/v1/icons/group-line-372e02eb.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1525
+      }
+    },
+    {
+      "id": "stack-layers-line",
+      "name": "堆叠图层",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/stack-layers-line-6e266859.png",
+      "tags": [
+        "stack",
+        "layers",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "cf4299f82972c2b0.png",
+      "tosKey": "gtm/pptx-media/v1/icons/stack-layers-line-6e266859.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1899
+      }
+    },
+    {
+      "id": "dot-grid-line",
+      "name": "点阵",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/dot-grid-line-5c521a36.png",
+      "tags": [
+        "dot",
+        "grid",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "d0432830da6feb79.png",
+      "tosKey": "gtm/pptx-media/v1/icons/dot-grid-line-5c521a36.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1685
+      }
+    },
+    {
+      "id": "user-profile-alt-line",
+      "name": "用户头像",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/user-profile-alt-line-d4627cd5.png",
+      "tags": [
+        "user",
+        "profile",
+        "alt",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "d1341ad3939e1248.png",
+      "tosKey": "gtm/pptx-media/v1/icons/user-profile-alt-line-d4627cd5.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1261
+      }
+    },
+    {
+      "id": "warning-triangle-line",
+      "name": "三角警告",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/warning-triangle-line-117e89df.png",
+      "tags": [
+        "warning",
+        "triangle",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "d13ea668c3d3a608.png",
+      "tosKey": "gtm/pptx-media/v1/icons/warning-triangle-line-117e89df.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1707
+      }
+    },
+    {
+      "id": "target-ring-app-icon",
+      "name": "靶心应用图标",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/target-ring-app-icon-c0a65fa7.png",
+      "tags": [
+        "target",
+        "ring",
+        "app",
+        "icon",
+        "app-icon"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "d7a1a3a3b463d4b6.png",
+      "tosKey": "gtm/pptx-media/v1/icons/target-ring-app-icon-c0a65fa7.png",
+      "size": {
+        "width": 784,
+        "height": 788,
+        "bytes": 45757
+      }
+    },
+    {
+      "id": "mail-envelope-color-icon",
+      "name": "邮件图标",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/mail-envelope-color-icon-18a4b587.png",
+      "tags": [
+        "mail",
+        "envelope",
+        "color",
+        "icon",
+        "app-icon"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "d878c7867c7b9e88.png",
+      "tosKey": "gtm/pptx-media/v1/icons/mail-envelope-color-icon-18a4b587.png",
+      "size": {
+        "width": 736,
+        "height": 600,
+        "bytes": 20934
+      }
+    },
+    {
+      "id": "monitor-analytics-line",
+      "name": "监控看板",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/monitor-analytics-line-67a7671d.png",
+      "tags": [
+        "monitor",
+        "analytics",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "db530e9b2022142b.png",
+      "tosKey": "gtm/pptx-media/v1/icons/monitor-analytics-line-67a7671d.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 946
+      }
+    },
+    {
+      "id": "ai-refresh-line",
+      "name": "AI 刷新",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/ai-refresh-line-e9debbf5.png",
+      "tags": [
+        "ai",
+        "refresh",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "dbf4c9262b825388.png",
+      "tosKey": "gtm/pptx-media/v1/icons/ai-refresh-line-e9debbf5.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 2095
+      }
+    },
+    {
+      "id": "checkmark-app-icon",
+      "name": "确认应用图标",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/checkmark-app-icon-f84f91bd.png",
+      "tags": [
+        "checkmark",
+        "app",
+        "icon",
+        "app-icon"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "dd8813686c79649d.png",
+      "tosKey": "gtm/pptx-media/v1/icons/checkmark-app-icon-f84f91bd.png",
+      "size": {
+        "width": 788,
+        "height": 788,
+        "bytes": 28533
+      }
+    },
+    {
+      "id": "feishu-minutes-app-icon",
+      "name": "飞书妙记应用图标",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/feishu-minutes-app-icon-3770cfc4.png",
+      "tags": [
+        "feishu",
+        "minutes",
+        "app",
+        "icon",
+        "app-icon"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "e04936988e3ce7e5.png",
+      "tosKey": "gtm/pptx-media/v1/icons/feishu-minutes-app-icon-3770cfc4.png",
+      "size": {
+        "width": 788,
+        "height": 788,
+        "bytes": 43914
+      }
+    },
+    {
+      "id": "ellipsis-circle-line",
+      "name": "更多",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/ellipsis-circle-line-17aa187e.png",
+      "tags": [
+        "ellipsis",
+        "circle",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "e31c46b1b4868c10.png",
+      "tosKey": "gtm/pptx-media/v1/icons/ellipsis-circle-line-17aa187e.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 2020
+      }
+    },
+    {
+      "id": "book-line",
+      "name": "书本",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/book-line-4c0300aa.png",
+      "tags": [
+        "book",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "e54651be3b930869.png",
+      "tosKey": "gtm/pptx-media/v1/icons/book-line-4c0300aa.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1218
+      }
+    },
+    {
+      "id": "ai-window-line",
+      "name": "AI 窗口",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/ai-window-line-41e0077a.png",
+      "tags": [
+        "ai",
+        "window",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "e6b1304700eed38d.png",
+      "tosKey": "gtm/pptx-media/v1/icons/ai-window-line-41e0077a.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1684
+      }
+    },
+    {
+      "id": "menu-collapse-line",
+      "name": "菜单收起",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/menu-collapse-line-1ebb63c0.png",
+      "tags": [
+        "menu",
+        "collapse",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "ea73d0a4b3f5ad9e.png",
+      "tosKey": "gtm/pptx-media/v1/icons/menu-collapse-line-1ebb63c0.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1131
+      }
+    },
+    {
+      "id": "heart-line",
+      "name": "爱心",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/heart-line-0c6cb756.png",
+      "tags": [
+        "heart",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "f036c268f4df72b6.png",
+      "tosKey": "gtm/pptx-media/v1/icons/heart-line-0c6cb756.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1633
+      }
+    },
+    {
+      "id": "shield-plus-line",
+      "name": "盾牌添加",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/shield-plus-line-bd6510ef.png",
+      "tags": [
+        "shield",
+        "plus",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "f10520cf6eff41a0.png",
+      "tosKey": "gtm/pptx-media/v1/icons/shield-plus-line-bd6510ef.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1752
+      }
+    },
+    {
+      "id": "robot-line",
+      "name": "机器人",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/robot-line-bc98fb50.png",
+      "tags": [
+        "robot",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "f149639a17f83ac5.png",
+      "tosKey": "gtm/pptx-media/v1/icons/robot-line-bc98fb50.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1484
+      }
+    },
+    {
+      "id": "x-red-solid",
+      "name": "红色叉号",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/x-red-solid-e8fd763f.png",
+      "tags": [
+        "x",
+        "red",
+        "solid",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "f1c5234a10c60691.png",
+      "tosKey": "gtm/pptx-media/v1/icons/x-red-solid-e8fd763f.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 2882
+      }
+    },
+    {
+      "id": "database-coins-line",
+      "name": "数据资产",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/database-coins-line-4bd0dbd4.png",
+      "tags": [
+        "database",
+        "coins",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "f1cc2419640a2e24.png",
+      "tosKey": "gtm/pptx-media/v1/icons/database-coins-line-4bd0dbd4.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 2078
+      }
+    },
+    {
+      "id": "code-brackets-line",
+      "name": "代码括号",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/code-brackets-line-6d249c9a.png",
+      "tags": [
+        "code",
+        "brackets",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "f1d7eaf936ed47e3.png",
+      "tosKey": "gtm/pptx-media/v1/icons/code-brackets-line-6d249c9a.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1774
+      }
+    },
+    {
+      "id": "gauge-line",
+      "name": "仪表盘",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/gauge-line-e6bc3899.png",
+      "tags": [
+        "gauge",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "f2eee9a72061d1bf.png",
+      "tosKey": "gtm/pptx-media/v1/icons/gauge-line-e6bc3899.png",
+      "size": {
+        "width": 96,
+        "height": 97,
+        "bytes": 4973
+      }
+    },
+    {
+      "id": "four-dot-grid-line",
+      "name": "四点宫格",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/four-dot-grid-line-929dc1d0.png",
+      "tags": [
+        "four",
+        "dot",
+        "grid",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "f8c54e3abd30b1b1.png",
+      "tosKey": "gtm/pptx-media/v1/icons/four-dot-grid-line-929dc1d0.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1708
+      }
+    },
+    {
+      "id": "handshake-line",
+      "name": "握手",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/handshake-line-745fc590.png",
+      "tags": [
+        "handshake",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "fadd92cee4d27fa3.png",
+      "tosKey": "gtm/pptx-media/v1/icons/handshake-line-745fc590.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1515
+      }
+    },
+    {
+      "id": "search-line",
+      "name": "搜索",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/search-line-3f87e7c3.png",
+      "tags": [
+        "search",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "fc28c003b91367ee.png",
+      "tosKey": "gtm/pptx-media/v1/icons/search-line-3f87e7c3.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1801
+      }
+    },
+    {
+      "id": "diamond-check-line",
+      "name": "菱形确认",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/diamond-check-line-07511425.png",
+      "tags": [
+        "diamond",
+        "check",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "fd0cdb640750c21a.png",
+      "tosKey": "gtm/pptx-media/v1/icons/diamond-check-line-07511425.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1525
+      }
+    },
+    {
+      "id": "unlock-line",
+      "name": "解锁",
+      "type": "icon",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons/unlock-line-8053bd06.png",
+      "tags": [
+        "unlock",
+        "line"
+      ],
+      "usage": "用于 GTM 材料中的功能点、流程、能力或状态表达；优先搭配短标题使用。",
+      "sourceFile": "fda00381edcabad5.png",
+      "tosKey": "gtm/pptx-media/v1/icons/unlock-line-8053bd06.png",
+      "size": {
+        "width": 96,
+        "height": 96,
+        "bytes": 1207
+      }
+    }
+  ]
+}
