@@ -1,0 +1,1604 @@
+{
+  "summary": {
+    "total": 84,
+    "generatedAt": "2026-05-14T16:59:01.965Z"
+  },
+  "items": [
+    {
+      "id": "other-image",
+      "name": "other-image",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "other-image"
+      ],
+      "usage": "",
+      "sourceFile": "0155f5e8fed3b5ec.png",
+      "tosKey": "",
+      "size": {
+        "width": 2164,
+        "height": 1696,
+        "bytes": 126559
+      },
+      "reason": "当前不纳入：更像截图、背景、照片、营销文案或装饰元素，不属于本轮 icon/logo 池。",
+      "category": "other-image"
+    },
+    {
+      "id": "other-image",
+      "name": "other-image",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "other-image"
+      ],
+      "usage": "",
+      "sourceFile": "02a17cc4064075db.png",
+      "tosKey": "",
+      "size": {
+        "width": 1416,
+        "height": 1010,
+        "bytes": 394770
+      },
+      "reason": "当前不纳入：更像截图、背景、照片、营销文案或装饰元素，不属于本轮 icon/logo 池。",
+      "category": "other-image"
+    },
+    {
+      "id": "other-image",
+      "name": "other-image",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "other-image"
+      ],
+      "usage": "",
+      "sourceFile": "02ff194a6c99225a.png",
+      "tosKey": "",
+      "size": {
+        "width": 4828,
+        "height": 4484,
+        "bytes": 2963144
+      },
+      "reason": "当前不纳入：更像截图、背景、照片、营销文案或装饰元素，不属于本轮 icon/logo 池。",
+      "category": "other-image"
+    },
+    {
+      "id": "other-image",
+      "name": "other-image",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "other-image"
+      ],
+      "usage": "",
+      "sourceFile": "03bfceac5459f168.jpg",
+      "tosKey": "",
+      "size": {
+        "width": 5760,
+        "height": 3240,
+        "bytes": 2114874
+      },
+      "reason": "当前不纳入：更像截图、背景、照片、营销文案或装饰元素，不属于本轮 icon/logo 池。",
+      "category": "other-image"
+    },
+    {
+      "id": "large-non-reusable",
+      "name": "large-non-reusable",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "large-non-reusable"
+      ],
+      "usage": "",
+      "sourceFile": "0606bba5fec31d6a.png",
+      "tosKey": "",
+      "size": {
+        "width": 371,
+        "height": 371,
+        "bytes": 152498
+      },
+      "reason": "当前不纳入：更像人物头像、食物/实物照片或非通用大图。",
+      "category": "large-non-reusable"
+    },
+    {
+      "id": "large-non-reusable",
+      "name": "large-non-reusable",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "large-non-reusable"
+      ],
+      "usage": "",
+      "sourceFile": "0955a6ce25efe281.png",
+      "tosKey": "",
+      "size": {
+        "width": 371,
+        "height": 371,
+        "bytes": 121613
+      },
+      "reason": "当前不纳入：更像人物头像、食物/实物照片或非通用大图。",
+      "category": "large-non-reusable"
+    },
+    {
+      "id": "other-image",
+      "name": "other-image",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "other-image"
+      ],
+      "usage": "",
+      "sourceFile": "0e0837affdf09225.png",
+      "tosKey": "",
+      "size": {
+        "width": 190,
+        "height": 224,
+        "bytes": 1293
+      },
+      "reason": "当前不纳入：更像截图、背景、照片、营销文案或装饰元素，不属于本轮 icon/logo 池。",
+      "category": "other-image"
+    },
+    {
+      "id": "other-image",
+      "name": "other-image",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "other-image"
+      ],
+      "usage": "",
+      "sourceFile": "1307195857c1c165.png",
+      "tosKey": "",
+      "size": {
+        "width": 4004,
+        "height": 2642,
+        "bytes": 4394339
+      },
+      "reason": "当前不纳入：更像截图、背景、照片、营销文案或装饰元素，不属于本轮 icon/logo 池。",
+      "category": "other-image"
+    },
+    {
+      "id": "large-non-reusable",
+      "name": "large-non-reusable",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "large-non-reusable"
+      ],
+      "usage": "",
+      "sourceFile": "1680a7cb41534c7c.png",
+      "tosKey": "",
+      "size": {
+        "width": 370,
+        "height": 371,
+        "bytes": 115065
+      },
+      "reason": "当前不纳入：更像人物头像、食物/实物照片或非通用大图。",
+      "category": "large-non-reusable"
+    },
+    {
+      "id": "metric-text",
+      "name": "metric-text",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "metric-text"
+      ],
+      "usage": "",
+      "sourceFile": "1694bc1d8cd2a0fb.png",
+      "tosKey": "",
+      "size": {
+        "width": 883,
+        "height": 188,
+        "bytes": 8875
+      },
+      "reason": "指标文字，不作为可复用 logo",
+      "category": "metric-text"
+    },
+    {
+      "id": "other-image",
+      "name": "other-image",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "other-image"
+      ],
+      "usage": "",
+      "sourceFile": "1a371697ae600ace.png",
+      "tosKey": "",
+      "size": {
+        "width": 16,
+        "height": 1140,
+        "bytes": 5319
+      },
+      "reason": "当前不纳入：更像截图、背景、照片、营销文案或装饰元素，不属于本轮 icon/logo 池。",
+      "category": "other-image"
+    },
+    {
+      "id": "other-image",
+      "name": "other-image",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "other-image"
+      ],
+      "usage": "",
+      "sourceFile": "262580914d0cb8e0.png",
+      "tosKey": "",
+      "size": {
+        "width": 1264,
+        "height": 1517,
+        "bytes": 2494679
+      },
+      "reason": "当前不纳入：更像截图、背景、照片、营销文案或装饰元素，不属于本轮 icon/logo 池。",
+      "category": "other-image"
+    },
+    {
+      "id": "other-image",
+      "name": "other-image",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "other-image"
+      ],
+      "usage": "",
+      "sourceFile": "293269c2527f61ae.png",
+      "tosKey": "",
+      "size": {
+        "width": 5697,
+        "height": 3145,
+        "bytes": 178479
+      },
+      "reason": "当前不纳入：更像截图、背景、照片、营销文案或装饰元素，不属于本轮 icon/logo 池。",
+      "category": "other-image"
+    },
+    {
+      "id": "other-image",
+      "name": "other-image",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "other-image"
+      ],
+      "usage": "",
+      "sourceFile": "2b798c99a0609e29.jpeg",
+      "tosKey": "",
+      "size": {
+        "width": 427,
+        "height": 263,
+        "bytes": 41505
+      },
+      "reason": "当前不纳入：更像截图、背景、照片、营销文案或装饰元素，不属于本轮 icon/logo 池。",
+      "category": "other-image"
+    },
+    {
+      "id": "other-image",
+      "name": "other-image",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "other-image"
+      ],
+      "usage": "",
+      "sourceFile": "2e10cadf46d95b5f.png",
+      "tosKey": "",
+      "size": {
+        "width": 11117,
+        "height": 1214,
+        "bytes": 175751
+      },
+      "reason": "当前不纳入：更像截图、背景、照片、营销文案或装饰元素，不属于本轮 icon/logo 池。",
+      "category": "other-image"
+    },
+    {
+      "id": "other-image",
+      "name": "other-image",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "other-image"
+      ],
+      "usage": "",
+      "sourceFile": "33198493b017095a.png",
+      "tosKey": "",
+      "size": {
+        "width": 23,
+        "height": 190,
+        "bytes": 3431
+      },
+      "reason": "当前不纳入：更像截图、背景、照片、营销文案或装饰元素，不属于本轮 icon/logo 池。",
+      "category": "other-image"
+    },
+    {
+      "id": "other-image",
+      "name": "other-image",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "other-image"
+      ],
+      "usage": "",
+      "sourceFile": "3b2fc3af7fbf2dd2.png",
+      "tosKey": "",
+      "size": {
+        "width": 3332,
+        "height": 4804,
+        "bytes": 754737
+      },
+      "reason": "当前不纳入：更像截图、背景、照片、营销文案或装饰元素，不属于本轮 icon/logo 池。",
+      "category": "other-image"
+    },
+    {
+      "id": "other-image",
+      "name": "other-image",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "other-image"
+      ],
+      "usage": "",
+      "sourceFile": "4554ef58edfc89d1.png",
+      "tosKey": "",
+      "size": {
+        "width": 5252,
+        "height": 1643,
+        "bytes": 367354
+      },
+      "reason": "当前不纳入：更像截图、背景、照片、营销文案或装饰元素，不属于本轮 icon/logo 池。",
+      "category": "other-image"
+    },
+    {
+      "id": "other-image",
+      "name": "other-image",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "other-image"
+      ],
+      "usage": "",
+      "sourceFile": "4816de094aaf8f83.png",
+      "tosKey": "",
+      "size": {
+        "width": 8280,
+        "height": 2880,
+        "bytes": 17102021
+      },
+      "reason": "当前不纳入：更像截图、背景、照片、营销文案或装饰元素，不属于本轮 icon/logo 池。",
+      "category": "other-image"
+    },
+    {
+      "id": "large-non-reusable",
+      "name": "large-non-reusable",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "large-non-reusable"
+      ],
+      "usage": "",
+      "sourceFile": "4a52644458264c9e.png",
+      "tosKey": "",
+      "size": {
+        "width": 370,
+        "height": 371,
+        "bytes": 121283
+      },
+      "reason": "当前不纳入：更像人物头像、食物/实物照片或非通用大图。",
+      "category": "large-non-reusable"
+    },
+    {
+      "id": "other-image",
+      "name": "other-image",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "other-image"
+      ],
+      "usage": "",
+      "sourceFile": "528b09fad3e307bb.png",
+      "tosKey": "",
+      "size": {
+        "width": 190,
+        "height": 224,
+        "bytes": 1258
+      },
+      "reason": "当前不纳入：更像截图、背景、照片、营销文案或装饰元素，不属于本轮 icon/logo 池。",
+      "category": "other-image"
+    },
+    {
+      "id": "other-image",
+      "name": "other-image",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "other-image"
+      ],
+      "usage": "",
+      "sourceFile": "5ee37433a8567767.png",
+      "tosKey": "",
+      "size": {
+        "width": 2660,
+        "height": 867,
+        "bytes": 709863
+      },
+      "reason": "当前不纳入：更像截图、背景、照片、营销文案或装饰元素，不属于本轮 icon/logo 池。",
+      "category": "other-image"
+    },
+    {
+      "id": "large-non-reusable",
+      "name": "large-non-reusable",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "large-non-reusable"
+      ],
+      "usage": "",
+      "sourceFile": "5f59bdda82f52155.png",
+      "tosKey": "",
+      "size": {
+        "width": 370,
+        "height": 371,
+        "bytes": 145848
+      },
+      "reason": "当前不纳入：更像人物头像、食物/实物照片或非通用大图。",
+      "category": "large-non-reusable"
+    },
+    {
+      "id": "other-image",
+      "name": "other-image",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "other-image"
+      ],
+      "usage": "",
+      "sourceFile": "5fce6b7a20086ded.png",
+      "tosKey": "",
+      "size": {
+        "width": 1323,
+        "height": 780,
+        "bytes": 929690
+      },
+      "reason": "当前不纳入：更像截图、背景、照片、营销文案或装饰元素，不属于本轮 icon/logo 池。",
+      "category": "other-image"
+    },
+    {
+      "id": "other-image",
+      "name": "other-image",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "other-image"
+      ],
+      "usage": "",
+      "sourceFile": "66e4e414512b5574.png",
+      "tosKey": "",
+      "size": {
+        "width": 864,
+        "height": 7067,
+        "bytes": 93064
+      },
+      "reason": "当前不纳入：更像截图、背景、照片、营销文案或装饰元素，不属于本轮 icon/logo 池。",
+      "category": "other-image"
+    },
+    {
+      "id": "other-image",
+      "name": "other-image",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "other-image"
+      ],
+      "usage": "",
+      "sourceFile": "686657b7b77dbe4b.png",
+      "tosKey": "",
+      "size": {
+        "width": 4782,
+        "height": 2736,
+        "bytes": 2348840
+      },
+      "reason": "当前不纳入：更像截图、背景、照片、营销文案或装饰元素，不属于本轮 icon/logo 池。",
+      "category": "other-image"
+    },
+    {
+      "id": "other-image",
+      "name": "other-image",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "other-image"
+      ],
+      "usage": "",
+      "sourceFile": "6ab41e23adc6772b.png",
+      "tosKey": "",
+      "size": {
+        "width": 3359,
+        "height": 2099,
+        "bytes": 2931222
+      },
+      "reason": "当前不纳入：更像截图、背景、照片、营销文案或装饰元素，不属于本轮 icon/logo 池。",
+      "category": "other-image"
+    },
+    {
+      "id": "other-image",
+      "name": "other-image",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "other-image"
+      ],
+      "usage": "",
+      "sourceFile": "6c091d7547925fae.png",
+      "tosKey": "",
+      "size": {
+        "width": 2589,
+        "height": 1009,
+        "bytes": 686378
+      },
+      "reason": "当前不纳入：更像截图、背景、照片、营销文案或装饰元素，不属于本轮 icon/logo 池。",
+      "category": "other-image"
+    },
+    {
+      "id": "other-image",
+      "name": "other-image",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "other-image"
+      ],
+      "usage": "",
+      "sourceFile": "6d6a6910c1536ee0.png",
+      "tosKey": "",
+      "size": {
+        "width": 22,
+        "height": 2475,
+        "bytes": 3349
+      },
+      "reason": "当前不纳入：更像截图、背景、照片、营销文案或装饰元素，不属于本轮 icon/logo 池。",
+      "category": "other-image"
+    },
+    {
+      "id": "other-image",
+      "name": "other-image",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "other-image"
+      ],
+      "usage": "",
+      "sourceFile": "71440ab9c990dcce.png",
+      "tosKey": "",
+      "size": {
+        "width": 600,
+        "height": 300,
+        "bytes": 2472
+      },
+      "reason": "当前不纳入：更像截图、背景、照片、营销文案或装饰元素，不属于本轮 icon/logo 池。",
+      "category": "other-image"
+    },
+    {
+      "id": "large-non-reusable",
+      "name": "large-non-reusable",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "large-non-reusable"
+      ],
+      "usage": "",
+      "sourceFile": "728284ddb37d8746.png",
+      "tosKey": "",
+      "size": {
+        "width": 371,
+        "height": 371,
+        "bytes": 116306
+      },
+      "reason": "当前不纳入：更像人物头像、食物/实物照片或非通用大图。",
+      "category": "large-non-reusable"
+    },
+    {
+      "id": "other-image",
+      "name": "other-image",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "other-image"
+      ],
+      "usage": "",
+      "sourceFile": "7423bfddbabf8232.png",
+      "tosKey": "",
+      "size": {
+        "width": 1697,
+        "height": 790,
+        "bytes": 35668
+      },
+      "reason": "当前不纳入：更像截图、背景、照片、营销文案或装饰元素，不属于本轮 icon/logo 池。",
+      "category": "other-image"
+    },
+    {
+      "id": "other-image",
+      "name": "other-image",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "other-image"
+      ],
+      "usage": "",
+      "sourceFile": "7a6471c1e252259a.png",
+      "tosKey": "",
+      "size": {
+        "width": 1920,
+        "height": 1080,
+        "bytes": 183674
+      },
+      "reason": "当前不纳入：更像截图、背景、照片、营销文案或装饰元素，不属于本轮 icon/logo 池。",
+      "category": "other-image"
+    },
+    {
+      "id": "other-image",
+      "name": "other-image",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "other-image"
+      ],
+      "usage": "",
+      "sourceFile": "7b0bdb056d319311.png",
+      "tosKey": "",
+      "size": {
+        "width": 1803,
+        "height": 1803,
+        "bytes": 99563
+      },
+      "reason": "当前不纳入：更像截图、背景、照片、营销文案或装饰元素，不属于本轮 icon/logo 池。",
+      "category": "other-image"
+    },
+    {
+      "id": "other-image",
+      "name": "other-image",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "other-image"
+      ],
+      "usage": "",
+      "sourceFile": "7b8d7aeb7574b22c.png",
+      "tosKey": "",
+      "size": {
+        "width": 864,
+        "height": 6645,
+        "bytes": 94970
+      },
+      "reason": "当前不纳入：更像截图、背景、照片、营销文案或装饰元素，不属于本轮 icon/logo 池。",
+      "category": "other-image"
+    },
+    {
+      "id": "other-image",
+      "name": "other-image",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "other-image"
+      ],
+      "usage": "",
+      "sourceFile": "7d9d8b865ccd8dc9.png",
+      "tosKey": "",
+      "size": {
+        "width": 4348,
+        "height": 3820,
+        "bytes": 181408
+      },
+      "reason": "当前不纳入：更像截图、背景、照片、营销文案或装饰元素，不属于本轮 icon/logo 池。",
+      "category": "other-image"
+    },
+    {
+      "id": "other-image",
+      "name": "other-image",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "other-image"
+      ],
+      "usage": "",
+      "sourceFile": "7e43583df202e745.png",
+      "tosKey": "",
+      "size": {
+        "width": 12420,
+        "height": 4320,
+        "bytes": 1414705
+      },
+      "reason": "当前不纳入：更像截图、背景、照片、营销文案或装饰元素，不属于本轮 icon/logo 池。",
+      "category": "other-image"
+    },
+    {
+      "id": "metric-text",
+      "name": "metric-text",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "metric-text"
+      ],
+      "usage": "",
+      "sourceFile": "7eade25d7dfd8233.png",
+      "tosKey": "",
+      "size": {
+        "width": 82,
+        "height": 26,
+        "bytes": 731
+      },
+      "reason": "指标文字，不作为可复用 icon",
+      "category": "metric-text"
+    },
+    {
+      "id": "other-image",
+      "name": "other-image",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "other-image"
+      ],
+      "usage": "",
+      "sourceFile": "7efc8dc96a9d0a18.png",
+      "tosKey": "",
+      "size": {
+        "width": 2068,
+        "height": 1368,
+        "bytes": 99128
+      },
+      "reason": "当前不纳入：更像截图、背景、照片、营销文案或装饰元素，不属于本轮 icon/logo 池。",
+      "category": "other-image"
+    },
+    {
+      "id": "other-image",
+      "name": "other-image",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "other-image"
+      ],
+      "usage": "",
+      "sourceFile": "8151698eea632296.png",
+      "tosKey": "",
+      "size": {
+        "width": 542,
+        "height": 399,
+        "bytes": 62503
+      },
+      "reason": "当前不纳入：更像截图、背景、照片、营销文案或装饰元素，不属于本轮 icon/logo 池。",
+      "category": "other-image"
+    },
+    {
+      "id": "large-non-reusable",
+      "name": "large-non-reusable",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "large-non-reusable"
+      ],
+      "usage": "",
+      "sourceFile": "82b20e64a807a1e4.png",
+      "tosKey": "",
+      "size": {
+        "width": 371,
+        "height": 371,
+        "bytes": 166607
+      },
+      "reason": "当前不纳入：更像人物头像、食物/实物照片或非通用大图。",
+      "category": "large-non-reusable"
+    },
+    {
+      "id": "large-non-reusable",
+      "name": "large-non-reusable",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "large-non-reusable"
+      ],
+      "usage": "",
+      "sourceFile": "87db19d23d312115.png",
+      "tosKey": "",
+      "size": {
+        "width": 800,
+        "height": 800,
+        "bytes": 806927
+      },
+      "reason": "当前不纳入：更像人物头像、食物/实物照片或非通用大图。",
+      "category": "large-non-reusable"
+    },
+    {
+      "id": "other-image",
+      "name": "other-image",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "other-image"
+      ],
+      "usage": "",
+      "sourceFile": "8b37a7696483eecc.png",
+      "tosKey": "",
+      "size": {
+        "width": 2500,
+        "height": 1499,
+        "bytes": 78428
+      },
+      "reason": "当前不纳入：更像截图、背景、照片、营销文案或装饰元素，不属于本轮 icon/logo 池。",
+      "category": "other-image"
+    },
+    {
+      "id": "other-image",
+      "name": "other-image",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "other-image"
+      ],
+      "usage": "",
+      "sourceFile": "984faae5892b890a.png",
+      "tosKey": "",
+      "size": {
+        "width": 6289,
+        "height": 3287,
+        "bytes": 190545
+      },
+      "reason": "当前不纳入：更像截图、背景、照片、营销文案或装饰元素，不属于本轮 icon/logo 池。",
+      "category": "other-image"
+    },
+    {
+      "id": "other-image",
+      "name": "other-image",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "other-image"
+      ],
+      "usage": "",
+      "sourceFile": "992cd65a40609062.png",
+      "tosKey": "",
+      "size": {
+        "width": 1920,
+        "height": 1332,
+        "bytes": 2870842
+      },
+      "reason": "当前不纳入：更像截图、背景、照片、营销文案或装饰元素，不属于本轮 icon/logo 池。",
+      "category": "other-image"
+    },
+    {
+      "id": "other-image",
+      "name": "other-image",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "other-image"
+      ],
+      "usage": "",
+      "sourceFile": "9a02ea22acfd3784.png",
+      "tosKey": "",
+      "size": {
+        "width": 236,
+        "height": 256,
+        "bytes": 6619
+      },
+      "reason": "当前不纳入：更像截图、背景、照片、营销文案或装饰元素，不属于本轮 icon/logo 池。",
+      "category": "other-image"
+    },
+    {
+      "id": "blank-or-invisible",
+      "name": "blank-or-invisible",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "blank-or-invisible"
+      ],
+      "usage": "",
+      "sourceFile": "9bf7e6e02aa80a2b.png",
+      "tosKey": "",
+      "size": {
+        "width": 99,
+        "height": 106,
+        "bytes": 171
+      },
+      "reason": "几乎为空的透明资源",
+      "category": "blank-or-invisible"
+    },
+    {
+      "id": "metric-text",
+      "name": "metric-text",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "metric-text"
+      ],
+      "usage": "",
+      "sourceFile": "9fadf1458a33d8b3.png",
+      "tosKey": "",
+      "size": {
+        "width": 75,
+        "height": 26,
+        "bytes": 1224
+      },
+      "reason": "指标文字，不作为可复用 icon",
+      "category": "metric-text"
+    },
+    {
+      "id": "other-image",
+      "name": "other-image",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "other-image"
+      ],
+      "usage": "",
+      "sourceFile": "a0399f7b86c6dcd3.png",
+      "tosKey": "",
+      "size": {
+        "width": 190,
+        "height": 224,
+        "bytes": 1294
+      },
+      "reason": "当前不纳入：更像截图、背景、照片、营销文案或装饰元素，不属于本轮 icon/logo 池。",
+      "category": "other-image"
+    },
+    {
+      "id": "other-image",
+      "name": "other-image",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "other-image"
+      ],
+      "usage": "",
+      "sourceFile": "a081f44dc9ae62db.png",
+      "tosKey": "",
+      "size": {
+        "width": 9600,
+        "height": 5400,
+        "bytes": 13528046
+      },
+      "reason": "当前不纳入：更像截图、背景、照片、营销文案或装饰元素，不属于本轮 icon/logo 池。",
+      "category": "other-image"
+    },
+    {
+      "id": "other-image",
+      "name": "other-image",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "other-image"
+      ],
+      "usage": "",
+      "sourceFile": "a1bf71926a28fc19.jpeg",
+      "tosKey": "",
+      "size": {
+        "width": 552,
+        "height": 1212,
+        "bytes": 200551
+      },
+      "reason": "当前不纳入：更像截图、背景、照片、营销文案或装饰元素，不属于本轮 icon/logo 池。",
+      "category": "other-image"
+    },
+    {
+      "id": "metric-text",
+      "name": "metric-text",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "metric-text"
+      ],
+      "usage": "",
+      "sourceFile": "a5a1cb8513075ccb.png",
+      "tosKey": "",
+      "size": {
+        "width": 92,
+        "height": 23,
+        "bytes": 785
+      },
+      "reason": "指标文字，不作为可复用 icon",
+      "category": "metric-text"
+    },
+    {
+      "id": "metric-text",
+      "name": "metric-text",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "metric-text"
+      ],
+      "usage": "",
+      "sourceFile": "ac8915eca1d4b76e.png",
+      "tosKey": "",
+      "size": {
+        "width": 498,
+        "height": 188,
+        "bytes": 5487
+      },
+      "reason": "指标文字，不作为可复用 logo",
+      "category": "metric-text"
+    },
+    {
+      "id": "other-image",
+      "name": "other-image",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "other-image"
+      ],
+      "usage": "",
+      "sourceFile": "af985b2a97fbead8.png",
+      "tosKey": "",
+      "size": {
+        "width": 11760,
+        "height": 4960,
+        "bytes": 3695839
+      },
+      "reason": "当前不纳入：更像截图、背景、照片、营销文案或装饰元素，不属于本轮 icon/logo 池。",
+      "category": "other-image"
+    },
+    {
+      "id": "other-image",
+      "name": "other-image",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "other-image"
+      ],
+      "usage": "",
+      "sourceFile": "b0f8d0ec7e7195aa.jpeg",
+      "tosKey": "",
+      "size": {
+        "width": 1280,
+        "height": 853,
+        "bytes": 130285
+      },
+      "reason": "当前不纳入：更像截图、背景、照片、营销文案或装饰元素，不属于本轮 icon/logo 池。",
+      "category": "other-image"
+    },
+    {
+      "id": "large-non-reusable",
+      "name": "large-non-reusable",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "large-non-reusable"
+      ],
+      "usage": "",
+      "sourceFile": "b472c9001ec3c7ba.png",
+      "tosKey": "",
+      "size": {
+        "width": 371,
+        "height": 371,
+        "bytes": 148979
+      },
+      "reason": "当前不纳入：更像人物头像、食物/实物照片或非通用大图。",
+      "category": "large-non-reusable"
+    },
+    {
+      "id": "other-image",
+      "name": "other-image",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "other-image"
+      ],
+      "usage": "",
+      "sourceFile": "b4906f8983e9cecf.png",
+      "tosKey": "",
+      "size": {
+        "width": 1955,
+        "height": 1360,
+        "bytes": 10448
+      },
+      "reason": "当前不纳入：更像截图、背景、照片、营销文案或装饰元素，不属于本轮 icon/logo 池。",
+      "category": "other-image"
+    },
+    {
+      "id": "large-non-reusable",
+      "name": "large-non-reusable",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "large-non-reusable"
+      ],
+      "usage": "",
+      "sourceFile": "b514c5a6da6a3836.png",
+      "tosKey": "",
+      "size": {
+        "width": 371,
+        "height": 371,
+        "bytes": 152416
+      },
+      "reason": "当前不纳入：更像人物头像、食物/实物照片或非通用大图。",
+      "category": "large-non-reusable"
+    },
+    {
+      "id": "other-image",
+      "name": "other-image",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "other-image"
+      ],
+      "usage": "",
+      "sourceFile": "b7b42851f262ec9e.png",
+      "tosKey": "",
+      "size": {
+        "width": 1500,
+        "height": 1500,
+        "bytes": 81354
+      },
+      "reason": "当前不纳入：更像截图、背景、照片、营销文案或装饰元素，不属于本轮 icon/logo 池。",
+      "category": "other-image"
+    },
+    {
+      "id": "other-image",
+      "name": "other-image",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "other-image"
+      ],
+      "usage": "",
+      "sourceFile": "b8798958dab08e18.png",
+      "tosKey": "",
+      "size": {
+        "width": 1437,
+        "height": 808,
+        "bytes": 52855
+      },
+      "reason": "当前不纳入：更像截图、背景、照片、营销文案或装饰元素，不属于本轮 icon/logo 池。",
+      "category": "other-image"
+    },
+    {
+      "id": "placeholder-logo",
+      "name": "placeholder-logo",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "placeholder-logo"
+      ],
+      "usage": "",
+      "sourceFile": "b972ab53e095fe13.png",
+      "tosKey": "",
+      "size": {
+        "width": 2202,
+        "height": 691,
+        "bytes": 70373
+      },
+      "reason": "Partner logo 占位图，不是正式素材",
+      "category": "placeholder-logo"
+    },
+    {
+      "id": "large-non-reusable",
+      "name": "large-non-reusable",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "large-non-reusable"
+      ],
+      "usage": "",
+      "sourceFile": "bfef7fcec9c3efeb.jpeg",
+      "tosKey": "",
+      "size": {
+        "width": 600,
+        "height": 667,
+        "bytes": 240608
+      },
+      "reason": "当前不纳入：更像人物头像、食物/实物照片或非通用大图。",
+      "category": "large-non-reusable"
+    },
+    {
+      "id": "large-non-reusable",
+      "name": "large-non-reusable",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "large-non-reusable"
+      ],
+      "usage": "",
+      "sourceFile": "c068661d22e1b310.png",
+      "tosKey": "",
+      "size": {
+        "width": 371,
+        "height": 371,
+        "bytes": 133868
+      },
+      "reason": "当前不纳入：更像人物头像、食物/实物照片或非通用大图。",
+      "category": "large-non-reusable"
+    },
+    {
+      "id": "other-image",
+      "name": "other-image",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "other-image"
+      ],
+      "usage": "",
+      "sourceFile": "cb79a2461ba7e11c.png",
+      "tosKey": "",
+      "size": {
+        "width": 4314,
+        "height": 3782,
+        "bytes": 188253
+      },
+      "reason": "当前不纳入：更像截图、背景、照片、营销文案或装饰元素，不属于本轮 icon/logo 池。",
+      "category": "other-image"
+    },
+    {
+      "id": "other-image",
+      "name": "other-image",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "other-image"
+      ],
+      "usage": "",
+      "sourceFile": "d2ed5cd47e00bcf2.png",
+      "tosKey": "",
+      "size": {
+        "width": 6036,
+        "height": 1872,
+        "bytes": 107532
+      },
+      "reason": "当前不纳入：更像截图、背景、照片、营销文案或装饰元素，不属于本轮 icon/logo 池。",
+      "category": "other-image"
+    },
+    {
+      "id": "other-image",
+      "name": "other-image",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "other-image"
+      ],
+      "usage": "",
+      "sourceFile": "d3456ffa1c942dc8.png",
+      "tosKey": "",
+      "size": {
+        "width": 10475,
+        "height": 1185,
+        "bytes": 148050
+      },
+      "reason": "当前不纳入：更像截图、背景、照片、营销文案或装饰元素，不属于本轮 icon/logo 池。",
+      "category": "other-image"
+    },
+    {
+      "id": "other-image",
+      "name": "other-image",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "other-image"
+      ],
+      "usage": "",
+      "sourceFile": "d8617b18f7fe3922.png",
+      "tosKey": "",
+      "size": {
+        "width": 1670,
+        "height": 1746,
+        "bytes": 1132182
+      },
+      "reason": "当前不纳入：更像截图、背景、照片、营销文案或装饰元素，不属于本轮 icon/logo 池。",
+      "category": "other-image"
+    },
+    {
+      "id": "other-image",
+      "name": "other-image",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "other-image"
+      ],
+      "usage": "",
+      "sourceFile": "da12fbd32e88ac66.jpeg",
+      "tosKey": "",
+      "size": {
+        "width": 1454,
+        "height": 774,
+        "bytes": 92124
+      },
+      "reason": "当前不纳入：更像截图、背景、照片、营销文案或装饰元素，不属于本轮 icon/logo 池。",
+      "category": "other-image"
+    },
+    {
+      "id": "other-image",
+      "name": "other-image",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "other-image"
+      ],
+      "usage": "",
+      "sourceFile": "db50fdf4a864220d.png",
+      "tosKey": "",
+      "size": {
+        "width": 1000,
+        "height": 500,
+        "bytes": 111038
+      },
+      "reason": "当前不纳入：更像截图、背景、照片、营销文案或装饰元素，不属于本轮 icon/logo 池。",
+      "category": "other-image"
+    },
+    {
+      "id": "large-non-reusable",
+      "name": "large-non-reusable",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "large-non-reusable"
+      ],
+      "usage": "",
+      "sourceFile": "dc0ced06675d1797.png",
+      "tosKey": "",
+      "size": {
+        "width": 371,
+        "height": 371,
+        "bytes": 137362
+      },
+      "reason": "当前不纳入：更像人物头像、食物/实物照片或非通用大图。",
+      "category": "large-non-reusable"
+    },
+    {
+      "id": "metric-text",
+      "name": "metric-text",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "metric-text"
+      ],
+      "usage": "",
+      "sourceFile": "df67549ffd3e2be9.png",
+      "tosKey": "",
+      "size": {
+        "width": 539,
+        "height": 188,
+        "bytes": 6527
+      },
+      "reason": "指标文字，不作为可复用 logo",
+      "category": "metric-text"
+    },
+    {
+      "id": "large-non-reusable",
+      "name": "large-non-reusable",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "large-non-reusable"
+      ],
+      "usage": "",
+      "sourceFile": "e24ba0f3b74c6ec6.png",
+      "tosKey": "",
+      "size": {
+        "width": 371,
+        "height": 371,
+        "bytes": 135542
+      },
+      "reason": "当前不纳入：更像人物头像、食物/实物照片或非通用大图。",
+      "category": "large-non-reusable"
+    },
+    {
+      "id": "other-image",
+      "name": "other-image",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "other-image"
+      ],
+      "usage": "",
+      "sourceFile": "e2cc3c0d5dc3155d.png",
+      "tosKey": "",
+      "size": {
+        "width": 960,
+        "height": 540,
+        "bytes": 225728
+      },
+      "reason": "当前不纳入：更像截图、背景、照片、营销文案或装饰元素，不属于本轮 icon/logo 池。",
+      "category": "other-image"
+    },
+    {
+      "id": "other-image",
+      "name": "other-image",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "other-image"
+      ],
+      "usage": "",
+      "sourceFile": "e91c0c8f0f0e01ca.png",
+      "tosKey": "",
+      "size": {
+        "width": 8280,
+        "height": 2880,
+        "bytes": 6735991
+      },
+      "reason": "当前不纳入：更像截图、背景、照片、营销文案或装饰元素，不属于本轮 icon/logo 池。",
+      "category": "other-image"
+    },
+    {
+      "id": "other-image",
+      "name": "other-image",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "other-image"
+      ],
+      "usage": "",
+      "sourceFile": "f15d62bc63903cd1.png",
+      "tosKey": "",
+      "size": {
+        "width": 2208,
+        "height": 1724,
+        "bytes": 83309
+      },
+      "reason": "当前不纳入：更像截图、背景、照片、营销文案或装饰元素，不属于本轮 icon/logo 池。",
+      "category": "other-image"
+    },
+    {
+      "id": "metric-text",
+      "name": "metric-text",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "metric-text"
+      ],
+      "usage": "",
+      "sourceFile": "f5a1f018b39db7cf.png",
+      "tosKey": "",
+      "size": {
+        "width": 67,
+        "height": 26,
+        "bytes": 1000
+      },
+      "reason": "指标文字，不作为可复用 icon",
+      "category": "metric-text"
+    },
+    {
+      "id": "other-image",
+      "name": "other-image",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "other-image"
+      ],
+      "usage": "",
+      "sourceFile": "f5c863fda4723f28.png",
+      "tosKey": "",
+      "size": {
+        "width": 2276,
+        "height": 1186,
+        "bytes": 5674413
+      },
+      "reason": "当前不纳入：更像截图、背景、照片、营销文案或装饰元素，不属于本轮 icon/logo 池。",
+      "category": "other-image"
+    },
+    {
+      "id": "other-image",
+      "name": "other-image",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "other-image"
+      ],
+      "usage": "",
+      "sourceFile": "f673a41a0c530fab.png",
+      "tosKey": "",
+      "size": {
+        "width": 3049,
+        "height": 2454,
+        "bytes": 4617331
+      },
+      "reason": "当前不纳入：更像截图、背景、照片、营销文案或装饰元素，不属于本轮 icon/logo 池。",
+      "category": "other-image"
+    },
+    {
+      "id": "large-non-reusable",
+      "name": "large-non-reusable",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "large-non-reusable"
+      ],
+      "usage": "",
+      "sourceFile": "f7d51b9aaad1162a.png",
+      "tosKey": "",
+      "size": {
+        "width": 583,
+        "height": 731,
+        "bytes": 576355
+      },
+      "reason": "当前不纳入：更像人物头像、食物/实物照片或非通用大图。",
+      "category": "large-non-reusable"
+    },
+    {
+      "id": "other-image",
+      "name": "other-image",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "other-image"
+      ],
+      "usage": "",
+      "sourceFile": "f8d245ed6167b0d8.png",
+      "tosKey": "",
+      "size": {
+        "width": 2144,
+        "height": 1684,
+        "bytes": 541139
+      },
+      "reason": "当前不纳入：更像截图、背景、照片、营销文案或装饰元素，不属于本轮 icon/logo 池。",
+      "category": "other-image"
+    },
+    {
+      "id": "decorative-line",
+      "name": "decorative-line",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "decorative-line"
+      ],
+      "usage": "",
+      "sourceFile": "fb2664faf480b23e.png",
+      "tosKey": "",
+      "size": {
+        "width": 2196,
+        "height": 392,
+        "bytes": 22815
+      },
+      "reason": "装饰曲线，不属于本轮 icon/logo 池",
+      "category": "decorative-line"
+    },
+    {
+      "id": "other-image",
+      "name": "other-image",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "other-image"
+      ],
+      "usage": "",
+      "sourceFile": "fd1c5e2c612d80c2.png",
+      "tosKey": "",
+      "size": {
+        "width": 1239,
+        "height": 872,
+        "bytes": 1930640
+      },
+      "reason": "当前不纳入：更像截图、背景、照片、营销文案或装饰元素，不属于本轮 icon/logo 池。",
+      "category": "other-image"
+    },
+    {
+      "id": "other-image",
+      "name": "other-image",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "other-image"
+      ],
+      "usage": "",
+      "sourceFile": "fe0be4b4d6325923.png",
+      "tosKey": "",
+      "size": {
+        "width": 4401,
+        "height": 1530,
+        "bytes": 5134631
+      },
+      "reason": "当前不纳入：更像截图、背景、照片、营销文案或装饰元素，不属于本轮 icon/logo 池。",
+      "category": "other-image"
+    },
+    {
+      "id": "other-image",
+      "name": "other-image",
+      "type": "excluded",
+      "url": "",
+      "tags": [
+        "other-image"
+      ],
+      "usage": "",
+      "sourceFile": "ff72104dbd4a73a6.png",
+      "tosKey": "",
+      "size": {
+        "width": 5760,
+        "height": 3240,
+        "bytes": 10691474
+      },
+      "reason": "当前不纳入：更像截图、背景、照片、营销文案或装饰元素，不属于本轮 icon/logo 池。",
+      "category": "other-image"
+    }
+  ]
+}
