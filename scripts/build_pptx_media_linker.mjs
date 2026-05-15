@@ -21,6 +21,18 @@ const shouldUploadArtifacts = args.has('--upload-artifacts');
 const forceUpload = args.has('--force');
 const uploadConcurrency = Number(process.env.PPTX_MEDIA_UPLOAD_CONCURRENCY || 4);
 
+const PRODUCT_ASSET_PATTERNS = [
+  /^feishu-/,
+  /^document-cloud-app-icon/,
+  /^document-note-app-icon/,
+  /^spreadsheet-app-icon/,
+  /^mail-envelope-(app|color)-icon/,
+  /^video-camera-app-icon/,
+  /^calendar-26-app-icon/,
+  /^people-app-icon/,
+  /^workflow-app-icon/,
+];
+
 const iconLabels = [
   [2, 'lock-security-line', '安全锁'],
   [4, 'office-building-line', '办公楼'],
@@ -438,6 +450,10 @@ function writeCsv(manifest) {
 function writeUsage(manifest, summary, artifactState) {
   const lines = [];
   const artifactLinks = artifactState.items || {};
+  const included = manifest.filter((item) => item.decision === 'include');
+  const icons = included.filter((item) => item.type === 'icon').map(publicAsset);
+  const logos = included.filter((item) => item.type === 'logo').map(publicAsset);
+  const { productAssets, generalIcons, brandCustomerLogos } = buildAssetGroups(icons, logos);
   lines.push('# PPTX Media Linker 使用说明');
   lines.push('');
   lines.push(`生成时间：${summary.generatedAt}`);
@@ -446,10 +462,11 @@ function writeUsage(manifest, summary, artifactState) {
   lines.push('');
   lines.push('PPTX 导出的 `pptx-media` 图片文件名通常是无意义哈希，团队复用时不知道每张图是什么，也不知道该复制哪个链接。这个索引把图片按内容识别成可复用资产，统一上传到妙笔 TOS，并补上可读名称、资源类型、使用建议和排除原因。');
   lines.push('');
-  lines.push('当前只把高复用的 `icon` 和 `logo` 纳入公共池：');
+  lines.push('当前公共池按使用场景分成三类：');
   lines.push('');
-  lines.push('- `icon`：功能、流程、状态、能力点图标，适合放在方案页、能力矩阵、流程图里。');
-  lines.push('- `logo`：飞书产品 logo、客户/伙伴 logo，适合放在案例页、生态页、客户页里。');
+  lines.push('- `Product Assets`：飞书产品相关素材，包含 app icon、产品 logo、中文/英文/深色/白色变体。');
+  lines.push('- `General Icons`：功能、流程、状态、能力点图标，适合放在方案页、能力矩阵、流程图里。');
+  lines.push('- `Brand / Customer Logos`：客户/伙伴/外部品牌 logo，适合放在案例页、生态页、客户页里。');
   lines.push('- 其他截图、背景、菜品/实物照片、营销大字、指标文字、装饰线，先保留在排除清单，不进入公共素材池。');
   lines.push('');
   lines.push('## 交付物');
@@ -459,6 +476,9 @@ function writeUsage(manifest, summary, artifactState) {
   lines.push('| `assets-index.json` | 完整机器可读索引，适合给脚本或后续工具使用。 |');
   lines.push('| `assets-index.csv` | 表格版索引，适合运营同学筛选、补充说明。 |');
   lines.push('| `llms.txt` | LLM 轻量入口，只放加载策略、规则、统计和高频示例。 |');
+  lines.push('| `product-assets.json` | 产品素材分片索引，把同一产品的 app icon 和 logo 放在一起。 |');
+  lines.push('| `general-icons.json` | 通用功能/流程/状态图标分片索引。 |');
+  lines.push('| `brand-customer-logos.json` | 客户/伙伴/外部品牌 logo 分片索引。 |');
   lines.push('| `icons.json` | icon 分片索引，Agent 需要找图标时只加载这个。 |');
   lines.push('| `logos.json` | logo 分片索引，Agent 需要找品牌/产品标识时只加载这个。 |');
   lines.push('| `excluded.json` | 暂不纳入资产的分片索引，用于复核边界。 |');
@@ -480,7 +500,7 @@ function writeUsage(manifest, summary, artifactState) {
   lines.push('## 当前统计');
   lines.push('');
   lines.push(`- 原始图片：${summary.total} 个`);
-  lines.push(`- 纳入公共池：${summary.selected} 个，其中 icon ${summary.byType.icon || 0} 个、logo ${summary.byType.logo || 0} 个`);
+  lines.push(`- 纳入公共池：${summary.selected} 个，其中 product assets ${productAssets.length} 个、general icons ${generalIcons.length} 个、brand/customer logos ${brandCustomerLogos.length} 个`);
   lines.push(`- 已有 TOS 链接：${summary.selectedUploaded} 个`);
   lines.push(`- 暂不纳入：${summary.excluded} 个`);
   lines.push(`- TOS 前缀：\`${TOS_PREFIX}/icons/\` 与 \`${TOS_PREFIX}/logos/\``);
@@ -497,9 +517,10 @@ function writeUsage(manifest, summary, artifactState) {
   lines.push('### LLM / Agent 使用');
   lines.push('');
   lines.push('1. 先读取 `llms.txt`，不要默认读取 CSV 或完整 JSON。');
-  lines.push('2. 需要图标时只读取 `icons.json`；需要 logo 时只读取 `logos.json`。');
-  lines.push('3. 只有做全量审计、去重、重新分类时，才读取 `assets-index.json`。');
-  lines.push('4. CSV 只作为表格编辑/人工筛选用，不作为 LLM 默认上下文。');
+  lines.push('2. 需要产品素材时读取 `product-assets.json`；需要通用图标时读取 `general-icons.json`；需要客户/品牌 logo 时读取 `brand-customer-logos.json`。');
+  lines.push('3. `icons.json` / `logos.json` 只作为兼容旧流程的物理类型分片。');
+  lines.push('4. 只有做全量审计、去重、重新分类时，才读取 `assets-index.json`。');
+  lines.push('5. CSV 只作为表格编辑/人工筛选用，不作为 LLM 默认上下文。');
   lines.push('');
   lines.push('## 命名规则');
   lines.push('');
@@ -582,6 +603,43 @@ function publicAsset(item) {
   return base;
 }
 
+function isProductAsset(asset) {
+  return PRODUCT_ASSET_PATTERNS.some((pattern) => pattern.test(asset.id));
+}
+
+function addAssetGroup(asset, group, groupLabel, kind) {
+  return {
+    ...asset,
+    group,
+    groupLabel,
+    kind,
+    tags: Array.from(new Set([...(asset.tags || []), group, kind.replace(/\s+/g, '-')])),
+  };
+}
+
+function buildAssetGroups(icons, logos) {
+  const productAssets = [];
+  const generalIcons = [];
+  const brandCustomerLogos = [];
+
+  for (const asset of [...icons, ...logos]) {
+    if (isProductAsset(asset)) {
+      productAssets.push(addAssetGroup(
+        asset,
+        'product-assets',
+        'Product Assets',
+        asset.type === 'logo' ? 'product logo' : 'app icon',
+      ));
+    } else if (asset.type === 'logo') {
+      brandCustomerLogos.push(addAssetGroup(asset, 'brand-customer-logos', 'Brand / Customer Logos', 'customer logo'));
+    } else {
+      generalIcons.push(addAssetGroup(asset, 'general-icons', 'General Icons', 'general icon'));
+    }
+  }
+
+  return { productAssets, generalIcons, brandCustomerLogos };
+}
+
 function escapeHtml(value) {
   return String(value ?? '')
     .replace(/&/g, '&amp;')
@@ -653,13 +711,15 @@ function markdownishToHtml(markdown) {
   return html.join('\n');
 }
 
-function renderAssetGrid(title, assets, startIndex = 1) {
+function renderAssetGrid({ id, title, assets, startIndex = 1 }) {
   const cards = assets.map((asset, index) => {
     const number = String(startIndex + index).padStart(3, '0');
     const tags = Array.from(asset.tags || []).slice(0, 4).map((tag) => `<span>${escapeHtml(tag)}</span>`).join('');
     const searchText = [
       number,
       asset.type,
+      asset.kind,
+      asset.groupLabel,
       asset.name,
       asset.id,
       asset.sourceFile,
@@ -674,7 +734,7 @@ function renderAssetGrid(title, assets, startIndex = 1) {
       '        <div class="asset-meta">',
       '          <div class="asset-row">',
       `            <span class="asset-no">#${number}</span>`,
-      `            <span class="asset-type">${escapeHtml(asset.type)}</span>`,
+      `            <span class="asset-type">${escapeHtml(asset.kind || asset.type)}</span>`,
       '          </div>',
       `          <h3>${escapeHtml(asset.name)}</h3>`,
       `          <p>${escapeHtml(asset.id)}</p>`,
@@ -687,10 +747,10 @@ function renderAssetGrid(title, assets, startIndex = 1) {
   }).join('\n');
 
   return [
-    `    <section class="asset-section" id="${escapeHtml(title.toLowerCase())}">`,
+    `    <section class="asset-section" id="${escapeHtml(id)}">`,
     '      <div class="section-head">',
     '        <div>',
-    `          <p class="eyebrow">All ${escapeHtml(title)}</p>`,
+    '          <p class="eyebrow">Asset group</p>',
     `          <h2>${escapeHtml(title)} · ${assets.length}</h2>`,
     '        </div>',
     '      </div>',
@@ -704,7 +764,11 @@ function renderAssetGrid(title, assets, startIndex = 1) {
 function writeLlmsPreview(llmsText, summary, groups = {}) {
   const icons = Array.from(groups.icons || []);
   const logos = Array.from(groups.logos || []);
-  const totalPreviewAssets = icons.length + logos.length;
+  const fallbackGroups = buildAssetGroups(icons, logos);
+  const productAssets = Array.from(groups.productAssets || fallbackGroups.productAssets);
+  const generalIcons = Array.from(groups.generalIcons || fallbackGroups.generalIcons);
+  const brandCustomerLogos = Array.from(groups.brandCustomerLogos || fallbackGroups.brandCustomerLogos);
+  const totalPreviewAssets = productAssets.length + generalIcons.length + brandCustomerLogos.length;
   const html = `<!doctype html>
 <html lang="zh-CN">
 <head>
@@ -799,7 +863,7 @@ function writeLlmsPreview(llmsText, summary, groups = {}) {
     main { max-width: 1280px; margin: 0 auto; padding: 24px; }
     .summary {
       display: grid;
-      grid-template-columns: repeat(3, minmax(120px, 1fr));
+      grid-template-columns: repeat(4, minmax(120px, 1fr));
       gap: 10px;
       margin: 18px 0 8px;
     }
@@ -991,8 +1055,9 @@ function writeLlmsPreview(llmsText, summary, groups = {}) {
         <h1>GTM PPTX Media Assets</h1>
       </div>
       <div class="actions">
-        <a class="button active" href="#icons" data-jump="icons">Icons</a>
-        <a class="button" href="#logos" data-jump="logos">Logos</a>
+        <a class="button active" href="#product-assets" data-jump="product-assets">Products</a>
+        <a class="button" href="#general-icons" data-jump="general-icons">General Icons</a>
+        <a class="button" href="#brand-customer-logos" data-jump="brand-customer-logos">Brand Logos</a>
         <button class="button" id="search-trigger" type="button">Search</button>
         <a class="button primary" href="https://magic-builder.tos-cn-beijing.volces.com/${TOS_PREFIX}/llms.txt" target="_blank" rel="noopener">llms.txt</a>
       </div>
@@ -1001,15 +1066,17 @@ function writeLlmsPreview(llmsText, summary, groups = {}) {
   <main>
     <section class="summary" aria-label="统计">
       <div class="stat"><strong>${totalPreviewAssets}</strong><span>Preview assets</span></div>
-      <div class="stat"><strong>${summary.byType.icon || 0}</strong><span>Icons</span></div>
-      <div class="stat"><strong>${summary.byType.logo || 0}</strong><span>Logos</span></div>
+      <div class="stat"><strong>${productAssets.length}</strong><span>Product Assets</span></div>
+      <div class="stat"><strong>${generalIcons.length}</strong><span>General Icons</span></div>
+      <div class="stat"><strong>${brandCustomerLogos.length}</strong><span>Brand / Customer Logos</span></div>
     </section>
     <section class="toolbar" aria-label="图库搜索">
       <input class="search-field" id="asset-search" type="search" placeholder="搜索名称、编号、原文件名、标签或 TOS 链接" autocomplete="off">
       <span class="result-count" id="result-count">${totalPreviewAssets} shown</span>
     </section>
-    ${renderAssetGrid('Icons', icons, 1)}
-    ${renderAssetGrid('Logos', logos, icons.length + 1)}
+    ${renderAssetGrid({ id: 'product-assets', title: 'Product Assets', assets: productAssets, startIndex: 1 })}
+    ${renderAssetGrid({ id: 'general-icons', title: 'General Icons', assets: generalIcons, startIndex: productAssets.length + 1 })}
+    ${renderAssetGrid({ id: 'brand-customer-logos', title: 'Brand / Customer Logos', assets: brandCustomerLogos, startIndex: productAssets.length + generalIcons.length + 1 })}
   </main>
   <script>
     const cards = Array.from(document.querySelectorAll(".asset-card"));
@@ -1063,17 +1130,20 @@ function writeTieredIndexes(manifest, summary, artifactState) {
   const icons = included.filter((item) => item.type === 'icon').map(publicAsset);
   const logos = included.filter((item) => item.type === 'logo').map(publicAsset);
   const excluded = manifest.filter((item) => item.decision === 'exclude').map(publicAsset);
-  const topIcons = icons
-    .filter((item) => item.tags.some((tag) => ['lock', 'security', 'data', 'database', 'search', 'user', 'ai', 'workflow', 'chat', 'chart'].includes(tag)))
-    .slice(0, 24);
-  const topLogos = logos
-    .filter((item) => item.tags.includes('feishu') || item.id.includes('feishu'))
-    .slice(0, 24);
+  const { productAssets, generalIcons, brandCustomerLogos } = buildAssetGroups(icons, logos);
 
   const splitSummary = {
     ...summary,
+    byAssetGroup: {
+      productAssets: productAssets.length,
+      generalIcons: generalIcons.length,
+      brandCustomerLogos: brandCustomerLogos.length,
+    },
     files: {
       llms: `${TOS_PREFIX}/llms.txt`,
+      productAssets: `${TOS_PREFIX}/product-assets.json`,
+      generalIcons: `${TOS_PREFIX}/general-icons.json`,
+      brandCustomerLogos: `${TOS_PREFIX}/brand-customer-logos.json`,
       icons: `${TOS_PREFIX}/icons.json`,
       logos: `${TOS_PREFIX}/logos.json`,
       excluded: `${TOS_PREFIX}/excluded.json`,
@@ -1095,6 +1165,18 @@ function writeTieredIndexes(manifest, summary, artifactState) {
     summary: { total: excluded.length, generatedAt: summary.generatedAt },
     items: excluded,
   });
+  writeJson(path.join(OUT_DIR, 'product-assets.json'), {
+    summary: { total: productAssets.length, generatedAt: summary.generatedAt },
+    items: productAssets,
+  });
+  writeJson(path.join(OUT_DIR, 'general-icons.json'), {
+    summary: { total: generalIcons.length, generatedAt: summary.generatedAt },
+    items: generalIcons,
+  });
+  writeJson(path.join(OUT_DIR, 'brand-customer-logos.json'), {
+    summary: { total: brandCustomerLogos.length, generatedAt: summary.generatedAt },
+    items: brandCustomerLogos,
+  });
 
   const lines = [];
   lines.push('# GTM PPTX Media Assets');
@@ -1108,15 +1190,20 @@ function writeTieredIndexes(manifest, summary, artifactState) {
   lines.push('## Load Strategy');
   lines.push('');
   lines.push('1. Read this llms.txt first for scope, rules, and routing.');
-  lines.push('2. If you need icons only, fetch icons.json.');
-  lines.push('3. If you need logos only, fetch logos.json.');
-  lines.push('4. If you need excluded/not-now assets, fetch excluded.json or not-needed-now.md.');
-  lines.push('5. Use assets-index.csv only for spreadsheet review. Use assets-index.json only for full automation.');
+  lines.push('2. If you need Feishu product assets, fetch product-assets.json.');
+  lines.push('3. If you need concept/process/status icons, fetch general-icons.json.');
+  lines.push('4. If you need customer or external brand logos, fetch brand-customer-logos.json.');
+  lines.push('5. Use icons.json and logos.json only when you need the older physical icon/logo split.');
+  lines.push('6. If you need excluded/not-now assets, fetch excluded.json or not-needed-now.md.');
+  lines.push('7. Use assets-index.csv only for spreadsheet review. Use assets-index.json only for full automation.');
   lines.push('');
   lines.push('## Public URLs');
   lines.push('');
   const links = [
     ['Search page', artifactLinks['index.html']?.url || `https://magic-builder.tos-cn-beijing.volces.com/${TOS_PREFIX}/index.html`],
+    ['Product Assets JSON', artifactLinks['product-assets.json']?.url || `https://magic-builder.tos-cn-beijing.volces.com/${TOS_PREFIX}/product-assets.json`],
+    ['General Icons JSON', artifactLinks['general-icons.json']?.url || `https://magic-builder.tos-cn-beijing.volces.com/${TOS_PREFIX}/general-icons.json`],
+    ['Brand / Customer Logos JSON', artifactLinks['brand-customer-logos.json']?.url || `https://magic-builder.tos-cn-beijing.volces.com/${TOS_PREFIX}/brand-customer-logos.json`],
     ['Icons JSON', artifactLinks['icons.json']?.url || `https://magic-builder.tos-cn-beijing.volces.com/${TOS_PREFIX}/icons.json`],
     ['Logos JSON', artifactLinks['logos.json']?.url || `https://magic-builder.tos-cn-beijing.volces.com/${TOS_PREFIX}/logos.json`],
     ['Excluded JSON', artifactLinks['excluded.json']?.url || `https://magic-builder.tos-cn-beijing.volces.com/${TOS_PREFIX}/excluded.json`],
@@ -1132,8 +1219,11 @@ function writeTieredIndexes(manifest, summary, artifactState) {
   lines.push(`- Original images: ${summary.total}`);
   lines.push(`- Included public assets: ${summary.selected}`);
   lines.push(`- Uploaded public TOS links: ${summary.selectedUploaded}`);
-  lines.push(`- Icons: ${summary.byType.icon || 0}`);
-  lines.push(`- Logos: ${summary.byType.logo || 0}`);
+  lines.push(`- Product assets: ${productAssets.length}`);
+  lines.push(`- General icons: ${generalIcons.length}`);
+  lines.push(`- Brand / customer logos: ${brandCustomerLogos.length}`);
+  lines.push(`- Physical icons: ${summary.byType.icon || 0}`);
+  lines.push(`- Physical logos: ${summary.byType.logo || 0}`);
   lines.push(`- Excluded for now: ${summary.excluded}`);
   lines.push('');
   lines.push('## Rules');
@@ -1143,18 +1233,6 @@ function writeTieredIndexes(manifest, summary, artifactState) {
   lines.push('- Logo assets should not be stretched, cropped, recolored, or used without brand authorization where applicable.');
   lines.push('- Icon assets are for concepts, process nodes, status labels, and capability matrices; pair them with short labels.');
   lines.push('- Every asset URL is public. Do not upload sensitive customer material to this pool.');
-  lines.push('');
-  lines.push('## High-Frequency Icons');
-  lines.push('');
-  for (const item of topIcons) {
-    lines.push(`- ${item.name} (${item.id}): ${item.url}`);
-  }
-  lines.push('');
-  lines.push('## High-Frequency Logos');
-  lines.push('');
-  for (const item of topLogos) {
-    lines.push(`- ${item.name} (${item.id}): ${item.url}`);
-  }
   lines.push('');
   lines.push('## Machine Summary');
   lines.push('');
@@ -1166,7 +1244,7 @@ function writeTieredIndexes(manifest, summary, artifactState) {
   while (cleanLines.length && cleanLines[cleanLines.length - 1] === '') cleanLines.pop();
   const llmsText = `${cleanLines.join('\n')}\n`;
   fs.writeFileSync(path.join(OUT_DIR, 'llms.txt'), llmsText);
-  writeLlmsPreview(llmsText, summary, { icons, logos });
+  writeLlmsPreview(llmsText, summary, { icons, logos, productAssets, generalIcons, brandCustomerLogos });
 }
 
 function writeHtml(manifest, summary) {
@@ -1597,6 +1675,9 @@ async function uploadArtifacts(artifactState) {
   const artifacts = [
     ['index.html', 'text/html', `${TOS_PREFIX}/index.html`],
     ['llms.txt', 'text/plain', `${TOS_PREFIX}/llms.txt`],
+    ['product-assets.json', 'application/json', `${TOS_PREFIX}/product-assets.json`],
+    ['general-icons.json', 'application/json', `${TOS_PREFIX}/general-icons.json`],
+    ['brand-customer-logos.json', 'application/json', `${TOS_PREFIX}/brand-customer-logos.json`],
     ['icons.json', 'application/json', `${TOS_PREFIX}/icons.json`],
     ['logos.json', 'application/json', `${TOS_PREFIX}/logos.json`],
     ['excluded.json', 'application/json', `${TOS_PREFIX}/excluded.json`],
