@@ -5,55 +5,73 @@
       "name": "USAGE.md",
       "tosKey": "gtm/pptx-media/v1/USAGE.md",
       "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/USAGE.md",
-      "uploadedAt": "2026-05-15T18:35:25.632Z"
+      "uploadedAt": "2026-05-15T19:23:00.582Z"
     },
     "assets-index.csv": {
       "name": "assets-index.csv",
       "tosKey": "gtm/pptx-media/v1/assets-index.csv",
       "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/assets-index.csv",
-      "uploadedAt": "2026-05-15T18:35:25.335Z"
+      "uploadedAt": "2026-05-15T19:23:00.495Z"
     },
     "not-needed-now.md": {
       "name": "not-needed-now.md",
       "tosKey": "gtm/pptx-media/v1/not-needed-now.md",
       "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/not-needed-now.md",
-      "uploadedAt": "2026-05-15T18:35:25.744Z"
+      "uploadedAt": "2026-05-15T19:23:01.140Z"
     },
     "assets-index.json": {
       "name": "assets-index.json",
       "tosKey": "gtm/pptx-media/v1/assets-index.json",
       "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/assets-index.json",
-      "uploadedAt": "2026-05-15T18:35:25.340Z"
+      "uploadedAt": "2026-05-15T19:23:00.093Z"
     },
     "index.html": {
       "name": "index.html",
       "tosKey": "gtm/pptx-media/v1/index.html",
       "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/index.html",
-      "uploadedAt": "2026-05-15T18:35:25.801Z"
+      "uploadedAt": "2026-05-15T19:22:58.950Z"
     },
     "logos.json": {
       "name": "logos.json",
       "tosKey": "gtm/pptx-media/v1/logos.json",
       "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos.json",
-      "uploadedAt": "2026-05-15T18:35:24.776Z"
+      "uploadedAt": "2026-05-15T19:23:00.988Z"
     },
     "llms.txt": {
       "name": "llms.txt",
       "tosKey": "gtm/pptx-media/v1/llms.txt",
       "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/llms.txt",
-      "uploadedAt": "2026-05-15T18:35:24.781Z"
+      "uploadedAt": "2026-05-15T19:22:58.867Z"
     },
     "icons.json": {
       "name": "icons.json",
       "tosKey": "gtm/pptx-media/v1/icons.json",
       "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/icons.json",
-      "uploadedAt": "2026-05-15T18:35:24.820Z"
+      "uploadedAt": "2026-05-15T19:22:59.570Z"
     },
     "excluded.json": {
       "name": "excluded.json",
       "tosKey": "gtm/pptx-media/v1/excluded.json",
       "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/excluded.json",
-      "uploadedAt": "2026-05-15T18:35:25.226Z"
+      "uploadedAt": "2026-05-15T19:22:59.999Z"
+    },
+    "product-assets.json": {
+      "name": "product-assets.json",
+      "tosKey": "gtm/pptx-media/v1/product-assets.json",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/product-assets.json",
+      "uploadedAt": "2026-05-15T19:22:58.861Z"
+    },
+    "brand-customer-logos.json": {
+      "name": "brand-customer-logos.json",
+      "tosKey": "gtm/pptx-media/v1/brand-customer-logos.json",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/brand-customer-logos.json",
+      "uploadedAt": "2026-05-15T19:22:59.497Z"
+    },
+    "general-icons.json": {
+      "name": "general-icons.json",
+      "tosKey": "gtm/pptx-media/v1/general-icons.json",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/general-icons.json",
+      "uploadedAt": "2026-05-15T19:23:01.006Z"
     }
   }
 }

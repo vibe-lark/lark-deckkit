@@ -1,0 +1,173 @@
+{
+  "summary": {
+    "total": 7,
+    "generatedAt": "2026-05-15T19:23:01.141Z"
+  },
+  "items": [
+    {
+      "id": "kaojiang-logo",
+      "name": "烤匠麻辣烤鱼",
+      "type": "logo",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/kaojiang-logo-e8bc7318.png",
+      "tags": [
+        "kaojiang",
+        "logo",
+        "brand-customer-logos",
+        "customer-logo"
+      ],
+      "usage": "用于 GTM 材料中的产品、客户或伙伴标识引用；不要拉伸变形，优先保留透明背景。",
+      "sourceFile": "55adb414daa2a42b.png",
+      "tosKey": "gtm/pptx-media/v1/logos/kaojiang-logo-e8bc7318.png",
+      "size": {
+        "width": 442,
+        "height": 149,
+        "bytes": 6652
+      },
+      "group": "brand-customer-logos",
+      "groupLabel": "Brand / Customer Logos",
+      "kind": "customer logo"
+    },
+    {
+      "id": "haidilao-logo",
+      "name": "海底捞",
+      "type": "logo",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/haidilao-logo-a4edaec6.png",
+      "tags": [
+        "haidilao",
+        "logo",
+        "brand-customer-logos",
+        "customer-logo"
+      ],
+      "usage": "用于 GTM 材料中的产品、客户或伙伴标识引用；不要拉伸变形，优先保留透明背景。",
+      "sourceFile": "5cfa40729e3c636e.png",
+      "tosKey": "gtm/pptx-media/v1/logos/haidilao-logo-a4edaec6.png",
+      "size": {
+        "width": 425,
+        "height": 199,
+        "bytes": 17041
+      },
+      "group": "brand-customer-logos",
+      "groupLabel": "Brand / Customer Logos",
+      "kind": "customer logo"
+    },
+    {
+      "id": "yueman-dajiang-logo",
+      "name": "月满大江千层肚火锅",
+      "type": "logo",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/yueman-dajiang-logo-5a944ba7.png",
+      "tags": [
+        "yueman",
+        "dajiang",
+        "logo",
+        "brand-customer-logos",
+        "customer-logo"
+      ],
+      "usage": "用于 GTM 材料中的产品、客户或伙伴标识引用；不要拉伸变形，优先保留透明背景。",
+      "sourceFile": "7b3a916b4f85c635.png",
+      "tosKey": "gtm/pptx-media/v1/logos/yueman-dajiang-logo-5a944ba7.png",
+      "size": {
+        "width": 1023,
+        "height": 423,
+        "bytes": 50528
+      },
+      "group": "brand-customer-logos",
+      "groupLabel": "Brand / Customer Logos",
+      "kind": "customer logo"
+    },
+    {
+      "id": "sangu-maocai-logo",
+      "name": "三顾冒菜",
+      "type": "logo",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/sangu-maocai-logo-9c67b7fe.png",
+      "tags": [
+        "sangu",
+        "maocai",
+        "logo",
+        "brand-customer-logos",
+        "customer-logo"
+      ],
+      "usage": "用于 GTM 材料中的产品、客户或伙伴标识引用；不要拉伸变形，优先保留透明背景。",
+      "sourceFile": "84f13ead6f5b7026.png",
+      "tosKey": "gtm/pptx-media/v1/logos/sangu-maocai-logo-9c67b7fe.png",
+      "size": {
+        "width": 300,
+        "height": 148,
+        "bytes": 3393
+      },
+      "group": "brand-customer-logos",
+      "groupLabel": "Brand / Customer Logos",
+      "kind": "customer logo"
+    },
+    {
+      "id": "landspace-logo-cn",
+      "name": "蓝箭航天",
+      "type": "logo",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/landspace-logo-cn-fe5c6fbd.png",
+      "tags": [
+        "landspace",
+        "logo",
+        "cn",
+        "brand-customer-logos",
+        "customer-logo"
+      ],
+      "usage": "用于 GTM 材料中的产品、客户或伙伴标识引用；不要拉伸变形，优先保留透明背景。",
+      "sourceFile": "9034d2ae6aaf0c2b.png",
+      "tosKey": "gtm/pptx-media/v1/logos/landspace-logo-cn-fe5c6fbd.png",
+      "size": {
+        "width": 2016,
+        "height": 672,
+        "bytes": 150454
+      },
+      "group": "brand-customer-logos",
+      "groupLabel": "Brand / Customer Logos",
+      "kind": "customer logo"
+    },
+    {
+      "id": "yitang-logo",
+      "name": "益禾堂",
+      "type": "logo",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/yitang-logo-d6d758cc.png",
+      "tags": [
+        "yitang",
+        "logo",
+        "brand-customer-logos",
+        "customer-logo"
+      ],
+      "usage": "用于 GTM 材料中的产品、客户或伙伴标识引用；不要拉伸变形，优先保留透明背景。",
+      "sourceFile": "98d057d0474ae4b2.png",
+      "tosKey": "gtm/pptx-media/v1/logos/yitang-logo-d6d758cc.png",
+      "size": {
+        "width": 760,
+        "height": 240,
+        "bytes": 18184
+      },
+      "group": "brand-customer-logos",
+      "groupLabel": "Brand / Customer Logos",
+      "kind": "customer logo"
+    },
+    {
+      "id": "pengfei-group-logo",
+      "name": "鹏飞集团",
+      "type": "logo",
+      "url": "https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/logos/pengfei-group-logo-47488ca4.png",
+      "tags": [
+        "pengfei",
+        "group",
+        "logo",
+        "brand-customer-logos",
+        "customer-logo"
+      ],
+      "usage": "用于 GTM 材料中的产品、客户或伙伴标识引用；不要拉伸变形，优先保留透明背景。",
+      "sourceFile": "a16f29d7442612c7.png",
+      "tosKey": "gtm/pptx-media/v1/logos/pengfei-group-logo-47488ca4.png",
+      "size": {
+        "width": 1050,
+        "height": 312,
+        "bytes": 103482
+      },
+      "group": "brand-customer-logos",
+      "groupLabel": "Brand / Customer Logos",
+      "kind": "customer logo"
+    }
+  ]
+}
