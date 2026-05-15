@@ -653,7 +653,48 @@ function markdownishToHtml(markdown) {
   return html.join('\n');
 }
 
-function writeLlmsPreview(llmsText, summary) {
+function renderAssetGrid(title, assets, startIndex = 1) {
+  const cards = assets.map((asset, index) => {
+    const number = String(startIndex + index).padStart(3, '0');
+    const tags = Array.from(asset.tags || []).slice(0, 4).map((tag) => `<span>${escapeHtml(tag)}</span>`).join('');
+    return [
+      '      <article class="asset-card">',
+      `        <a class="asset-preview" href="${escapeHtml(asset.url)}" target="_blank" rel="noopener" aria-label="预览 ${escapeHtml(asset.name)}">`,
+      `          <img src="${escapeHtml(asset.url)}" alt="${escapeHtml(asset.name)}" loading="lazy">`,
+      '        </a>',
+      '        <div class="asset-meta">',
+      '          <div class="asset-row">',
+      `            <span class="asset-no">#${number}</span>`,
+      `            <span class="asset-type">${escapeHtml(asset.type)}</span>`,
+      '          </div>',
+      `          <h3>${escapeHtml(asset.name)}</h3>`,
+      `          <p>${escapeHtml(asset.id)}</p>`,
+      `          <p class="asset-file">${escapeHtml(asset.sourceFile)}</p>`,
+      `          <div class="asset-tags">${tags}</div>`,
+      `          <a class="asset-url" href="${escapeHtml(asset.url)}" target="_blank" rel="noopener">${escapeHtml(asset.url)}</a>`,
+      '        </div>',
+      '      </article>',
+    ].join('\n');
+  }).join('\n');
+
+  return [
+    `    <section class="asset-section" id="${escapeHtml(title.toLowerCase())}">`,
+    '      <div class="section-head">',
+    '        <div>',
+    `          <p class="eyebrow">All ${escapeHtml(title)}</p>`,
+    `          <h2>${escapeHtml(title)} · ${assets.length}</h2>`,
+    '        </div>',
+    '      </div>',
+    '      <div class="asset-grid">',
+    cards,
+    '      </div>',
+    '    </section>',
+  ].join('\n');
+}
+
+function writeLlmsPreview(llmsText, summary, groups = {}) {
+  const icons = Array.from(groups.icons || []);
+  const logos = Array.from(groups.logos || []);
   const html = `<!doctype html>
 <html lang="zh-CN">
 <head>
@@ -687,7 +728,7 @@ function writeLlmsPreview(llmsText, summary) {
       border-bottom: 1px solid var(--line);
       backdrop-filter: blur(18px);
     }
-    .wrap { max-width: 1120px; margin: 0 auto; padding: 22px 24px; }
+    .wrap { max-width: 1280px; margin: 0 auto; padding: 22px 24px; }
     .top { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; }
     .eyebrow { margin: 0 0 6px; color: var(--muted); font-size: 13px; font-weight: 650; }
     h1 { margin: 0; font-size: 30px; line-height: 1.18; letter-spacing: 0; }
@@ -710,7 +751,29 @@ function writeLlmsPreview(llmsText, summary) {
       cursor: pointer;
     }
     .button.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
-    main { max-width: 1120px; margin: 0 auto; padding: 24px; }
+    .gallery-intro {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin: 16px 0 18px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--surface);
+      padding: 16px 18px;
+    }
+    .gallery-intro h2 {
+      margin: 0 0 4px;
+      padding: 0;
+      font-size: 17px;
+    }
+    .gallery-intro p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+    main { max-width: 1280px; margin: 0 auto; padding: 24px; }
     .summary {
       display: grid;
       grid-template-columns: repeat(5, minmax(120px, 1fr));
@@ -769,6 +832,119 @@ function writeLlmsPreview(llmsText, summary) {
       border-color: var(--accent);
       box-shadow: 0 0 0 3px rgba(23,100,232,0.10);
     }
+    .asset-section {
+      margin-top: 24px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--surface);
+      padding: 24px;
+    }
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    .section-head h2 {
+      margin: 0;
+      padding: 0;
+    }
+    .asset-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(252px, 1fr));
+      gap: 12px;
+    }
+    .asset-card {
+      display: grid;
+      grid-template-columns: 84px minmax(0, 1fr);
+      gap: 12px;
+      min-height: 148px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      padding: 12px;
+    }
+    .asset-preview {
+      display: flex;
+      width: 84px;
+      height: 84px;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background:
+        linear-gradient(45deg, #eef1f5 25%, transparent 25%),
+        linear-gradient(-45deg, #eef1f5 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #eef1f5 75%),
+        linear-gradient(-45deg, transparent 75%, #eef1f5 75%),
+        #fff;
+      background-size: 16px 16px;
+      background-position: 0 0, 0 8px, 8px -8px, -8px 0;
+      overflow: hidden;
+    }
+    .asset-preview img {
+      max-width: 72px;
+      max-height: 72px;
+      object-fit: contain;
+      display: block;
+    }
+    .asset-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 4px;
+    }
+    .asset-no {
+      font-variant-numeric: tabular-nums;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .asset-type {
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      padding: 1px 5px;
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.4;
+    }
+    .asset-meta h3 {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.3;
+    }
+    .asset-meta p {
+      margin: 2px 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.35;
+      overflow-wrap: anywhere;
+    }
+    .asset-file {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    }
+    .asset-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin: 6px 0;
+    }
+    .asset-tags span {
+      border-radius: 4px;
+      background: #f0f3f7;
+      color: var(--muted);
+      padding: 1px 5px;
+      font-size: 11px;
+    }
+    .asset-url {
+      display: block;
+      max-width: 100%;
+      font-size: 11px;
+      line-height: 1.35;
+      overflow-wrap: anywhere;
+    }
     pre {
       overflow: auto;
       padding: 14px;
@@ -781,8 +957,12 @@ function writeLlmsPreview(llmsText, summary) {
     @media (max-width: 760px) {
       .top { display: block; }
       .actions { justify-content: flex-start; margin-top: 14px; }
+      .gallery-intro { display: block; }
+      .gallery-intro .actions { margin-top: 12px; }
       .summary { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       article { padding: 8px 18px 22px; }
+      .asset-grid { grid-template-columns: 1fr; }
+      .asset-section { padding: 16px; }
     }
   </style>
 </head>
@@ -794,6 +974,8 @@ function writeLlmsPreview(llmsText, summary) {
         <h1>GTM PPTX Media Assets</h1>
       </div>
       <div class="actions">
+        <a class="button" href="#icons">Icons</a>
+        <a class="button" href="#logos">Logos</a>
         <a class="button primary" href="https://magic-builder.tos-cn-beijing.volces.com/${TOS_PREFIX}/llms.txt" target="_blank" rel="noopener">Raw llms.txt</a>
         <a class="button" href="https://magic-builder.tos-cn-beijing.volces.com/${TOS_PREFIX}/index.html" target="_blank" rel="noopener">Search Page</a>
         <button class="button" id="copy">Copy llms.txt URL</button>
@@ -808,9 +990,21 @@ function writeLlmsPreview(llmsText, summary) {
       <div class="stat"><strong>${summary.byType.logo || 0}</strong><span>Logos</span></div>
       <div class="stat"><strong>${summary.excluded}</strong><span>Excluded</span></div>
     </section>
+    <section class="gallery-intro" aria-label="图库入口">
+      <div>
+        <h2>Full Preview Gallery</h2>
+        <p>所有已纳入的 icon 和 logo 都在下面按编号排列；每张卡片都可以直接预览并打开 TOS 链接。</p>
+      </div>
+      <div class="actions">
+        <a class="button" href="#icons">Jump to Icons</a>
+        <a class="button" href="#logos">Jump to Logos</a>
+      </div>
+    </section>
     <article>
       ${markdownishToHtml(llmsText)}
     </article>
+    ${renderAssetGrid('Icons', icons, 1)}
+    ${renderAssetGrid('Logos', logos, icons.length + 1)}
   </main>
   <script>
     document.getElementById("copy").addEventListener("click", async () => {
@@ -934,7 +1128,7 @@ function writeTieredIndexes(manifest, summary, artifactState) {
   while (cleanLines.length && cleanLines[cleanLines.length - 1] === '') cleanLines.pop();
   const llmsText = `${cleanLines.join('\n')}\n`;
   fs.writeFileSync(path.join(OUT_DIR, 'llms.txt'), llmsText);
-  writeLlmsPreview(llmsText, summary);
+  writeLlmsPreview(llmsText, summary, { icons, logos });
 }
 
 function writeHtml(manifest, summary) {
