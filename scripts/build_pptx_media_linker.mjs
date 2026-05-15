@@ -657,8 +657,17 @@ function renderAssetGrid(title, assets, startIndex = 1) {
   const cards = assets.map((asset, index) => {
     const number = String(startIndex + index).padStart(3, '0');
     const tags = Array.from(asset.tags || []).slice(0, 4).map((tag) => `<span>${escapeHtml(tag)}</span>`).join('');
+    const searchText = [
+      number,
+      asset.type,
+      asset.name,
+      asset.id,
+      asset.sourceFile,
+      asset.url,
+      ...(asset.tags || []),
+    ].filter(Boolean).join(' ').toLowerCase();
     return [
-      '      <article class="asset-card">',
+      `      <article class="asset-card" data-type="${escapeHtml(asset.type)}" data-search="${escapeHtml(searchText)}">`,
       `        <a class="asset-preview" href="${escapeHtml(asset.url)}" target="_blank" rel="noopener" aria-label="预览 ${escapeHtml(asset.name)}">`,
       `          <img src="${escapeHtml(asset.url)}" alt="${escapeHtml(asset.name)}" loading="lazy">`,
       '        </a>',
@@ -695,6 +704,7 @@ function renderAssetGrid(title, assets, startIndex = 1) {
 function writeLlmsPreview(llmsText, summary, groups = {}) {
   const icons = Array.from(groups.icons || []);
   const logos = Array.from(groups.logos || []);
+  const totalPreviewAssets = icons.length + logos.length;
   const html = `<!doctype html>
 <html lang="zh-CN">
 <head>
@@ -710,6 +720,7 @@ function writeLlmsPreview(llmsText, summary, groups = {}) {
       --muted: #667085;
       --line: #d8dee8;
       --accent: #1764e8;
+      --accent-soft: #e8f0ff;
       --code: #101828;
     }
     * { box-sizing: border-box; }
@@ -750,8 +761,10 @@ function writeLlmsPreview(llmsText, summary, groups = {}) {
       font-weight: 650;
       cursor: pointer;
     }
+    .button:hover { text-decoration: none; border-color: var(--accent); }
     .button.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
-    .gallery-intro {
+    .button.active { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
+    .toolbar {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -762,21 +775,31 @@ function writeLlmsPreview(llmsText, summary, groups = {}) {
       background: var(--surface);
       padding: 16px 18px;
     }
-    .gallery-intro h2 {
-      margin: 0 0 4px;
-      padding: 0;
-      font-size: 17px;
+    .search-field {
+      width: min(100%, 520px);
+      height: 38px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      padding: 0 12px;
+      color: var(--text);
+      font-size: 14px;
+      outline: none;
     }
-    .gallery-intro p {
-      margin: 0;
+    .search-field:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(23,100,232,0.10);
+    }
+    .result-count {
+      min-width: 92px;
+      text-align: right;
       color: var(--muted);
       font-size: 13px;
-      line-height: 1.5;
     }
     main { max-width: 1280px; margin: 0 auto; padding: 24px; }
     .summary {
       display: grid;
-      grid-template-columns: repeat(5, minmax(120px, 1fr));
+      grid-template-columns: repeat(3, minmax(120px, 1fr));
       gap: 10px;
       margin: 18px 0 8px;
     }
@@ -788,12 +811,7 @@ function writeLlmsPreview(llmsText, summary, groups = {}) {
     }
     .stat strong { display: block; font-size: 24px; line-height: 1.05; }
     .stat span { color: var(--muted); font-size: 12px; }
-    article {
-      border: 1px solid var(--line);
-      border-radius: 10px;
-      background: var(--surface);
-      padding: 12px 28px 28px;
-    }
+    .is-hidden { display: none !important; }
     ul { margin: 8px 0 14px; padding-left: 22px; }
     li { margin: 6px 0; }
     .asset-link {
@@ -813,11 +831,11 @@ function writeLlmsPreview(llmsText, summary, groups = {}) {
       border: 1px solid var(--line);
       border-radius: 8px;
       background:
-        linear-gradient(45deg, #eef1f5 25%, transparent 25%),
-        linear-gradient(-45deg, #eef1f5 25%, transparent 25%),
-        linear-gradient(45deg, transparent 75%, #eef1f5 75%),
-        linear-gradient(-45deg, transparent 75%, #eef1f5 75%),
-        #fff;
+        linear-gradient(45deg, #8d98a8 25%, transparent 25%),
+        linear-gradient(-45deg, #8d98a8 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #8d98a8 75%),
+        linear-gradient(-45deg, transparent 75%, #8d98a8 75%),
+        #d9dee7;
       background-size: 16px 16px;
       background-position: 0 0, 0 8px, 8px -8px, -8px 0;
       overflow: hidden;
@@ -874,11 +892,11 @@ function writeLlmsPreview(llmsText, summary, groups = {}) {
       border: 1px solid var(--line);
       border-radius: 8px;
       background:
-        linear-gradient(45deg, #eef1f5 25%, transparent 25%),
-        linear-gradient(-45deg, #eef1f5 25%, transparent 25%),
-        linear-gradient(45deg, transparent 75%, #eef1f5 75%),
-        linear-gradient(-45deg, transparent 75%, #eef1f5 75%),
-        #fff;
+        linear-gradient(45deg, #8d98a8 25%, transparent 25%),
+        linear-gradient(-45deg, #8d98a8 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #8d98a8 75%),
+        linear-gradient(-45deg, transparent 75%, #8d98a8 75%),
+        #d9dee7;
       background-size: 16px 16px;
       background-position: 0 0, 0 8px, 8px -8px, -8px 0;
       overflow: hidden;
@@ -957,10 +975,9 @@ function writeLlmsPreview(llmsText, summary, groups = {}) {
     @media (max-width: 760px) {
       .top { display: block; }
       .actions { justify-content: flex-start; margin-top: 14px; }
-      .gallery-intro { display: block; }
-      .gallery-intro .actions { margin-top: 12px; }
-      .summary { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      article { padding: 8px 18px 22px; }
+      .toolbar { display: block; }
+      .result-count { margin-top: 8px; text-align: left; }
+      .summary { grid-template-columns: 1fr; }
       .asset-grid { grid-template-columns: 1fr; }
       .asset-section { padding: 16px; }
     }
@@ -974,43 +991,64 @@ function writeLlmsPreview(llmsText, summary, groups = {}) {
         <h1>GTM PPTX Media Assets</h1>
       </div>
       <div class="actions">
-        <a class="button" href="#icons">Icons</a>
-        <a class="button" href="#logos">Logos</a>
-        <a class="button primary" href="https://magic-builder.tos-cn-beijing.volces.com/${TOS_PREFIX}/llms.txt" target="_blank" rel="noopener">Raw llms.txt</a>
-        <a class="button" href="https://magic-builder.tos-cn-beijing.volces.com/${TOS_PREFIX}/index.html" target="_blank" rel="noopener">Search Page</a>
-        <button class="button" id="copy">Copy llms.txt URL</button>
+        <a class="button active" href="#icons" data-jump="icons">Icons</a>
+        <a class="button" href="#logos" data-jump="logos">Logos</a>
+        <button class="button" id="search-trigger" type="button">Search</button>
+        <a class="button primary" href="https://magic-builder.tos-cn-beijing.volces.com/${TOS_PREFIX}/llms.txt" target="_blank" rel="noopener">llms.txt</a>
       </div>
     </div>
   </header>
   <main>
     <section class="summary" aria-label="统计">
-      <div class="stat"><strong>${summary.total}</strong><span>Original images</span></div>
-      <div class="stat"><strong>${summary.selected}</strong><span>Included assets</span></div>
+      <div class="stat"><strong>${totalPreviewAssets}</strong><span>Preview assets</span></div>
       <div class="stat"><strong>${summary.byType.icon || 0}</strong><span>Icons</span></div>
       <div class="stat"><strong>${summary.byType.logo || 0}</strong><span>Logos</span></div>
-      <div class="stat"><strong>${summary.excluded}</strong><span>Excluded</span></div>
     </section>
-    <section class="gallery-intro" aria-label="图库入口">
-      <div>
-        <h2>Full Preview Gallery</h2>
-        <p>所有已纳入的 icon 和 logo 都在下面按编号排列；每张卡片都可以直接预览并打开 TOS 链接。</p>
-      </div>
-      <div class="actions">
-        <a class="button" href="#icons">Jump to Icons</a>
-        <a class="button" href="#logos">Jump to Logos</a>
-      </div>
+    <section class="toolbar" aria-label="图库搜索">
+      <input class="search-field" id="asset-search" type="search" placeholder="搜索名称、编号、原文件名、标签或 TOS 链接" autocomplete="off">
+      <span class="result-count" id="result-count">${totalPreviewAssets} shown</span>
     </section>
-    <article>
-      ${markdownishToHtml(llmsText)}
-    </article>
     ${renderAssetGrid('Icons', icons, 1)}
     ${renderAssetGrid('Logos', logos, icons.length + 1)}
   </main>
   <script>
-    document.getElementById("copy").addEventListener("click", async () => {
-      await navigator.clipboard.writeText("https://magic-builder.tos-cn-beijing.volces.com/${TOS_PREFIX}/llms.txt");
-      document.getElementById("copy").textContent = "Copied";
-      setTimeout(() => { document.getElementById("copy").textContent = "Copy llms.txt URL"; }, 1200);
+    const cards = Array.from(document.querySelectorAll(".asset-card"));
+    const sections = Array.from(document.querySelectorAll(".asset-section"));
+    const search = document.getElementById("asset-search");
+    const resultCount = document.getElementById("result-count");
+    const jumpButtons = Array.from(document.querySelectorAll("[data-jump]"));
+
+    function updateVisibleSections() {
+      sections.forEach((section) => {
+        const visibleCards = section.querySelectorAll(".asset-card:not(.is-hidden)").length;
+        section.classList.toggle("is-hidden", visibleCards === 0);
+      });
+    }
+
+    search.addEventListener("input", () => {
+      const query = search.value.trim().toLowerCase();
+      let shown = 0;
+      cards.forEach((card) => {
+        const match = !query || card.dataset.search.includes(query);
+        card.classList.toggle("is-hidden", !match);
+        if (match) shown += 1;
+      });
+      resultCount.textContent = shown + " shown";
+      updateVisibleSections();
+    });
+
+    document.getElementById("search-trigger").addEventListener("click", () => {
+      search.scrollIntoView({ behavior: "smooth", block: "center" });
+      search.focus();
+    });
+
+    jumpButtons.forEach((button) => {
+      button.addEventListener("click", (event) => {
+        event.preventDefault();
+        jumpButtons.forEach((item) => item.classList.remove("active"));
+        button.classList.add("active");
+        document.getElementById(button.dataset.jump).scrollIntoView({ behavior: "smooth", block: "start" });
+      });
     });
   </script>
 </body>
