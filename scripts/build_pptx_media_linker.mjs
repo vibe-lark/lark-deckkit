@@ -603,10 +603,14 @@ function markdownishToHtml(markdown) {
     }
   };
 
-  const linkify = (text) => escapeHtml(text).replace(
-    /(https:\/\/[^\s<]+)/g,
-    '<a href="$1" target="_blank" rel="noopener">$1</a>',
-  );
+  const linkify = (text) => escapeHtml(text).replace(/(https:\/\/[^\s<]+)/g, (url) => {
+    const cleanUrl = url.replace(/[),.;]+$/, '');
+    const suffix = url.slice(cleanUrl.length);
+    if (/\.(?:png|jpe?g|webp|gif)(?:\?.*)?$/i.test(cleanUrl)) {
+      return `<span class="asset-link"><a class="asset-thumb-link" href="${cleanUrl}" target="_blank" rel="noopener"><img class="asset-thumb" src="${cleanUrl}" alt="" loading="lazy"></a><a href="${cleanUrl}" target="_blank" rel="noopener">${cleanUrl}</a></span>${suffix}`;
+    }
+    return `<a href="${cleanUrl}" target="_blank" rel="noopener">${cleanUrl}</a>${suffix}`;
+  });
 
   for (const line of lines) {
     if (line.startsWith('```')) {
@@ -729,6 +733,42 @@ function writeLlmsPreview(llmsText, summary) {
     }
     ul { margin: 8px 0 14px; padding-left: 22px; }
     li { margin: 6px 0; }
+    .asset-link {
+      display: inline-grid;
+      grid-template-columns: 54px minmax(0, 1fr);
+      align-items: center;
+      gap: 10px;
+      max-width: 100%;
+      vertical-align: middle;
+    }
+    .asset-thumb-link {
+      display: inline-flex;
+      width: 54px;
+      height: 54px;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background:
+        linear-gradient(45deg, #eef1f5 25%, transparent 25%),
+        linear-gradient(-45deg, #eef1f5 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #eef1f5 75%),
+        linear-gradient(-45deg, transparent 75%, #eef1f5 75%),
+        #fff;
+      background-size: 16px 16px;
+      background-position: 0 0, 0 8px, 8px -8px, -8px 0;
+      overflow: hidden;
+    }
+    .asset-thumb {
+      max-width: 46px;
+      max-height: 46px;
+      object-fit: contain;
+      display: block;
+    }
+    .asset-thumb-link:hover {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(23,100,232,0.10);
+    }
     pre {
       overflow: auto;
       padding: 14px;

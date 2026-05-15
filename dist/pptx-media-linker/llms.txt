@@ -117,7 +117,7 @@ Preview page: https://magic.solutionsuite.cn/html-box/vjC9AsKydQw
     "include": 215,
     "exclude": 84
   },
-  "generatedAt": "2026-05-14T16:59:01.965Z",
+  "generatedAt": "2026-05-15T08:54:29.574Z",
   "files": {
     "llms": "gtm/pptx-media/v1/llms.txt",
     "icons": "gtm/pptx-media/v1/icons.json",
