@@ -32,10 +32,33 @@
 <link rel="stylesheet" href="./products/chat.css" />
 ```
 
+如果需要使用从 Figma 组件资源合并来的轻量 SDK，再加：
+
+```html
+<script src="./lark-product-mocks.js"></script>
+```
+
+它会暴露 `window.LarkProductMocks`，用于生成可编辑的桌面/移动产品原型片段：
+
+```js
+const header = LarkProductMocks.render("desktopHeader", {
+  brandName: "产品名称",
+  navLinks: ["页签", "页签", "页签"],
+  primaryAction: "Button",
+});
+
+const sender = LarkProductMocks.render("mobileChatSender", {
+  chips: [{ label: "联网搜索", icon: "search" }],
+  placeholder: "按住 说话",
+});
+```
+
 ## 文件
 
 - `tokens.css`：共享字体、颜色、圆角、阴影、间距和基础语义 token。
 - `lark-product-mocks.css`：总入口，导入所有产品样式和通用组件。
+- `lark-product-mocks.js`：产品原型轻量 SDK，提供 Figma 桌面 Header 与移动端代表组件的 HTML 生成入口。
+- `figma-component-spec.md`：两个 Figma 组件资源的组件清单、token 映射、SDK 入口和当前 blocked 记录。
 - `products/chat.css`：飞书聊天，覆盖深色主导航、分组栏、会话列表、消息气泡和输入区。
 - `products/drive.css`：飞书云盘，覆盖 Feishu Docs 首页侧栏、快捷操作卡、最近文件表格和操作区。
 - `products/doc.css`：飞书文档，覆盖顶部工具栏、大纲、正文页、段落、表格、评论和 callout。
@@ -143,6 +166,15 @@ python3 scripts/simulate_real_product_mock.py \
 - 不适合：线上产品前端、把未清洗的飞书私有 DOM/CSS 直接提交到公开仓库。
 - 类名统一使用 `.lpm-*`，避免污染 `LarkSlides` 和 `LarkSlideTemplates`。
 - 字体优先使用飞书线上字体栈；没有线上字体时，回退到 `sdk/fonts.css` 里的兰亭黑。
+
+## Figma 组件 SDK
+
+`figma-component-spec.md` 记录了这次合并的 Figma 来源、组件清单和 token 映射：
+
+- 桌面端：`[D] Header`，SDK 入口为 `desktopHeader`。
+- 移动端：组件索引页里的 Navigation、Data Entry、Data Display、Feedback、Biz Component、AI Component，当前落地了 `mobileButton`、`mobileNavBar`、`mobileCard`、`mobileDialog`、`mobileChatSender` 作为可复用代表组件。
+
+这层 SDK 不依赖 React、Tailwind 或 Universe Design 包。Figma 里的 Code Connect 片段只作为语义参考，最终输出仍是适合 HTML PPT 编辑的普通 HTML 字符串。
 
 ## 示例
 
