@@ -55,6 +55,7 @@ cd lark-deckkit
 - 复杂页面再用 visualLayout 和 components
 - 页面要像 PPT，不要像后台页面
 - 文字和图形保持可编辑，不要做成整页截图
+- 静态 HTML 出稿时保留文本 sidecar：`texts.md` 只改文案，`index.html` 只承载版式
 - 需要飞书产品原型时，再引入 product-mocks
 
 如果只做单文件 HTML，也可以用 CDN 一键引入：
@@ -62,7 +63,8 @@ cd lark-deckkit
 
 完成后检查：
 node scripts/validate_deck.js <html-file> --expect-slides N
-再用浏览器截图看一遍版式；正式出稿前做一遍 frontend design review。
+再用浏览器截图看一遍版式；正式出稿前做一遍 Front Design / front-design review：
+https://skills.sh/anthropics/skills/frontend-design
 ```
 
 ## 技术解释
@@ -210,6 +212,7 @@ node scripts/validate_deck.js <html-file> --expect-slides N
 | `LarkSlideTemplates.getDesignGuidance()` | 读取这套模板内置的设计约束。 |
 | `LarkSlideTemplates.qualityRules.typography` | 读取字号规则，比如标题、副标题、正文在 1600x900 画布里的推荐范围。 |
 | `LarkSlideTemplates.validateDeckSpec()` | 检查页面数量、标题、文本密度和 block 密度。 |
+| `LarkSlides.annotateEditableText()` | 为运行时生成的 `contenteditable` 文本补 `data-text-id`，方便静态化后走文本 sidecar。 |
 
 ### 字体
 
@@ -243,6 +246,32 @@ node scripts/validate_deck.js sdk/quickstart.html --expect-slides 3
 ```
 
 `validate_deck.js` 只能检查结构问题。页面好不好看，还是要打开浏览器看截图。
+
+### 工程化交付仓
+
+如果要把一套 HTML PPT 当成可交付资产，而不是临时页面，使用 `deliveries/`：
+
+```bash
+node scripts/delivery_new.js --slug customer-brief
+node scripts/delivery_finalize.js \
+  --run deliveries/<run> \
+  --source sdk/quickstart.html \
+  --expect-slides 3 \
+  --name lark-demo-2026-05-09
+node scripts/delivery_package.js \
+  --run deliveries/<run> \
+  --name lark-demo-2026-05-09
+```
+
+产物会落到 `deliveries/<run>/output/`，包括 `index.html`、命名交付副本、`delivery-manifest.json`、`CHECKLIST.md` 和 `FEEDBACK.md`。自动门禁由 `validate_deck.js` 执行；Front Design Review 仍然是人工截图审查，不伪装成静态脚本能判断的东西。
+
+如果源文件里有静态 `contenteditable` 文本，`delivery_finalize` 会生成 `output/texts.md`，并给对应节点写入 `data-text-id`。后续只改文案时，编辑 `texts.md` 后执行：
+
+```bash
+node scripts/apply_deck_texts.js deliveries/<run>/output/index.html deliveries/<run>/output/texts.md
+```
+
+`delivery_package.js` 会把 `index.html`、`texts.md`、应用脚本和 README 打成 zip，适合把可编辑交付件发给别人。
 
 ### 本地预览
 
@@ -290,8 +319,12 @@ http://127.0.0.1:4173/sdk/quickstart.html
 │   ├── lark-product-mocks.css
 │   ├── example.html
 │   └── products/
+├── deliveries/
+│   └── README.md
 ├── scripts/
 │   ├── convert_pptx_to_html.py
+│   ├── delivery_new.js
+│   ├── delivery_finalize.js
 │   └── validate_deck.js
 └── tests/
     ├── test_artifacts.py

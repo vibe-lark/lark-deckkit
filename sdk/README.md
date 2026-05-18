@@ -153,7 +153,7 @@ Lark DeckKit 的默认产物是演示稿，不是网页 Dashboard。使用 SDK �
 
 - 一页只承载一个主观点，优先把长段落压缩成标题、短副标题和 3-4 个步骤。
 - `statement` 用来讲观点，`todo` 用来讲过程，`caseFlow` 用来讲“用户目标 -> Agent 计划 -> CLI 执行 -> 飞书回写”这类链路。
-- 少用卡片，多用留白、居中标题、细线和明确对齐。不要把 3 个大框、5 个小框和长条混在一页里。
+- 少用卡片，多用留白、居中标题和明确对齐；线条只在表达分组、方向或度量时使用。不要把 3 个大框、5 个小框、长条和装饰线混在一页里。
 - 字号按 1600x900 PPT 画布：Hero `76-92px`，Section `58-68px`，Subtitle `28-40px`，Body `20-28px`。
 - 只有关键标题、指标、标签可以用渐变。正文说明用白色或灰色，避免全页都抢焦点。
 - 截图检查比肉眼看代码更可靠。生成后至少看桌面截图，检查文字是否居中、留白是否均匀、内容是否像在演示而不是在填表。
@@ -320,6 +320,17 @@ LarkSlideTemplates.visualLayout({
   ],
 });
 ```
+
+### 文本 sidecar
+
+正式交付的静态 HTML 应该有文本 sidecar：`index.html` 保持版式，`texts.md` 负责文案修改。DeckKit 运行时会通过 `LarkSlides.annotateEditableText()` 给 `contenteditable` 文本补 `data-text-id`；如果你已经有静态 HTML，可以直接跑：
+
+```bash
+node scripts/extract_deck_texts.js path/to/index.html --out path/to/texts.md --annotate path/to/index.html
+node scripts/apply_deck_texts.js path/to/index.html path/to/texts.md
+```
+
+这条链路只适合纯文本叶子节点。带复杂行内结构的标题应该拆成多个文本节点，避免一次文案修改破坏高亮 span。
 
 模板返回的是普通 slide 对象，也可以直接传入自定义 HTML：
 
