@@ -80,7 +80,7 @@
       "Preview screenshots and fix alignment, density, and hierarchy before publishing.",
     ],
     layout: [
-      "Prefer large centered claims, restrained dividers, and generous negative space.",
+      "Prefer large centered claims, generous negative space, and dividers only when they clarify grouping or direction.",
       "Avoid nested cards, decorative card grids, and repeated equal-weight boxes.",
       "Use columns only when comparison or process flow is the actual message.",
       "Keep tags rectangular and precise; do not use overly round pill shapes unless the source deck does.",
@@ -94,6 +94,7 @@
     antiPatterns: [
       "Starting from HTML/CSS layout before the page story is clear.",
       "Filling a slide with many cards because the content has many bullets.",
+      "Adding lvg-layout-shape lines as decoration when spacing and alignment already separate the content.",
       "Using web-dashboard density for a fullscreen presentation.",
       "Adding glow, shine, or gradients when they do not clarify hierarchy.",
     ],
@@ -597,7 +598,6 @@
     ];
     if (visibleItems.length <= 5) {
       const grid = layoutGrid({ x: 216, y: 348, w: 1168, columns: visibleItems.length, gap: 56 });
-      blocks.push(shapeBlock({ x: 240, y: 306, w: 1120, h: 1, fill: "linear-gradient(90deg, rgba(206,234,254,0), rgba(206,234,254,0.30), rgba(206,234,254,0))", radius: "999px" }));
       visibleItems.forEach((item, index) => {
         const col = grid.col(index);
         const label = item.label || `Step ${index + 1}`;
@@ -607,9 +607,6 @@
         blocks.push(quickText({ x: col.x, y: grid.y + 82, w: col.w, h: 22, text: label, size: 17, weight: 650, align: "center", color: "#7f8aa0", className: "lvg-quick-copy" }));
         blocks.push(quickText({ x: col.x, y: grid.y + 116, w: col.w, h: 34, text: heading, size: 28, weight: 740, align: "center", gradient: "brand", className: "lvg-quick-heading" }));
         blocks.push(quickText({ x: col.x - 4, y: grid.y + 178, w: col.w + 8, h: 102, text: body, size: 21, weight: 500, align: "center", color: "#aeb7c7", lineHeight: 1.34, className: "lvg-quick-copy" }));
-        if (index < visibleItems.length - 1) {
-          blocks.push(shapeBlock({ x: col.x + col.w + 28, y: grid.y + 94, w: 1, h: 132, fill: "rgba(206,234,254,0.14)" }));
-        }
       });
       return visualLayout({ title, sourceSlide, className: "lvg-quick-slide lvg-quick-apple lvg-quick-todo", blocks });
     }
@@ -645,16 +642,12 @@
       quickText({ x: 240, y: 100, w: 1120, h: 74, text: title, size: 60, weight: 760, align: "center", gradient: "brand", className: "lvg-quick-heading" }),
       quickText({ x: 330, y: 190, w: 940, h: 42, text: subtitle, size: 28, weight: 500, align: "center", color: "#aeb7c7", lineHeight: 1.36, className: "lvg-quick-copy" }),
       quickText({ x: 260, y: 304, w: 1080, h: 46, text: prompt, size: 36, weight: 680, align: "center", color: tokens.colors.white, className: "lvg-quick-copy" }),
-      shapeBlock({ x: 580, y: 394, w: 440, h: 2, fill: tokens.gradients.deepBlue, radius: "999px", opacity: 0.78 }),
     ];
     visibleSteps.forEach((step, index) => {
       const col = grid.col(index);
       blocks.push(quickText({ x: col.x, y: grid.y, w: col.w, h: 26, text: String(index + 1).padStart(2, "0"), size: 20, weight: 700, align: "center", gradient: "deepBlue", className: "lvg-quick-copy" }));
       blocks.push(quickText({ x: col.x, y: grid.y + 50, w: col.w, h: 34, text: step.title || "", size: 28, weight: 740, align: "center", gradient: "brand", className: "lvg-quick-heading" }));
       blocks.push(quickText({ x: col.x - 8, y: grid.y + 114, w: col.w + 16, h: 84, text: step.body || "", size: 21, weight: 500, align: "center", color: "#aeb7c7", lineHeight: 1.36, className: "lvg-quick-copy" }));
-      if (index < visibleSteps.length - 1) {
-        blocks.push(shapeBlock({ x: col.x + col.w + 24, y: grid.y + 66, w: 38, h: 1, fill: "rgba(206,234,254,0.24)" }));
-      }
     });
     return visualLayout({ title, sourceSlide, className: "lvg-quick-slide lvg-quick-apple lvg-quick-flow", blocks });
   }

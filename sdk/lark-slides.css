@@ -289,6 +289,9 @@ body {
 
 .lvg-gradient-text {
   display: inline-block;
+  line-height: inherit;
+  padding-bottom: 0.08em;
+  margin-bottom: -0.08em;
   color: transparent !important;
   background: var(--lvg-brand-text-gradient, linear-gradient(90deg, #e2fff7 0%, #c8effa 43%, #b1d5f6 62%, #80a3ff 100%));
   background-clip: text;
@@ -354,6 +357,10 @@ body {
 .lvg-quick-slide .lvg-quick-copy,
 .lvg-quick-slide .lvg-quick-heading {
   overflow: hidden;
+}
+
+.lvg-quick-slide .lvg-quick-heading {
+  overflow: visible;
 }
 
 .lvg-quick-slide .lvg-code-copy,
