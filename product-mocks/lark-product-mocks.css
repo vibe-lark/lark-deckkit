@@ -309,3 +309,415 @@
   -webkit-background-clip: text;
   background-clip: text;
 }
+
+/* Figma component SDK layer. Scoped to product mocks so it never affects PPT slides. */
+.lpm-d-header {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  height: 56px;
+  min-height: 56px;
+  padding: 0 24px;
+  color: var(--lpm-ink);
+  background: var(--lpm-surface);
+  border-bottom: var(--lpm-line-soft);
+  font-family: var(--lpm-font);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.lpm-d-header-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 132px;
+  padding-right: 8px;
+}
+
+.lpm-d-header-logo {
+  display: inline-grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  background: conic-gradient(from 220deg, #1456f0, #2dbeab, #7b61ff, #1456f0);
+  border-radius: 6px;
+}
+
+.lpm-d-header-brand-name {
+  color: var(--lpm-ink);
+  font-weight: var(--lpm-weight-strong);
+  white-space: nowrap;
+}
+
+.lpm-d-header-nav {
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+  gap: 0;
+}
+
+.lpm-d-header-link {
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 16px;
+  color: var(--lpm-text);
+  border-bottom: 2px solid transparent;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.lpm-d-header-link.is-active {
+  color: var(--lpm-blue);
+  border-bottom-color: var(--lpm-blue);
+  font-weight: var(--lpm-weight-strong);
+}
+
+.lpm-d-header-spacer {
+  flex: 1 1 auto;
+  min-width: 16px;
+}
+
+.lpm-d-header-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 248px;
+  height: 32px;
+  padding: 0 12px;
+  color: var(--lpm-secondary);
+  background: var(--lpm-surface);
+  border: 1px solid #d0d3d6;
+  border-radius: var(--lpm-radius-md);
+  font-size: 14px;
+}
+
+.lpm-d-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  height: 100%;
+}
+
+.lpm-d-header-icon-button,
+.lpm-m-icon-button,
+.lpm-m-text-button {
+  display: inline-grid;
+  place-items: center;
+  padding: 0;
+  color: var(--lpm-text);
+  background: transparent;
+  border: 0;
+  font: inherit;
+}
+
+.lpm-d-header-icon-button {
+  width: 20px;
+  height: 32px;
+  color: var(--lpm-secondary);
+}
+
+.lpm-d-header-slot {
+  width: 120px;
+  height: 28px;
+  border: 1px dashed #7b61ff;
+  border-radius: var(--lpm-radius-md);
+}
+
+.lpm-d-header-divider {
+  width: 1px;
+  height: 24px;
+  background: var(--lpm-border-soft);
+}
+
+.lpm-d-header-avatar {
+  width: 32px;
+  height: 32px;
+}
+
+.lpm-m-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 116px;
+  min-height: 44px;
+  padding: 0 16px;
+  color: var(--lpm-text);
+  background: var(--lpm-surface);
+  border: 1px solid transparent;
+  border-radius: var(--lpm-radius-md);
+  font-family: var(--lpm-font);
+  font-size: 17px;
+  font-weight: var(--lpm-weight-body);
+  line-height: 24px;
+}
+
+.lpm-m-button.is-small {
+  min-height: 44px;
+  font-size: 17px;
+}
+
+.lpm-m-button.is-large {
+  min-height: 52px;
+  font-size: 18px;
+}
+
+.lpm-m-button.is-primary {
+  color: #fff;
+  background: var(--lpm-blue);
+}
+
+.lpm-m-button.is-default {
+  border-color: #d0d3d6;
+}
+
+.lpm-m-button.is-text {
+  min-width: 0;
+  color: var(--lpm-blue);
+  background: transparent;
+}
+
+.lpm-m-button.is-round {
+  border-radius: 999px;
+}
+
+.lpm-m-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 72px;
+  padding: 10px 17px;
+  color: var(--lpm-ink);
+  background: var(--lpm-surface);
+  font-family: var(--lpm-font);
+}
+
+.lpm-m-navbar-profile {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+}
+
+.lpm-m-navbar-photo,
+.lpm-m-navbar .lpm-avatar {
+  width: 38px;
+  height: 38px;
+}
+
+.lpm-m-navbar-title-stack {
+  display: grid;
+  min-width: 0;
+}
+
+.lpm-m-navbar-title-stack strong {
+  color: var(--lpm-ink);
+  overflow: hidden;
+  font-size: 21px;
+  font-weight: var(--lpm-weight-strong);
+  line-height: 32px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.lpm-m-navbar-title-stack span {
+  color: var(--lpm-secondary);
+  overflow: hidden;
+  font-size: 11px;
+  line-height: 17px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.lpm-m-navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+
+.lpm-m-icon-button {
+  width: 32px;
+  height: 32px;
+}
+
+.lpm-m-navbar.is-secondary {
+  position: relative;
+  justify-content: center;
+}
+
+.lpm-m-navbar.is-secondary .lpm-m-icon-button {
+  position: absolute;
+  left: 14px;
+}
+
+.lpm-m-navbar.is-secondary .lpm-m-text-button {
+  position: absolute;
+  right: 18px;
+  color: var(--lpm-text);
+}
+
+.lpm-m-navbar.is-secondary .lpm-m-navbar-title-stack {
+  justify-items: center;
+  text-align: center;
+}
+
+.lpm-m-navbar.is-secondary .lpm-m-navbar-title-stack strong {
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.lpm-m-card {
+  width: 343px;
+  min-height: 134px;
+  padding: 16px;
+  background: var(--lpm-surface);
+  border: 1px solid var(--lpm-border);
+  border-radius: var(--lpm-radius-lg);
+  box-shadow: 0 2px 4px rgba(31, 35, 41, 0.06);
+}
+
+.lpm-m-card.is-s2 {
+  box-shadow: 0 2px 6px rgba(31, 35, 41, 0.08);
+}
+
+.lpm-m-card.is-s3 {
+  box-shadow: 0 4px 8px rgba(31, 35, 41, 0.09);
+}
+
+.lpm-m-card.is-borderless {
+  border-color: transparent;
+}
+
+.lpm-m-card-placeholder {
+  height: 102px;
+  border: 1px dashed #8d55ed;
+  border-radius: 6px;
+}
+
+.lpm-m-dialog-mask {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 320px;
+  min-height: 260px;
+  padding: 36px;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.lpm-m-dialog {
+  width: min(100%, 408px);
+  overflow: hidden;
+  background: var(--lpm-surface);
+  border-radius: var(--lpm-radius-lg);
+}
+
+.lpm-m-dialog-content {
+  display: grid;
+  gap: 12px;
+  padding: 24px 20px;
+  text-align: center;
+}
+
+.lpm-m-dialog h3,
+.lpm-m-dialog p {
+  margin: 0;
+  color: var(--lpm-ink);
+}
+
+.lpm-m-dialog h3 {
+  font-size: 17px;
+  font-weight: var(--lpm-weight-strong);
+  line-height: 24px;
+}
+
+.lpm-m-dialog p {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.lpm-m-dialog-actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  border-top: var(--lpm-line-soft);
+}
+
+.lpm-m-dialog-actions button {
+  min-height: 50px;
+  color: var(--lpm-text);
+  background: transparent;
+  border: 0;
+  border-right: var(--lpm-line-soft);
+  font: inherit;
+  font-size: 17px;
+}
+
+.lpm-m-dialog-actions button:last-child {
+  border-right: 0;
+}
+
+.lpm-m-dialog-actions .is-primary {
+  color: var(--lpm-blue);
+}
+
+.lpm-m-chat-sender {
+  display: grid;
+  gap: 13px;
+  width: min(100%, 486px);
+  font-family: var(--lpm-font);
+}
+
+.lpm-m-chat-sender-chips {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.lpm-m-chat-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 44px;
+  padding: 0 13px;
+  color: var(--lpm-ink);
+  background: var(--lpm-surface);
+  border: 1px solid #d0d3d6;
+  border-radius: 999px;
+  font: inherit;
+  font-size: 18px;
+}
+
+.lpm-m-chat-chip:empty {
+  width: 44px;
+}
+
+.lpm-m-chat-input {
+  position: relative;
+  display: grid;
+  grid-template-columns: 32px minmax(0, 1fr) 32px;
+  align-items: center;
+  gap: 12px;
+  min-height: 64px;
+  padding: 0 17px;
+  color: var(--lpm-ink);
+  background: #f5f6f7;
+  border-radius: 17px;
+}
+
+.lpm-m-chat-input strong {
+  justify-self: center;
+  font-size: 21px;
+  font-weight: var(--lpm-weight-strong);
+  line-height: 31px;
+  white-space: nowrap;
+}
+
+.lpm-m-chat-input-icon {
+  display: inline-grid;
+  place-items: center;
+  color: var(--lpm-text);
+}
