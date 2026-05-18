@@ -166,8 +166,10 @@ Block rules:
 
 ### Lines / Connectors
 
-- Use short dashed lines with visible gap from boxes; do not let connectors touch card edges.
-- Gradient dashed lines are preferred for important relationships.
+- Use lines only when they encode a relationship, boundary, sequence, or measurement. Do not use `lvg-layout-shape` lines as decorative filler.
+- Prefer spacing, alignment, and type hierarchy before adding dividers. In multi-column `todo` and `caseFlow` pages, default to no connector lines unless direction would be ambiguous without them.
+- When connectors are necessary, use short dashed lines with visible gap from boxes; do not let connectors touch card edges.
+- Gradient dashed lines are reserved for important relationships.
 - End caps should be round for line samples and guide-line components.
 - Line weights should be intentional: `2px`, `4px`, `6px`, `8px`.
 

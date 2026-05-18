@@ -64,14 +64,15 @@
   function mountControls(deck) {
     if (!deck.options.controls) return null;
 
+    const listenerOptions = deck.eventListenerOptions || undefined;
     const toolbar = document.createElement("div");
     toolbar.className = "ls-toolbar";
     toolbar.setAttribute("role", "toolbar");
     toolbar.setAttribute("aria-label", "Slide controls");
 
-    const prev = button("上一页", "‹", () => deck.prev());
-    const next = button("下一页", "›", () => deck.next());
-    const fullscreen = button("全屏播放", "⛶", () => deck.toggleFullscreen());
+    const prev = button("上一页", "‹", () => deck.prev(), listenerOptions);
+    const next = button("下一页", "›", () => deck.next(), listenerOptions);
+    const fullscreen = button("全屏播放", "⛶", () => deck.toggleFullscreen(), listenerOptions);
 
     const status = document.createElement("div");
     status.className = "ls-status";
@@ -92,14 +93,14 @@
     return toolbar;
   }
 
-  function button(label, text, onClick) {
+  function button(label, text, onClick, listenerOptions) {
     const el = document.createElement("button");
     el.className = "ls-button";
     el.type = "button";
     el.setAttribute("aria-label", label);
     el.title = label;
     el.textContent = text;
-    el.addEventListener("click", onClick);
+    el.addEventListener("click", onClick, listenerOptions);
     return el;
   }
 
@@ -117,6 +118,7 @@
       setSlideActive(slide, index === deck.index);
       return inner;
     });
+    annotateEditableText(deck.slides);
 
     if (!deck.controls) deck.controls = mountControls(deck);
     deck.updateScale();
@@ -134,10 +136,14 @@
     if (!mount) throw new Error("LarkSlides: missing mount element");
     mount.classList.add("ls-app");
     mount.classList.toggle("ls-no-controls", options.controls === false);
+    const eventController = typeof AbortController !== "undefined" ? new AbortController() : null;
+    const eventListenerOptions = eventController ? { signal: eventController.signal } : undefined;
 
     const deck = {
       mount,
       stage: ensureStructure(mount),
+      eventController,
+      eventListenerOptions,
       options: {
         controls: options.controls !== false,
         keyboard: options.keyboard !== false,
@@ -155,6 +161,8 @@
       progressBar: null,
       scaleFrame: 0,
       scaleTransform: "",
+      wheelLock: 0,
+      touchStartY: null,
       theme: null,
       updateScale,
       enterFullscreen,
@@ -189,10 +197,17 @@
         return this.goTo(this.index - 1);
       },
       destroy() {
-        window.removeEventListener("resize", this.onResize);
-        window.removeEventListener("hashchange", this.onHashChange);
-        window.removeEventListener("keydown", this.onKeydown);
-        document.removeEventListener("fullscreenchange", this.onFullscreenChange);
+        if (this.eventController) {
+          this.eventController.abort();
+        } else {
+          window.removeEventListener("resize", this.onResize);
+          window.removeEventListener("hashchange", this.onHashChange);
+          window.removeEventListener("keydown", this.onKeydown);
+          document.removeEventListener("fullscreenchange", this.onFullscreenChange);
+          this.mount.removeEventListener("wheel", this.onWheel);
+          this.mount.removeEventListener("touchstart", this.onTouchStart);
+          this.mount.removeEventListener("touchend", this.onTouchEnd);
+        }
         cancelAnimationFrame(this.scaleFrame);
       },
     };
@@ -205,6 +220,30 @@
     };
     deck.onHashChange = () => deck.goTo(readHashIndex() || 0, { replace: true });
     deck.onFullscreenChange = () => deck.syncPresentationState();
+    deck.onWheel = (event) => {
+      if (!deck.options.keyboard) return;
+      if (event.target?.isContentEditable) return;
+      const now = Date.now();
+      if (now - deck.wheelLock < 520) return;
+      if (Math.abs(event.deltaY) < 28) return;
+      deck.wheelLock = now;
+      event.preventDefault();
+      if (event.deltaY > 0) deck.next();
+      else deck.prev();
+    };
+    deck.onTouchStart = (event) => {
+      if (!deck.options.keyboard) return;
+      deck.touchStartY = event.touches?.[0]?.clientY ?? null;
+    };
+    deck.onTouchEnd = (event) => {
+      if (!deck.options.keyboard || deck.touchStartY == null) return;
+      const endY = event.changedTouches?.[0]?.clientY ?? deck.touchStartY;
+      const deltaY = endY - deck.touchStartY;
+      deck.touchStartY = null;
+      if (Math.abs(deltaY) < 48) return;
+      if (deltaY < 0) deck.next();
+      else deck.prev();
+    };
     deck.onKeydown = (event) => {
       if (!deck.options.keyboard) return;
       if (event.target?.isContentEditable) return;
@@ -225,10 +264,13 @@
       if (event.code === "End") deck.goTo(deck.slides.length - 1);
     };
 
-    window.addEventListener("resize", deck.onResize);
-    window.addEventListener("hashchange", deck.onHashChange);
-    window.addEventListener("keydown", deck.onKeydown);
-    document.addEventListener("fullscreenchange", deck.onFullscreenChange);
+    window.addEventListener("resize", deck.onResize, eventListenerOptions);
+    window.addEventListener("hashchange", deck.onHashChange, eventListenerOptions);
+    window.addEventListener("keydown", deck.onKeydown, eventListenerOptions);
+    document.addEventListener("fullscreenchange", deck.onFullscreenChange, eventListenerOptions);
+    mount.addEventListener("wheel", deck.onWheel, eventListenerOptions);
+    mount.addEventListener("touchstart", deck.onTouchStart, eventListenerOptions);
+    mount.addEventListener("touchend", deck.onTouchEnd, eventListenerOptions);
 
     return deck.renderDeck();
   }
@@ -402,6 +444,45 @@
     image.dataset.lsLoaded = "true";
   }
 
+  function annotateEditableText(slides) {
+    const slideList = Array.from(slides || document.querySelectorAll(".ls-slide"));
+    let count = 0;
+    slideList.forEach((slide, index) => {
+      const slideId = `slide-${String(index + 1).padStart(2, "0")}`;
+      const used = new Set(
+        Array.from(slide.querySelectorAll("[data-text-id]")).map((node) => node.dataset.textId)
+      );
+      const counters = {};
+      const editables = Array.from(slide.querySelectorAll('[contenteditable="true"], [data-editable-text]'));
+      editables.forEach((node) => {
+        if (node.dataset.textId) return;
+        const base = editableTextBase(node);
+        counters[base] = (counters[base] || 0) + 1;
+        let field = counters[base] === 1 ? base : `${base}-${String(counters[base]).padStart(2, "0")}`;
+        let textId = `${slideId}.${field}`;
+        while (used.has(textId)) {
+          counters[base] += 1;
+          field = `${base}-${String(counters[base]).padStart(2, "0")}`;
+          textId = `${slideId}.${field}`;
+        }
+        node.dataset.textId = textId;
+        node.dataset.larkTextAutogen = "true";
+        used.add(textId);
+        count += 1;
+      });
+    });
+    return count;
+  }
+
+  function editableTextBase(node) {
+    const className = Array.from(node.classList || []).find((name) => !/^ls-/.test(name) && !/^lvg-layout-block$/.test(name));
+    const base = className || node.tagName?.toLowerCase() || "text";
+    return base
+      .toLowerCase()
+      .replace(/[^a-z0-9\u4e00-\u9fa5_-]+/g, "-")
+      .replace(/^-+|-+$/g, "") || "text";
+  }
+
   function normalizeIndex(index, length) {
     const numeric = Number(index);
     if (!Number.isFinite(numeric) || length <= 0) return 0;
@@ -420,6 +501,7 @@
     createDeck,
     renderDeck,
     mountControls,
+    annotateEditableText,
     defineTheme,
     applyTheme,
     enterFullscreen(deck) {

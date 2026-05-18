@@ -66,11 +66,47 @@ function findDenseTextLiterals(html) {
   return dense.slice(0, 8);
 }
 
+function parseStyleNumber(style, property) {
+  const pattern = new RegExp(`${property}\\s*:\\s*([0-9.]+)px`, "i");
+  const match = String(style).match(pattern);
+  return match ? Number(match[1]) : null;
+}
+
+function isThinLineBox(width, height) {
+  if (!Number.isFinite(width) || !Number.isFinite(height)) return false;
+  const longSide = Math.max(width, height);
+  const shortSide = Math.min(width, height);
+  return longSide >= 80 && shortSide <= 4;
+}
+
+function countDecorativeLineShapes(html) {
+  let count = 0;
+
+  const staticShapePattern = /<div\b(?=[^>]*class=["'][^"']*\blvg-layout-shape\b[^"']*["'])(?=[^>]*style=["'][^"']+["'])[^>]*>/gi;
+  for (const match of html.matchAll(staticShapePattern)) {
+    const style = (match[0].match(/\bstyle=["']([^"']+)["']/i) || [])[1] || "";
+    const width = parseStyleNumber(style, "width");
+    const height = parseStyleNumber(style, "height");
+    if (isThinLineBox(width, height)) count += 1;
+  }
+
+  const shapeBlockPattern = /shapeBlock\s*\(\s*\{([\s\S]*?)\}\s*\)/g;
+  for (const match of html.matchAll(shapeBlockPattern)) {
+    const body = match[1];
+    const width = Number((body.match(/\bw\s*:\s*([0-9.]+)/) || [])[1]);
+    const height = Number((body.match(/\bh\s*:\s*([0-9.]+)/) || [])[1]);
+    if (isThinLineBox(width, height)) count += 1;
+  }
+
+  return count;
+}
+
 function validate(html, options = {}) {
   const issues = [];
   const add = (level, code, message, details = {}) => issues.push({ level, code, message, ...details });
   const visibleHtml = stripScriptsAndStyles(html);
   const slideCount = countSlides(html);
+  const lineShapes = countDecorativeLineShapes(html);
 
   if (!/data-lark-deck/.test(html) && !/\bls-stage\b/.test(html)) {
     add("error", "deck-container", "Missing DeckKit mount marker: data-lark-deck or ls-stage.");
@@ -96,9 +132,20 @@ function validate(html, options = {}) {
     add("warning", "external-scripts", "External scripts detected. This can be fine, but verify availability for the target host.", externalAssets);
   }
 
+  const lineBudget = Math.max(4, Math.ceil(Math.max(slideCount, 1) * 1.2));
+  if (lineShapes > lineBudget) {
+    add(
+      "warning",
+      "decorative-lines",
+      "Thin lvg-layout-shape lines are over budget; use lines only for relationship, boundary, sequence, or measurement.",
+      { lineShapes, lineBudget }
+    );
+  }
+
   return {
     ok: !issues.some((issue) => issue.level === "error"),
     slideCount,
+    lineShapes,
     visibleTextChars: visibleHtml.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim().length,
     externalAssets,
     issues,

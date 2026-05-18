@@ -76,6 +76,10 @@ class GeneratedArtifactsTest(unittest.TestCase):
             "toggleFullscreen",
             "fullscreenchange",
             "markImageLoaded",
+            "annotateEditableText",
+            "AbortController",
+            "touchstart",
+            "wheel",
         ]:
             self.assertIn(symbol, runtime)
 
@@ -120,6 +124,7 @@ class GeneratedArtifactsTest(unittest.TestCase):
         self.assertIn("HTML PPT 模板 SDK", readme)
         self.assertIn("推荐封装方式", readme)
         self.assertIn("Front-Design 规则", readme)
+        self.assertIn("文本 sidecar", readme)
         self.assertIn("getDesignGuidance", readme)
         self.assertIn("qualityRules.typography", readme)
 
@@ -219,6 +224,18 @@ class GeneratedArtifactsTest(unittest.TestCase):
         self.assertIn("scripts/validate_deck.js", readme)
         self.assertIn("https://bytedance.larkoffice.com/wiki/PdkgwdJO9iKS49k57pDcEcGxnad", readme)
         self.assertIn("仓库里不需要提交原始 PPTX", readme)
+
+    def test_feishu_deck_h5_gap_analysis_is_recorded(self):
+        comparison = ROOT / "docs" / "comparisons" / "2026-05-10-feishu-deck-h5-gap-analysis.md"
+        self.assertTrue(comparison.exists(), "missing feishu-deck-h5 comparison record")
+
+        doc = comparison.read_text(encoding="utf-8")
+        self.assertIn("FuQiang/feishu-deck-h5", doc)
+        self.assertIn("8e702be12b074f0358324392b61a70cea069f6ef", doc)
+        self.assertIn("结构", doc)
+        self.assertIn("文本 sidecar", doc)
+        self.assertIn("运行时交互", doc)
+        self.assertIn("吸收决策", doc)
 
     def test_product_mocks_css_package_covers_lark_product_prototypes(self):
         package_readme = PRODUCT_MOCKS / "README.md"
