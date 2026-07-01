@@ -181,6 +181,12 @@ body {
   outline-offset: 2px;
 }
 
+.ls-button-icon {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
 .ls-status {
   min-width: 64px;
   text-align: center;
@@ -285,6 +291,14 @@ body {
 .lvg-slide [contenteditable="true"]:focus-visible {
   border-radius: 4px;
   box-shadow: 0 0 0 2px rgba(84, 139, 255, 0.72);
+}
+
+[data-lark-text-sync="true"][data-lark-text-saving="true"] {
+  box-shadow: 0 0 0 2px rgba(20, 86, 240, 0.36);
+}
+
+[data-lark-text-sync="true"][data-lark-text-saving="error"] {
+  box-shadow: 0 0 0 2px rgba(214, 72, 87, 0.72);
 }
 
 .lvg-gradient-text {

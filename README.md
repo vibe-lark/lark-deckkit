@@ -9,7 +9,8 @@ Lark DeckKit 做的事情很简单：把飞书 PPT 的标准规范，整理成�
 ### 1. 先看效果
 
 - 原版 PPT：<https://bytedance.larkoffice.com/wiki/PdkgwdJO9iKS49k57pDcEcGxnad#share-Al9Md6kQmoKIe4xTybRctwsTnad>
-- HTML 版本：<https://magic.solutionsuite.cn/html-box/viE4zlP5oro>
+- HTML 版本：<https://magic.solutionsuite.cn/html-box/viE4zlP5oro>，完整 49 页 PPT 转 HTML，保留原 PPT 内容并升级为新播放器。
+- 上手与能力 Showcase：<https://magic.solutionsuite.cn/html-box/vo3xSvCpVR4>，3 页深色模板示例，用来展示上手路径和已实现能力。
 
 ### 2. Use With AI
 
@@ -213,6 +214,9 @@ https://skills.sh/anthropics/skills/frontend-design
 | `LarkSlideTemplates.qualityRules.typography` | 读取字号规则，比如标题、副标题、正文在 1600x900 画布里的推荐范围。 |
 | `LarkSlideTemplates.validateDeckSpec()` | 检查页面数量、标题、文本密度和 block 密度。 |
 | `LarkSlides.annotateEditableText()` | 为运行时生成的 `contenteditable` 文本补 `data-text-id`，方便静态化后走文本 sidecar。 |
+| `LarkSlides.loadRemoteTexts(deck)` | 从 `textSync.loadUrl` 读取 FaaS JSON，并按 `data-text-id` 更新页面文字。 |
+| `LarkSlides.collectDeckTexts(deck)` | 收集当前 HTML 里全部可编辑文字，生成可提交给 FaaS 的文本快照。 |
+| `deck.copyCurrentSlideLink()` | 复制带 `#/页码` 的当前页链接，发给别人后自动跳到这一页。 |
 
 ### 字体
 
@@ -238,7 +242,9 @@ font-family: var(--ld-font-ui);
 ```bash
 node --check sdk/lark-slides.js
 node --check sdk/templates.js
+node --check sdk/remote-text-faas.example.js
 node --check scripts/validate_deck.js
+python3 -m unittest discover -s tests
 python3 tests/test_artifacts.py
 python3 tests/test_sdk_upgrade.py
 python3 tests/test_visual_sample.py
@@ -272,6 +278,24 @@ node scripts/apply_deck_texts.js deliveries/<run>/output/index.html deliveries/<
 ```
 
 `delivery_package.js` 会把 `index.html`、`texts.md`、应用脚本和 README 打成 zip，适合把可编辑交付件发给别人。
+
+如果需要让 HTML 播放器直接连云端文案，可以在 `LarkSlides.createDeck` 里配置 `textSync`：
+
+```js
+LarkSlides.createDeck({
+  mount: "#deck",
+  deck,
+  textSync: {
+    deckId: "customer-story",
+    loadUrl: "https://your-faas.example.com/deck-texts?id=customer-story",
+    saveUrl: "https://your-faas.example.com/deck-texts",
+  },
+});
+```
+
+读取接口返回 `{ "texts": { "slide-01.hero-title": "云端标题" } }`；编辑后播放器会把 `changed` 和整份 `texts` 快照 POST 到 `saveUrl`，由 FaaS 更新云端数据。
+
+最小 FaaS 示例在 `sdk/remote-text-faas.example.js`，可以用 `magic-builder faas publish sdk/remote-text-faas.example.js --name lark-deckkit-remote-texts` 发布后替换 URL。示例用进程内存演示接口形状，正式使用时换成持久 KV、Bitable 或数据库。
 
 ### 本地预览
 
@@ -312,6 +336,7 @@ http://127.0.0.1:4173/sdk/quickstart.html
 │   ├── lark-slides.css
 │   ├── lark-slides.js
 │   ├── templates.js
+│   ├── remote-text-faas.example.js
 │   ├── quickstart.html
 │   └── README.md
 ├── product-mocks/

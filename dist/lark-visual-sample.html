@@ -14,6 +14,10 @@
     <script src="../sdk/templates.js"></script>
     <script>
       const A = (name) => `assets/pptx-media/${name}`;
+      const DECK_ID = "lark-deckkit-full-ppt-showcase-v2";
+      const MAGIC_TEXT_SYNC_ENDPOINT = "https://lark-deckkit.local/full-ppt-text-sync";
+      const TEXT_STORE_PREFIX = "lark-deckkit:full-ppt-showcase:";
+      const memoryTextStore = (window.__LARK_DECKKIT_FULL_PPT_MEMORY__ ||= new Map());
 
       const deckSlides = [
         LarkSlideTemplates.visualLayout({
@@ -1051,11 +1055,106 @@
         })
       ];
 
+      installMagicTextSyncEndpoint();
+
       LarkSlides.createDeck({
         mount: "#deck",
         slides: deckSlides,
         controls: new URLSearchParams(location.search).get("controls") !== "0",
+        metadata: { id: DECK_ID, title: "Lark DeckKit Public Preview" },
+        textSync: {
+          deckId: DECK_ID,
+          loadUrl: `${MAGIC_TEXT_SYNC_ENDPOINT}?id=${encodeURIComponent(DECK_ID)}`,
+          saveUrl: MAGIC_TEXT_SYNC_ENDPOINT,
+          saveDebounceMs: 500,
+        },
       });
+
+      function installMagicTextSyncEndpoint() {
+        if (window.__LARK_DECKKIT_FULL_PPT_TEXT_SYNC_FETCH_INSTALLED__) return;
+        window.__LARK_DECKKIT_FULL_PPT_TEXT_SYNC_FETCH_INSTALLED__ = true;
+        const nativeFetch = window.fetch.bind(window);
+        window.fetch = async (resource, options = {}) => {
+          const url = typeof resource === "string" ? resource : resource?.url || "";
+          if (!url.startsWith(MAGIC_TEXT_SYNC_ENDPOINT)) return nativeFetch(resource, options);
+          return handleMagicTextSyncRequest(url, options);
+        };
+      }
+
+      async function handleMagicTextSyncRequest(url, options = {}) {
+        const method = String(options.method || "GET").toUpperCase();
+        const requestUrl = new URL(url);
+        const deckId = requestUrl.searchParams.get("id") || DECK_ID;
+        if (method === "GET") return jsonResponse(await readTextRecord(deckId));
+        if (method === "POST") {
+          const payload = JSON.parse(options.body || "{}");
+          const next = mergeTextRecord(await readTextRecord(payload.deckId || deckId), payload);
+          await writeTextRecord(next.deckId, next);
+          return jsonResponse({ ok: true, deckId: next.deckId, updatedAt: next.updatedAt, changed: next.changed });
+        }
+        return jsonResponse({ ok: false, error: "Method not allowed" }, 405);
+      }
+
+      async function readTextRecord(deckId) {
+        const key = TEXT_STORE_PREFIX + deckId;
+        const store = getMagicStore();
+        if (store) {
+          const raw = await store.global_get(key);
+          const parsed = parseStoredValue(raw);
+          if (parsed) return parsed;
+        }
+        return memoryTextStore.get(key) || { deckId, texts: {}, changed: null, updatedAt: new Date().toISOString() };
+      }
+
+      async function writeTextRecord(deckId, record) {
+        const key = TEXT_STORE_PREFIX + deckId;
+        const store = getMagicStore();
+        if (store) await store.global_set(key, JSON.stringify(record));
+        memoryTextStore.set(key, record);
+      }
+
+      function getMagicStore() {
+        const store = window.magic?.store || window.magic?.redis;
+        if (store && typeof store.global_get === "function" && typeof store.global_set === "function") return store;
+        return null;
+      }
+
+      function mergeTextRecord(current, payload) {
+        const next = {
+          deckId: payload.deckId || current.deckId || DECK_ID,
+          texts: {
+            ...(current.texts || {}),
+            ...(payload.texts || {}),
+          },
+          changed: payload.changed || null,
+          updatedAt: payload.updatedAt || new Date().toISOString(),
+        };
+        if (payload.changed?.id) {
+          next.texts[payload.changed.id] = {
+            text: payload.changed.text || "",
+            html: payload.changed.html || "",
+            slide: payload.changed.slide || null,
+          };
+        }
+        return next;
+      }
+
+      function parseStoredValue(raw) {
+        if (!raw) return null;
+        if (typeof raw === "object") return raw;
+        try {
+          return JSON.parse(String(raw));
+        } catch (_error) {
+          return null;
+        }
+      }
+
+      function jsonResponse(body, status = 200) {
+        return new Response(JSON.stringify(body), {
+          status,
+          headers: { "Content-Type": "application/json; charset=utf-8" },
+        });
+      }
     </script>
   </body>
 </html>

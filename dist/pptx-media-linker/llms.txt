@@ -2,7 +2,7 @@
 
 Purpose: public TOS asset index for Feishu GTM PPTX media. Use this file as the lightweight entrypoint. Do not load the CSV or full JSON unless needed.
 
-Preview page: https://magic.solutionsuite.cn/html-box/vjC9AsKydQw
+Interactive search page: https://magic.solutionsuite.cn/html-box/vnRjxHHZxlv
 
 ## Load Strategy
 
@@ -16,7 +16,8 @@ Preview page: https://magic.solutionsuite.cn/html-box/vjC9AsKydQw
 
 ## Public URLs
 
-- Search page: https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/index.html
+- Interactive search page: https://magic.solutionsuite.cn/html-box/vnRjxHHZxlv
+- Static HTML download: https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/index.html
 - Product Assets JSON: https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/product-assets.json
 - General Icons JSON: https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/general-icons.json
 - Brand / Customer Logos JSON: https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/brand-customer-logos.json
@@ -87,6 +88,7 @@ Preview page: https://magic.solutionsuite.cn/html-box/vjC9AsKydQw
     "excluded": "gtm/pptx-media/v1/excluded.json",
     "csv": "gtm/pptx-media/v1/assets-index.csv",
     "fullJson": "gtm/pptx-media/v1/assets-index.json",
+    "searchPage": "https://magic.solutionsuite.cn/html-box/vnRjxHHZxlv",
     "html": "gtm/pptx-media/v1/index.html"
   }
 }

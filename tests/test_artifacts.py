@@ -58,6 +58,7 @@ class GeneratedArtifactsTest(unittest.TestCase):
         loader = (SDK / "lark-deckkit-loader.js").read_text(encoding="utf-8")
         example = (SDK / "example.html").read_text(encoding="utf-8")
         readme = (SDK / "README.md").read_text(encoding="utf-8")
+        remote_text_faas = (SDK / "remote-text-faas.example.js").read_text(encoding="utf-8")
 
         for symbol in [
             "window.LarkSlides",
@@ -80,6 +81,12 @@ class GeneratedArtifactsTest(unittest.TestCase):
             "AbortController",
             "touchstart",
             "wheel",
+            "textSync",
+            "loadRemoteTexts",
+            "saveCurrentTexts",
+            "copyCurrentSlideLink",
+            "currentSlideLink",
+            "normalizeTextPayload",
         ]:
             self.assertIn(symbol, runtime)
 
@@ -122,11 +129,15 @@ class GeneratedArtifactsTest(unittest.TestCase):
         self.assertIn("LarkSlides.createDeck", example)
         self.assertIn("LarkSlides.createDeckSpec", example)
         self.assertIn("HTML PPT 模板 SDK", readme)
+        self.assertIn("textSync", readme)
+        self.assertIn("remote-text-faas.example.js", readme)
         self.assertIn("推荐封装方式", readme)
         self.assertIn("Front-Design 规则", readme)
         self.assertIn("文本 sidecar", readme)
         self.assertIn("getDesignGuidance", readme)
         self.assertIn("qualityRules.typography", readme)
+        self.assertIn("module.exports = async function", remote_text_faas)
+        self.assertIn("slide-01.hero-title", remote_text_faas)
 
     def test_font_assets_are_bundled_and_reusable(self):
         fonts_css_path = SDK / "fonts.css"
@@ -390,6 +401,40 @@ class GeneratedArtifactsTest(unittest.TestCase):
         for name, url in magic_fonts_manifest["assets"].items():
             self.assertTrue(name.endswith(".woff2"), name)
             self.assertIn("magic-builder.tos-cn-beijing.volces.com", url)
+
+    def test_pptx_media_linker_has_human_gallery_and_static_download_docs(self):
+        linker = DIST / "pptx-media-linker"
+        llms = (linker / "llms.txt").read_text(encoding="utf-8")
+        usage = (linker / "USAGE.md").read_text(encoding="utf-8")
+        gallery = (linker / "gallery.html").read_text(encoding="utf-8")
+        script = (ROOT / "scripts" / "build_pptx_media_linker.mjs").read_text(encoding="utf-8")
+
+        self.assertIn("Interactive search page: https://magic.solutionsuite.cn/html-box/vnRjxHHZxlv", llms)
+        self.assertIn(
+            "Static HTML download: https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/index.html",
+            llms,
+        )
+        self.assertNotIn("Preview page:", llms)
+        self.assertNotIn(
+            "- Search page: https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/index.html",
+            llms,
+        )
+
+        self.assertIn("可点击检索页（妙笔空间）", usage)
+        self.assertIn("TOS `index.html` 是静态 HTML 下载备份", usage)
+        self.assertIn("`gallery.html` | 面向人的可点击图库页", usage)
+        self.assertIn("--publish-gallery", usage)
+
+        self.assertIn('<meta name="html-box-height-mode" content="auto">', gallery)
+        self.assertIn("可点击图库入口", gallery)
+        self.assertIn("搜索名称、编号、原文件名、标签或 TOS 链接", gallery)
+        self.assertIn("Product Assets", gallery)
+        self.assertIn("General Icons", gallery)
+        self.assertIn("Brand / Customer Logos", gallery)
+
+        self.assertIn("PPTX_MEDIA_MAGIC_PAGE_ID", script)
+        self.assertIn("MAGIC_BUILDER_BIN", script)
+        self.assertIn("--publish-gallery", script)
 
     def test_lark_cli_intro_deck_uses_deckkit_and_stays_short(self):
         html_path = DIST / "lark-cli-intro.html"

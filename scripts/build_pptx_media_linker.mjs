@@ -10,14 +10,21 @@ const OUT_DIR = 'dist/pptx-media-linker';
 const INVENTORY_PATH = path.join(OUT_DIR, 'media-inventory.json');
 const UPLOAD_STATE_PATH = path.join(OUT_DIR, 'upload-results.json');
 const ARTIFACT_STATE_PATH = path.join(OUT_DIR, 'artifact-upload-results.json');
-const UPLOAD_SCRIPT = process.env.PPTX_MEDIA_UPLOAD_SCRIPT ||
-  '/Users/bytedance/.codex/skills/upload-file-to-tos/upload.js';
+const LEGACY_UPLOAD_SCRIPT = process.env.PPTX_MEDIA_UPLOAD_SCRIPT || '';
+const MAGIC_BUILDER_BIN = process.env.MAGIC_BUILDER_BIN || 'magic-builder';
+const MAGIC_BASE_URL = (process.env.MAGIC_BASE_URL || 'https://magic.solutionsuite.cn').replace(/\/+$/, '');
+const MAGIC_PAGE_ID = process.env.PPTX_MEDIA_MAGIC_PAGE_ID || 'vnRjxHHZxlv';
+const MAGIC_PAGE_TITLE = process.env.PPTX_MEDIA_MAGIC_PAGE_TITLE || 'GTM PPTX Media Assets';
 const TOS_PREFIX = process.env.PPTX_MEDIA_TOS_PREFIX || 'gtm/pptx-media/v1';
 const LLMS_PREVIEW_URL = process.env.PPTX_MEDIA_LLMS_PREVIEW_URL || '';
+const SEARCH_PAGE_URL = process.env.PPTX_MEDIA_SEARCH_PAGE_URL ||
+  LLMS_PREVIEW_URL ||
+  (MAGIC_PAGE_ID ? `${MAGIC_BASE_URL}/html-box/${MAGIC_PAGE_ID}` : '');
 
 const args = new Set(process.argv.slice(2));
 const shouldUpload = args.has('--upload');
 const shouldUploadArtifacts = args.has('--upload-artifacts');
+const shouldPublishGallery = args.has('--publish-gallery');
 const forceUpload = args.has('--force');
 const uploadConcurrency = Number(process.env.PPTX_MEDIA_UPLOAD_CONCURRENCY || 4);
 
@@ -412,7 +419,20 @@ function buildManifest(inventory, uploadState) {
   });
 }
 
-function summarize(manifest) {
+function resolveGeneratedAt(manifest) {
+  if (process.env.PPTX_MEDIA_GENERATED_AT) return process.env.PPTX_MEDIA_GENERATED_AT;
+  const existing = readJson(path.join(OUT_DIR, 'assets-index.json'), null);
+  if (
+    existing?.summary?.generatedAt &&
+    Array.isArray(existing.items) &&
+    JSON.stringify(existing.items) === JSON.stringify(manifest)
+  ) {
+    return existing.summary.generatedAt;
+  }
+  return new Date().toISOString();
+}
+
+function summarize(manifest, generatedAt = resolveGeneratedAt(manifest)) {
   const by = (key) => manifest.reduce((acc, item) => {
     const value = item[key] || 'unknown';
     acc[value] = (acc[value] || 0) + 1;
@@ -427,7 +447,7 @@ function summarize(manifest) {
     byType: by('type'),
     byBucket: by('bucket'),
     byDecision: by('decision'),
-    generatedAt: new Date().toISOString(),
+    generatedAt,
   };
 }
 
@@ -482,21 +502,31 @@ function writeUsage(manifest, summary, artifactState) {
   lines.push('| `icons.json` | icon 分片索引，Agent 需要找图标时只加载这个。 |');
   lines.push('| `logos.json` | logo 分片索引，Agent 需要找品牌/产品标识时只加载这个。 |');
   lines.push('| `excluded.json` | 暂不纳入资产的分片索引，用于复核边界。 |');
-  lines.push('| `index.html` | 本地可打开的检索页，支持按类型/状态搜索、复制链接。 |');
+  lines.push('| `gallery.html` | 面向人的可点击图库页，用于发布到妙笔空间。 |');
+  lines.push('| `index.html` | 本地可打开的完整检索页；上传到 TOS 后只作为静态 HTML 下载备份。 |');
   lines.push('| `USAGE.md` | 当前这份使用说明。 |');
   lines.push('| `not-needed-now.md` | 当前明确不做的能力和不纳入资产范围。 |');
   lines.push('');
-  if (Object.keys(artifactLinks).length) {
+  if (Object.keys(artifactLinks).length || SEARCH_PAGE_URL) {
     lines.push('## 已上传的索引文件');
     lines.push('');
-    if (LLMS_PREVIEW_URL) {
-      lines.push(`- llms.txt 妙笔预览页：${LLMS_PREVIEW_URL}`);
+    if (SEARCH_PAGE_URL) {
+      lines.push(`- 可点击检索页（妙笔空间）：${SEARCH_PAGE_URL}`);
     }
     for (const item of Object.values(artifactLinks)) {
       lines.push(`- ${item.name}：${item.url}`);
     }
     lines.push('');
   }
+  lines.push('## 打开方式');
+  lines.push('');
+  if (SEARCH_PAGE_URL) {
+    lines.push(`- 给人直接打开：使用妙笔空间页面 ${SEARCH_PAGE_URL}。`);
+  }
+  lines.push('- 本地开发/复核：打开 `gallery.html` 或 `index.html`。');
+  lines.push('- TOS `index.html` 是静态 HTML 下载备份。浏览器点开直接下载是预期行为，不要把它当成面向人的入口。');
+  lines.push('- LLM / Agent 入口仍然是 `llms.txt`，按分片 JSON 渐进加载。');
+  lines.push('');
   lines.push('## 当前统计');
   lines.push('');
   lines.push(`- 原始图片：${summary.total} 个`);
@@ -542,6 +572,12 @@ function writeUsage(manifest, summary, artifactState) {
   lines.push('');
   lines.push('```bash');
   lines.push('node scripts/build_pptx_media_linker.mjs --upload --upload-artifacts');
+  lines.push('```');
+  lines.push('');
+  lines.push('如果需要同步更新妙笔空间里给人看的图库页：');
+  lines.push('');
+  lines.push('```bash');
+  lines.push('node scripts/build_pptx_media_linker.mjs --publish-gallery');
   lines.push('```');
   lines.push('');
   lines.push('如果只是更新索引页面，不重新上传素材：');
@@ -761,7 +797,7 @@ function renderAssetGrid({ id, title, assets, startIndex = 1 }) {
   ].join('\n');
 }
 
-function writeLlmsPreview(llmsText, summary, groups = {}) {
+function writeGalleryHtml(llmsText, summary, groups = {}) {
   const icons = Array.from(groups.icons || []);
   const logos = Array.from(groups.logos || []);
   const fallbackGroups = buildAssetGroups(icons, logos);
@@ -774,7 +810,8 @@ function writeLlmsPreview(llmsText, summary, groups = {}) {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>GTM PPTX Media Assets · llms.txt</title>
+  <meta name="html-box-height-mode" content="auto">
+  <title>GTM PPTX Media Assets</title>
   <style>
     :root {
       color-scheme: light;
@@ -1051,28 +1088,28 @@ function writeLlmsPreview(llmsText, summary, groups = {}) {
   <header>
     <div class="wrap top">
       <div>
-        <p class="eyebrow">LLM entrypoint for public TOS assets</p>
+        <p class="eyebrow">可点击图库入口</p>
         <h1>GTM PPTX Media Assets</h1>
       </div>
       <div class="actions">
-        <a class="button active" href="#product-assets" data-jump="product-assets">Products</a>
-        <a class="button" href="#general-icons" data-jump="general-icons">General Icons</a>
-        <a class="button" href="#brand-customer-logos" data-jump="brand-customer-logos">Brand Logos</a>
-        <button class="button" id="search-trigger" type="button">Search</button>
+        <a class="button active" href="#product-assets" data-jump="product-assets">产品素材</a>
+        <a class="button" href="#general-icons" data-jump="general-icons">通用图标</a>
+        <a class="button" href="#brand-customer-logos" data-jump="brand-customer-logos">品牌 Logo</a>
+        <button class="button" id="search-trigger" type="button">搜索</button>
         <a class="button primary" href="https://magic-builder.tos-cn-beijing.volces.com/${TOS_PREFIX}/llms.txt" target="_blank" rel="noopener">llms.txt</a>
       </div>
     </div>
   </header>
   <main>
     <section class="summary" aria-label="统计">
-      <div class="stat"><strong>${totalPreviewAssets}</strong><span>Preview assets</span></div>
-      <div class="stat"><strong>${productAssets.length}</strong><span>Product Assets</span></div>
-      <div class="stat"><strong>${generalIcons.length}</strong><span>General Icons</span></div>
-      <div class="stat"><strong>${brandCustomerLogos.length}</strong><span>Brand / Customer Logos</span></div>
+      <div class="stat"><strong>${totalPreviewAssets}</strong><span>可用素材</span></div>
+      <div class="stat"><strong>${productAssets.length}</strong><span>产品素材</span></div>
+      <div class="stat"><strong>${generalIcons.length}</strong><span>通用图标</span></div>
+      <div class="stat"><strong>${brandCustomerLogos.length}</strong><span>品牌 / 客户 Logo</span></div>
     </section>
     <section class="toolbar" aria-label="图库搜索">
       <input class="search-field" id="asset-search" type="search" placeholder="搜索名称、编号、原文件名、标签或 TOS 链接" autocomplete="off">
-      <span class="result-count" id="result-count">${totalPreviewAssets} shown</span>
+      <span class="result-count" id="result-count">${totalPreviewAssets} 个</span>
     </section>
     ${renderAssetGrid({ id: 'product-assets', title: 'Product Assets', assets: productAssets, startIndex: 1 })}
     ${renderAssetGrid({ id: 'general-icons', title: 'General Icons', assets: generalIcons, startIndex: productAssets.length + 1 })}
@@ -1100,7 +1137,7 @@ function writeLlmsPreview(llmsText, summary, groups = {}) {
         card.classList.toggle("is-hidden", !match);
         if (match) shown += 1;
       });
-      resultCount.textContent = shown + " shown";
+      resultCount.textContent = shown + " 个";
       updateVisibleSections();
     });
 
@@ -1122,6 +1159,7 @@ function writeLlmsPreview(llmsText, summary, groups = {}) {
 </html>
 `;
   fs.writeFileSync(path.join(OUT_DIR, 'llms-preview.html'), html);
+  fs.writeFileSync(path.join(OUT_DIR, 'gallery.html'), html);
 }
 
 function writeTieredIndexes(manifest, summary, artifactState) {
@@ -1149,6 +1187,7 @@ function writeTieredIndexes(manifest, summary, artifactState) {
       excluded: `${TOS_PREFIX}/excluded.json`,
       csv: `${TOS_PREFIX}/assets-index.csv`,
       fullJson: `${TOS_PREFIX}/assets-index.json`,
+      searchPage: SEARCH_PAGE_URL,
       html: `${TOS_PREFIX}/index.html`,
     },
   };
@@ -1183,8 +1222,8 @@ function writeTieredIndexes(manifest, summary, artifactState) {
   lines.push('');
   lines.push('Purpose: public TOS asset index for Feishu GTM PPTX media. Use this file as the lightweight entrypoint. Do not load the CSV or full JSON unless needed.');
   lines.push('');
-  if (LLMS_PREVIEW_URL) {
-    lines.push(`Preview page: ${LLMS_PREVIEW_URL}`);
+  if (SEARCH_PAGE_URL) {
+    lines.push(`Interactive search page: ${SEARCH_PAGE_URL}`);
     lines.push('');
   }
   lines.push('## Load Strategy');
@@ -1199,8 +1238,10 @@ function writeTieredIndexes(manifest, summary, artifactState) {
   lines.push('');
   lines.push('## Public URLs');
   lines.push('');
+  const staticHtmlUrl = artifactLinks['index.html']?.url || `https://magic-builder.tos-cn-beijing.volces.com/${TOS_PREFIX}/index.html`;
   const links = [
-    ['Search page', artifactLinks['index.html']?.url || `https://magic-builder.tos-cn-beijing.volces.com/${TOS_PREFIX}/index.html`],
+    ['Interactive search page', SEARCH_PAGE_URL || staticHtmlUrl],
+    ['Static HTML download', staticHtmlUrl],
     ['Product Assets JSON', artifactLinks['product-assets.json']?.url || `https://magic-builder.tos-cn-beijing.volces.com/${TOS_PREFIX}/product-assets.json`],
     ['General Icons JSON', artifactLinks['general-icons.json']?.url || `https://magic-builder.tos-cn-beijing.volces.com/${TOS_PREFIX}/general-icons.json`],
     ['Brand / Customer Logos JSON', artifactLinks['brand-customer-logos.json']?.url || `https://magic-builder.tos-cn-beijing.volces.com/${TOS_PREFIX}/brand-customer-logos.json`],
@@ -1244,7 +1285,7 @@ function writeTieredIndexes(manifest, summary, artifactState) {
   while (cleanLines.length && cleanLines[cleanLines.length - 1] === '') cleanLines.pop();
   const llmsText = `${cleanLines.join('\n')}\n`;
   fs.writeFileSync(path.join(OUT_DIR, 'llms.txt'), llmsText);
-  writeLlmsPreview(llmsText, summary, { icons, logos, productAssets, generalIcons, brandCustomerLogos });
+  writeGalleryHtml(llmsText, summary, { icons, logos, productAssets, generalIcons, brandCustomerLogos });
 }
 
 function writeHtml(manifest, summary) {
@@ -1599,9 +1640,32 @@ function saveOutputs(manifest, artifactState) {
   return summary;
 }
 
-function uploadOne(filePath, key) {
+function inferContentType(filePath) {
+  const ext = path.extname(filePath).toLowerCase();
+  const types = {
+    '.csv': 'text/csv',
+    '.gif': 'image/gif',
+    '.html': 'text/html',
+    '.jpeg': 'image/jpeg',
+    '.jpg': 'image/jpeg',
+    '.json': 'application/json',
+    '.md': 'text/plain',
+    '.png': 'image/png',
+    '.txt': 'text/plain',
+    '.webp': 'image/webp',
+  };
+  return types[ext] || 'application/octet-stream';
+}
+
+function extractUrl(output) {
+  const match = String(output || '').match(/https?:\/\/[^\s"'<>]+/);
+  if (!match) return '';
+  return match[0].replace(/[),.;]+$/, '');
+}
+
+function spawnCommand(command, commandArgs) {
   return new Promise((resolve, reject) => {
-    const child = spawn('node', [UPLOAD_SCRIPT, filePath, '--key', key, '-q'], {
+    const child = spawn(command, commandArgs, {
       cwd: ROOT,
       stdio: ['ignore', 'pipe', 'pipe'],
     });
@@ -1609,14 +1673,36 @@ function uploadOne(filePath, key) {
     let stderr = '';
     child.stdout.on('data', (chunk) => { stdout += chunk.toString(); });
     child.stderr.on('data', (chunk) => { stderr += chunk.toString(); });
+    child.on('error', reject);
     child.on('close', (code) => {
       if (code === 0) {
-        resolve(stdout.trim());
+        resolve({ stdout: stdout.trim(), stderr: stderr.trim() });
       } else {
-        reject(new Error(stderr.trim() || `upload exited with ${code}`));
+        reject(new Error(stderr.trim() || `${command} exited with ${code}`));
       }
     });
   });
+}
+
+async function uploadOne(filePath, key, contentType = inferContentType(filePath)) {
+  if (LEGACY_UPLOAD_SCRIPT) {
+    const { stdout } = await spawnCommand('node', [LEGACY_UPLOAD_SCRIPT, filePath, '--key', key, '-q']);
+    const url = extractUrl(stdout);
+    if (!url) throw new Error(`Upload did not return a URL for ${filePath}`);
+    return url;
+  }
+  const { stdout } = await spawnCommand(MAGIC_BUILDER_BIN, [
+    'file',
+    'upload',
+    filePath,
+    '--key',
+    key,
+    '--content-type',
+    contentType,
+  ]);
+  const url = extractUrl(stdout);
+  if (!url) throw new Error(`Upload did not return a URL for ${filePath}`);
+  return url;
 }
 
 async function runPool(items, worker) {
@@ -1699,7 +1785,7 @@ async function uploadArtifacts(artifactState) {
   }
   console.log(`Uploading ${pending.length} generated artifacts ...`);
   await runPool(pending, async (item) => {
-    const url = await uploadOne(item.path, item.tosKey);
+    const url = await uploadOne(item.path, item.tosKey, item.contentType);
     artifactState.items[item.name] = {
       name: item.name,
       tosKey: item.tosKey,
@@ -1710,12 +1796,30 @@ async function uploadArtifacts(artifactState) {
   });
 }
 
+async function publishGallery() {
+  if (!MAGIC_PAGE_ID) {
+    throw new Error('Missing PPTX_MEDIA_MAGIC_PAGE_ID for --publish-gallery');
+  }
+  const galleryPath = path.join(OUT_DIR, 'gallery.html');
+  const { stdout } = await spawnCommand(MAGIC_BUILDER_BIN, [
+    'page',
+    'publish',
+    galleryPath,
+    '--title',
+    MAGIC_PAGE_TITLE,
+    '--id',
+    MAGIC_PAGE_ID,
+  ]);
+  const url = extractUrl(stdout) || `${MAGIC_BASE_URL}/html-box/${MAGIC_PAGE_ID}`;
+  console.log(`Published gallery: ${url}`);
+}
+
 async function main() {
   if (!fs.existsSync(INVENTORY_PATH)) {
     throw new Error(`Missing inventory: ${INVENTORY_PATH}`);
   }
-  if (!fs.existsSync(UPLOAD_SCRIPT)) {
-    throw new Error(`Missing upload script: ${UPLOAD_SCRIPT}`);
+  if ((shouldUpload || shouldUploadArtifacts) && LEGACY_UPLOAD_SCRIPT && !fs.existsSync(LEGACY_UPLOAD_SCRIPT)) {
+    throw new Error(`Missing upload script: ${LEGACY_UPLOAD_SCRIPT}`);
   }
 
   const inventory = readJson(INVENTORY_PATH, []);
@@ -1731,6 +1835,9 @@ async function main() {
   if (shouldUploadArtifacts) {
     await uploadArtifacts(artifactState);
     saveOutputs(manifest, artifactState);
+  }
+  if (shouldPublishGallery) {
+    await publishGallery();
   }
 
   console.log(JSON.stringify(summary, null, 2));
