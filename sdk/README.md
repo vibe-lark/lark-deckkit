@@ -8,8 +8,9 @@
 - `font-manifest.json`：已提交字体文件、字重和可选字体说明。
 - `fonts/`：浏览器可直接加载的 WOFF2 字体资源。
 - `lark-slides.css`：基础画布、播放控件、模板样式。
-- `lark-slides.js`：演示稿运行时，提供翻页、Hash 定位、全屏、缩放、主题注册和 Deck Spec。
+- `lark-slides.js`：演示稿运行时，提供翻页、Hash 定位、当前页链接复制、全屏、缩放、主题注册、云端文本同步和 Deck Spec。
 - `templates.js`：模板注册表、组件化 block、设计 tokens、资源路径解析器、front-design guidance，以及基础模板和 Lark 暗色视觉模板。
+- `remote-text-faas.example.js`：可发布到 Magic FaaS 的云端文本读写示例。
 - `example.html`：最小可运行示例。
 
 ## 最小用法
@@ -351,11 +352,73 @@ LarkSlides.createDeck({
 });
 ```
 
+### 云端文本同步
+
+播放器可以把 `contenteditable` / `data-editable-text` / `data-text-id` 文案接到 FaaS。打开页面时先从云端加载 JSON，用户编辑后会把变更和整份文本快照 POST 回云端，FaaS 更新自己的存储即可。
+
+```js
+LarkSlides.createDeck({
+  mount: "#deck",
+  deck,
+  textSync: {
+    deckId: "customer-story-2026-06",
+    loadUrl: "https://your-faas.example.com/deck-texts?id=customer-story-2026-06",
+    saveUrl: "https://your-faas.example.com/deck-texts",
+    saveDebounceMs: 600,
+  },
+});
+```
+
+读取接口返回以下任一格式都可以：
+
+```json
+{
+  "texts": {
+    "slide-01.hero-title": "云端标题",
+    "slide-01.hero-subtitle": { "html": "第一行<br>第二行" }
+  }
+}
+```
+
+保存接口会收到：
+
+```json
+{
+  "deckId": "customer-story-2026-06",
+  "activeSlide": 1,
+  "changed": {
+    "id": "slide-01.hero-title",
+    "text": "用户编辑后的纯文本",
+    "html": "用户编辑后的 HTML",
+    "slide": 1
+  },
+  "texts": {
+    "slide-01.hero-title": {
+      "text": "用户编辑后的纯文本",
+      "html": "用户编辑后的 HTML",
+      "slide": 1
+    }
+  },
+  "updatedAt": "2026-06-30T00:00:00.000Z"
+}
+```
+
+`textSync` 是可选能力；没有配置时，播放器仍按普通静态 HTML 播放。需要手动触发时可以调用 `deck.loadRemoteTexts()`、`deck.saveCurrentTexts()` 或 `LarkSlides.collectDeckTexts(deck)`。
+
+仓库里有一个最小 FaaS 示例：`sdk/remote-text-faas.example.js`。可用 Magic Builder 发布后，把返回的 HTTP 地址填到 `loadUrl` / `saveUrl`：
+
+```bash
+magic-builder faas publish sdk/remote-text-faas.example.js --name lark-deckkit-remote-texts
+```
+
+这个示例使用 FaaS 进程内存，适合验证接口形状；正式使用时应把 `memoryStore` 替换成持久 KV、Bitable 或数据库。
+
 ## 播放控制
 
 - 方向键、空格、PageUp/PageDown 翻页。
 - URL Hash 使用 `#/页码`，例如 `#/12` 可直接打开第 12 页。
-- 右下控制条提供上一页、下一页和全屏播放。
+- 右下控制条提供上一页、下一页、复制当前页链接和全屏播放。
+- `deck.copyCurrentSlideLink()` 会复制带 `#/页码` 的链接，发给别人后可自动跳转到当前页。
 - 全屏播放是正式播放态：控制条和进度条会隐藏，16:9 画布按 PPT 方式充满屏幕可用区域；按 `ESC` 退出播放态。
 - 图片由运行时预加载当前页前后两页，并在加载完成后短淡入，避免翻页时突然闪出。
 

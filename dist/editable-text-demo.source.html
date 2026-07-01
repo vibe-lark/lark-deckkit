@@ -1,0 +1,593 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="use-iframe" content="true" />
+    <meta name="html-box-height-mode" content="viewport" />
+    <title>Lark DeckKit Usage Showcase</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="../sdk/fonts.css" />
+    <link rel="stylesheet" href="../sdk/lark-slides.css" />
+    <style>
+      .showcase-slide {
+        position: relative;
+        width: 1600px;
+        height: 900px;
+        box-sizing: border-box;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 84% 16%, rgba(84, 139, 255, 0.18), transparent 28%),
+          radial-gradient(circle at 18% 20%, rgba(62, 195, 247, 0.16), transparent 30%),
+          linear-gradient(135deg, #000000 0%, #06070a 54%, #000000 100%);
+        color: #f7f8fb;
+        font-family: var(--ld-font-ui, "PingFang SC", "Microsoft YaHei", Arial, sans-serif);
+      }
+
+      .showcase-slide::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 6px;
+        background: linear-gradient(90deg, #548bff 0%, #9bc6ff 45%, #eadafb 70%, #548bff 100%);
+      }
+
+      .showcase-slide::after {
+        content: "";
+        position: absolute;
+        inset: 34px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 8px;
+        pointer-events: none;
+      }
+
+      .showcase-kicker {
+        width: fit-content;
+        padding: 9px 16px;
+        border: 1px solid rgba(84, 139, 255, 0.46);
+        border-radius: 8px;
+        color: #ceeafe;
+        background: rgba(84, 139, 255, 0.1);
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 1.2;
+      }
+
+      .showcase-title {
+        margin: 0;
+        color: #ffffff;
+        font-size: 72px;
+        font-weight: 780;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .showcase-subtitle {
+        margin: 0;
+        color: rgba(247, 248, 251, 0.72);
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 1.5;
+      }
+
+      .showcase-panel {
+        box-sizing: border-box;
+      }
+
+      .intro-grid {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 0.98fr 1.02fr;
+        gap: 72px;
+        height: 100%;
+        padding: 92px 112px;
+        box-sizing: border-box;
+      }
+
+      .intro-copy {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 28px;
+      }
+
+      .intro-code {
+        margin-top: 10px;
+        padding: 20px 22px;
+        border: 1px solid rgba(84, 139, 255, 0.34);
+        border-radius: 8px;
+        color: #ceeafe;
+        background: rgba(5, 10, 22, 0.74);
+        font-size: 22px;
+        font-weight: 650;
+        line-height: 1.4;
+        white-space: pre-wrap;
+        box-shadow: 0 18px 52px rgba(0, 0, 0, 0.24);
+      }
+
+      .step-list {
+        align-self: center;
+        display: grid;
+        gap: 16px;
+      }
+
+      .step-item {
+        display: grid;
+        grid-template-columns: 92px 1fr;
+        gap: 20px;
+        align-items: start;
+        padding: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.13);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.065);
+        box-shadow: 0 20px 58px rgba(0, 0, 0, 0.26);
+      }
+
+      .step-tag {
+        display: inline-grid;
+        min-height: 34px;
+        place-items: center;
+        border-radius: 6px;
+        color: #9bc6ff;
+        background: rgba(84, 139, 255, 0.12);
+        font-size: 15px;
+        font-weight: 780;
+        line-height: 1.2;
+        text-transform: uppercase;
+      }
+
+      .step-item:nth-child(2) .step-tag {
+        color: #ceeafe;
+        background: rgba(62, 195, 247, 0.12);
+      }
+
+      .step-item:nth-child(3) .step-tag {
+        color: #eadafb;
+        background: rgba(234, 218, 251, 0.12);
+      }
+
+      .step-copy {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.92);
+        font-size: 24px;
+        font-weight: 650;
+        line-height: 1.36;
+      }
+
+      .slide-head {
+        position: relative;
+        z-index: 1;
+        padding: 74px 108px 0;
+      }
+
+      .slide-head .showcase-title {
+        font-size: 58px;
+      }
+
+      .slide-head .showcase-subtitle {
+        width: 900px;
+        margin-top: 18px;
+        font-size: 25px;
+      }
+
+      .capability-grid {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding: 42px 108px 0;
+      }
+
+      .capability-card {
+        min-height: 210px;
+        padding: 26px 28px;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.065);
+        box-sizing: border-box;
+        box-shadow: 0 18px 52px rgba(0, 0, 0, 0.24);
+      }
+
+      .capability-card h2 {
+        margin: 0 0 16px;
+        color: #ffffff;
+        font-size: 32px;
+        font-weight: 760;
+        line-height: 1.18;
+      }
+
+      .capability-card p {
+        margin: 0;
+        color: rgba(247, 248, 251, 0.72);
+        font-size: 21px;
+        font-weight: 500;
+        line-height: 1.45;
+      }
+
+      .capability-chip {
+        display: inline-block;
+        margin-bottom: 18px;
+        padding: 5px 9px;
+        border-radius: 6px;
+        color: #9bc6ff;
+        background: rgba(84, 139, 255, 0.12);
+        font-size: 14px;
+        font-weight: 800;
+        letter-spacing: 0;
+        text-transform: uppercase;
+      }
+
+      .capability-card:nth-child(2) .capability-chip,
+      .capability-card:nth-child(5) .capability-chip {
+        color: #ceeafe;
+        background: rgba(62, 195, 247, 0.12);
+      }
+
+      .capability-card:nth-child(3) .capability-chip,
+      .capability-card:nth-child(6) .capability-chip {
+        color: #eadafb;
+        background: rgba(234, 218, 251, 0.12);
+      }
+
+      .pipeline {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 16px;
+        padding: 50px 108px 0;
+      }
+
+      .pipeline-card {
+        min-height: 184px;
+        padding: 24px 22px;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-top: 5px solid #548bff;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.06);
+        box-sizing: border-box;
+        box-shadow: 0 18px 48px rgba(0, 0, 0, 0.24);
+      }
+
+      .pipeline-card:nth-child(2),
+      .pipeline-card:nth-child(4) {
+        border-top-color: #9bc6ff;
+      }
+
+      .pipeline-card:nth-child(3),
+      .pipeline-card:nth-child(5) {
+        border-top-color: #eadafb;
+      }
+
+      .pipeline-num {
+        color: #9bc6ff;
+        font-size: 18px;
+        font-weight: 800;
+      }
+
+      .pipeline-card:nth-child(2) .pipeline-num,
+      .pipeline-card:nth-child(4) .pipeline-num {
+        color: #ceeafe;
+      }
+
+      .pipeline-card:nth-child(3) .pipeline-num,
+      .pipeline-card:nth-child(5) .pipeline-num {
+        color: #eadafb;
+      }
+
+      .pipeline-card h2 {
+        margin: 18px 0 14px;
+        color: #ffffff;
+        font-size: 29px;
+        font-weight: 760;
+        line-height: 1.18;
+      }
+
+      .pipeline-card p {
+        margin: 0;
+        color: rgba(247, 248, 251, 0.7);
+        font-size: 19px;
+        line-height: 1.44;
+      }
+
+      .metrics-row {
+        position: absolute;
+        z-index: 1;
+        left: 108px;
+        right: 108px;
+        bottom: 78px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 18px;
+      }
+
+      .metric {
+        padding: 22px 24px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 8px;
+        background: rgba(5, 10, 20, 0.76);
+        box-shadow: 0 18px 48px rgba(0, 0, 0, 0.22);
+      }
+
+      .metric strong {
+        display: block;
+        color: #9bc6ff;
+        font-size: 34px;
+        font-weight: 800;
+        line-height: 1;
+      }
+
+      .metric span {
+        display: block;
+        margin-top: 12px;
+        color: rgba(247, 248, 251, 0.65);
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1.35;
+      }
+
+      [data-text-id] {
+        border-radius: 6px;
+        outline: 1px dashed transparent;
+        outline-offset: 6px;
+        transition: outline-color 160ms ease, background 160ms ease;
+      }
+
+      [data-text-id]:hover,
+      [data-text-id]:focus-visible {
+        outline-color: rgba(84, 139, 255, 0.72);
+        background: rgba(84, 139, 255, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="deck" data-lark-deck></div>
+    <script src="../sdk/lark-slides.js"></script>
+    <script src="../sdk/templates.js"></script>
+    <script>
+      const DECK_ID = "lark-deckkit-usage-showcase-v3";
+      const MAGIC_TEXT_SYNC_ENDPOINT = "https://lark-deckkit.local/usage-showcase-text-sync";
+      const TEXT_STORE_PREFIX = "lark-deckkit:usage-showcase:";
+      const memoryTextStore = (window.__LARK_DECKKIT_USAGE_SHOWCASE_MEMORY__ ||= new Map());
+      const DEFAULT_TEXTS = {
+        "slide-01.badge": { text: "Lark DeckKit / Start Here" },
+        "slide-01.hero-title": { text: "三步做出飞书风格 HTML PPT" },
+        "slide-01.hero-subtitle": { text: "用结构化内容驱动模板，保留可编辑文字、播放控制和发布能力。" },
+        "slide-01.code": { text: "createDeckFromOutline()\nvalidate_deck.js\nmagic-builder page publish" },
+        "slide-01.step-1": { text: "读取 design.md 和 sdk/README.md，确定飞书 DeckKit 的字体、画布、颜色和密度规则。" },
+        "slide-01.step-2": { text: "把主题、听众、页数和每页要点写成 outline，让模板负责版式和层级。" },
+        "slide-01.step-3": { text: "跑验证、看截图、发布到妙笔；后续只改文案时走 data-text-id。" },
+        "slide-02.title": { text: "SDK 和播放器已经具备的能力" },
+        "slide-02.subtitle": { text: "这不是截图播放器，而是可继续维护的 HTML 演示稿运行时。" },
+        "slide-02.card-1-title": { text: "16:9 播放器" },
+        "slide-02.card-1-body": { text: "翻页、Hash 跳页、全屏、缩放、预加载和底部进度条。" },
+        "slide-02.card-2-title": { text: "模板生成" },
+        "slide-02.card-2-body": { text: "createDeckFromOutline 生成 statement、todo、caseFlow 等稳定页面。" },
+        "slide-02.card-3-title": { text: "精确布局" },
+        "slide-02.card-3-body": { text: "visualLayout 用 1600x900 坐标放置图片、文字、形状和 SVG。" },
+        "slide-02.card-4-title": { text: "可编辑文案" },
+        "slide-02.card-4-body": { text: "contenteditable 与 data-text-id 让标题、标签、正文都能继续修改。" },
+        "slide-02.card-5-title": { text: "产品原型" },
+        "slide-02.card-5-body": { text: "product-mocks 覆盖聊天、文档、多维表格、会议、任务、日历等示意。" },
+        "slide-02.card-6-title": { text: "分享定位" },
+        "slide-02.card-6-body": { text: "复制当前页链接会带 #/页码，别人打开后直接到对应页面。" },
+        "slide-03.title": { text: "从 PPTX 到可交付资产" },
+        "slide-03.subtitle": { text: "项目里同时沉淀了转换、校验、打包、发布和素材索引链路。" },
+        "slide-03.pipe-1": { text: "PPTX 转 HTML" },
+        "slide-03.pipe-1-body": { text: "抽取页面、图片、文本、母版背景和基础形状。" },
+        "slide-03.pipe-2": { text: "文本 sidecar" },
+        "slide-03.pipe-2-body": { text: "texts.md 承接文案修改，HTML 保持版式稳定。" },
+        "slide-03.pipe-3": { text: "云端文本" },
+        "slide-03.pipe-3-body": { text: "textSync 可接 window.magic.store、FaaS、KV 或数据库。" },
+        "slide-03.pipe-4": { text: "交付打包" },
+        "slide-03.pipe-4-body": { text: "delivery_* 脚本生成清单、反馈模板和 zip 包。" },
+        "slide-03.pipe-5": { text: "妙笔发布" },
+        "slide-03.pipe-5-body": { text: "单文件 HTML 发布到妙笔空间，资源外链化到 TOS。" },
+      };
+
+      const slides = [
+        {
+          title: "上手引导",
+          sourceSlide: 1,
+          content: `
+            <section class="showcase-slide">
+              <div class="intro-grid">
+                <div class="intro-copy">
+                  <div class="showcase-kicker" contenteditable="true" data-text-id="slide-01.badge">Lark DeckKit / Start Here</div>
+                  <h1 class="showcase-title" contenteditable="true" data-text-id="slide-01.hero-title">三步做出飞书风格 HTML PPT</h1>
+                  <p class="showcase-subtitle" contenteditable="true" data-text-id="slide-01.hero-subtitle">用结构化内容驱动模板，保留可编辑文字、播放控制和发布能力。</p>
+                  <div class="intro-code" contenteditable="true" data-text-id="slide-01.code">createDeckFromOutline()
+validate_deck.js
+magic-builder page publish</div>
+                </div>
+                <div class="showcase-panel step-list">
+                  <article class="step-item">
+                    <div class="step-tag">Read</div>
+                    <p class="step-copy" contenteditable="true" data-text-id="slide-01.step-1">读取 design.md 和 sdk/README.md，确定飞书 DeckKit 的字体、画布、颜色和密度规则。</p>
+                  </article>
+                  <article class="step-item">
+                    <div class="step-tag">Outline</div>
+                    <p class="step-copy" contenteditable="true" data-text-id="slide-01.step-2">把主题、听众、页数和每页要点写成 outline，让模板负责版式和层级。</p>
+                  </article>
+                  <article class="step-item">
+                    <div class="step-tag">Ship</div>
+                    <p class="step-copy" contenteditable="true" data-text-id="slide-01.step-3">跑验证、看截图、发布到妙笔；后续只改文案时走 data-text-id。</p>
+                  </article>
+                </div>
+              </div>
+            </section>
+          `,
+        },
+        {
+          title: "SDK 能力",
+          sourceSlide: 2,
+          content: `
+            <section class="showcase-slide">
+              <div class="slide-head">
+                <h1 class="showcase-title" contenteditable="true" data-text-id="slide-02.title">SDK 和播放器已经具备的能力</h1>
+                <p class="showcase-subtitle" contenteditable="true" data-text-id="slide-02.subtitle">这不是截图播放器，而是可继续维护的 HTML 演示稿运行时。</p>
+              </div>
+              <div class="capability-grid">
+                <article class="capability-card"><span class="capability-chip">Runtime</span><h2 contenteditable="true" data-text-id="slide-02.card-1-title">16:9 播放器</h2><p contenteditable="true" data-text-id="slide-02.card-1-body">翻页、Hash 跳页、全屏、缩放、预加载和底部进度条。</p></article>
+                <article class="capability-card"><span class="capability-chip">Templates</span><h2 contenteditable="true" data-text-id="slide-02.card-2-title">模板生成</h2><p contenteditable="true" data-text-id="slide-02.card-2-body">createDeckFromOutline 生成 statement、todo、caseFlow 等稳定页面。</p></article>
+                <article class="capability-card"><span class="capability-chip">Layout</span><h2 contenteditable="true" data-text-id="slide-02.card-3-title">精确布局</h2><p contenteditable="true" data-text-id="slide-02.card-3-body">visualLayout 用 1600x900 坐标放置图片、文字、形状和 SVG。</p></article>
+                <article class="capability-card"><span class="capability-chip">Editable</span><h2 contenteditable="true" data-text-id="slide-02.card-4-title">可编辑文案</h2><p contenteditable="true" data-text-id="slide-02.card-4-body">contenteditable 与 data-text-id 让标题、标签、正文都能继续修改。</p></article>
+                <article class="capability-card"><span class="capability-chip">Mocks</span><h2 contenteditable="true" data-text-id="slide-02.card-5-title">产品原型</h2><p contenteditable="true" data-text-id="slide-02.card-5-body">product-mocks 覆盖聊天、文档、多维表格、会议、任务、日历等示意。</p></article>
+                <article class="capability-card"><span class="capability-chip">Share</span><h2 contenteditable="true" data-text-id="slide-02.card-6-title">分享定位</h2><p contenteditable="true" data-text-id="slide-02.card-6-body">复制当前页链接会带 #/页码，别人打开后直接到对应页面。</p></article>
+              </div>
+            </section>
+          `,
+        },
+        {
+          title: "交付能力",
+          sourceSlide: 3,
+          content: `
+            <section class="showcase-slide">
+              <div class="slide-head">
+                <h1 class="showcase-title" contenteditable="true" data-text-id="slide-03.title">从 PPTX 到可交付资产</h1>
+                <p class="showcase-subtitle" contenteditable="true" data-text-id="slide-03.subtitle">项目里同时沉淀了转换、校验、打包、发布和素材索引链路。</p>
+              </div>
+              <div class="pipeline">
+                <article class="pipeline-card"><span class="pipeline-num">01</span><h2 contenteditable="true" data-text-id="slide-03.pipe-1">PPTX 转 HTML</h2><p contenteditable="true" data-text-id="slide-03.pipe-1-body">抽取页面、图片、文本、母版背景和基础形状。</p></article>
+                <article class="pipeline-card"><span class="pipeline-num">02</span><h2 contenteditable="true" data-text-id="slide-03.pipe-2">文本 sidecar</h2><p contenteditable="true" data-text-id="slide-03.pipe-2-body">texts.md 承接文案修改，HTML 保持版式稳定。</p></article>
+                <article class="pipeline-card"><span class="pipeline-num">03</span><h2 contenteditable="true" data-text-id="slide-03.pipe-3">云端文本</h2><p contenteditable="true" data-text-id="slide-03.pipe-3-body">textSync 可接 window.magic.store、FaaS、KV 或数据库。</p></article>
+                <article class="pipeline-card"><span class="pipeline-num">04</span><h2 contenteditable="true" data-text-id="slide-03.pipe-4">交付打包</h2><p contenteditable="true" data-text-id="slide-03.pipe-4-body">delivery_* 脚本生成清单、反馈模板和 zip 包。</p></article>
+                <article class="pipeline-card"><span class="pipeline-num">05</span><h2 contenteditable="true" data-text-id="slide-03.pipe-5">妙笔发布</h2><p contenteditable="true" data-text-id="slide-03.pipe-5-body">单文件 HTML 发布到妙笔空间，资源外链化到 TOS。</p></article>
+              </div>
+              <div class="metrics-row">
+                <div class="metric"><strong>299</strong><span>原始 PPTX 媒体文件</span></div>
+                <div class="metric"><strong>215</strong><span>公共素材池资产</span></div>
+                <div class="metric"><strong>30</strong><span>当前测试用例通过</span></div>
+                <div class="metric"><strong>1</strong><span>HTML 文件即可发布</span></div>
+              </div>
+            </section>
+          `,
+        },
+      ];
+
+      const deckSpec = LarkSlides.createDeckSpec({
+        title: "Lark DeckKit Usage Showcase",
+        theme: "larkVisual",
+        slides,
+        meta: {
+          id: DECK_ID,
+          title: "Lark DeckKit Usage Showcase",
+        },
+      });
+
+      installMagicTextSyncEndpoint();
+
+      const deck = LarkSlides.createDeck({
+        mount: "#deck",
+        deck: deckSpec,
+        textSync: {
+          deckId: DECK_ID,
+          loadUrl: `${MAGIC_TEXT_SYNC_ENDPOINT}?id=${encodeURIComponent(DECK_ID)}`,
+          saveUrl: MAGIC_TEXT_SYNC_ENDPOINT,
+          saveDebounceMs: 500,
+        },
+      });
+
+      window.LarkDeckKitUsageShowcase = deck;
+
+      function installMagicTextSyncEndpoint() {
+        if (window.__LARK_DECKKIT_USAGE_SHOWCASE_FETCH_INSTALLED__) return;
+        window.__LARK_DECKKIT_USAGE_SHOWCASE_FETCH_INSTALLED__ = true;
+        const nativeFetch = window.fetch.bind(window);
+        window.fetch = async (resource, options = {}) => {
+          const url = typeof resource === "string" ? resource : resource?.url || "";
+          if (!url.startsWith(MAGIC_TEXT_SYNC_ENDPOINT)) return nativeFetch(resource, options);
+          return handleMagicTextSyncRequest(url, options);
+        };
+      }
+
+      async function handleMagicTextSyncRequest(url, options = {}) {
+        const method = String(options.method || "GET").toUpperCase();
+        const requestUrl = new URL(url);
+        const deckId = requestUrl.searchParams.get("id") || DECK_ID;
+        if (method === "GET") return jsonResponse(await readTextRecord(deckId));
+        if (method === "POST") {
+          const payload = JSON.parse(options.body || "{}");
+          const next = mergeTextRecord(await readTextRecord(payload.deckId || deckId), payload);
+          await writeTextRecord(next.deckId, next);
+          return jsonResponse({ ok: true, deckId: next.deckId, updatedAt: next.updatedAt, changed: next.changed });
+        }
+        return jsonResponse({ ok: false, error: "Method not allowed" }, 405);
+      }
+
+      async function readTextRecord(deckId) {
+        const key = TEXT_STORE_PREFIX + deckId;
+        const store = getMagicStore();
+        if (store) {
+          const raw = await store.global_get(key);
+          const parsed = parseStoredValue(raw);
+          if (parsed) return parsed;
+        }
+        return memoryTextStore.get(key) || defaultTextRecord(deckId);
+      }
+
+      async function writeTextRecord(deckId, record) {
+        const key = TEXT_STORE_PREFIX + deckId;
+        const store = getMagicStore();
+        if (store) await store.global_set(key, JSON.stringify(record));
+        memoryTextStore.set(key, record);
+      }
+
+      function getMagicStore() {
+        const store = window.magic?.store || window.magic?.redis;
+        if (store && typeof store.global_get === "function" && typeof store.global_set === "function") return store;
+        return null;
+      }
+
+      function defaultTextRecord(deckId) {
+        return {
+          deckId,
+          texts: { ...DEFAULT_TEXTS },
+          changed: null,
+          updatedAt: new Date().toISOString(),
+        };
+      }
+
+      function mergeTextRecord(current, payload) {
+        const next = {
+          deckId: payload.deckId || current.deckId || DECK_ID,
+          texts: {
+            ...(current.texts || {}),
+            ...(payload.texts || {}),
+          },
+          changed: payload.changed || null,
+          updatedAt: payload.updatedAt || new Date().toISOString(),
+        };
+        if (payload.changed?.id) {
+          next.texts[payload.changed.id] = {
+            text: payload.changed.text || "",
+            html: payload.changed.html || "",
+            slide: payload.changed.slide || null,
+          };
+        }
+        return next;
+      }
+
+      function parseStoredValue(raw) {
+        if (!raw) return null;
+        if (typeof raw === "object") return raw;
+        try {
+          return JSON.parse(String(raw));
+        } catch (_error) {
+          return null;
+        }
+      }
+
+      function jsonResponse(body, status = 200) {
+        return new Response(JSON.stringify(body), {
+          status,
+          headers: { "Content-Type": "application/json; charset=utf-8" },
+        });
+      }
+    </script>
+  </body>
+</html>

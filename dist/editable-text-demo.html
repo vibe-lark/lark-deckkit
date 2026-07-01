@@ -1,0 +1,5298 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="use-iframe" content="true" />
+    <meta name="html-box-height-mode" content="viewport" />
+    <title>Lark DeckKit Usage Showcase</title>
+    <link rel="icon" href="data:," />
+    <style>
+:root {
+  --ld-font-zh: "FZLanTingHeiPro_GB18030", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+  --ld-font-display: "TikTok Display", "FZLanTingHeiPro_GB18030", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+  --ld-font-ui: "Inter", "FZLanTingHeiPro_GB18030", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+}
+
+@font-face {
+  font-family: "FZLanTingHeiPro_GB18030";
+  src: url("https://magic-builder.tos-cn-beijing.volces.com/uploads/1777953440221_FZLanTingHeiProGB18030-ExtraLight.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FZLanTingHeiPro_GB18030";
+  src: url("https://magic-builder.tos-cn-beijing.volces.com/uploads/1777953444787_FZLanTingHeiProGB18030-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FZLanTingHeiPro_GB18030";
+  src: url("https://magic-builder.tos-cn-beijing.volces.com/uploads/1777953451740_FZLanTingHeiProGB18030-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FZLanTingHeiPro_GB18030";
+  src: url("https://magic-builder.tos-cn-beijing.volces.com/uploads/1777953449140_FZLanTingHeiProGB18030-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FZLanTingHeiPro_GB18030";
+  src: url("https://magic-builder.tos-cn-beijing.volces.com/uploads/1777953456364_FZLanTingHeiProGB18030-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FZLanTingHeiPro_GB18030";
+  src: url("https://magic-builder.tos-cn-beijing.volces.com/uploads/1777953435667_FZLanTingHeiProGB18030-DemiBold.woff2") format("woff2");
+  font-weight: 650;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FZLanTingHeiPro_GB18030";
+  src: url("https://magic-builder.tos-cn-beijing.volces.com/uploads/1777953432607_FZLanTingHeiProGB18030-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FZLanTingHeiPro_GB18030";
+  src: url("https://magic-builder.tos-cn-beijing.volces.com/uploads/1777953437856_FZLanTingHeiProGB18030-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FZLanTingHeiPro_GB18030";
+  src: url("https://magic-builder.tos-cn-beijing.volces.com/uploads/1777953442578_FZLanTingHeiProGB18030-Heavy.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "方正兰亭黑Pro_GB18030";
+  src: url("https://magic-builder.tos-cn-beijing.volces.com/uploads/1777953451740_FZLanTingHeiProGB18030-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FZLanTingHeiPro_GB18030 ExtraLight";
+  src: url("https://magic-builder.tos-cn-beijing.volces.com/uploads/1777953440221_FZLanTingHeiProGB18030-ExtraLight.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FZLanTingHeiPro_GB18030 Light";
+  src: url("https://magic-builder.tos-cn-beijing.volces.com/uploads/1777953444787_FZLanTingHeiProGB18030-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FZLanTingHeiPro_GB18030 Medium";
+  src: url("https://magic-builder.tos-cn-beijing.volces.com/uploads/1777953449140_FZLanTingHeiProGB18030-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FZLanTingHeiPro_GB18030 SemiBold";
+  src: url("https://magic-builder.tos-cn-beijing.volces.com/uploads/1777953456364_FZLanTingHeiProGB18030-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FZLanTingHeiPro_GB18030 SemiBol";
+  src: url("https://magic-builder.tos-cn-beijing.volces.com/uploads/1777953456364_FZLanTingHeiProGB18030-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FZLanTingHeiPro_GB18030 DemiBold";
+  src: url("https://magic-builder.tos-cn-beijing.volces.com/uploads/1777953435667_FZLanTingHeiProGB18030-DemiBold.woff2") format("woff2");
+  font-weight: 650;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FZLanTingHeiPro_GB18030 Bold";
+  src: url("https://magic-builder.tos-cn-beijing.volces.com/uploads/1777953432607_FZLanTingHeiProGB18030-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FZLanTingHeiPro_GB18030 ExtraBold";
+  src: url("https://magic-builder.tos-cn-beijing.volces.com/uploads/1777953437856_FZLanTingHeiProGB18030-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FZLanTingHeiPro_GB18030 Heavy";
+  src: url("https://magic-builder.tos-cn-beijing.volces.com/uploads/1777953442578_FZLanTingHeiProGB18030-Heavy.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+</style>
+    <style>
+:root {
+  color-scheme: light dark;
+  --ls-app-bg: #111217;
+  --ls-toolbar-bg: rgba(20, 22, 28, 0.86);
+  --ls-toolbar-border: rgba(255, 255, 255, 0.12);
+  --ls-toolbar-fg: #f5f7fb;
+  --ls-muted-fg: rgba(245, 247, 251, 0.68);
+  --ls-accent: #1456f0;
+  --ls-slide-bg: #ffffff;
+  --ls-control-size: 36px;
+  --ls-radius: 8px;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--ls-app-bg);
+  color: #1f2329;
+  font-family: var(--ld-font-ui, "Inter", "FZLanTingHeiPro_GB18030", "PingFang SC", "Microsoft YaHei", Arial, sans-serif);
+  overflow: hidden;
+}
+
+.ls-app {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  place-items: center;
+  background: var(--ls-app-bg);
+}
+
+.ls-app[data-lark-theme="larkVisual"] {
+  --ls-app-bg: #111217;
+  --ls-slide-bg: #000000;
+  --ls-accent: #1456f0;
+}
+
+.ls-stage {
+  position: relative;
+  width: min(100vw, calc((100vh - 72px) * 16 / 9));
+  max-width: 100vw;
+  aspect-ratio: 16 / 9;
+  background: var(--ls-slide-bg);
+  overflow: hidden;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.34);
+}
+
+.ls-app.ls-no-controls {
+  grid-template-rows: 1fr;
+}
+
+.ls-app.ls-no-controls .ls-stage {
+  width: min(100vw, calc(100vh * 16 / 9));
+  box-shadow: none;
+}
+
+.ls-app.ls-presenting {
+  grid-template-rows: 1fr;
+  background: #000;
+}
+
+.ls-app.ls-presenting .ls-stage {
+  width: min(100vw, calc(100vh * 16 / 9));
+  max-width: 100vw;
+  box-shadow: none;
+}
+
+.ls-app.ls-presenting .ls-toolbar,
+.ls-app.ls-presenting .ls-progress {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.ls-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--ls-slide-bg);
+  overflow: hidden;
+}
+
+.ls-slide[hidden] {
+  display: none !important;
+}
+
+.ls-slide-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1600px;
+  height: 900px;
+  transform-origin: top left;
+  background: #fff;
+  overflow: hidden;
+}
+
+.ls-element {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.ls-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  white-space: pre-wrap;
+  overflow: visible;
+}
+
+.ls-text p {
+  margin: 0;
+}
+
+.ls-text span {
+  white-space: pre-wrap;
+}
+
+.ls-picture,
+.ls-vector {
+  overflow: hidden;
+}
+
+.ls-picture img {
+  position: absolute;
+  display: block;
+  max-width: none;
+  object-fit: fill;
+}
+
+.ls-slide img[data-src] {
+  opacity: 0;
+  transition: opacity 180ms ease;
+}
+
+.ls-slide img[data-src].is-loaded,
+.ls-slide img[data-src][data-ls-loaded="true"] {
+  opacity: 1;
+}
+
+.ls-shape {
+  overflow: hidden;
+}
+
+.ls-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 56px;
+  padding: 10px 12px;
+  color: var(--ls-toolbar-fg);
+  background: var(--ls-toolbar-bg);
+  border: 1px solid var(--ls-toolbar-border);
+  border-radius: var(--ls-radius);
+  backdrop-filter: blur(14px);
+}
+
+.ls-button {
+  width: var(--ls-control-size);
+  height: var(--ls-control-size);
+  display: inline-grid;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 6px;
+  color: var(--ls-toolbar-fg);
+  background: rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+  font: inherit;
+}
+
+.ls-button:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.ls-button:focus-visible {
+  outline: 2px solid #8ab4ff;
+  outline-offset: 2px;
+}
+
+.ls-button-icon {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+.ls-status {
+  min-width: 64px;
+  text-align: center;
+  color: var(--ls-muted-fg);
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+}
+
+.ls-progress {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.ls-progress-bar {
+  width: 0;
+  height: 100%;
+  background: var(--ls-accent);
+  transition: width 160ms ease;
+}
+
+.ls-template-slide {
+  width: 1600px;
+  height: 900px;
+  padding: 88px 104px;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+.ls-template-kicker {
+  margin: 0 0 20px;
+  color: #1456f0;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.ls-template-title {
+  margin: 0;
+  color: #111217;
+  font-size: 76px;
+  line-height: 1.05;
+  font-weight: 760;
+}
+
+.ls-template-subtitle {
+  max-width: 980px;
+  margin: 28px 0 0;
+  color: #4e5969;
+  font-size: 32px;
+  line-height: 1.42;
+}
+
+.ls-template-grid {
+  display: grid;
+  gap: 28px;
+}
+
+.ls-template-card {
+  border: 1px solid #dee0e3;
+  border-radius: 8px;
+  padding: 28px;
+  background: #fff;
+}
+
+.ls-template-metric {
+  font-size: 108px;
+  line-height: 1;
+  font-weight: 760;
+  color: #1456f0;
+}
+
+.ls-template-label {
+  margin-top: 16px;
+  color: #4e5969;
+  font-size: 28px;
+  line-height: 1.35;
+}
+
+.ls-visual .ls-slide-inner {
+  background: #000;
+}
+
+.lvg-slide {
+  position: relative;
+  width: 1600px;
+  height: 900px;
+  overflow: hidden;
+  box-sizing: border-box;
+  background: #000;
+  color: #f7f8fb;
+  font-family: var(--ld-font-display, "TikTok Display", "FZLanTingHeiPro_GB18030", "方正兰亭黑Pro_GB18030", "PingFang SC", "Microsoft YaHei", Arial, sans-serif);
+  letter-spacing: 0;
+}
+
+.lvg-slide [contenteditable="true"] {
+  outline: 0;
+}
+
+.lvg-slide [contenteditable="true"]:focus-visible {
+  border-radius: 4px;
+  box-shadow: 0 0 0 2px rgba(84, 139, 255, 0.72);
+}
+
+[data-lark-text-sync="true"][data-lark-text-saving="true"] {
+  box-shadow: 0 0 0 2px rgba(20, 86, 240, 0.36);
+}
+
+[data-lark-text-sync="true"][data-lark-text-saving="error"] {
+  box-shadow: 0 0 0 2px rgba(214, 72, 87, 0.72);
+}
+
+.lvg-gradient-text {
+  display: inline-block;
+  line-height: inherit;
+  padding-bottom: 0.08em;
+  margin-bottom: -0.08em;
+  color: transparent !important;
+  background: var(--lvg-brand-text-gradient, linear-gradient(90deg, #e2fff7 0%, #c8effa 43%, #b1d5f6 62%, #80a3ff 100%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.lvg-gradient-text.soft {
+  background-image: var(--lvg-soft-text-gradient, linear-gradient(90deg, #ffffff 0%, #e2fff7 38%, #b1d5f6 68%, #80a3ff 100%));
+}
+
+.lvg-gradient-text.gray {
+  background-image: var(--lvg-gray-text-gradient, linear-gradient(90deg, #e6e8ee 0%, #b5bac4 52%, #858b96 100%));
+}
+
+.lvg-gradient-text.white-gray {
+  background-image: var(--lvg-white-gray-gradient, linear-gradient(90deg, #f7f9ff 0%, #d9dee8 48%, #9ea8b8 100%));
+}
+
+.lvg-gradient-text.deep-blue {
+  background-image: var(--lvg-deep-blue-gradient, linear-gradient(90deg, #3ec3f7 0%, #1456f0 100%));
+}
+
+.lvg-layout {
+  background: #000;
+}
+
+.lvg-layout-block {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.lvg-layout-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  white-space: pre;
+  overflow: visible;
+}
+
+.lvg-layout-text p {
+  margin: 0;
+}
+
+.lvg-layout-text span {
+  white-space: inherit;
+}
+
+.lvg-layout-text span[style*="color:#000000"] {
+  color: #fff !important;
+}
+
+.lvg-quick-slide .lvg-quick-copy,
+.lvg-quick-slide .lvg-quick-copy p,
+.lvg-quick-slide .lvg-quick-copy span,
+.lvg-quick-slide .lvg-quick-heading,
+.lvg-quick-slide .lvg-quick-heading p,
+.lvg-quick-slide .lvg-quick-heading span {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.lvg-quick-slide .lvg-quick-copy,
+.lvg-quick-slide .lvg-quick-heading {
+  overflow: hidden;
+}
+
+.lvg-quick-slide .lvg-quick-heading {
+  overflow: visible;
+}
+
+.lvg-quick-slide .lvg-code-copy,
+.lvg-quick-slide .lvg-code-copy p,
+.lvg-quick-slide .lvg-code-copy span {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.ls-slide[data-source-slide="4"] .lvg-layout-text[style*="top:240.670px"],
+.ls-slide[data-source-slide="5"] .lvg-layout-text,
+.ls-slide[data-source-slide="6"] .lvg-layout-text[style*="top:392px"],
+.ls-slide[data-source-slide="7"] .lvg-layout-text,
+.ls-slide[data-source-slide="8"] .lvg-layout-text,
+.ls-slide[data-source-slide="9"] .lvg-layout-text[style*="top:376.801px"],
+.ls-slide[data-source-slide="10"] .lvg-layout-text[style*="top:361.376px"] {
+  align-items: center;
+  --lvg-ppt-title-gradient: linear-gradient(90deg, #e2fff7 0%, #b1d5f6 52%, #80a3ff 100%);
+}
+
+.ls-slide[data-source-slide="4"] .lvg-layout-text[style*="top:240.670px"] {
+  --lvg-ppt-title-gradient: linear-gradient(90deg, #e2fff7 0%, #e2fff7 40%, #b1d5f6 62%, #80a3ff 76%, #80a3ff 100%);
+}
+
+.ls-slide[data-source-slide="10"] .lvg-layout-text[style*="top:361.376px"] {
+  --lvg-ppt-title-gradient: linear-gradient(180deg, #ffffff 0%, #ffffff 19%, #2668ff 100%);
+}
+
+.ls-slide[data-source-slide="4"] .lvg-layout-text[style*="top:240.670px"] p,
+.ls-slide[data-source-slide="5"] .lvg-layout-text p,
+.ls-slide[data-source-slide="6"] .lvg-layout-text[style*="top:392px"] p,
+.ls-slide[data-source-slide="7"] .lvg-layout-text p,
+.ls-slide[data-source-slide="8"] .lvg-layout-text p,
+.ls-slide[data-source-slide="9"] .lvg-layout-text[style*="top:376.801px"] p,
+.ls-slide[data-source-slide="10"] .lvg-layout-text[style*="top:361.376px"] p {
+  display: inline-block;
+  width: auto;
+  max-width: 100%;
+  line-height: 1.08;
+  background: var(--lvg-ppt-title-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+  text-align: center !important;
+}
+
+.ls-slide[data-source-slide="4"] .lvg-layout-text[style*="top:240.670px"] span,
+.ls-slide[data-source-slide="5"] .lvg-layout-text span,
+.ls-slide[data-source-slide="6"] .lvg-layout-text[style*="top:392px"] span,
+.ls-slide[data-source-slide="7"] .lvg-layout-text span,
+.ls-slide[data-source-slide="8"] .lvg-layout-text span,
+.ls-slide[data-source-slide="9"] .lvg-layout-text[style*="top:376.801px"] span,
+.ls-slide[data-source-slide="10"] .lvg-layout-text[style*="top:361.376px"] span {
+  background: transparent !important;
+  color: inherit !important;
+  -webkit-text-fill-color: inherit !important;
+  font-family: "TikTok Display Medium", "FZLanTingHeiPro_GB18030 SemiBold", "FZLanTingHeiPro_GB18030 DemiBold", "FZLanTingHeiPro_GB18030 Bold", var(--ld-font-zh, "FZLanTingHeiPro_GB18030", "PingFang SC", "Microsoft YaHei", Arial, sans-serif) !important;
+  font-weight: 760 !important;
+}
+
+.ls-slide[data-source-slide="3"] .lvg-layout-text[style*="top:263.626px"] p {
+  line-height: 1.08;
+}
+
+.ls-slide[data-source-slide="3"] .lvg-layout-text[style*="top:456.195px"] {
+  top: 476px !important;
+}
+
+.ls-slide[data-source-slide="6"] .lvg-layout-text[style*="top:392px"] p {
+  background: none !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+  word-spacing: -0.18em;
+}
+
+.ls-slide[data-source-slide="6"] .lvg-layout-text[style*="top:392px"] span {
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+  font-size: 88px !important;
+}
+
+.ls-slide[data-source-slide="9"] .lvg-layout-text[style*="top:253.610px"] {
+  left: 0 !important;
+  width: 1600px !important;
+  align-items: center;
+}
+
+.ls-slide[data-source-slide="9"] .lvg-layout-text[style*="top:253.610px"] p {
+  text-align: center !important;
+}
+
+.ls-slide[data-source-slide="9"] .lvg-layout-text[style*="top:376.801px"],
+.ls-slide[data-source-slide="10"] .lvg-layout-text[style*="top:361.376px"] {
+  left: 0 !important;
+  width: 1600px !important;
+}
+
+.ls-slide[data-source-slide="10"] .lvg-layout-image[style*="top:199.562px"] {
+  top: 512px !important;
+  height: 360px !important;
+}
+
+.ls-slide[data-source-slide="10"] .lvg-layout-image[style*="top:199.562px"] img {
+  transform: scaleY(-1);
+  transform-origin: center;
+}
+
+.ls-slide[data-source-slide="10"] .lvg-layout-image[style*="top:199.562px"]::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 130px;
+  bottom: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.82) 36%, #000 100%);
+}
+
+.lvg-layout-vector path[fill="#000000"] {
+  fill: #fff;
+}
+
+.ls-slide[data-source-slide="10"] .lvg-layout-shape[style*="background:#ffffff;"],
+.ls-slide[data-source-slide="16"] .lvg-layout-shape[style*="background:#ffffff;"] {
+  display: none;
+}
+
+.lvg-layout-image,
+.lvg-layout-shape,
+.lvg-layout-vector {
+  overflow: hidden;
+}
+
+.lvg-layout-image img {
+  position: absolute;
+  display: block;
+  max-width: none;
+  object-fit: fill;
+}
+
+.ls-slide[data-source-slide="6"] .lvg-layout-vector {
+  display: none;
+}
+
+.ls-slide[data-source-slide="17"] .lvg-layout-shape[style*="background:#ffffff"] {
+  background: #000 !important;
+  opacity: 0.36 !important;
+}
+
+.ls-slide[data-source-slide="18"] .lvg-layout-shape[style*="background:transparent"],
+.ls-slide[data-source-slide="34"] .lvg-layout-shape[style*="background:transparent"] {
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.54), rgba(0, 0, 0, 0.18) 44%, rgba(0, 0, 0, 0.52)) !important;
+}
+
+.ls-slide[data-source-slide="18"] .lvg-layout::after,
+.ls-slide[data-source-slide="34"] .lvg-layout::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: rgba(0, 0, 0, 0.38);
+}
+
+.ls-slide[data-source-slide="18"] .lvg-layout-text,
+.ls-slide[data-source-slide="18"] .lvg-layout-vector {
+  z-index: 3;
+}
+
+.ls-slide[data-source-slide="22"] .lvg-layout-shape[style*="left:1115.199px"],
+.ls-slide[data-source-slide="22"] .lvg-layout-shape[style*="left:807.303px"],
+.ls-slide[data-source-slide="22"] .lvg-layout-shape[style*="left:494.646px"] {
+  display: block;
+  border-radius: 7px 7px 0 0;
+  background: linear-gradient(180deg, #d7ffff 0%, #5dd7ff 34%, #1e5cff 100%) !important;
+  box-shadow: 0 0 22px rgba(80, 175, 255, 0.35);
+}
+
+.ls-slide[data-source-slide="23"] .lvg-layout-vector path {
+  fill: none !important;
+  stroke: #66cfff !important;
+  stroke-width: 155000 !important;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 0 10px rgba(80, 175, 255, 0.75));
+}
+
+.ls-slide[data-source-slide="23"] .lvg-layout-shape[style*="border-radius:50%"] {
+  display: block;
+  overflow: visible;
+  background: radial-gradient(circle, #ffffff 0 26%, #8eeaff 48%, #2368ff 68%, rgba(35, 104, 255, 0) 72%) !important;
+  box-shadow: 0 0 18px rgba(119, 211, 255, 0.8);
+}
+
+.ls-slide[data-source-slide="23"] .lvg-layout-shape[style*="left:210.840px"]::before,
+.ls-slide[data-source-slide="23"] .lvg-layout-shape[style*="left:518.819px"]::before,
+.ls-slide[data-source-slide="23"] .lvg-layout-shape[style*="left:837.666px"]::before,
+.ls-slide[data-source-slide="23"] .lvg-layout-shape[style*="left:1158.371px"]::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  width: 3px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(79, 195, 255, 0.95), rgba(20, 86, 240, 0.18));
+}
+
+.ls-slide[data-source-slide="23"] .lvg-layout-shape[style*="left:210.840px"]::before {
+  height: 260px;
+}
+
+.ls-slide[data-source-slide="23"] .lvg-layout-shape[style*="left:518.819px"]::before {
+  height: 190px;
+}
+
+.ls-slide[data-source-slide="23"] .lvg-layout-shape[style*="left:837.666px"]::before {
+  height: 190px;
+}
+
+.ls-slide[data-source-slide="23"] .lvg-layout-shape[style*="left:1158.371px"]::before {
+  height: 230px;
+}
+
+.ls-slide[data-source-slide="28"] .lvg-layout-shape[style*="width:262.324px"] {
+  border: 1.5px solid rgba(255, 255, 255, 0.45);
+  border-radius: 18px !important;
+  background: rgba(255, 255, 255, 0.02) !important;
+}
+
+.ls-slide[data-source-slide="28"] .lvg-layout-shape[style*="width:107.366px"] {
+  border: 1.5px solid rgba(255, 255, 255, 0.38);
+  border-radius: 14px !important;
+  background: rgba(255, 255, 255, 0.02) !important;
+}
+
+.ls-slide[data-source-slide="29"] .lvg-layout-text[style*="left:903.249px"] span,
+.ls-slide[data-source-slide="29"] .lvg-layout-text[style*="left:885.055px"] span {
+  color: #172033 !important;
+}
+
+.ls-slide[data-source-slide="35"] .lvg-layout-text span[style*="font-size:72.000px"] {
+  color: #80a3ff !important;
+}
+
+.ls-slide[data-source-slide="35"] .lvg-layout-shape[style*="background:#ffffff"] {
+  border-radius: 5px !important;
+}
+
+.ls-slide[data-source-slide="35"] .lvg-layout-text[style*="top:425.510px"] p,
+.ls-slide[data-source-slide="35"] .lvg-layout-text[style*="top:500.924px"] p,
+.ls-slide[data-source-slide="35"] .lvg-layout-text[style*="top:367.014px"] p {
+  text-align: center !important;
+}
+
+.ls-slide[data-source-slide="42"] .lvg-layout::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, #ceeafe 0%, #3ec3f7 54%, #1456f0 100%) 195px 315px / 834px 8px no-repeat,
+    linear-gradient(90deg, #ceeafe 0%, #3ec3f7 54%, #1456f0 100%) 195px 383px / 834px 6px no-repeat,
+    linear-gradient(90deg, #ceeafe 0%, #3ec3f7 54%, #1456f0 100%) 195px 433px / 834px 10px no-repeat,
+    linear-gradient(90deg, #ceeafe 0%, #3ec3f7 48%, #1456f0 58%, transparent 58%) 195px 571px / 834px 8px no-repeat,
+    linear-gradient(90deg, #ceeafe 0%, #3ec3f7 52%, #1456f0 100%) 195px 694px / 834px 3px no-repeat,
+    repeating-linear-gradient(90deg, #ceeafe 0 13px, transparent 13px 26px) 195px 744px / 834px 3px no-repeat,
+    repeating-linear-gradient(90deg, rgba(206, 234, 254, 0.4) 0 13px, transparent 13px 26px) 195px 793px / 834px 3px no-repeat,
+    linear-gradient(90deg, #ceeafe 0%, #b1d5ff 52%, #80a3ff 100%) 1196px 286px / 199px 19px no-repeat,
+    linear-gradient(90deg, #ffffff 0%, #f0dfff 52%, #c5a7ff 100%) 1199px 384px / 199px 19px no-repeat,
+    linear-gradient(90deg, #ffffff, #ffffff) 1201px 480px / 199px 19px no-repeat;
+}
+
+.ls-visual .lvg-layout {
+  --lvg-brand-text-gradient: linear-gradient(90deg, #e2fff7 0%, #c8effa 43%, #b1d5f6 62%, #80a3ff 100%);
+  --lvg-soft-text-gradient: linear-gradient(90deg, #ffffff 0%, #e2fff7 38%, #b1d5f6 68%, #80a3ff 100%);
+  --lvg-white-gray-gradient: linear-gradient(90deg, #f7f9ff 0%, #d9dee8 48%, #9ea8b8 100%);
+  --lvg-gray-text-gradient: linear-gradient(90deg, #e6e8ee 0%, #b5bac4 52%, #858b96 100%);
+  --lvg-secondary-gradient: linear-gradient(90deg, #a6a6a6 0%, #ffffff 45%, #717171 100%);
+  --lvg-label-gray-gradient: linear-gradient(90deg, #d8dee8 0%, #aeb4c2 58%, #7d8797 100%);
+  --lvg-deep-blue-gradient: linear-gradient(90deg, #1456f0 0%, #2f68ff 50%, #6f8eff 100%);
+}
+
+.ls-visual .lvg-layout-text span[style*="font-size:47.617px"],
+.ls-visual .lvg-layout-text span[style*="font-size:48.000px"],
+.ls-visual .lvg-layout-text span[style*="font-size:53.333px"],
+.ls-visual .lvg-layout-text span[style*="font-size:56.000px"],
+.ls-visual .lvg-layout-text span[style*="font-size:66.667px"] {
+  font-weight: 740 !important;
+}
+
+.ls-slide[data-source-slide="11"] .lvg-layout-text[style*="top:377.900px"] p,
+.ls-slide[data-source-slide="15"] .lvg-layout-text[style*="top:397.995px"] p,
+.ls-slide[data-source-slide="16"] .lvg-layout-text[style*="top:315.281px"] p,
+.ls-slide[data-source-slide="17"] .lvg-layout-text[style*="top:338.039px"] p,
+.ls-slide[data-source-slide="17"] .lvg-layout-text[style*="top:346.861px"] p,
+.ls-slide[data-source-slide="17"] .lvg-layout-text[style*="top:346.860px"] p,
+.ls-slide[data-source-slide="18"] .lvg-layout-text[style*="top:362.932px"] p,
+.ls-slide[data-source-slide="19"] .lvg-layout-text[style*="left:812.610px"][style*="top:362.548px"] p,
+.ls-slide[data-source-slide="20"] .lvg-layout-text[style*="top:519.045px"] p,
+.ls-slide[data-source-slide="20"] .lvg-layout-text[style*="top:550.659px"] p,
+.ls-slide[data-source-slide="20"] .lvg-layout-text[style*="top:417.582px"] p,
+.ls-slide[data-source-slide="21"] .lvg-layout-text[style*="top:338.638px"] p,
+.ls-slide[data-source-slide="21"] .lvg-layout-text[style*="top:411.372px"][style*="left:409.270px"] p,
+.ls-slide[data-source-slide="24"] .lvg-layout-text[style*="top:392.577px"] p:nth-child(2),
+.ls-slide[data-source-slide="25"] .lvg-layout-text[style*="top:459.360px"] p:nth-child(2),
+.ls-slide[data-source-slide="26"] .lvg-layout-text[style*="top:611.139px"] p,
+.ls-slide[data-source-slide="26"] .lvg-layout-text[style*="top:614.106px"] p,
+.ls-slide[data-source-slide="26"] .lvg-layout-text[style*="top:292.640px"] p:first-child,
+.ls-slide[data-source-slide="27"] .lvg-layout-text[style*="top:437.937px"] p,
+.ls-slide[data-source-slide="29"] .lvg-layout-text[style*="top:260.323px"] p,
+.ls-slide[data-source-slide="30"] .lvg-layout-text[style*="top:321.160px"] p,
+.ls-slide[data-source-slide="31"] .lvg-layout-text[style*="top:201.516px"] p:nth-child(2),
+.ls-slide[data-source-slide="32"] .lvg-layout-text[style*="top:201.516px"] p:nth-child(2),
+.ls-slide[data-source-slide="35"] .lvg-layout-text[style*="top:500.924px"] p,
+.ls-slide[data-source-slide="40"] .lvg-layout-text[style*="top:443.691px"] p,
+.ls-slide[data-source-slide="40"] .lvg-layout-text[style*="top:554.594px"] p,
+.ls-slide[data-source-slide="40"] .lvg-layout-text[style*="top:610.923px"] p,
+.ls-slide[data-source-slide="41"] .lvg-layout-text[style*="top:416.590px"] p,
+.ls-slide[data-source-slide="41"] .lvg-layout-text[style*="top:568.060px"] p,
+.ls-slide[data-source-slide="41"] .lvg-layout-text[style*="top:644.240px"] p {
+  display: inline-block;
+  width: auto;
+  max-width: 100%;
+  background: var(--lvg-brand-text-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+.ls-slide[data-source-slide="11"] .lvg-layout-text[style*="top:377.900px"] span,
+.ls-slide[data-source-slide="15"] .lvg-layout-text[style*="top:397.995px"] span,
+.ls-slide[data-source-slide="16"] .lvg-layout-text[style*="top:315.281px"] span,
+.ls-slide[data-source-slide="17"] .lvg-layout-text[style*="top:338.039px"] span,
+.ls-slide[data-source-slide="17"] .lvg-layout-text[style*="top:346.861px"] span,
+.ls-slide[data-source-slide="17"] .lvg-layout-text[style*="top:346.860px"] span,
+.ls-slide[data-source-slide="18"] .lvg-layout-text[style*="top:362.932px"] span,
+.ls-slide[data-source-slide="19"] .lvg-layout-text[style*="left:812.610px"][style*="top:362.548px"] span,
+.ls-slide[data-source-slide="20"] .lvg-layout-text[style*="top:519.045px"] span,
+.ls-slide[data-source-slide="20"] .lvg-layout-text[style*="top:550.659px"] span,
+.ls-slide[data-source-slide="20"] .lvg-layout-text[style*="top:417.582px"] span,
+.ls-slide[data-source-slide="21"] .lvg-layout-text[style*="top:338.638px"] span,
+.ls-slide[data-source-slide="21"] .lvg-layout-text[style*="top:411.372px"][style*="left:409.270px"] span,
+.ls-slide[data-source-slide="24"] .lvg-layout-text[style*="top:392.577px"] p:nth-child(2) span,
+.ls-slide[data-source-slide="25"] .lvg-layout-text[style*="top:459.360px"] p:nth-child(2) span,
+.ls-slide[data-source-slide="26"] .lvg-layout-text[style*="top:611.139px"] span,
+.ls-slide[data-source-slide="26"] .lvg-layout-text[style*="top:614.106px"] span,
+.ls-slide[data-source-slide="26"] .lvg-layout-text[style*="top:292.640px"] p:first-child span,
+.ls-slide[data-source-slide="27"] .lvg-layout-text[style*="top:437.937px"] span,
+.ls-slide[data-source-slide="29"] .lvg-layout-text[style*="top:260.323px"] span,
+.ls-slide[data-source-slide="30"] .lvg-layout-text[style*="top:321.160px"] span,
+.ls-slide[data-source-slide="31"] .lvg-layout-text[style*="top:201.516px"] p:nth-child(2) span,
+.ls-slide[data-source-slide="32"] .lvg-layout-text[style*="top:201.516px"] p:nth-child(2) span,
+.ls-slide[data-source-slide="35"] .lvg-layout-text[style*="top:500.924px"] span,
+.ls-slide[data-source-slide="40"] .lvg-layout-text[style*="top:443.691px"] span,
+.ls-slide[data-source-slide="40"] .lvg-layout-text[style*="top:554.594px"] span,
+.ls-slide[data-source-slide="40"] .lvg-layout-text[style*="top:610.923px"] span,
+.ls-slide[data-source-slide="41"] .lvg-layout-text[style*="top:416.590px"] span,
+.ls-slide[data-source-slide="41"] .lvg-layout-text[style*="top:568.060px"] span,
+.ls-slide[data-source-slide="41"] .lvg-layout-text[style*="top:644.240px"] span {
+  background: transparent !important;
+  color: inherit !important;
+  -webkit-text-fill-color: inherit !important;
+  font-family: "TikTok Display Medium", "FZLanTingHeiPro_GB18030 SemiBold", "FZLanTingHeiPro_GB18030 DemiBold", var(--ld-font-zh, "FZLanTingHeiPro_GB18030", "PingFang SC", "Microsoft YaHei", Arial, sans-serif) !important;
+  font-weight: 760 !important;
+}
+
+.ls-slide[data-source-slide="12"] .lvg-layout-text[style*="top:332.988px"] span,
+.ls-slide[data-source-slide="12"] .lvg-layout-text[style*="top:434.362px"] span,
+.ls-slide[data-source-slide="13"] .lvg-layout-text[style*="top:307.090px"] span,
+.ls-slide[data-source-slide="13"] .lvg-layout-text[style*="top:463.740px"] span,
+.ls-slide[data-source-slide="14"] .lvg-layout-text span,
+.ls-slide[data-source-slide="20"] .lvg-layout-text[style*="top:417.582px"] span,
+.ls-slide[data-source-slide="21"] .lvg-layout-text[style*="top:205.743px"] span,
+.ls-slide[data-source-slide="26"] .lvg-layout-text[style*="top:454.561px"] span {
+  font-family: "TikTok Display Medium", "FZLanTingHeiPro_GB18030 SemiBold", "FZLanTingHeiPro_GB18030 DemiBold", var(--ld-font-zh, "FZLanTingHeiPro_GB18030", "PingFang SC", "Microsoft YaHei", Arial, sans-serif) !important;
+  font-weight: 760 !important;
+}
+
+.ls-slide[data-source-slide="11"] .lvg-layout-text,
+.ls-slide[data-source-slide="15"] .lvg-layout-text {
+  align-items: center;
+}
+
+.ls-slide[data-source-slide="11"] .lvg-layout-text[style*="top:377.900px"],
+.ls-slide[data-source-slide="15"] .lvg-layout-text[style*="top:397.995px"] {
+  left: 0 !important;
+  width: 1600px !important;
+}
+
+.ls-slide[data-source-slide="14"] .lvg-layout-text[style*="top:274.814px"] p,
+.ls-slide[data-source-slide="14"] .lvg-layout-text[style*="top:310.029px"] p {
+  display: inline-block;
+  background: var(--lvg-soft-text-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+.ls-slide[data-source-slide="14"] .lvg-layout-text[style*="top:274.814px"] span,
+.ls-slide[data-source-slide="14"] .lvg-layout-text[style*="top:310.029px"] span {
+  color: inherit !important;
+  -webkit-text-fill-color: inherit !important;
+}
+
+.ls-slide[data-source-slide="14"] .lvg-layout-text[style*="top:310.029px"] {
+  left: 918px !important;
+}
+
+.ls-slide[data-source-slide="13"] .lvg-layout-text[style*="top:307.090px"] {
+  left: 152px !important;
+  top: 318px !important;
+  width: 560px !important;
+  height: auto !important;
+}
+
+.ls-slide[data-source-slide="13"] .lvg-layout-text[style*="top:307.090px"] p {
+  line-height: 1.22;
+}
+
+.ls-slide[data-source-slide="13"] .lvg-layout-text[style*="top:463.740px"] {
+  left: 152px !important;
+  top: 472px !important;
+  width: 520px !important;
+}
+
+.ls-slide[data-source-slide="13"] .lvg-layout-text[style*="top:463.740px"] p {
+  display: inline-block;
+  background: var(--lvg-soft-text-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+.ls-slide[data-source-slide="13"] .lvg-layout-text[style*="top:463.740px"] span {
+  color: inherit !important;
+  -webkit-text-fill-color: inherit !important;
+}
+
+.ls-slide[data-source-slide="16"] .lvg-layout-image[style*="top:252.130px"] {
+  left: 33px !important;
+  top: 512px !important;
+  width: 1533px !important;
+  height: 360px !important;
+}
+
+.ls-slide[data-source-slide="16"] .lvg-layout-image[style*="top:252.130px"] img {
+  transform: scaleY(-1);
+  transform-origin: center;
+}
+
+.ls-slide[data-source-slide="16"] .lvg-layout-image[style*="top:252.130px"]::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 130px;
+  bottom: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.82) 36%, #000 100%);
+}
+
+.ls-slide[data-source-slide="16"] .lvg-layout-text[style*="top:315.281px"] {
+  left: 180px !important;
+  top: 310px !important;
+  width: 1240px !important;
+}
+
+.ls-slide[data-source-slide="16"] .lvg-layout-text[style*="top:315.281px"] p {
+  text-align: left !important;
+}
+
+.ls-slide[data-source-slide="17"] .lvg-layout::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  background:
+    linear-gradient(180deg, rgba(226, 255, 247, 0), rgba(177, 213, 246, 0.54) 18%, rgba(128, 163, 255, 0.72) 52%, rgba(128, 163, 255, 0)) 533px 206px / 2px 500px no-repeat,
+    linear-gradient(180deg, rgba(226, 255, 247, 0), rgba(177, 213, 246, 0.54) 18%, rgba(128, 163, 255, 0.72) 52%, rgba(128, 163, 255, 0)) 1066px 206px / 2px 500px no-repeat;
+}
+
+.ls-slide[data-source-slide="17"] .lvg-layout-text {
+  z-index: 3;
+}
+
+.ls-slide[data-source-slide="17"] .lvg-layout-text[style*="top:338.039px"],
+.ls-slide[data-source-slide="17"] .lvg-layout-text[style*="top:346.861px"],
+.ls-slide[data-source-slide="17"] .lvg-layout-text[style*="top:346.860px"] {
+  top: 338px !important;
+  width: 430px !important;
+  align-items: center;
+}
+
+.ls-slide[data-source-slide="17"] .lvg-layout-text[style*="top:338.039px"],
+.ls-slide[data-source-slide="17"] .lvg-layout-text[style*="top:440.772px"] {
+  left: 80px !important;
+  width: 430px !important;
+}
+
+.ls-slide[data-source-slide="17"] .lvg-layout-text[style*="top:346.861px"],
+.ls-slide[data-source-slide="17"] .lvg-layout-text[style*="top:423.877px"] {
+  left: 585px !important;
+  width: 430px !important;
+}
+
+.ls-slide[data-source-slide="17"] .lvg-layout-text[style*="top:346.860px"],
+.ls-slide[data-source-slide="17"] .lvg-layout-text[style*="top:425.499px"] {
+  left: 1055px !important;
+  width: 430px !important;
+}
+
+.ls-slide[data-source-slide="17"] .lvg-layout-text[style*="top:440.772px"],
+.ls-slide[data-source-slide="17"] .lvg-layout-text[style*="top:423.877px"],
+.ls-slide[data-source-slide="17"] .lvg-layout-text[style*="top:425.499px"] {
+  top: 440px !important;
+}
+
+.ls-slide[data-source-slide="17"] .lvg-layout-text p {
+  width: 100%;
+  text-align: center !important;
+}
+
+.ls-slide[data-source-slide="17"] .lvg-layout-text[style*="top:440.772px"] p,
+.ls-slide[data-source-slide="17"] .lvg-layout-text[style*="top:423.877px"] p,
+.ls-slide[data-source-slide="17"] .lvg-layout-text[style*="top:425.499px"] p {
+  line-height: 1.34;
+}
+
+.ls-slide[data-source-slide="20"] .lvg-layout-shape[style*="top:367.795px"],
+.ls-slide[data-source-slide="21"] .lvg-layout-shape[style*="top:505.599px"],
+.ls-slide[data-source-slide="26"] .lvg-layout-shape[style*="top:450.012px"],
+.ls-slide[data-source-slide="30"] .lvg-layout-shape[style*="top:311.225px"],
+.ls-slide[data-source-slide="30"] .lvg-layout-shape[style*="top:357.903px"] {
+  border-radius: 6px !important;
+}
+
+.ls-slide[data-source-slide="20"] .lvg-layout-shape[style*="top:367.795px"] {
+  border-color: rgba(255, 255, 255, 0.86) !important;
+}
+
+.ls-slide[data-source-slide="20"] .lvg-layout-text[style*="top:367.964px"] {
+  left: 157.38px !important;
+  top: 367.795px !important;
+  width: 82.413px !important;
+  height: 44.023px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ls-slide[data-source-slide="20"] .lvg-layout-text[style*="top:367.964px"] p {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center !important;
+  line-height: 1;
+}
+
+.ls-slide[data-source-slide="20"] .lvg-layout-text[style*="top:367.964px"] span {
+  display: block;
+  transform: translateX(-3px);
+}
+
+.ls-slide[data-source-slide="19"] .lvg-layout-text span {
+  font-weight: 760 !important;
+}
+
+.ls-slide[data-source-slide="21"] .lvg-layout-text[style*="top:205.743px"] p {
+  line-height: 1.12;
+}
+
+.ls-slide[data-source-slide="21"] .lvg-layout-text[style*="top:205.743px"] span {
+  font-size: 48px !important;
+}
+
+.ls-slide[data-source-slide="23"] .lvg-layout-text[style*="top:454.855px"] span {
+  color: #aeb4c2 !important;
+  -webkit-text-fill-color: #aeb4c2 !important;
+  font-weight: 520 !important;
+}
+
+.ls-slide[data-source-slide="23"] .lvg-layout-text[style*="top:586.136px"] span,
+.ls-slide[data-source-slide="23"] .lvg-layout-text[style*="top:521.815px"] span,
+.ls-slide[data-source-slide="23"] .lvg-layout-text[style*="top:454.855px"] span,
+.ls-slide[data-source-slide="23"] .lvg-layout-text[style*="top:382.853px"] span {
+  color: #b9bec8 !important;
+  -webkit-text-fill-color: #b9bec8 !important;
+  font-weight: 520 !important;
+}
+
+.ls-slide[data-source-slide="23"] .lvg-layout-text[style*="top:163.169px"] {
+  transform: scaleX(1.055);
+  transform-origin: center center;
+}
+
+.ls-slide[data-source-slide="23"] .lvg-layout-text[style*="top:163.169px"] p {
+  line-height: 1.18;
+}
+
+.ls-slide[data-source-slide="24"] .lvg-layout-image[style*="left:800.000px"][style*="top:199.172px"] {
+  border-radius: 8px !important;
+  overflow: hidden;
+}
+
+.ls-slide[data-source-slide="26"] .editable-solution-tag-frame {
+  border: 1.4px solid rgba(255, 255, 255, 0.88) !important;
+  background: rgba(255, 255, 255, 0.02) !important;
+}
+
+.ls-slide[data-source-slide="26"] .editable-solution-tag {
+  left: 155.427px !important;
+  top: 450.012px !important;
+  width: 275.93px !important;
+  height: 51.571px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ls-slide[data-source-slide="26"] .editable-solution-tag span {
+  font-weight: 560 !important;
+}
+
+.ls-slide[data-source-slide="26"] .editable-solution-tag p,
+.ls-slide[data-source-slide="26"] .lvg-layout-text[style*="top:545.682px"] p {
+  display: inline-block;
+  background: var(--lvg-label-gray-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+.ls-slide[data-source-slide="26"] .editable-solution-tag span,
+.ls-slide[data-source-slide="26"] .lvg-layout-text[style*="top:545.682px"] span {
+  color: inherit !important;
+  -webkit-text-fill-color: inherit !important;
+}
+
+.ls-slide[data-source-slide="26"] .editable-solution-tag p {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  text-align: center !important;
+  transform: translateY(-2px);
+}
+
+.ls-slide[data-source-slide="26"] .metric-sixty {
+  left: 135.418px !important;
+  width: 150px !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
+}
+
+.ls-slide[data-source-slide="26"] .metric-sixty p {
+  width: 100%;
+  text-align: left !important;
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+  line-height: 1;
+}
+
+.ls-slide[data-source-slide="26"] .lvg-layout-text[style*="top:545.682px"] {
+  justify-content: center !important;
+}
+
+.ls-slide[data-source-slide="26"] .lvg-layout-text[style*="top:545.682px"] p {
+  line-height: 1.12;
+}
+
+.ls-slide[data-source-slide="26"] .lvg-layout-text[style*="top:611.139px"],
+.ls-slide[data-source-slide="26"] .lvg-layout-text[style*="top:614.106px"] {
+  top: 612px !important;
+  height: 74.266px !important;
+  display: flex;
+  align-items: flex-start;
+}
+
+.ls-slide[data-source-slide="26"] .lvg-layout-text[style*="top:611.139px"] p,
+.ls-slide[data-source-slide="26"] .lvg-layout-text[style*="top:614.106px"] p {
+  display: flex;
+  align-items: flex-end;
+  line-height: 1;
+}
+
+.ls-slide[data-source-slide="28"] .lvg-layout-text p,
+.ls-slide[data-source-slide="28"] .lvg-layout-text span {
+  background: var(--lvg-white-gray-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+.ls-slide[data-source-slide="28"] .lvg-layout-text span {
+  background: transparent !important;
+  color: inherit !important;
+  -webkit-text-fill-color: inherit !important;
+}
+
+.ls-slide[data-source-slide="28"] .lvg-layout-text {
+  align-items: center;
+}
+
+.ls-slide[data-source-slide="28"] .lvg-layout-text p {
+  width: 100%;
+  text-align: center !important;
+}
+
+.ls-slide[data-source-slide="28"] .lvg-layout-shape[style*="width:262.324px"],
+.ls-slide[data-source-slide="28"] .lvg-layout-shape[style*="width:107.366px"] {
+  border: 4px solid transparent !important;
+  background:
+    linear-gradient(#000, #000) padding-box,
+    var(--lvg-white-gray-gradient) border-box !important;
+}
+
+.ls-slide[data-source-slide="28"] .lvg-layout-shape[style*="width:262.324px"] {
+  border-radius: 18px !important;
+}
+
+.ls-slide[data-source-slide="28"] .lvg-layout-shape[style*="width:107.366px"] {
+  border-radius: 14px !important;
+}
+
+.ls-slide[data-source-slide="29"] .lvg-layout-text[style*="top:77.440px"] p:nth-child(2) span:last-child {
+  background: var(--lvg-brand-text-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+.ls-slide[data-source-slide="29"] .lvg-layout-shape[style*="left:223.573px"],
+.ls-slide[data-source-slide="29"] .lvg-layout-image[style*="left:859.153px"][style*="top:341.593px"] {
+  border-radius: 24px !important;
+  overflow: hidden;
+}
+
+.ls-slide[data-source-slide="29"] .lvg-layout::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, #ceeafe 0%, #3ec3f7 54%, #1456f0 100%) 752px 450px / 91px 3px no-repeat,
+    linear-gradient(90deg, #ceeafe 0%, #3ec3f7 54%, #1456f0 100%) 752px 571px / 91px 3px no-repeat,
+    linear-gradient(90deg, #ceeafe 0%, #3ec3f7 54%, #1456f0 100%) 752px 692px / 91px 3px no-repeat;
+  -webkit-mask: repeating-linear-gradient(90deg, #000 0 8px, transparent 8px 17px);
+  mask: repeating-linear-gradient(90deg, #000 0 8px, transparent 8px 17px);
+}
+
+.ls-slide[data-source-slide="30"] .lvg-layout-text[style*="top:468.617px"] p,
+.ls-slide[data-source-slide="30"] .lvg-layout-text[style*="top:466.437px"] p,
+.ls-slide[data-source-slide="30"] .lvg-layout-text[style*="top:586.216px"] p,
+.ls-slide[data-source-slide="30"] .lvg-layout-text[style*="top:584.036px"] p {
+  display: inline-block;
+  background: var(--lvg-soft-text-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+.ls-slide[data-source-slide="30"] .lvg-layout-text[style*="top:468.617px"] span,
+.ls-slide[data-source-slide="30"] .lvg-layout-text[style*="top:466.437px"] span,
+.ls-slide[data-source-slide="30"] .lvg-layout-text[style*="top:586.216px"] span,
+.ls-slide[data-source-slide="30"] .lvg-layout-text[style*="top:584.036px"] span {
+  color: inherit !important;
+  -webkit-text-fill-color: inherit !important;
+}
+
+.ls-slide[data-source-slide="30"] .lvg-layout-shape[style*="top:309.049px"],
+.ls-slide[data-source-slide="30"] .lvg-layout-shape[style*="top:310.057px"] {
+  z-index: 1;
+  border: 2px solid transparent !important;
+  border-radius: 8px !important;
+  background:
+    linear-gradient(#000, #000) padding-box,
+    var(--lvg-brand-text-gradient) border-box !important;
+}
+
+.ls-slide[data-source-slide="30"] .lvg-layout-text[style*="top:321.160px"] {
+  z-index: 4;
+}
+
+.ls-slide[data-source-slide="30"] .lvg-layout-text[style*="top:321.160px"] p {
+  display: block;
+  width: 100%;
+  text-align: center !important;
+  line-height: 1.08;
+}
+
+.ls-slide[data-source-slide="30"] .lvg-layout-text[style*="top:313.171px"],
+.ls-slide[data-source-slide="30"] .lvg-layout-text[style*="top:359.848px"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 37.495px !important;
+}
+
+.ls-slide[data-source-slide="30"] .lvg-layout-text[style*="top:313.171px"] {
+  top: 311.225px !important;
+}
+
+.ls-slide[data-source-slide="30"] .lvg-layout-text[style*="top:359.848px"] {
+  top: 357.903px !important;
+}
+
+.ls-slide[data-source-slide="30"] .lvg-layout-text[style*="top:313.171px"] p,
+.ls-slide[data-source-slide="30"] .lvg-layout-text[style*="top:359.848px"] p {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center !important;
+  line-height: 1;
+}
+
+.ls-slide[data-source-slide="31"] .lvg-layout-text[style*="top:386.299px"],
+.ls-slide[data-source-slide="32"] .lvg-layout-text[style*="top:386.299px"],
+.ls-slide[data-source-slide="33"] .lvg-layout-text[style*="top:386.299px"],
+.ls-slide[data-source-slide="31"] .lvg-layout-text[style*="top:540.382px"],
+.ls-slide[data-source-slide="32"] .lvg-layout-text[style*="top:540.382px"],
+.ls-slide[data-source-slide="33"] .lvg-layout-text[style*="top:540.382px"] {
+  width: 390px !important;
+  height: auto !important;
+  white-space: normal !important;
+}
+
+.ls-slide[data-source-slide="31"] .lvg-layout-text[style*="top:540.382px"],
+.ls-slide[data-source-slide="32"] .lvg-layout-text[style*="top:540.382px"],
+.ls-slide[data-source-slide="33"] .lvg-layout-text[style*="top:540.382px"] {
+  width: 370px !important;
+}
+
+.ls-slide[data-source-slide="31"] .lvg-layout-text[style*="top:386.299px"] p,
+.ls-slide[data-source-slide="32"] .lvg-layout-text[style*="top:386.299px"] p,
+.ls-slide[data-source-slide="33"] .lvg-layout-text[style*="top:386.299px"] p,
+.ls-slide[data-source-slide="31"] .lvg-layout-text[style*="top:540.382px"] p,
+.ls-slide[data-source-slide="32"] .lvg-layout-text[style*="top:540.382px"] p,
+.ls-slide[data-source-slide="33"] .lvg-layout-text[style*="top:540.382px"] p {
+  line-height: 1.5;
+  white-space: normal !important;
+}
+
+.ls-slide[data-source-slide="31"] .lvg-layout-text[style*="top:386.299px"] span,
+.ls-slide[data-source-slide="32"] .lvg-layout-text[style*="top:386.299px"] span,
+.ls-slide[data-source-slide="33"] .lvg-layout-text[style*="top:386.299px"] span,
+.ls-slide[data-source-slide="31"] .lvg-layout-text[style*="top:540.382px"] span,
+.ls-slide[data-source-slide="32"] .lvg-layout-text[style*="top:540.382px"] span,
+.ls-slide[data-source-slide="33"] .lvg-layout-text[style*="top:540.382px"] span {
+  color: #aeb4c2 !important;
+  -webkit-text-fill-color: #aeb4c2 !important;
+  white-space: normal !important;
+}
+
+.ls-slide[data-source-slide="33"] .lvg-layout-text[style*="top:201.516px"] p:nth-child(2) {
+  display: inline-block;
+  background: var(--lvg-brand-text-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+.ls-slide[data-source-slide="33"] .lvg-layout-text[style*="top:201.516px"] p:nth-child(2) span {
+  color: inherit !important;
+  -webkit-text-fill-color: inherit !important;
+  font-family: "TikTok Display Medium", "FZLanTingHeiPro_GB18030 SemiBold", "FZLanTingHeiPro_GB18030 DemiBold", var(--ld-font-zh, "FZLanTingHeiPro_GB18030", "PingFang SC", "Microsoft YaHei", Arial, sans-serif) !important;
+  font-weight: 760 !important;
+}
+
+.ls-slide[data-source-slide="35"] .lvg-layout-text[style*="top:500.924px"] p {
+  background: linear-gradient(90deg, #3ec3f7 0%, #1456f0 100%) !important;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+}
+
+.ls-slide[data-source-slide="40"] .lvg-layout-shape[style*="top:304.605px"],
+.ls-slide[data-source-slide="41"] .lvg-layout-shape[style*="top:219.105px"] {
+  background: var(--lvg-brand-text-gradient) !important;
+}
+
+.ls-slide[data-source-slide="41"] .lvg-layout-shape[style*="top:219.105px"] {
+  background: linear-gradient(90deg, #a6a6a6 0%, #bcbcbc 48%, #717171 100%) !important;
+}
+
+.ls-slide[data-source-slide="40"] .lvg-layout-text[style*="top:359.433px"] span,
+.ls-slide[data-source-slide="40"] .lvg-layout-text[style*="top:360.915px"] span,
+.ls-slide[data-source-slide="41"] .lvg-layout-text[style*="top:295.202px"] span,
+.ls-slide[data-source-slide="41"] .lvg-layout-text[style*="top:297.260px"] span {
+  color: #000 !important;
+  -webkit-text-fill-color: #000 !important;
+}
+
+.ls-slide[data-source-slide="41"] .lvg-layout-text[style*="top:416.590px"] p {
+  background: var(--lvg-gray-text-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.ls-slide[data-source-slide="41"] .lvg-layout-text[style*="top:568.060px"] p {
+  background: linear-gradient(90deg, #ffffff 0%, #a6a6a6 42%, #80a3ff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.ls-slide[data-source-slide="41"] .lvg-layout-text[style*="top:644.240px"] p {
+  background: linear-gradient(90deg, #a6a6a6 0%, #ffffff 46%, #717171 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.ls-slide[data-source-slide="42"] .lvg-layout::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  background:
+    linear-gradient(90deg, #2f2f2f 0%, #2f2f2f 100%) 195px 522px / 834px 6px no-repeat,
+    radial-gradient(circle, #2f2f2f 0 4px, transparent 5px) 191px 517px / 12px 12px no-repeat,
+    radial-gradient(circle, #2f2f2f 0 4px, transparent 5px) 1023px 517px / 12px 12px no-repeat,
+    linear-gradient(90deg, #ceeafe 0%, #3ec3f7 47%, #1456f0 56%, #2f2f2f 56%, #2f2f2f 100%) 195px 570px / 834px 6px no-repeat,
+    radial-gradient(circle, #ceeafe 0 4px, transparent 5px) 191px 565px / 12px 12px no-repeat,
+    radial-gradient(circle, #2f2f2f 0 4px, transparent 5px) 1023px 565px / 12px 12px no-repeat,
+    radial-gradient(circle, #1456f0 0 4px, transparent 5px) 1023px 693px / 12px 12px no-repeat,
+    radial-gradient(circle, #1456f0 0 4px, transparent 5px) 1023px 743px / 12px 12px no-repeat,
+    radial-gradient(circle, #2f2f2f 0 4px, transparent 5px) 1023px 792px / 12px 12px no-repeat;
+}
+
+.ls-slide[data-source-slide="42"] .lvg-layout::after {
+  content: none;
+}
+
+.ls-slide[data-source-slide="42"] .lvg-layout-text,
+.ls-slide[data-source-slide="42"] .lvg-layout-shape {
+  z-index: 3;
+}
+
+.ls-slide[data-source-slide="42"] .lvg-layout-shape[style*="left:1105.928px"],
+.ls-slide[data-source-slide="42"] .lvg-layout-shape[style*="left:1105.927px"] {
+  border: 1.4px solid transparent !important;
+  border-radius: 6px !important;
+  background:
+    linear-gradient(#000, #000) padding-box,
+    var(--lvg-brand-text-gradient) border-box !important;
+}
+
+.ls-slide[data-source-slide="42"] .lvg-layout-text[style*="left:1112.799px"] span,
+.ls-slide[data-source-slide="42"] .lvg-layout-text[style*="left:1112.798px"] span {
+  background: var(--lvg-brand-text-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+.ls-slide[data-source-slide="42"] .lvg-layout-text[style*="left:1112.799px"],
+.ls-slide[data-source-slide="42"] .lvg-layout-text[style*="left:1112.798px"] {
+  left: 1105.927px !important;
+  width: 74.32px !important;
+  height: 39.504px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ls-slide[data-source-slide="42"] .lvg-layout-text[style*="left:1112.799px"] p,
+.ls-slide[data-source-slide="42"] .lvg-layout-text[style*="left:1112.798px"] p {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center !important;
+  line-height: 1;
+}
+
+.ls-slide[data-source-slide="42"] .lvg-layout-image[style*="top:289.973px"] {
+  top: 292px !important;
+  width: 36px !important;
+  height: 36px !important;
+}
+
+.ls-slide[data-source-slide="42"] .lvg-layout-text[style*="top:287.008px"],
+.ls-slide[data-source-slide="42"] .lvg-layout-text[style*="top:287.010px"] {
+  top: 298px !important;
+  height: 30px !important;
+}
+
+.ls-slide[data-source-slide="42"] .lvg-layout-text[style*="top:287.008px"] p,
+.ls-slide[data-source-slide="42"] .lvg-layout-text[style*="top:287.010px"] p {
+  line-height: 1;
+}
+
+.ls-slide[data-source-slide="42"] .lvg-layout-text[style*="top:287.008px"] span,
+.ls-slide[data-source-slide="42"] .lvg-layout-text[style*="top:287.010px"] span {
+  font-size: 20px !important;
+}
+
+.ls-slide[data-source-slide="42"] .lvg-layout-shape[style*="top:267.130px"] {
+  border-color: transparent !important;
+  background:
+    linear-gradient(#000, #000) padding-box,
+    linear-gradient(90deg, #ceeafe 0%, #b1d5ff 52%, #80a3ff 100%) border-box !important;
+}
+
+.ls-slide[data-source-slide="42"] .lvg-layout-shape[style*="top:365.347px"] {
+  border-color: transparent !important;
+  background:
+    linear-gradient(#000, #000) padding-box,
+    linear-gradient(90deg, #ffffff 0%, #f0dfff 52%, #c5a7ff 100%) border-box !important;
+}
+
+.ls-slide[data-source-slide="42"] .lvg-layout-shape[style*="top:460.971px"] {
+  border-color: #ffffff !important;
+  background: transparent !important;
+}
+
+.ls-slide[data-source-slide="42"] .lvg-layout-text[style*="top:268.670px"] span {
+  background: linear-gradient(90deg, #ceeafe 0%, #b1d5ff 52%, #80a3ff 100%) !important;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+}
+
+.ls-slide[data-source-slide="42"] .lvg-layout-text[style*="top:366.887px"] span {
+  background: linear-gradient(90deg, #ffffff 0%, #f0dfff 52%, #c5a7ff 100%) !important;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+}
+
+.ls-slide[data-source-slide="42"] .lvg-layout-text[style*="top:462.511px"] span {
+  background: transparent !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+.ls-slide[data-source-slide="42"] .lvg-layout::before {
+  background:
+    linear-gradient(90deg, #ceeafe 0%, #3ec3f7 54%, #1456f0 100%) 195px 276px / 834px 8px no-repeat,
+    linear-gradient(90deg, #ceeafe 0%, #b1d5ff 52%, #80a3ff 100%) 1196px 286px / 199px 19px no-repeat,
+    linear-gradient(90deg, #ffffff 0%, #f0dfff 52%, #c5a7ff 100%) 1199px 384px / 199px 19px no-repeat,
+    linear-gradient(90deg, #ffffff, #ffffff) 1201px 480px / 199px 19px no-repeat;
+}
+
+.ls-slide[data-source-slide="42"] .lvg-layout-text[style*="top:345.263px"]::after,
+.ls-slide[data-source-slide="42"] .lvg-layout-text[style*="top:403.296px"]::after,
+.ls-slide[data-source-slide="42"] .lvg-layout-text[style*="top:449.779px"]::after,
+.ls-slide[data-source-slide="42"] .lvg-layout-text[style*="top:499.772px"]::after,
+.ls-slide[data-source-slide="42"] .lvg-layout-text[style*="top:548.078px"]::after,
+.ls-slide[data-source-slide="42"] .lvg-layout-text[style*="top:671.178px"]::after,
+.ls-slide[data-source-slide="42"] .lvg-layout-text[style*="top:721.042px"]::after,
+.ls-slide[data-source-slide="42"] .lvg-layout-text[style*="top:769.482px"]::after {
+  content: "";
+  position: absolute;
+  left: 61px;
+  width: 834px;
+  border-radius: 999px;
+  pointer-events: none;
+}
+
+.ls-slide[data-source-slide="42"] .lvg-layout-text[style*="top:345.263px"]::after {
+  top: 38px;
+  height: 4px;
+  background: linear-gradient(90deg, #ceeafe 0%, #3ec3f7 54%, #1456f0 100%);
+}
+
+.ls-slide[data-source-slide="42"] .lvg-layout-text[style*="top:403.296px"]::after {
+  top: 30px;
+  height: 6px;
+  background: linear-gradient(90deg, #ceeafe 0%, #3ec3f7 54%, #1456f0 100%);
+}
+
+.ls-slide[data-source-slide="42"] .lvg-layout-text[style*="top:449.779px"]::after {
+  top: 34px;
+  height: 8px;
+  background: linear-gradient(90deg, #ceeafe 0%, #3ec3f7 54%, #1456f0 100%);
+}
+
+.ls-slide[data-source-slide="42"] .lvg-layout-text[style*="top:499.772px"]::after {
+  top: 23px;
+  height: 7px;
+  background: #2f2f2f;
+}
+
+.ls-slide[data-source-slide="42"] .lvg-layout-text[style*="top:548.078px"]::after {
+  top: 22px;
+  height: 14px;
+  background: linear-gradient(90deg, #ceeafe 0%, #3ec3f7 47%, #1456f0 58%, #2f2f2f 58%, #2f2f2f 100%);
+}
+
+.ls-slide[data-source-slide="42"] .lvg-layout-text[style*="top:671.178px"]::after {
+  top: 23px;
+  height: 4px;
+  background: linear-gradient(90deg, #ceeafe 0%, #3ec3f7 54%, #1456f0 100%);
+}
+
+.ls-slide[data-source-slide="42"] .lvg-layout-text[style*="top:721.042px"]::after {
+  top: 23px;
+  height: 4px;
+  background: linear-gradient(90deg, #ceeafe 0%, #3ec3f7 54%, #1456f0 100%);
+  -webkit-mask: repeating-linear-gradient(90deg, #000 0 12px, transparent 12px 24px);
+  mask: repeating-linear-gradient(90deg, #000 0 12px, transparent 12px 24px);
+}
+
+.ls-slide[data-source-slide="42"] .lvg-layout-text[style*="top:769.482px"]::after {
+  top: 23px;
+  height: 4px;
+  background: #2f2f2f;
+  -webkit-mask: repeating-linear-gradient(90deg, #000 0 12px, transparent 12px 24px);
+  mask: repeating-linear-gradient(90deg, #000 0 12px, transparent 12px 24px);
+}
+
+.ls-slide[data-source-slide="43"] .lvg-layout-text[style*="top:341.839px"],
+.ls-slide[data-source-slide="43"] .lvg-layout-text[style*="top:448.340px"],
+.ls-slide[data-source-slide="43"] .lvg-layout-text[style*="top:554.841px"],
+.ls-slide[data-source-slide="43"] .lvg-layout-text[style*="top:661.343px"] {
+  height: 44px !important;
+}
+
+.ls-slide[data-source-slide="43"] .lvg-layout-text[style*="left:241.720px"] {
+  width: 170px !important;
+}
+
+.ls-slide[data-source-slide="43"] .lvg-layout-text[style*="left:741.814px"] {
+  width: 150px !important;
+}
+
+.ls-slide[data-source-slide="43"] .lvg-layout-text[style*="left:1245.586px"] {
+  width: 150px !important;
+}
+
+.ls-slide[data-source-slide="43"] .lvg-layout-text[style*="left:320.430px"] {
+  left: 390px !important;
+  width: 84px !important;
+}
+
+.ls-slide[data-source-slide="43"] .lvg-layout-text[style*="left:812.150px"] {
+  left: 885px !important;
+  width: 84px !important;
+}
+
+.ls-slide[data-source-slide="43"] .lvg-layout-text[style*="left:1299.175px"] {
+  left: 1370px !important;
+  width: 84px !important;
+}
+
+.ls-slide[data-source-slide="43"] .lvg-layout-text[style*="left:320.430px"] p,
+.ls-slide[data-source-slide="43"] .lvg-layout-text[style*="left:812.150px"] p,
+.ls-slide[data-source-slide="43"] .lvg-layout-text[style*="left:1299.175px"] p {
+  text-align: left !important;
+}
+
+.ls-slide[data-source-slide="43"] .lvg-layout-vector[style*="top:326.013px"] {
+  overflow: visible;
+}
+
+.ls-slide[data-source-slide="43"] .lvg-layout-vector[style*="top:326.013px"] line {
+  stroke: rgba(208, 207, 207, 0.36) !important;
+  stroke-width: 1.667px !important;
+}
+
+.ls-slide[data-source-slide="45"] .lvg-layout-text[style*="top:112.487px"] span {
+  color: #548bff !important;
+  -webkit-text-fill-color: #548bff !important;
+  opacity: 1 !important;
+}
+
+.lvg-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.lvg-bg-soft {
+  opacity: 0.92;
+}
+
+.lvg-wash {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 52% 38%, rgba(54, 80, 148, 0.16), transparent 38%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.76));
+  pointer-events: none;
+}
+
+.lvg-vignette {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 50% 44%, rgba(67, 93, 168, 0.18), transparent 36%),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.84), rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.84));
+  pointer-events: none;
+}
+
+.lvg-title {
+  position: absolute;
+  left: 140px;
+  top: 134px;
+  margin: 0;
+  color: #fff;
+  font-size: 40px;
+  line-height: 1.08;
+  font-weight: 560;
+}
+
+.lvg-title.strong {
+  font-weight: 760;
+}
+
+.lvg-link {
+  position: absolute;
+  right: 166px;
+  top: 130px;
+  color: #548bff;
+  font-size: 26px;
+  line-height: 1;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  font-weight: 400;
+}
+
+.lvg-center {
+  position: absolute;
+  left: 50%;
+  top: 47%;
+  width: 78%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.lvg-center h1,
+.lvg-hero-copy h1,
+.lvg-quote h1 {
+  margin: 0;
+  color: #fff;
+  font-size: 82px;
+  line-height: 1.08;
+  font-weight: 780;
+}
+
+.lvg-center p,
+.lvg-quote p {
+  margin: 34px 0 0;
+  color: #548bff;
+  font-size: 31px;
+  line-height: 1.2;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  font-weight: 400;
+}
+
+.lvg-small-caption {
+  position: absolute;
+  left: 50%;
+  bottom: 96px;
+  transform: translateX(-50%);
+  color: rgba(255, 255, 255, 0.28);
+  font-size: 10px;
+  line-height: 1;
+}
+
+.lvg-hero-copy {
+  position: absolute;
+  left: 132px;
+  top: 254px;
+  width: 820px;
+}
+
+.lvg-hero-copy.center {
+  left: 50%;
+  top: 50%;
+  width: 940px;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.lvg-hero-copy.right {
+  left: auto;
+  right: 132px;
+  text-align: right;
+}
+
+.lvg-hero-copy h1 {
+  font-size: 66px;
+}
+
+.lvg-hero-copy .big {
+  font-size: 84px;
+}
+
+.lvg-hero-copy p {
+  margin: 28px 0 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 28px;
+  line-height: 1.45;
+  font-weight: 420;
+}
+
+.lvg-blue {
+  color: #9bc6ff;
+}
+
+.lvg-muted {
+  color: #717171;
+}
+
+.lvg-logo-lockup {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  margin-bottom: 34px;
+}
+
+.lvg-logo-lockup img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+}
+
+.lvg-palette-stack {
+  position: absolute;
+  left: 188px;
+  top: 226px;
+  width: 1224px;
+}
+
+.lvg-palette-label {
+  margin: 0 0 22px;
+  color: #717171;
+  font-size: 28px;
+  line-height: 1;
+  font-weight: 430;
+}
+
+.lvg-gradient-row {
+  display: grid;
+  grid-template-columns: 1.9fr 0.95fr 0.75fr;
+  background: linear-gradient(90deg, #548bff 0%, #548bff 36%, #9bc6ff 50%, #eadafb 64%, #ffcfb4 100%);
+}
+
+.lvg-gradient-row.small {
+  height: 44px;
+}
+
+.lvg-gradient-row.large {
+  height: 136px;
+}
+
+.lvg-gradient-row span {
+  display: flex;
+  align-items: center;
+  padding-left: 22px;
+  color: rgba(0, 0, 0, 0.74);
+  font-size: 14px;
+  font-weight: 520;
+}
+
+.lvg-swatch-row {
+  display: grid;
+  grid-template-columns: 1.35fr 1.35fr 1.35fr 1.35fr 1.35fr 1.35fr 1.35fr 1.35fr 0.6fr 0.6fr 0.6fr 0.6fr 0.6fr 0.6fr;
+  height: 138px;
+  margin-top: 44px;
+}
+
+.lvg-swatch-row div {
+  padding: 24px 12px;
+  color: rgba(0, 0, 0, 0.72);
+  font-size: 14px;
+  font-weight: 520;
+}
+
+.lvg-highlight-demo {
+  position: absolute;
+  left: 512px;
+  top: 300px;
+  width: 578px;
+}
+
+.lvg-ok-line,
+.lvg-bad-line {
+  position: relative;
+  min-height: 76px;
+  padding-left: 84px;
+  display: flex;
+  align-items: center;
+}
+
+.lvg-status {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 34px;
+  height: 34px;
+  transform: translateY(-50%);
+  object-fit: contain;
+}
+
+.lvg-ok-line strong {
+  color: #fff;
+  font-size: 56px;
+  line-height: 1;
+  font-weight: 780;
+  white-space: nowrap;
+}
+
+.lvg-bad-line strong {
+  color: #fff;
+  font-size: 36px;
+  line-height: 1.32;
+  font-weight: 760;
+}
+
+.lvg-rule {
+  height: 1px;
+  margin: 18px 0 26px;
+  background: rgba(255, 255, 255, 0.34);
+}
+
+.lvg-type-board {
+  position: absolute;
+  left: 260px;
+  top: 218px;
+  width: 1080px;
+  height: 504px;
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  gap: 138px;
+}
+
+.lvg-type-separator,
+.lvg-dotted-separator {
+  width: 1px;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.42) 0 3px, transparent 3px 10px);
+}
+
+.lvg-type-kicker {
+  margin: 0 0 90px;
+  color: #596375;
+  font-size: 28px;
+  line-height: 1;
+  font-weight: 420;
+}
+
+.lvg-type-group {
+  margin-bottom: 58px;
+}
+
+.lvg-type-caption {
+  margin: 0 0 22px;
+  color: #596375;
+  font-size: 22px;
+  line-height: 1;
+  font-weight: 420;
+}
+
+.lvg-type-main {
+  margin: 0;
+  color: #fff;
+  font-size: 36px;
+  line-height: 1.12;
+  font-weight: 760;
+  white-space: nowrap;
+}
+
+.lvg-type-body {
+  margin: 0;
+  color: #fff;
+  font-size: 31px;
+  line-height: 1.18;
+  font-weight: 430;
+  white-space: nowrap;
+}
+
+.lvg-logo-cloud {
+  position: absolute;
+  left: 250px;
+  top: 334px;
+  width: 1100px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px 24px;
+  justify-content: center;
+  align-content: center;
+}
+
+.lvg-logo-card {
+  width: 205px;
+  height: 104px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.lvg-logo-card img {
+  max-width: 82%;
+  max-height: 70%;
+  object-fit: contain;
+}
+
+.lvg-avatar-columns {
+  position: absolute;
+  left: 146px;
+  right: 138px;
+  top: 258px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 114px;
+}
+
+.lvg-avatar-col {
+  position: relative;
+  min-height: 430px;
+}
+
+.lvg-avatar-col + .lvg-avatar-col::before {
+  content: "";
+  position: absolute;
+  left: -56px;
+  top: 86px;
+  width: 1px;
+  height: 384px;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.28) 0 3px, transparent 3px 7px);
+}
+
+.lvg-col-title {
+  margin: 0 0 45px;
+  color: #fff;
+  font-size: 28px;
+  line-height: 1;
+  font-weight: 520;
+}
+
+.lvg-person {
+  height: 86px;
+  display: grid;
+  grid-template-columns: 62px minmax(0, 1fr) 54px;
+  align-items: center;
+  column-gap: 30px;
+}
+
+.lvg-person img {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.lvg-person span {
+  color: #aeb0b8;
+  font-size: 25px;
+  line-height: 1;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.lvg-icon-grid {
+  position: absolute;
+  left: 144px;
+  top: 304px;
+  width: 1312px;
+  display: grid;
+  grid-template-columns: repeat(18, 1fr);
+  gap: 26px 30px;
+}
+
+.lvg-icon-dot {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+}
+
+.lvg-icon-dot img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.lvg-status-row {
+  position: absolute;
+  left: 144px;
+  top: 224px;
+  display: flex;
+  gap: 28px;
+}
+
+.lvg-status-row img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+}
+
+.lvg-product-icons {
+  position: absolute;
+  left: 288px;
+  top: 236px;
+  width: 1024px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px 22px;
+}
+
+.lvg-product-icon {
+  width: 56px;
+  height: 56px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.lvg-product-icon img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+}
+
+.lvg-product-labels {
+  position: absolute;
+  left: 300px;
+  top: 548px;
+  width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 18px 34px;
+}
+
+.lvg-product-labels span {
+  color: #787f8e;
+  font-size: 13px;
+  text-align: center;
+}
+
+.lvg-photo-strip {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.lvg-photo-strip img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.52) saturate(0.85);
+}
+
+.lvg-photo-caption {
+  position: absolute;
+  top: 350px;
+  width: 25%;
+  text-align: center;
+  color: #fff;
+}
+
+.lvg-photo-caption h3 {
+  margin: 0;
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 650;
+}
+
+.lvg-photo-caption p {
+  margin: 16px 0 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 17px;
+  line-height: 1.4;
+}
+
+.lvg-shot {
+  position: absolute;
+  right: 116px;
+  top: 220px;
+  width: 620px;
+  height: 420px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #f7f9ff;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.32);
+}
+
+.lvg-shot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lvg-shot.phone {
+  width: 340px;
+  height: 600px;
+  right: 210px;
+  top: 158px;
+}
+
+.lvg-metrics {
+  position: absolute;
+  left: 122px;
+  top: 235px;
+  width: 430px;
+}
+
+.lvg-metric-value {
+  margin: 0;
+  color: #b1d5ff;
+  font-size: 94px;
+  line-height: 1;
+  font-weight: 760;
+}
+
+.lvg-metric-label {
+  margin: 0 0 16px;
+  color: #fff;
+  font-size: 24px;
+  line-height: 1.3;
+}
+
+.lvg-chart {
+  position: absolute;
+  left: 648px;
+  top: 236px;
+  width: 700px;
+  height: 420px;
+}
+
+.lvg-chart-line {
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: 72px;
+  height: 3px;
+  background: linear-gradient(90deg, #8fcaff, #1456f0);
+  transform: skewY(-23deg);
+  transform-origin: left bottom;
+  box-shadow: 0 0 18px rgba(84, 139, 255, 0.65);
+}
+
+.lvg-chart-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 100% 84px, 116px 100%;
+  opacity: 0.48;
+}
+
+.lvg-bar-group {
+  position: absolute;
+  left: 500px;
+  top: 300px;
+  width: 680px;
+  display: grid;
+  gap: 18px;
+}
+
+.lvg-bar {
+  height: 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  overflow: hidden;
+}
+
+.lvg-bar span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #bcecff, #1456f0);
+}
+
+.lvg-card-row {
+  position: absolute;
+  left: 148px;
+  right: 148px;
+  top: 385px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.lvg-dark-card {
+  min-height: 144px;
+  padding: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.045);
+}
+
+.lvg-dark-card h3 {
+  margin: 0;
+  color: #fff;
+  font-size: 25px;
+  line-height: 1.25;
+  font-weight: 650;
+}
+
+.lvg-dark-card p {
+  margin: 16px 0 0;
+  color: rgba(255, 255, 255, 0.66);
+  font-size: 18px;
+  line-height: 1.45;
+}
+
+.lvg-logo-spec {
+  position: absolute;
+  left: 206px;
+  top: 286px;
+  display: grid;
+  grid-template-columns: 230px 230px 1fr;
+  gap: 24px 80px;
+  align-items: center;
+}
+
+.lvg-logo-panel {
+  width: 230px;
+  height: 360px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: #fff;
+}
+
+.lvg-logo-panel.dark {
+  background: #000;
+}
+
+.lvg-logo-panel img {
+  max-width: 150px;
+  max-height: 120px;
+  object-fit: contain;
+}
+
+.lvg-lockup-spec {
+  position: relative;
+  width: 610px;
+  height: 210px;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.lvg-lockup-spec img {
+  position: absolute;
+  left: 36px;
+  top: 62px;
+  height: 86px;
+}
+
+.lvg-lockup-spec .partner {
+  position: absolute;
+  right: 46px;
+  top: 74px;
+  color: rgba(255, 255, 255, 0.36);
+  font-size: 38px;
+}
+
+.lvg-line-kit {
+  position: absolute;
+  left: 140px;
+  top: 274px;
+  width: 900px;
+}
+
+.lvg-line {
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #ceeafe, #3ec3f7, #1456f0);
+  margin: 28px 0;
+}
+
+.lvg-line.thin {
+  height: 4px;
+}
+
+.lvg-line.dashed {
+  height: 4px;
+  background: repeating-linear-gradient(90deg, #ceeafe 0 12px, transparent 12px 20px), linear-gradient(90deg, #ceeafe, #1456f0);
+}
+
+.lvg-tag-list {
+  position: absolute;
+  right: 180px;
+  top: 270px;
+  width: 300px;
+  display: grid;
+  gap: 56px;
+}
+
+.lvg-tag-row {
+  display: grid;
+  grid-template-columns: 74px 1fr;
+  align-items: center;
+  gap: 18px;
+}
+
+.lvg-tag {
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 6px;
+  color: #fff;
+  font-size: 25px;
+}
+
+.lvg-tag-line {
+  height: 28px;
+  background: linear-gradient(90deg, #e2fff7, #80a3ff);
+}
+
+.lvg-map {
+  position: absolute;
+  left: 170px;
+  bottom: 108px;
+  width: 870px;
+  opacity: 0.56;
+}
+
+.lvg-milestone {
+  position: absolute;
+  left: 170px;
+  top: 470px;
+  width: 920px;
+  height: 170px;
+}
+
+.lvg-milestone::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 88px;
+  height: 3px;
+  background: linear-gradient(90deg, #548bff, #9bc6ff, #548bff);
+}
+
+.lvg-point {
+  position: absolute;
+  top: 72px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #9bc6ff;
+  box-shadow: 0 0 16px rgba(155, 198, 255, 0.8);
+}
+
+.lvg-point span {
+  position: absolute;
+  left: -36px;
+  top: -54px;
+  width: 120px;
+  color: #fff;
+  font-size: 15px;
+  text-align: center;
+}
+
+.lvg-quote {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 960px;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.lvg-quote h1 {
+  font-size: 56px;
+  line-height: 1.28;
+}
+
+.lvg-mini-logo {
+  position: absolute;
+  left: 140px;
+  top: 118px;
+  max-width: 240px;
+  max-height: 58px;
+  object-fit: contain;
+}
+
+.lvg-hero-copy .lvg-mini-logo {
+  position: static;
+  display: block;
+  margin: 0 0 32px;
+  max-width: 240px;
+  max-height: 58px;
+}
+
+.lvg-hero-copy.center .lvg-mini-logo {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 720px) {
+  .ls-app {
+    grid-template-rows: 1fr auto;
+  }
+
+  .ls-stage {
+    width: 100vw;
+    box-shadow: none;
+  }
+
+  .ls-toolbar {
+    width: calc(100vw - 24px);
+    justify-content: center;
+    border-radius: 0;
+  }
+}
+
+</style>
+    <style>
+      .showcase-slide {
+        position: relative;
+        width: 1600px;
+        height: 900px;
+        box-sizing: border-box;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 84% 16%, rgba(84, 139, 255, 0.18), transparent 28%),
+          radial-gradient(circle at 18% 20%, rgba(62, 195, 247, 0.16), transparent 30%),
+          linear-gradient(135deg, #000000 0%, #06070a 54%, #000000 100%);
+        color: #f7f8fb;
+        font-family: var(--ld-font-ui, "PingFang SC", "Microsoft YaHei", Arial, sans-serif);
+      }
+
+      .showcase-slide::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 6px;
+        background: linear-gradient(90deg, #548bff 0%, #9bc6ff 45%, #eadafb 70%, #548bff 100%);
+      }
+
+      .showcase-slide::after {
+        content: "";
+        position: absolute;
+        inset: 34px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 8px;
+        pointer-events: none;
+      }
+
+      .showcase-kicker {
+        width: fit-content;
+        padding: 9px 16px;
+        border: 1px solid rgba(84, 139, 255, 0.46);
+        border-radius: 8px;
+        color: #ceeafe;
+        background: rgba(84, 139, 255, 0.1);
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 1.2;
+      }
+
+      .showcase-title {
+        margin: 0;
+        color: #ffffff;
+        font-size: 72px;
+        font-weight: 780;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .showcase-subtitle {
+        margin: 0;
+        color: rgba(247, 248, 251, 0.72);
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 1.5;
+      }
+
+      .showcase-panel {
+        box-sizing: border-box;
+      }
+
+      .intro-grid {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 0.98fr 1.02fr;
+        gap: 72px;
+        height: 100%;
+        padding: 92px 112px;
+        box-sizing: border-box;
+      }
+
+      .intro-copy {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 28px;
+      }
+
+      .intro-code {
+        margin-top: 10px;
+        padding: 20px 22px;
+        border: 1px solid rgba(84, 139, 255, 0.34);
+        border-radius: 8px;
+        color: #ceeafe;
+        background: rgba(5, 10, 22, 0.74);
+        font-size: 22px;
+        font-weight: 650;
+        line-height: 1.4;
+        white-space: pre-wrap;
+        box-shadow: 0 18px 52px rgba(0, 0, 0, 0.24);
+      }
+
+      .step-list {
+        align-self: center;
+        display: grid;
+        gap: 16px;
+      }
+
+      .step-item {
+        display: grid;
+        grid-template-columns: 92px 1fr;
+        gap: 20px;
+        align-items: start;
+        padding: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.13);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.065);
+        box-shadow: 0 20px 58px rgba(0, 0, 0, 0.26);
+      }
+
+      .step-tag {
+        display: inline-grid;
+        min-height: 34px;
+        place-items: center;
+        border-radius: 6px;
+        color: #9bc6ff;
+        background: rgba(84, 139, 255, 0.12);
+        font-size: 15px;
+        font-weight: 780;
+        line-height: 1.2;
+        text-transform: uppercase;
+      }
+
+      .step-item:nth-child(2) .step-tag {
+        color: #ceeafe;
+        background: rgba(62, 195, 247, 0.12);
+      }
+
+      .step-item:nth-child(3) .step-tag {
+        color: #eadafb;
+        background: rgba(234, 218, 251, 0.12);
+      }
+
+      .step-copy {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.92);
+        font-size: 24px;
+        font-weight: 650;
+        line-height: 1.36;
+      }
+
+      .slide-head {
+        position: relative;
+        z-index: 1;
+        padding: 74px 108px 0;
+      }
+
+      .slide-head .showcase-title {
+        font-size: 58px;
+      }
+
+      .slide-head .showcase-subtitle {
+        width: 900px;
+        margin-top: 18px;
+        font-size: 25px;
+      }
+
+      .capability-grid {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding: 42px 108px 0;
+      }
+
+      .capability-card {
+        min-height: 210px;
+        padding: 26px 28px;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.065);
+        box-sizing: border-box;
+        box-shadow: 0 18px 52px rgba(0, 0, 0, 0.24);
+      }
+
+      .capability-card h2 {
+        margin: 0 0 16px;
+        color: #ffffff;
+        font-size: 32px;
+        font-weight: 760;
+        line-height: 1.18;
+      }
+
+      .capability-card p {
+        margin: 0;
+        color: rgba(247, 248, 251, 0.72);
+        font-size: 21px;
+        font-weight: 500;
+        line-height: 1.45;
+      }
+
+      .capability-chip {
+        display: inline-block;
+        margin-bottom: 18px;
+        padding: 5px 9px;
+        border-radius: 6px;
+        color: #9bc6ff;
+        background: rgba(84, 139, 255, 0.12);
+        font-size: 14px;
+        font-weight: 800;
+        letter-spacing: 0;
+        text-transform: uppercase;
+      }
+
+      .capability-card:nth-child(2) .capability-chip,
+      .capability-card:nth-child(5) .capability-chip {
+        color: #ceeafe;
+        background: rgba(62, 195, 247, 0.12);
+      }
+
+      .capability-card:nth-child(3) .capability-chip,
+      .capability-card:nth-child(6) .capability-chip {
+        color: #eadafb;
+        background: rgba(234, 218, 251, 0.12);
+      }
+
+      .pipeline {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 16px;
+        padding: 50px 108px 0;
+      }
+
+      .pipeline-card {
+        min-height: 184px;
+        padding: 24px 22px;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-top: 5px solid #548bff;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.06);
+        box-sizing: border-box;
+        box-shadow: 0 18px 48px rgba(0, 0, 0, 0.24);
+      }
+
+      .pipeline-card:nth-child(2),
+      .pipeline-card:nth-child(4) {
+        border-top-color: #9bc6ff;
+      }
+
+      .pipeline-card:nth-child(3),
+      .pipeline-card:nth-child(5) {
+        border-top-color: #eadafb;
+      }
+
+      .pipeline-num {
+        color: #9bc6ff;
+        font-size: 18px;
+        font-weight: 800;
+      }
+
+      .pipeline-card:nth-child(2) .pipeline-num,
+      .pipeline-card:nth-child(4) .pipeline-num {
+        color: #ceeafe;
+      }
+
+      .pipeline-card:nth-child(3) .pipeline-num,
+      .pipeline-card:nth-child(5) .pipeline-num {
+        color: #eadafb;
+      }
+
+      .pipeline-card h2 {
+        margin: 18px 0 14px;
+        color: #ffffff;
+        font-size: 29px;
+        font-weight: 760;
+        line-height: 1.18;
+      }
+
+      .pipeline-card p {
+        margin: 0;
+        color: rgba(247, 248, 251, 0.7);
+        font-size: 19px;
+        line-height: 1.44;
+      }
+
+      .metrics-row {
+        position: absolute;
+        z-index: 1;
+        left: 108px;
+        right: 108px;
+        bottom: 78px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 18px;
+      }
+
+      .metric {
+        padding: 22px 24px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 8px;
+        background: rgba(5, 10, 20, 0.76);
+        box-shadow: 0 18px 48px rgba(0, 0, 0, 0.22);
+      }
+
+      .metric strong {
+        display: block;
+        color: #9bc6ff;
+        font-size: 34px;
+        font-weight: 800;
+        line-height: 1;
+      }
+
+      .metric span {
+        display: block;
+        margin-top: 12px;
+        color: rgba(247, 248, 251, 0.65);
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1.35;
+      }
+
+      [data-text-id] {
+        border-radius: 6px;
+        outline: 1px dashed transparent;
+        outline-offset: 6px;
+        transition: outline-color 160ms ease, background 160ms ease;
+      }
+
+      [data-text-id]:hover,
+      [data-text-id]:focus-visible {
+        outline-color: rgba(84, 139, 255, 0.72);
+        background: rgba(84, 139, 255, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="deck" data-lark-deck></div>
+    <script>
+(function () {
+  "use strict";
+
+  const DEFAULT_SIZE = { width: 1600, height: 900 };
+  const themes = {};
+  const DEFAULT_TEXT_SAVE_DEBOUNCE_MS = 600;
+
+  defineTheme("default", {
+    className: "ls-theme-default",
+    cssVars: {},
+  });
+
+  defineTheme("larkVisual", {
+    className: "ls-theme-lark-visual",
+    cssVars: {
+      "--ls-app-bg": "#111217",
+      "--ls-slide-bg": "#000000",
+      "--ls-accent": "#1456f0",
+    },
+  });
+
+  function toElement(slide, index) {
+    if (slide instanceof HTMLElement) return slide;
+
+    const section = document.createElement("section");
+    section.className = `ls-slide ${slide.className || ""}`.trim();
+    section.dataset.index = String(index + 1);
+    if (slide.id) section.id = slide.id;
+    if (slide.title) section.dataset.title = slide.title;
+    if (slide.template) section.dataset.template = slide.template;
+    if (slide.sourceSlide) section.dataset.sourceSlide = String(slide.sourceSlide);
+    section.setAttribute("aria-label", slide.title || `Slide ${index + 1}`);
+
+    const inner = document.createElement("div");
+    inner.className = "ls-slide-inner";
+    inner.innerHTML = typeof slide === "string" ? slide : slide.content || "";
+    section.appendChild(inner);
+    return section;
+  }
+
+  function ensureStructure(mount) {
+    let stage = mount.querySelector(":scope > .ls-stage");
+    if (stage) return stage;
+
+    stage = document.createElement("div");
+    stage.className = "ls-stage";
+
+    const existingSlides = Array.from(mount.querySelectorAll(":scope > .ls-slide"));
+    for (const slide of existingSlides) stage.appendChild(slide);
+    mount.appendChild(stage);
+    return stage;
+  }
+
+  function ensureInner(slide) {
+    let inner = slide.querySelector(":scope > .ls-slide-inner");
+    if (!inner) {
+      inner = document.createElement("div");
+      inner.className = "ls-slide-inner";
+      while (slide.firstChild) inner.appendChild(slide.firstChild);
+      slide.appendChild(inner);
+    }
+    return inner;
+  }
+
+  function mountControls(deck) {
+    if (!deck.options.controls) return null;
+
+    const listenerOptions = deck.eventListenerOptions || undefined;
+    const toolbar = document.createElement("div");
+    toolbar.className = "ls-toolbar";
+    toolbar.setAttribute("role", "toolbar");
+    toolbar.setAttribute("aria-label", "Slide controls");
+
+    const prev = button("上一页", "‹", () => deck.prev(), listenerOptions);
+    const next = button("下一页", "›", () => deck.next(), listenerOptions);
+    const share = button("复制当前页链接", copyLinkIcon(), () => {
+      deck.copyCurrentSlideLink().catch((error) => {
+        showToolbarMessage(deck, "复制失败", 1600);
+        if (deck.options.textSync?.onError) deck.options.textSync.onError(error, deck);
+      });
+    }, listenerOptions);
+    const fullscreen = button("全屏播放", fullscreenIcon(), () => deck.toggleFullscreen(), listenerOptions);
+
+    const status = document.createElement("div");
+    status.className = "ls-status";
+    status.setAttribute("aria-live", "polite");
+    deck.status = status;
+
+    toolbar.append(prev, status, next);
+    if (deck.options.share) toolbar.appendChild(share);
+    toolbar.appendChild(fullscreen);
+    deck.mount.appendChild(toolbar);
+
+    const progress = document.createElement("div");
+    progress.className = "ls-progress";
+    const bar = document.createElement("div");
+    bar.className = "ls-progress-bar";
+    progress.appendChild(bar);
+    deck.mount.appendChild(progress);
+    deck.progressBar = bar;
+
+    return toolbar;
+  }
+
+  function button(label, text, onClick, listenerOptions) {
+    const el = document.createElement("button");
+    el.className = "ls-button";
+    el.type = "button";
+    el.setAttribute("aria-label", label);
+    el.title = label;
+    if (text instanceof Node) el.appendChild(text);
+    else el.textContent = text;
+    el.addEventListener("click", onClick, listenerOptions);
+    return el;
+  }
+
+  function iconSvg(children) {
+    const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svg.setAttribute("class", "ls-button-icon");
+    svg.setAttribute("viewBox", "0 0 20 20");
+    svg.setAttribute("aria-hidden", "true");
+    svg.setAttribute("focusable", "false");
+    svg.setAttribute("fill", "none");
+    svg.setAttribute("stroke", "currentColor");
+    svg.setAttribute("stroke-width", "1.7");
+    svg.setAttribute("stroke-linecap", "round");
+    svg.setAttribute("stroke-linejoin", "round");
+    children.forEach(([name, attrs]) => {
+      const child = document.createElementNS("http://www.w3.org/2000/svg", name);
+      Object.entries(attrs).forEach(([key, value]) => child.setAttribute(key, value));
+      svg.appendChild(child);
+    });
+    return svg;
+  }
+
+  function copyLinkIcon() {
+    return iconSvg([
+      ["rect", { x: "7.5", y: "7.5", width: "9", height: "9", rx: "1.8" }],
+      ["path", { d: "M4 12.5V5.8C4 4.8 4.8 4 5.8 4h6.7" }],
+    ]);
+  }
+
+  function fullscreenIcon() {
+    return iconSvg([
+      ["path", { d: "M7.2 4H4v3.2" }],
+      ["path", { d: "M12.8 4H16v3.2" }],
+      ["path", { d: "M16 12.8V16h-3.2" }],
+      ["path", { d: "M4 12.8V16h3.2" }],
+    ]);
+  }
+
+  function renderDeck(deck) {
+    if (deck.options.slides?.length) {
+      deck.stage.replaceChildren(
+        ...deck.options.slides.map((slide, index) => toElement(slide, index))
+      );
+    }
+
+    deck.slides = Array.from(deck.stage.querySelectorAll(":scope > .ls-slide"));
+    deck.slideInners = deck.slides.map((slide, index) => {
+      const inner = ensureInner(slide);
+      slide.dataset.index = slide.dataset.index || String(index + 1);
+      setSlideActive(slide, index === deck.index);
+      return inner;
+    });
+    annotateEditableText(deck.slides);
+    setupTextSync(deck);
+
+    if (!deck.controls) deck.controls = mountControls(deck);
+    deck.updateScale();
+    deck.goTo(deck.index, { replace: true });
+    return deck;
+  }
+
+  function createDeck(rawOptions = {}) {
+    const options = normalizeCreateOptions(rawOptions);
+    const mount =
+      typeof options.mount === "string"
+        ? document.querySelector(options.mount)
+        : options.mount || document.querySelector("[data-lark-deck]");
+
+    if (!mount) throw new Error("LarkSlides: missing mount element");
+    mount.classList.add("ls-app");
+    mount.classList.toggle("ls-no-controls", options.controls === false);
+    const eventController = typeof AbortController !== "undefined" ? new AbortController() : null;
+    const eventListenerOptions = eventController ? { signal: eventController.signal } : undefined;
+
+    const deck = {
+      mount,
+      stage: ensureStructure(mount),
+      eventController,
+      eventListenerOptions,
+      options: {
+        controls: options.controls !== false,
+        keyboard: options.keyboard !== false,
+        hash: options.hash !== false,
+        share: options.share !== false,
+        textSync: normalizeTextSyncOptions(options.textSync || options.remoteText || options.textStore),
+        size: options.size || DEFAULT_SIZE,
+        slides: options.slides || null,
+        theme: options.theme || "default",
+        metadata: options.metadata || options.meta || {},
+      },
+      index: readHashIndex() || 0,
+      slides: [],
+      slideInners: [],
+      controls: null,
+      status: null,
+      progressBar: null,
+      scaleFrame: 0,
+      scaleTransform: "",
+      statusMessageTimer: 0,
+      wheelLock: 0,
+      touchStartY: null,
+      textSync: null,
+      theme: null,
+      updateScale,
+      enterFullscreen,
+      exitFullscreen,
+      toggleFullscreen,
+      syncPresentationState,
+      isPresenting,
+      loadRemoteTexts() {
+        return loadRemoteTexts(this);
+      },
+      saveCurrentTexts() {
+        return saveCurrentTexts(this);
+      },
+      getCurrentSlideLink() {
+        return currentSlideLink(this);
+      },
+      copyCurrentSlideLink() {
+        return copyCurrentSlideLink(this);
+      },
+      renderDeck() {
+        return renderDeck(this);
+      },
+      goTo(index, meta = {}) {
+        const numeric = normalizeIndex(index, this.slides.length);
+        const previous = this.index;
+        this.index = numeric;
+        setSlideActive(this.slides[previous], false);
+        setSlideActive(this.slides[numeric], true);
+        preloadNearbySlides(this.slides, numeric);
+        updateSlideStatus(this);
+        if (this.progressBar) {
+          const width = this.slides.length <= 1 ? 100 : ((numeric + 1) / this.slides.length) * 100;
+          this.progressBar.style.width = `${width}%`;
+        }
+        if (this.options.hash && !meta.replace) {
+          history.replaceState(null, "", `#/${numeric + 1}`);
+        }
+        return this;
+      },
+      next() {
+        return this.goTo(this.index + 1);
+      },
+      prev() {
+        return this.goTo(this.index - 1);
+      },
+      destroy() {
+        if (this.eventController) {
+          this.eventController.abort();
+        } else {
+          window.removeEventListener("resize", this.onResize);
+          window.removeEventListener("hashchange", this.onHashChange);
+          window.removeEventListener("keydown", this.onKeydown);
+          document.removeEventListener("fullscreenchange", this.onFullscreenChange);
+          this.mount.removeEventListener("wheel", this.onWheel);
+          this.mount.removeEventListener("touchstart", this.onTouchStart);
+          this.mount.removeEventListener("touchend", this.onTouchEnd);
+        }
+        cancelAnimationFrame(this.scaleFrame);
+        clearTimeout(this.statusMessageTimer);
+        destroyTextSync(this);
+      },
+    };
+
+    deck.theme = applyTheme(deck, deck.options.theme);
+
+    deck.onResize = () => {
+      cancelAnimationFrame(deck.scaleFrame);
+      deck.scaleFrame = requestAnimationFrame(() => deck.updateScale());
+    };
+    deck.onHashChange = () => deck.goTo(readHashIndex() || 0, { replace: true });
+    deck.onFullscreenChange = () => deck.syncPresentationState();
+    deck.onWheel = (event) => {
+      if (!deck.options.keyboard) return;
+      if (event.target?.isContentEditable) return;
+      const now = Date.now();
+      if (now - deck.wheelLock < 520) return;
+      if (Math.abs(event.deltaY) < 28) return;
+      deck.wheelLock = now;
+      event.preventDefault();
+      if (event.deltaY > 0) deck.next();
+      else deck.prev();
+    };
+    deck.onTouchStart = (event) => {
+      if (!deck.options.keyboard) return;
+      deck.touchStartY = event.touches?.[0]?.clientY ?? null;
+    };
+    deck.onTouchEnd = (event) => {
+      if (!deck.options.keyboard || deck.touchStartY == null) return;
+      const endY = event.changedTouches?.[0]?.clientY ?? deck.touchStartY;
+      const deltaY = endY - deck.touchStartY;
+      deck.touchStartY = null;
+      if (Math.abs(deltaY) < 48) return;
+      if (deltaY < 0) deck.next();
+      else deck.prev();
+    };
+    deck.onKeydown = (event) => {
+      if (!deck.options.keyboard) return;
+      if (event.target?.isContentEditable) return;
+      if (event.code === "Escape" && deck.isPresenting()) {
+        event.preventDefault();
+        deck.exitFullscreen();
+        return;
+      }
+      if (["ArrowRight", "PageDown", "Space"].includes(event.code)) {
+        event.preventDefault();
+        deck.next();
+      }
+      if (["ArrowLeft", "PageUp"].includes(event.code)) {
+        event.preventDefault();
+        deck.prev();
+      }
+      if (event.code === "Home") deck.goTo(0);
+      if (event.code === "End") deck.goTo(deck.slides.length - 1);
+    };
+
+    window.addEventListener("resize", deck.onResize, eventListenerOptions);
+    window.addEventListener("hashchange", deck.onHashChange, eventListenerOptions);
+    window.addEventListener("keydown", deck.onKeydown, eventListenerOptions);
+    document.addEventListener("fullscreenchange", deck.onFullscreenChange, eventListenerOptions);
+    mount.addEventListener("wheel", deck.onWheel, eventListenerOptions);
+    mount.addEventListener("touchstart", deck.onTouchStart, eventListenerOptions);
+    mount.addEventListener("touchend", deck.onTouchEnd, eventListenerOptions);
+
+    return deck.renderDeck();
+  }
+
+  function createDeckSpec({
+    title = "",
+    description = "",
+    theme = "larkVisual",
+    size = DEFAULT_SIZE,
+    slides = [],
+    assets = {},
+    meta = {},
+  } = {}) {
+    return {
+      title,
+      description,
+      theme,
+      size,
+      slides: Array.from(slides),
+      assets: { ...assets },
+      meta: { ...meta },
+    };
+  }
+
+  function normalizeCreateOptions(options = {}) {
+    const spec = options.deck || options.spec;
+    if (!spec) return options;
+
+    return {
+      ...spec,
+      ...options,
+      slides: options.slides || spec.slides || [],
+      size: options.size || spec.size || DEFAULT_SIZE,
+      theme: options.theme || spec.theme || "default",
+      metadata: options.metadata || options.meta || spec.meta || {},
+    };
+  }
+
+  function defineTheme(name, theme = {}) {
+    if (!name || typeof name !== "string") {
+      throw new Error("LarkSlides: theme name is required");
+    }
+    const normalized = {
+      name,
+      className: theme.className || "",
+      cssVars: { ...(theme.cssVars || {}) },
+      meta: { ...(theme.meta || {}) },
+    };
+    themes[name] = normalized;
+    return normalized;
+  }
+
+  function resolveTheme(theme = "default") {
+    if (typeof theme === "string") return themes[theme] || themes.default;
+    if (theme && typeof theme === "object") {
+      return {
+        name: theme.name || "custom",
+        className: theme.className || "",
+        cssVars: { ...(theme.cssVars || {}) },
+        meta: { ...(theme.meta || {}) },
+      };
+    }
+    return themes.default;
+  }
+
+  function applyTheme(target, themeInput = "default") {
+    const mount = target?.mount || target;
+    const theme = resolveTheme(themeInput);
+    if (!mount) return theme;
+
+    if (mount.__larkThemeClass) mount.classList.remove(mount.__larkThemeClass);
+    (mount.__larkThemeVars || []).forEach((property) => mount.style.removeProperty(property));
+
+    if (mount.dataset) mount.dataset.larkTheme = theme.name;
+    if (theme.className) mount.classList.add(theme.className);
+    Object.entries(theme.cssVars || {}).forEach(([property, value]) => {
+      mount.style.setProperty(property, value);
+    });
+    mount.__larkThemeClass = theme.className;
+    mount.__larkThemeVars = Object.keys(theme.cssVars || {});
+    return theme;
+  }
+
+  function updateScale() {
+    const size = this?.options?.size || DEFAULT_SIZE;
+    const stage = this?.stage || document.querySelector(".ls-stage");
+    if (!stage) return;
+    const scale = Math.min(stage.clientWidth / size.width, stage.clientHeight / size.height);
+    const offsetX = (stage.clientWidth - size.width * scale) / 2;
+    const offsetY = (stage.clientHeight - size.height * scale) / 2;
+    const transform = `translate(${offsetX}px, ${offsetY}px) scale(${scale})`;
+    if (this?.stage && this.scaleTransform === transform) return;
+    if (this?.stage) this.scaleTransform = transform;
+
+    const inners = this?.slideInners?.length
+      ? this.slideInners
+      : Array.from(stage.querySelectorAll(".ls-slide-inner"));
+    inners.forEach((inner) => {
+      inner.style.transform = transform;
+    });
+  }
+
+  function enterFullscreen() {
+    if (document.fullscreenElement === this.mount) return Promise.resolve(this);
+    if (!this.mount.requestFullscreen) {
+      this.syncPresentationState(true);
+      return Promise.resolve(this);
+    }
+    return this.mount.requestFullscreen().then(() => this);
+  }
+
+  function exitFullscreen() {
+    if (document.fullscreenElement === this.mount && document.exitFullscreen) {
+      return document.exitFullscreen().then(() => this);
+    }
+    this.syncPresentationState(false);
+    return Promise.resolve(this);
+  }
+
+  function toggleFullscreen() {
+    return this.isPresenting() ? this.exitFullscreen() : this.enterFullscreen();
+  }
+
+  function isPresenting() {
+    return this.mount.classList.contains("ls-presenting") || document.fullscreenElement === this.mount;
+  }
+
+  function syncPresentationState(force) {
+    const isFullscreen = force ?? document.fullscreenElement === this.mount;
+    this.mount.classList.toggle("ls-presenting", Boolean(isFullscreen));
+    cancelAnimationFrame(this.scaleFrame);
+    this.scaleFrame = requestAnimationFrame(() => this.updateScale());
+    return this;
+  }
+
+  function setSlideActive(slide, isActive) {
+    if (!slide) return;
+    slide.hidden = !isActive;
+    slide.classList.toggle("is-active", isActive);
+  }
+
+  function preloadNearbySlides(slides, index) {
+    loadSlideImages(slides[index]);
+    loadSlideImages(slides[index - 1]);
+    loadSlideImages(slides[index + 1]);
+    loadSlideImages(slides[index - 2]);
+    loadSlideImages(slides[index + 2]);
+  }
+
+  function loadSlideImages(slide) {
+    if (!slide) return;
+    slide.querySelectorAll("img[data-src]").forEach((image) => {
+      const source = image.dataset.src;
+      if (!source) return;
+      if (image.getAttribute("src") !== source) {
+        image.classList.add("is-loading");
+        image.addEventListener("load", markImageLoaded, { once: true });
+        image.addEventListener("error", markImageLoaded, { once: true });
+        image.setAttribute("src", source);
+      }
+      if (image.complete && image.getAttribute("src") === source) {
+        markImageLoaded({ currentTarget: image });
+      }
+    });
+  }
+
+  function markImageLoaded(event) {
+    const image = event.currentTarget;
+    image.classList.remove("is-loading");
+    image.classList.add("is-loaded");
+    image.dataset.lsLoaded = "true";
+  }
+
+  function normalizeTextSyncOptions(input) {
+    if (!input) return null;
+    const options = typeof input === "string" ? { loadUrl: input, saveUrl: input } : { ...input };
+    if (!options.loadUrl && !options.saveUrl) return null;
+    return {
+      deckId: options.deckId || options.id || "",
+      loadUrl: options.loadUrl || options.url || "",
+      saveUrl: options.saveUrl || options.url || "",
+      loadMethod: options.loadMethod || "GET",
+      saveMethod: options.saveMethod || "POST",
+      headers: { ...(options.headers || {}) },
+      loadHeaders: { ...(options.loadHeaders || {}) },
+      saveHeaders: { ...(options.saveHeaders || {}) },
+      credentials: options.credentials,
+      saveDebounceMs: Number.isFinite(Number(options.saveDebounceMs))
+        ? Number(options.saveDebounceMs)
+        : DEFAULT_TEXT_SAVE_DEBOUNCE_MS,
+      saveAll: options.saveAll !== false,
+      editable: options.editable !== false,
+      onLoad: options.onLoad,
+      onSave: options.onSave,
+      onError: options.onError,
+    };
+  }
+
+  function setupTextSync(deck) {
+    destroyTextSync(deck);
+    const options = deck.options.textSync;
+    if (!options) return null;
+
+    const nodes = editableTextNodes(deck);
+    const state = {
+      options,
+      nodes,
+      values: {},
+      timers: new Map(),
+      pending: new Map(),
+      saving: new Set(),
+      loaded: false,
+    };
+    deck.textSync = state;
+
+    nodes.forEach((node) => {
+      if (options.editable && node.hasAttribute("data-editable-text") && node.getAttribute("contenteditable") !== "true") {
+        node.setAttribute("contenteditable", "true");
+      }
+      node.dataset.larkTextSync = "true";
+      node.__larkTextInputHandler = () => scheduleTextSave(deck, node);
+      node.__larkTextBlurHandler = () => flushTextSave(deck, node);
+      node.addEventListener("input", node.__larkTextInputHandler);
+      node.addEventListener("blur", node.__larkTextBlurHandler);
+    });
+
+    if (options.loadUrl) {
+      loadRemoteTexts(deck).catch((error) => handleTextSyncError(deck, error));
+    }
+    return state;
+  }
+
+  function destroyTextSync(deck) {
+    const state = deck.textSync;
+    if (!state) return;
+    state.timers?.forEach((timer) => clearTimeout(timer));
+    state.nodes?.forEach((node) => {
+      if (node.__larkTextInputHandler) {
+        node.removeEventListener("input", node.__larkTextInputHandler);
+        delete node.__larkTextInputHandler;
+      }
+      if (node.__larkTextBlurHandler) {
+        node.removeEventListener("blur", node.__larkTextBlurHandler);
+        delete node.__larkTextBlurHandler;
+      }
+    });
+    deck.textSync = null;
+  }
+
+  function editableTextNodes(deck) {
+    const root = deck?.stage || document;
+    return Array.from(root.querySelectorAll("[data-text-id]")).filter((node) =>
+      node.matches?.('[contenteditable="true"], [data-editable-text], [data-text-id]')
+    );
+  }
+
+  async function loadRemoteTexts(deck) {
+    const options = deck.options.textSync;
+    if (!options?.loadUrl) return {};
+    const payload = await requestJson(options.loadUrl, {
+      method: options.loadMethod,
+      headers: mergeHeaders(options.headers, options.loadHeaders),
+      credentials: options.credentials,
+    });
+    const values = normalizeTextPayload(payload);
+    applyRemoteTexts(deck, values);
+    if (deck.textSync) {
+      deck.textSync.values = values;
+      deck.textSync.loaded = true;
+    }
+    if (typeof options.onLoad === "function") options.onLoad(values, deck);
+    return values;
+  }
+
+  function applyRemoteTexts(deck, values) {
+    const nodes = editableTextNodes(deck);
+    nodes.forEach((node) => {
+      const id = node.dataset.textId;
+      if (!id || !Object.prototype.hasOwnProperty.call(values, id)) return;
+      applyTextValue(node, values[id]);
+      node.dataset.larkTextRemote = "true";
+    });
+  }
+
+  function normalizeTextPayload(payload) {
+    const source = payload?.texts || payload?.items || payload?.data || payload || {};
+    const result = {};
+    if (Array.isArray(source)) {
+      source.forEach((item) => {
+        const id = item?.id || item?.textId || item?.key;
+        if (id) result[id] = normalizeTextValue(item);
+      });
+      return result;
+    }
+    Object.entries(source).forEach(([id, value]) => {
+      if (value == null) return;
+      result[id] = normalizeTextValue(value);
+    });
+    return result;
+  }
+
+  function normalizeTextValue(value) {
+    if (value && typeof value === "object" && !Array.isArray(value)) {
+      if (value.html != null) return { html: String(value.html) };
+      if (value.text != null) return { text: String(value.text) };
+      if (value.value != null) return { text: String(value.value) };
+    }
+    return { text: String(value) };
+  }
+
+  function applyTextValue(node, value) {
+    const normalized = normalizeTextValue(value);
+    if (normalized.html != null) {
+      node.innerHTML = normalized.html;
+      return;
+    }
+    node.innerHTML = escapeHtml(normalized.text).replace(/\n/g, "<br>");
+  }
+
+  function scheduleTextSave(deck, node) {
+    const state = deck.textSync;
+    const options = state?.options;
+    if (!state || !options?.saveUrl) return;
+    const id = node.dataset.textId;
+    if (!id) return;
+    if (state.timers.has(id)) clearTimeout(state.timers.get(id));
+    const timer = setTimeout(() => {
+      state.timers.delete(id);
+      saveTextNode(deck, node).catch((error) => handleTextSyncError(deck, error));
+    }, Math.max(0, options.saveDebounceMs));
+    state.timers.set(id, timer);
+  }
+
+  function flushTextSave(deck, node) {
+    const state = deck.textSync;
+    const id = node?.dataset?.textId;
+    if (!state || !id || !state.timers.has(id)) return;
+    clearTimeout(state.timers.get(id));
+    state.timers.delete(id);
+    saveTextNode(deck, node).catch((error) => handleTextSyncError(deck, error));
+  }
+
+  async function saveTextNode(deck, node) {
+    const state = deck.textSync;
+    const options = state?.options;
+    if (!state || !options?.saveUrl) return null;
+    const entry = serializeTextNode(node, deck);
+    state.pending.set(entry.id, entry);
+    state.saving.add(entry.id);
+    node.dataset.larkTextSaving = "true";
+
+    const payload = {
+      deckId: options.deckId || deck.options.metadata?.id || deck.options.metadata?.title || "",
+      activeSlide: deck.index + 1,
+      changed: entry,
+      texts: options.saveAll ? collectDeckTexts(deck) : undefined,
+      updatedAt: new Date().toISOString(),
+    };
+
+    try {
+      const response = await requestJson(options.saveUrl, {
+        method: options.saveMethod,
+        headers: mergeHeaders(options.headers, options.saveHeaders, { "Content-Type": "application/json" }),
+        credentials: options.credentials,
+        body: JSON.stringify(payload),
+      });
+
+      state.saving.delete(entry.id);
+      state.pending.delete(entry.id);
+      node.dataset.larkTextSaving = "false";
+      node.dataset.larkTextSavedAt = payload.updatedAt;
+      state.values[entry.id] = { html: entry.html, text: entry.text };
+      if (typeof options.onSave === "function") options.onSave({ entry, payload, response }, deck);
+      showToolbarMessage(deck, "已保存", 900);
+      return response;
+    } catch (error) {
+      state.saving.delete(entry.id);
+      node.dataset.larkTextSaving = "error";
+      throw error;
+    }
+  }
+
+  function saveCurrentTexts(deck) {
+    const state = deck.textSync;
+    if (!state?.options?.saveUrl) return Promise.resolve(null);
+    const options = state.options;
+    const payload = {
+      deckId: options.deckId || deck.options.metadata?.id || deck.options.metadata?.title || "",
+      activeSlide: deck.index + 1,
+      changed: null,
+      texts: collectDeckTexts(deck),
+      updatedAt: new Date().toISOString(),
+    };
+    return requestJson(options.saveUrl, {
+      method: options.saveMethod,
+      headers: mergeHeaders(options.headers, options.saveHeaders, { "Content-Type": "application/json" }),
+      credentials: options.credentials,
+      body: JSON.stringify(payload),
+    }).then((response) => {
+      showToolbarMessage(deck, "已保存", 900);
+      if (typeof options.onSave === "function") options.onSave({ entry: null, payload, response }, deck);
+      return response;
+    });
+  }
+
+  function serializeTextNode(node, deck) {
+    const slide = node.closest(".ls-slide");
+    return {
+      id: node.dataset.textId,
+      text: textFromNode(node),
+      html: node.innerHTML,
+      slide: slide?.dataset.index ? Number(slide.dataset.index) : deck.index + 1,
+      slideId: slide?.id || "",
+      slideTitle: slide?.dataset.title || "",
+    };
+  }
+
+  function collectDeckTexts(deck) {
+    return editableTextNodes(deck).reduce((acc, node) => {
+      const item = serializeTextNode(node, deck);
+      acc[item.id] = {
+        text: item.text,
+        html: item.html,
+        slide: item.slide,
+        slideId: item.slideId,
+        slideTitle: item.slideTitle,
+      };
+      return acc;
+    }, {});
+  }
+
+  function textFromNode(node) {
+    if (typeof node.innerText === "string") return node.innerText.replace(/\u00a0/g, " ");
+    return String(node.textContent || "").replace(/\u00a0/g, " ");
+  }
+
+  function escapeHtml(value) {
+    return String(value ?? "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  }
+
+  async function requestJson(url, options = {}) {
+    if (typeof fetch !== "function") {
+      throw new Error("LarkSlides: fetch is required for textSync");
+    }
+    const response = await fetch(url, options);
+    if (!response.ok) throw new Error(`LarkSlides: textSync request failed ${response.status}`);
+    if (response.status === 204) return {};
+    const text = await response.text();
+    return text ? JSON.parse(text) : {};
+  }
+
+  function mergeHeaders(...headersList) {
+    return headersList.reduce((acc, headers) => {
+      Object.entries(headers || {}).forEach(([key, value]) => {
+        if (value != null) acc[key] = value;
+      });
+      return acc;
+    }, {});
+  }
+
+  function handleTextSyncError(deck, error) {
+    showToolbarMessage(deck, "保存异常", 1400);
+    if (typeof deck.options.textSync?.onError === "function") {
+      deck.options.textSync.onError(error, deck);
+      return;
+    }
+    console.warn(error);
+  }
+
+  function updateSlideStatus(deck) {
+    if (!deck.status) return;
+    deck.status.textContent = `${deck.index + 1} / ${deck.slides.length}`;
+  }
+
+  function showToolbarMessage(deck, message, duration = 1200) {
+    if (!deck.status) return;
+    clearTimeout(deck.statusMessageTimer);
+    deck.status.textContent = message;
+    deck.statusMessageTimer = setTimeout(() => updateSlideStatus(deck), duration);
+  }
+
+  function currentSlideLink(deck) {
+    const page = normalizeIndex(deck.index, deck.slides.length) + 1;
+    if (typeof URL !== "undefined") {
+      const url = new URL(location.href);
+      url.hash = `/${page}`;
+      return url.toString();
+    }
+    return `${location.href.replace(/#.*$/, "")}#/${page}`;
+  }
+
+  function copyCurrentSlideLink(deck) {
+    const link = currentSlideLink(deck);
+    return copyText(link).then(() => {
+      showToolbarMessage(deck, "已复制", 900);
+      return link;
+    });
+  }
+
+  function copyText(text) {
+    if (typeof navigator !== "undefined" && navigator.clipboard?.writeText) return navigator.clipboard.writeText(text);
+    const area = document.createElement("textarea");
+    area.value = text;
+    area.setAttribute("readonly", "");
+    area.style.position = "fixed";
+    area.style.left = "-9999px";
+    document.body.appendChild(area);
+    area.select();
+    document.execCommand("copy");
+    area.remove();
+    return Promise.resolve();
+  }
+
+  function annotateEditableText(slides) {
+    const slideList = Array.from(slides || document.querySelectorAll(".ls-slide"));
+    let count = 0;
+    slideList.forEach((slide, index) => {
+      const slideId = `slide-${String(index + 1).padStart(2, "0")}`;
+      const used = new Set(
+        Array.from(slide.querySelectorAll("[data-text-id]")).map((node) => node.dataset.textId)
+      );
+      const counters = {};
+      const editables = Array.from(slide.querySelectorAll('[contenteditable="true"], [data-editable-text]'));
+      editables.forEach((node) => {
+        if (node.dataset.textId) return;
+        const base = editableTextBase(node);
+        counters[base] = (counters[base] || 0) + 1;
+        let field = counters[base] === 1 ? base : `${base}-${String(counters[base]).padStart(2, "0")}`;
+        let textId = `${slideId}.${field}`;
+        while (used.has(textId)) {
+          counters[base] += 1;
+          field = `${base}-${String(counters[base]).padStart(2, "0")}`;
+          textId = `${slideId}.${field}`;
+        }
+        node.dataset.textId = textId;
+        node.dataset.larkTextAutogen = "true";
+        used.add(textId);
+        count += 1;
+      });
+    });
+    return count;
+  }
+
+  function editableTextBase(node) {
+    const className = Array.from(node.classList || []).find((name) => !/^ls-/.test(name) && !/^lvg-layout-block$/.test(name));
+    const base = className || node.tagName?.toLowerCase() || "text";
+    return base
+      .toLowerCase()
+      .replace(/[^a-z0-9\u4e00-\u9fa5_-]+/g, "-")
+      .replace(/^-+|-+$/g, "") || "text";
+  }
+
+  function normalizeIndex(index, length) {
+    const numeric = Number(index);
+    if (!Number.isFinite(numeric) || length <= 0) return 0;
+    return Math.max(0, Math.min(length - 1, Math.trunc(numeric)));
+  }
+
+  function readHashIndex() {
+    const match = location.hash.match(/^#\/(\d+)$/);
+    if (!match) return 0;
+    return Math.max(0, Number(match[1]) - 1);
+  }
+
+  window.LarkSlides = {
+    themes,
+    createDeckSpec,
+    createDeck,
+    renderDeck,
+    mountControls,
+    annotateEditableText,
+    normalizeTextPayload,
+    collectDeckTexts,
+    loadRemoteTexts,
+    saveCurrentTexts,
+    currentSlideLink,
+    copyCurrentSlideLink,
+    defineTheme,
+    applyTheme,
+    enterFullscreen(deck) {
+      return deck.enterFullscreen();
+    },
+    exitFullscreen(deck) {
+      return deck.exitFullscreen();
+    },
+    toggleFullscreen(deck) {
+      return deck.toggleFullscreen();
+    },
+    goTo(deck, index) {
+      return deck.goTo(index);
+    },
+    next(deck) {
+      return deck.next();
+    },
+    prev(deck) {
+      return deck.prev();
+    },
+  };
+})();
+
+</script>
+    <script>
+(function () {
+  "use strict";
+
+  function escapeHtml(value) {
+    return String(value ?? "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  }
+
+  function renderList(items = [], renderItem) {
+    return items.map(renderItem).join("");
+  }
+
+  function renderIf(value, renderValue) {
+    return value ? renderValue(value) : "";
+  }
+
+  function imageTag(src, className = "", attrs = "") {
+    const classAttr = className ? ` class="${escapeHtml(className)}"` : "";
+    const extraAttrs = attrs ? ` ${attrs}` : "";
+    return `<img${classAttr} data-src="${escapeHtml(src)}" alt="" decoding="async"${extraAttrs}>`;
+  }
+
+  const tokens = {
+    canvas: { width: 1600, height: 900 },
+    colors: {
+      black: "#000000",
+      white: "#ffffff",
+      gray: "#858b96",
+      lightBlue: "#ceeafe",
+      cyan: "#3ec3f7",
+      deepBlue: "#1456f0",
+    },
+    gradients: {
+      brand: "linear-gradient(90deg, #e2fff7 0%, #c8effa 43%, #b1d5f6 62%, #80a3ff 100%)",
+      soft: "linear-gradient(90deg, #ffffff 0%, #e2fff7 38%, #b1d5f6 68%, #80a3ff 100%)",
+      gray: "linear-gradient(90deg, #e6e8ee 0%, #b5bac4 52%, #858b96 100%)",
+      whiteGray: "linear-gradient(90deg, #f7f9ff 0%, #d9dee8 48%, #9ea8b8 100%)",
+      deepBlue: "linear-gradient(90deg, #3ec3f7 0%, #1456f0 100%)",
+    },
+    fonts: {
+      display: "var(--ld-font-display, \"TikTok Display\", \"FZLanTingHeiPro_GB18030\", \"PingFang SC\", \"Microsoft YaHei\", Arial, sans-serif)",
+      zh: "var(--ld-font-zh, \"FZLanTingHeiPro_GB18030\", \"PingFang SC\", \"Microsoft YaHei\", Arial, sans-serif)",
+      ui: "var(--ld-font-ui, \"Inter\", \"FZLanTingHeiPro_GB18030\", \"PingFang SC\", \"Microsoft YaHei\", Arial, sans-serif)",
+      en: "\"TikTok Display\", \"Inter\", Arial, sans-serif",
+    },
+  };
+
+  const templateRegistry = {};
+  const templateContracts = {};
+
+  const qualityRules = {
+    canvas: { width: 1600, height: 900 },
+    typography: {
+      heroClaim: { min: 76, max: 92, weight: "740-760", lineHeight: "1.05-1.10" },
+      sectionClaim: { min: 58, max: 68, weight: "700-760", lineHeight: "1.08-1.15" },
+      subtitle: { min: 28, max: 40, weight: "400-600", lineHeight: "1.35-1.45" },
+      body: { min: 20, max: 28, weight: "400-600", lineHeight: "1.35-1.55" },
+      micro: { min: 12, max: 18, weight: "400-500", lineHeight: "1.30-1.50" },
+    },
+    defaults: {
+      maxTitleChars: 34,
+      maxSubtitleChars: 96,
+      maxBodyChars: 220,
+      maxItems: 6,
+      maxBlocks: 96,
+    },
+  };
+
+  const designGuidance = {
+    name: "front-design keynote loop",
+    intent: "Generate fewer, stronger, presentation-ready HTML slides before doing precision layout.",
+    workflow: [
+      "Compress the narrative before choosing a template.",
+      "Map each slide to one job: statement, todo, caseFlow, metric, or precision visualLayout.",
+      "Keep one dominant focal point per slide; supporting text should be short and visibly secondary.",
+      "Use the 1600x900 typography scale instead of web UI defaults.",
+      "Preview screenshots and fix alignment, density, and hierarchy before publishing.",
+    ],
+    layout: [
+      "Prefer large centered claims, generous negative space, and dividers only when they clarify grouping or direction.",
+      "Avoid nested cards, decorative card grids, and repeated equal-weight boxes.",
+      "Use columns only when comparison or process flow is the actual message.",
+      "Keep tags rectangular and precise; do not use overly round pill shapes unless the source deck does.",
+    ],
+    typography: [
+      "Hero claim: 76-92px on the 1600x900 canvas.",
+      "Section claim: 58-68px.",
+      "Subtitle: 28-40px.",
+      "Body and labels: 20-28px, except metadata labels can use 12-18px.",
+    ],
+    antiPatterns: [
+      "Starting from HTML/CSS layout before the page story is clear.",
+      "Filling a slide with many cards because the content has many bullets.",
+      "Adding lvg-layout-shape lines as decoration when spacing and alignment already separate the content.",
+      "Using web-dashboard density for a fullscreen presentation.",
+      "Adding glow, shine, or gradients when they do not clarify hierarchy.",
+    ],
+    verification: [
+      "Run validateDeckSpec for structure and density.",
+      "Run scripts/validate_deck.js for HTML entrypoint checks.",
+      "Use browser screenshots to inspect alignment, clipping, and perceived type size.",
+    ],
+  };
+
+  function normalizeContract(contract = {}) {
+    return {
+      intent: contract.intent || "",
+      slots: { ...(contract.slots || {}) },
+      limits: { ...(contract.limits || {}) },
+      guidance: Array.from(contract.guidance || []),
+    };
+  }
+
+  function defineTemplate(name, renderer, contract = {}) {
+    if (!name || typeof name !== "string") throw new Error("LarkSlideTemplates: template name is required");
+    if (typeof renderer !== "function") throw new Error(`LarkSlideTemplates: ${name} must be a function`);
+    templateRegistry[name] = renderer;
+    templateContracts[name] = normalizeContract(contract);
+    return renderer;
+  }
+
+  function normalizeTemplateName(name = "") {
+    return String(name).replace(/-([a-z])/g, (_, char) => char.toUpperCase());
+  }
+
+  function resolveTemplateName(name = "") {
+    const value = String(name || "");
+    if (templateRegistry[value] || templateContracts[value]) return value;
+    const normalized = normalizeTemplateName(value);
+    if (templateRegistry[normalized] || templateContracts[normalized]) return normalized;
+    return value;
+  }
+
+  function create(name, props = {}) {
+    const renderer = typeof name === "function" ? name : templateRegistry[name];
+    if (!renderer) throw new Error(`LarkSlideTemplates: unknown template ${name}`);
+    return renderer(props);
+  }
+
+  function templateNames() {
+    return Object.keys(templateRegistry);
+  }
+
+  function getTemplateContract(name) {
+    const resolved = resolveTemplateName(name);
+    return templateContracts[resolved]
+      ? {
+          ...templateContracts[resolved],
+          slots: { ...templateContracts[resolved].slots },
+          limits: { ...templateContracts[resolved].limits },
+          guidance: Array.from(templateContracts[resolved].guidance || []),
+        }
+      : null;
+  }
+
+  function getDesignGuidance() {
+    return {
+      ...designGuidance,
+      workflow: Array.from(designGuidance.workflow),
+      layout: Array.from(designGuidance.layout),
+      typography: Array.from(designGuidance.typography),
+      antiPatterns: Array.from(designGuidance.antiPatterns),
+      verification: Array.from(designGuidance.verification),
+    };
+  }
+
+  function plainText(value = "") {
+    return String(value ?? "")
+      .replace(/<script[\s\S]*?<\/script>/gi, " ")
+      .replace(/<style[\s\S]*?<\/style>/gi, " ")
+      .replace(/<[^>]+>/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  function textLength(value = "") {
+    return plainText(value).length;
+  }
+
+  function addIssue(list, level, code, message, details = {}) {
+    list.push({ level, code, message, ...details });
+  }
+
+  function validateDeckSpec(spec = {}, options = {}) {
+    const issues = [];
+    const rules = { ...qualityRules.defaults, ...(options.rules || {}) };
+    const slides = Array.isArray(spec.slides) ? spec.slides : [];
+    const size = spec.size || qualityRules.canvas;
+
+    if (!spec.title) addIssue(issues, "warning", "deck-title-missing", "Deck title is missing.");
+    if (!slides.length) addIssue(issues, "error", "slides-empty", "Deck has no slides.");
+    if (size.width !== qualityRules.canvas.width || size.height !== qualityRules.canvas.height) {
+      addIssue(issues, "warning", "canvas-size", "DeckKit is tuned for 1600x900 slides.", { size });
+    }
+
+    slides.forEach((slide, index) => {
+      const label = `slide ${index + 1}`;
+      const resolvedTemplate = slide.template ? resolveTemplateName(slide.template) : "";
+      const contract = resolvedTemplate ? templateContracts[resolvedTemplate] : null;
+      const limits = { ...rules, ...(contract?.limits || {}) };
+      const titleLength = textLength(slide.title || "");
+      const contentLength = textLength(slide.content || "");
+
+      if (!slide.title) addIssue(issues, "warning", "slide-title-missing", `${label} has no title.`, { index });
+      if (slide.template && !templateRegistry[resolvedTemplate]) {
+        addIssue(issues, "warning", "template-unknown", `${label} uses an unknown template "${slide.template}".`, { index, template: slide.template });
+      }
+      if (titleLength > limits.maxTitleChars) {
+        addIssue(issues, "warning", "title-density", `${label} title is long; split or shorten for keynote-quality layout.`, { index, length: titleLength, max: limits.maxTitleChars });
+      }
+      if (contentLength > limits.maxBodyChars) {
+        addIssue(issues, "warning", "content-density", `${label} has dense text; use a higher-level template or split into multiple slides.`, { index, length: contentLength, max: limits.maxBodyChars });
+      }
+      if (slide.template === "visual-layout") {
+        const blockCount = (slide.content || "").match(/lvg-layout-block/g)?.length || 0;
+        if (blockCount > limits.maxBlocks) {
+          addIssue(issues, "warning", "block-density", `${label} has many absolute blocks; prefer a stable pattern template for new decks.`, { index, blockCount, max: limits.maxBlocks });
+        }
+      }
+    });
+
+    return {
+      ok: !issues.some((issue) => issue.level === "error"),
+      issueCount: issues.length,
+      errors: issues.filter((issue) => issue.level === "error").length,
+      warnings: issues.filter((issue) => issue.level === "warning").length,
+      issues,
+    };
+  }
+
+  function asset(basePath = "") {
+    const prefix = String(basePath || "").replace(/\/+$/, "");
+    return (name) => {
+      const value = String(name || "");
+      if (!value) return "";
+      if (/^(?:https?:\/\/|data:|blob:|\/)/.test(value)) return value;
+      const path = value.replace(/^\/+/, "");
+      return prefix ? `${prefix}/${path}` : path;
+    };
+  }
+
+  function deckSpec({
+    title = "",
+    description = "",
+    theme = "larkVisual",
+    slides = [],
+    assets = {},
+    meta = {},
+  } = {}) {
+    const createDeckSpec = window.LarkSlides?.createDeckSpec;
+    if (createDeckSpec) return createDeckSpec({ title, description, theme, slides, assets, meta });
+    return { title, description, theme, slides: Array.from(slides), assets: { ...assets }, meta: { ...meta } };
+  }
+
+  function geometryStyle({ x, y, w, h, style = "" } = {}) {
+    const parts = ["position:absolute;"];
+    if (x != null) parts.push(`left:${Number(x).toFixed(3)}px;`);
+    if (y != null) parts.push(`top:${Number(y).toFixed(3)}px;`);
+    if (w != null) parts.push(`width:${Number(w).toFixed(3)}px;`);
+    if (h != null) parts.push(`height:${Number(h).toFixed(3)}px;`);
+    if (style) parts.push(style);
+    return parts.join("");
+  }
+
+  function gradientClass(gradient) {
+    if (!gradient) return "";
+    const variants = {
+      brand: "brand",
+      soft: "soft",
+      gray: "gray",
+      whiteGray: "white-gray",
+      deepBlue: "deep-blue",
+    };
+    return `lvg-gradient-text ${variants[gradient] || escapeHtml(gradient)}`;
+  }
+
+  function gradientText(text, gradient = "brand", className = "") {
+    const classes = [gradientClass(gradient), className].filter(Boolean).join(" ");
+    return `<span class="${classes}">${escapeHtml(text)}</span>`;
+  }
+
+  function textBlock({
+    x,
+    y,
+    w,
+    h,
+    text = "",
+    html,
+    className = "",
+    style = "",
+    align = "left",
+    size = 48,
+    color = tokens.colors.white,
+    weight = 700,
+    lineHeight = 1.15,
+    gradient = "",
+  } = {}) {
+    const blockStyleValue = geometryStyle({ x, y, w, h, style: `background:transparent;${style}` });
+    const spanClass = gradient ? ` class="${gradientClass(gradient)}"` : "";
+    const spanStyles = [
+      `font-size:${Number(size).toFixed(3)}px;`,
+      `font-weight:${escapeHtml(weight)};`,
+      gradient ? "" : `color:${escapeHtml(color)};`,
+    ].join("");
+    const spanStyle = ` style="${spanStyles}"`;
+    const body =
+      html != null
+        ? html
+        : `<p style="text-align:${escapeHtml(align)};line-height:${escapeHtml(lineHeight)};"><span${spanClass}${spanStyle}>${escapeHtml(text)}</span></p>`;
+    return { kind: "text", className, style: blockStyleValue, html: body };
+  }
+
+  function imageBlock({
+    src,
+    x = 0,
+    y = 0,
+    w = tokens.canvas.width,
+    h = tokens.canvas.height,
+    fit = "cover",
+    className = "",
+    style = "",
+    innerStyle,
+  } = {}) {
+    return {
+      kind: "image",
+      className,
+      src,
+      style: geometryStyle({ x, y, w, h, style }),
+      innerStyle: innerStyle || `left:0;top:0;width:100%;height:100%;object-fit:${escapeHtml(fit)};`,
+    };
+  }
+
+  function shapeBlock({
+    x,
+    y,
+    w,
+    h,
+    fill = "transparent",
+    radius,
+    border,
+    opacity,
+    className = "",
+    style = "",
+  } = {}) {
+    const shapeStyle = [
+      `background:${fill};`,
+      radius ? `border-radius:${escapeHtml(radius)};` : "",
+      border ? `border:${border};` : "",
+      opacity != null ? `opacity:${Number(opacity).toFixed(3)};` : "",
+      style,
+    ].join("");
+    return { kind: "shape", className, style: geometryStyle({ x, y, w, h, style: shapeStyle }) };
+  }
+
+  function vectorBlock({ html = "", x, y, w, h, className = "", style = "" } = {}) {
+    return { kind: "vector", className, html, style: geometryStyle({ x, y, w, h, style }) };
+  }
+
+  function layoutGrid({ x = 120, y = 0, w = 1360, columns = 3, gap = 32 } = {}) {
+    const safeColumns = Math.max(1, Number(columns) || 1);
+    const safeGap = Number(gap) || 0;
+    const colW = (Number(w) - safeGap * (safeColumns - 1)) / safeColumns;
+    return {
+      x: Number(x),
+      y: Number(y),
+      w: Number(w),
+      columns: safeColumns,
+      gap: safeGap,
+      colW,
+      col(index = 0, span = 1) {
+        const safeSpan = Math.max(1, Number(span) || 1);
+        return {
+          x: Number(x) + Number(index) * (colW + safeGap),
+          y: Number(y),
+          w: colW * safeSpan + safeGap * (safeSpan - 1),
+        };
+      },
+    };
+  }
+
+  function paragraphList(items = []) {
+    return renderList(items, (item) => `<p class="ls-template-label">${escapeHtml(item)}</p>`);
+  }
+
+  function cover({ title, subtitle, kicker } = {}) {
+    return {
+      title,
+      className: "ls-template",
+      content: `
+        <div class="ls-template-slide" style="display:flex;flex-direction:column;justify-content:center;">
+          ${renderIf(kicker, (text) => `<p class="ls-template-kicker">${escapeHtml(text)}</p>`)}
+          <h1 class="ls-template-title">${escapeHtml(title)}</h1>
+          ${renderIf(subtitle, (text) => `<p class="ls-template-subtitle">${escapeHtml(text)}</p>`)}
+        </div>
+      `,
+    };
+  }
+
+  function section({ title, subtitle, index } = {}) {
+    return {
+      title,
+      className: "ls-template",
+      content: `
+        <div class="ls-template-slide" style="display:grid;grid-template-columns:240px 1fr;align-items:center;">
+          <div class="ls-template-metric">${escapeHtml(index ?? "")}</div>
+          <div>
+            <h1 class="ls-template-title">${escapeHtml(title)}</h1>
+            ${renderIf(subtitle, (text) => `<p class="ls-template-subtitle">${escapeHtml(text)}</p>`)}
+          </div>
+        </div>
+      `,
+    };
+  }
+
+  function imageHero({ title, subtitle, image, align = "left" } = {}) {
+    const textAlign = align === "right" ? "right" : "left";
+    const gradient =
+      align === "right"
+        ? "linear-gradient(90deg, rgba(0,0,0,0.05), rgba(0,0,0,0.74))"
+        : "linear-gradient(90deg, rgba(0,0,0,0.74), rgba(0,0,0,0.05))";
+    return {
+      title,
+      className: "ls-template",
+      content: `
+        <div class="ls-template-slide" style="padding:0;position:relative;color:#fff;background:#111;">
+          ${imageTag(image, "", 'style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"')}
+          <div style="position:absolute;inset:0;background:${gradient};"></div>
+          <div style="position:relative;height:100%;display:flex;flex-direction:column;justify-content:center;align-items:${textAlign === "right" ? "flex-end" : "flex-start"};padding:96px 112px;text-align:${textAlign};box-sizing:border-box;">
+            <h1 class="ls-template-title" style="max-width:900px;color:#fff;">${escapeHtml(title)}</h1>
+            ${renderIf(subtitle, (text) => `<p class="ls-template-subtitle" style="color:rgba(255,255,255,0.82);">${escapeHtml(text)}</p>`)}
+          </div>
+        </div>
+      `,
+    };
+  }
+
+  function metric({ title, metrics = [] } = {}) {
+    return {
+      title,
+      className: "ls-template",
+      content: `
+        <div class="ls-template-slide">
+          <h1 class="ls-template-title" style="font-size:58px;">${escapeHtml(title)}</h1>
+          <div class="ls-template-grid" style="grid-template-columns:repeat(${Math.max(metrics.length, 1)},1fr);margin-top:72px;">
+            ${renderList(
+              metrics,
+              (item) => `
+                  <div class="ls-template-card">
+                    <div class="ls-template-metric">${escapeHtml(item.value)}</div>
+                    <div class="ls-template-label">${escapeHtml(item.label)}</div>
+                  </div>
+                `
+            )}
+          </div>
+        </div>
+      `,
+    };
+  }
+
+  function twoColumn({ title, left = [], right = [] } = {}) {
+    return {
+      title,
+      className: "ls-template",
+      content: `
+        <div class="ls-template-slide">
+          <h1 class="ls-template-title" style="font-size:58px;">${escapeHtml(title)}</h1>
+          <div class="ls-template-grid" style="grid-template-columns:1fr 1fr;margin-top:56px;">
+            <div class="ls-template-card">${paragraphList(left)}</div>
+            <div class="ls-template-card">${paragraphList(right)}</div>
+          </div>
+        </div>
+      `,
+    };
+  }
+
+  function editable(value, className = "", tag = "span") {
+    return `<${tag}${className ? ` class="${className}"` : ""} contenteditable="true">${escapeHtml(value)}</${tag}>`;
+  }
+
+  function richText(parts = []) {
+    return parts
+      .map((part) => {
+        if (typeof part === "string") return escapeHtml(part);
+        const className = part.className ? ` class="${escapeHtml(part.className)}"` : "";
+        return `<span${className}>${escapeHtml(part.text)}</span>`;
+      })
+      .join("");
+  }
+
+  function visualSlide({ title, template, sourceSlide, content, className = "" }) {
+    return {
+      title,
+      template,
+      sourceSlide,
+      className: `ls-visual ${className}`.trim(),
+      content,
+    };
+  }
+
+  function blockStyle(block = {}) {
+    if (block.style) return block.style;
+    const parts = ["position:absolute;"];
+    if (block.x != null) parts.push(`left:${Number(block.x).toFixed(3)}px;`);
+    if (block.y != null) parts.push(`top:${Number(block.y).toFixed(3)}px;`);
+    if (block.w != null) parts.push(`width:${Number(block.w).toFixed(3)}px;`);
+    if (block.h != null) parts.push(`height:${Number(block.h).toFixed(3)}px;`);
+    if (block.opacity != null) parts.push(`opacity:${Number(block.opacity).toFixed(3)};`);
+    if (block.fill) parts.push(`background:${block.fill};`);
+    if (block.color) parts.push(`color:${block.color};`);
+    if (block.size) parts.push(`font-size:${Number(block.size).toFixed(3)}px;`);
+    if (block.weight) parts.push(`font-weight:${escapeHtml(block.weight)};`);
+    if (block.align) parts.push(`text-align:${escapeHtml(block.align)};`);
+    if (block.lineHeight) parts.push(`line-height:${escapeHtml(block.lineHeight)};`);
+    if (block.radius) parts.push(`border-radius:${escapeHtml(block.radius)};`);
+    if (block.border) parts.push(`border:${block.border};`);
+    return parts.join("");
+  }
+
+  function visualLayoutBlock(block = {}) {
+    const className = block.className ? ` ${escapeHtml(block.className)}` : "";
+    const style = escapeHtml(blockStyle(block));
+    if (block.kind === "image") {
+      const innerStyle = block.innerStyle ? escapeHtml(block.innerStyle) : "left:0;top:0;width:100%;height:100%;";
+      return `
+        <div class="lvg-layout-block lvg-layout-image${className}" style="${style}">
+          <img data-src="${escapeHtml(block.src)}" alt="" decoding="async" style="${innerStyle}">
+        </div>
+      `;
+    }
+    if (block.kind === "shape") {
+      return `<div class="lvg-layout-block lvg-layout-shape${className}" style="${style}"></div>`;
+    }
+    if (block.kind === "vector" || block.kind === "raw") {
+      return `<div class="lvg-layout-block lvg-layout-vector${className}" style="${style}">${block.html || ""}</div>`;
+    }
+    if (block.kind === "text") {
+      const body = block.html != null ? block.html : escapeHtml(block.text || "");
+      return `<div class="lvg-layout-block lvg-layout-text${className}" contenteditable="true" style="${style}">${body}</div>`;
+    }
+    return "";
+  }
+
+  function visualLayout({ title, sourceSlide, blocks = [], className = "" } = {}) {
+    return visualSlide({
+      title,
+      template: "visual-layout",
+      sourceSlide,
+      className: `lvg-layout-slide ${className}`.trim(),
+      content: `
+          <div class="lvg-slide lvg-layout">
+          ${renderList(blocks, visualLayoutBlock)}
+        </div>
+      `,
+    });
+  }
+
+  function visualBackgroundBlocks() {
+    return [
+      shapeBlock({ x: 0, y: 0, w: 1600, h: 900, fill: "#03050a" }),
+      shapeBlock({
+        x: 0,
+        y: 0,
+        w: 1600,
+        h: 900,
+        fill: "radial-gradient(circle at 50% -10%, rgba(128,163,255,0.26), rgba(3,5,10,0) 44%), radial-gradient(circle at 18% 18%, rgba(62,195,247,0.08), rgba(3,5,10,0) 34%)",
+      }),
+    ];
+  }
+
+  function quickText({ x, y, w, h, text, size = 34, weight = 620, color = tokens.colors.white, align = "left", gradient = "", lineHeight = 1.2, className = "", style = "" }) {
+    return textBlock({ x, y, w, h, text, size, weight, color, align, gradient, lineHeight, className, style });
+  }
+
+  function visualStatement({ title, subtitle, kicker = "", sourceSlide } = {}) {
+    return visualLayout({
+      title,
+      sourceSlide,
+      className: "lvg-quick-slide lvg-quick-apple lvg-quick-statement",
+      blocks: [
+        ...visualBackgroundBlocks(),
+        quickText({ x: 0, y: 174, w: 1600, h: 28, text: kicker, size: 19, weight: 640, align: "center", color: "#7b8494", className: "lvg-quick-copy" }),
+        quickText({ x: 180, y: 268, w: 1240, h: 126, text: title, size: 76, weight: 760, align: "center", gradient: "brand", lineHeight: 1.05, className: "lvg-quick-heading" }),
+        quickText({ x: 360, y: 456, w: 880, h: 86, text: subtitle, size: 29, weight: 500, align: "center", color: "#b9c2d1", lineHeight: 1.36, className: "lvg-quick-copy" }),
+        shapeBlock({ x: 610, y: 604, w: 380, h: 2, fill: tokens.gradients.deepBlue, radius: "999px", opacity: 0.82 }),
+      ],
+    });
+  }
+
+  function visualTodoList({ title, subtitle = "", items = [], sourceSlide } = {}) {
+    const visibleItems = Array.from(items).slice(0, 5);
+    const blocks = [
+      ...visualBackgroundBlocks(),
+      quickText({ x: 240, y: 106, w: 1120, h: 74, text: title, size: 60, weight: 760, align: "center", gradient: "brand", className: "lvg-quick-heading" }),
+      quickText({ x: 330, y: 196, w: 940, h: 42, text: subtitle, size: 28, weight: 500, align: "center", color: "#aeb7c7", lineHeight: 1.36, className: "lvg-quick-copy" }),
+    ];
+    if (visibleItems.length <= 5) {
+      const grid = layoutGrid({ x: 216, y: 348, w: 1168, columns: visibleItems.length, gap: 56 });
+      visibleItems.forEach((item, index) => {
+        const col = grid.col(index);
+        const label = item.label || `Step ${index + 1}`;
+        const heading = item.title || item.heading || "";
+        const body = item.body || item.text || "";
+        blocks.push(quickText({ x: col.x, y: grid.y, w: col.w, h: 44, text: String(index + 1).padStart(2, "0"), size: 40, weight: 720, align: "center", gradient: "deepBlue", className: "lvg-quick-heading" }));
+        blocks.push(quickText({ x: col.x, y: grid.y + 82, w: col.w, h: 22, text: label, size: 17, weight: 650, align: "center", color: "#7f8aa0", className: "lvg-quick-copy" }));
+        blocks.push(quickText({ x: col.x, y: grid.y + 116, w: col.w, h: 34, text: heading, size: 28, weight: 740, align: "center", gradient: "brand", className: "lvg-quick-heading" }));
+        blocks.push(quickText({ x: col.x - 4, y: grid.y + 178, w: col.w + 8, h: 102, text: body, size: 21, weight: 500, align: "center", color: "#aeb7c7", lineHeight: 1.34, className: "lvg-quick-copy" }));
+      });
+      return visualLayout({ title, sourceSlide, className: "lvg-quick-slide lvg-quick-apple lvg-quick-todo", blocks });
+    }
+    const rowH = 88;
+    const startY = 286;
+    blocks.push(shapeBlock({ x: 238, y: 250, w: 1124, h: Math.max(visibleItems.length * rowH + 64, 300), fill: "rgba(255,255,255,0.035)", radius: "8px", border: "1.2px solid rgba(62,195,247,0.34)" }));
+    visibleItems.forEach((item, index) => {
+      const y = startY + index * rowH;
+      const label = item.label || `Step ${index + 1}`;
+      const heading = item.title || item.heading || "";
+      const body = item.body || item.text || "";
+      const chips = Array.from(item.chips || []).slice(0, 3);
+      blocks.push(shapeBlock({ x: 292, y, w: 1016, h: rowH - 14, fill: "rgba(3,10,23,0.62)", radius: "8px", border: "1.1px solid rgba(62,195,247,0.22)" }));
+      blocks.push(shapeBlock({ x: 318, y: y + 27, w: 30, h: 30, fill: "rgba(62,195,247,0.12)", radius: "6px", border: "1.2px solid rgba(62,195,247,0.62)" }));
+      blocks.push(quickText({ x: 318, y: y + 29, w: 30, h: 26, text: "✓", size: 21, weight: 760, align: "center", gradient: "deepBlue" }));
+      blocks.push(quickText({ x: 374, y: y + 18, w: 148, h: 26, text: label, size: 19, weight: 720, gradient: "deepBlue", className: "lvg-quick-copy" }));
+      blocks.push(quickText({ x: 374, y: y + 47, w: 230, h: 32, text: heading, size: 27, weight: 740, gradient: "brand", className: "lvg-quick-heading" }));
+      blocks.push(quickText({ x: 628, y: y + 25, w: chips.length ? 374 : 604, h: 42, text: body, size: 21, weight: 500, color: "#aeb7c7", lineHeight: 1.3, className: "lvg-quick-copy" }));
+      chips.forEach((chip, chipIndex) => {
+        const chipX = 1042 + chipIndex * 88;
+        blocks.push(shapeBlock({ x: chipX, y: y + 27, w: 74, h: 32, fill: "rgba(255,255,255,0.04)", radius: "6px", border: "1px solid rgba(62,195,247,0.30)" }));
+        blocks.push(quickText({ x: chipX, y: y + 35, w: 74, h: 18, text: chip, size: 13, weight: 620, align: "center", color: "#dceeff", className: "lvg-quick-copy" }));
+      });
+    });
+    return visualLayout({ title, sourceSlide, className: "lvg-quick-slide lvg-quick-todo", blocks });
+  }
+
+  function visualCaseFlow({ title, subtitle = "", prompt = "", steps = [], sourceSlide } = {}) {
+    const visibleSteps = Array.from(steps).slice(0, 4);
+    const grid = layoutGrid({ x: 230, y: 500, w: 1140, columns: Math.min(Math.max(visibleSteps.length, 1), 4), gap: 54 });
+    const blocks = [
+      ...visualBackgroundBlocks(),
+      quickText({ x: 240, y: 100, w: 1120, h: 74, text: title, size: 60, weight: 760, align: "center", gradient: "brand", className: "lvg-quick-heading" }),
+      quickText({ x: 330, y: 190, w: 940, h: 42, text: subtitle, size: 28, weight: 500, align: "center", color: "#aeb7c7", lineHeight: 1.36, className: "lvg-quick-copy" }),
+      quickText({ x: 260, y: 304, w: 1080, h: 46, text: prompt, size: 36, weight: 680, align: "center", color: tokens.colors.white, className: "lvg-quick-copy" }),
+    ];
+    visibleSteps.forEach((step, index) => {
+      const col = grid.col(index);
+      blocks.push(quickText({ x: col.x, y: grid.y, w: col.w, h: 26, text: String(index + 1).padStart(2, "0"), size: 20, weight: 700, align: "center", gradient: "deepBlue", className: "lvg-quick-copy" }));
+      blocks.push(quickText({ x: col.x, y: grid.y + 50, w: col.w, h: 34, text: step.title || "", size: 28, weight: 740, align: "center", gradient: "brand", className: "lvg-quick-heading" }));
+      blocks.push(quickText({ x: col.x - 8, y: grid.y + 114, w: col.w + 16, h: 84, text: step.body || "", size: 21, weight: 500, align: "center", color: "#aeb7c7", lineHeight: 1.36, className: "lvg-quick-copy" }));
+    });
+    return visualLayout({ title, sourceSlide, className: "lvg-quick-slide lvg-quick-apple lvg-quick-flow", blocks });
+  }
+
+  function createDeckFromOutline({ title = "", description = "", theme = "larkVisual", slides = [], meta = {} } = {}) {
+    const renderedSlides = Array.from(slides).map((slide) => {
+      const type = slide.type || slide.template || "statement";
+      if (type === "statement" || type === "title") return visualStatement(slide);
+      if (type === "todo" || type === "todoList") return visualTodoList(slide);
+      if (type === "caseFlow" || type === "flow") return visualCaseFlow(slide);
+      if (templateRegistry[type]) return create(type, slide);
+      return visualStatement(slide);
+    });
+    return deckSpec({ title, description, theme, slides: renderedSlides, meta });
+  }
+
+  function visualCover({ title, subtitle, caption, sourceSlide } = {}) {
+    return visualSlide({
+      title,
+      template: "visual-cover",
+      sourceSlide,
+      content: `
+        <div class="lvg-slide">
+          <div class="lvg-center">
+            ${editable(title, "", "h1")}
+            ${renderIf(subtitle, (text) => editable(text, "", "p"))}
+          </div>
+          ${renderIf(caption, (text) => editable(text, "lvg-small-caption"))}
+        </div>
+      `,
+    });
+  }
+
+  function visualHero({ title, subtitle, bg, logo, align = "center", highlight = [], sourceSlide } = {}) {
+    const titleContent = highlight.length ? richText(highlight) : escapeHtml(title);
+    return visualSlide({
+      title,
+      template: "visual-hero",
+      sourceSlide,
+      content: `
+        <div class="lvg-slide">
+          ${renderIf(bg, (src) => imageTag(src, "lvg-bg lvg-bg-soft"))}
+          <div class="lvg-vignette"></div>
+          <div class="lvg-hero-copy ${escapeHtml(align)}">
+            ${renderIf(logo, (src) => imageTag(src, "lvg-mini-logo"))}
+            <h1 contenteditable="true">${titleContent}</h1>
+            ${renderIf(subtitle, (text) => editable(text, "", "p"))}
+          </div>
+        </div>
+      `,
+    });
+  }
+
+  function visualQuote({ title, subtitle, bg, sourceSlide } = {}) {
+    return visualSlide({
+      title,
+      template: "visual-quote",
+      sourceSlide,
+      content: `
+        <div class="lvg-slide">
+          ${renderIf(bg, (src) => imageTag(src, "lvg-bg lvg-bg-soft"))}
+          <div class="lvg-vignette"></div>
+          <div class="lvg-quote">
+            ${editable(title, "", "h1")}
+            ${renderIf(subtitle, (text) => editable(text, "", "p"))}
+          </div>
+        </div>
+      `,
+    });
+  }
+
+  function visualPalette({ sourceSlide } = {}) {
+    const swatches = [
+      ["#548BFF", "#548bff"],
+      ["#9BC6FF", "#9bc6ff"],
+      ["#EADAFB", "#eadafb"],
+      ["#FFF1E6", "#fff1e6"],
+      ["#E2FFF7", "#e2fff7"],
+      ["#BEE3FF", "#bee3ff"],
+      ["#FFFADD", "#fffadd"],
+      ["#D7F3D7", "#d7f3d7"],
+      ["#336DF4", "#336df4"],
+      ["#976EFF", "#976eff"],
+      ["#FFAB6B", "#ffab6b"],
+      ["#FFAB6B", "#ffab6b"],
+      ["#96EDFF", "#96edff"],
+      ["#71C6FF", "#71c6ff"],
+    ];
+    return visualSlide({
+      title: "品牌色板",
+      template: "visual-palette",
+      sourceSlide,
+      content: `
+        <div class="lvg-slide">
+          ${editable("品牌色板", "lvg-title")}
+          ${editable("更多资源见 figma", "lvg-link")}
+          <div class="lvg-palette-stack">
+            ${editable("PPT 色彩应用", "lvg-palette-label", "p")}
+            <div class="lvg-gradient-row small"><span>Brand</span><span>Intelligent</span><span>Nature</span></div>
+            <div class="lvg-gradient-row large"><span># 548BFF</span><span># D29AFF</span><span># FFCFB4</span></div>
+            <div class="lvg-swatch-row">
+              ${renderList(swatches, ([label, color]) => `<div style="background:${color};">${escapeHtml(label)}</div>`)}
+            </div>
+          </div>
+        </div>
+      `,
+    });
+  }
+
+  function visualHighlight({ sourceSlide } = {}) {
+    return visualSlide({
+      title: "高亮字",
+      template: "visual-highlight",
+      sourceSlide,
+      content: `
+        <div class="lvg-slide">
+          ${editable("高亮字", "lvg-title lvg-muted")}
+          <div class="lvg-highlight-demo">
+            <div class="lvg-ok-line">
+              <img class="lvg-status" src="https://magic-builder.tos-cn-beijing.volces.com/uploads/1777923433793_a4540d81cce4891e.png" alt="">
+              <strong contenteditable="true">先进团队 <span class="lvg-blue">先用飞书</span></strong>
+            </div>
+            <div class="lvg-rule"></div>
+            <div class="lvg-bad-line">
+              <img class="lvg-status" src="https://magic-builder.tos-cn-beijing.volces.com/uploads/1777923387855_70f40590943bfa16.png" alt="">
+              <strong contenteditable="true">封面标题\\金句高亮文案<span class="lvg-blue">高亮文案</span><br>封面标题\\金句高亮文案<span class="lvg-blue">高亮文案</span></strong>
+            </div>
+          </div>
+        </div>
+      `,
+    });
+  }
+
+  function visualTypography({ sourceSlide } = {}) {
+    return visualSlide({
+      title: "字体样式",
+      template: "visual-typography",
+      sourceSlide,
+      content: `
+        <div class="lvg-slide">
+          ${editable("字体样式", "lvg-title")}
+          <div class="lvg-type-board">
+            <div>
+              ${editable("_ 中文字体", "lvg-type-kicker", "p")}
+              <div class="lvg-type-group">${editable("中文 Typography", "lvg-type-caption", "p")}${editable("方正兰亭黑Pro", "lvg-type-main", "p")}</div>
+              <div class="lvg-type-group">${editable("标题_Semi Bold+加粗", "lvg-type-caption", "p")}${editable("2024飞书未来无限大会", "lvg-type-main", "p")}</div>
+              <div class="lvg-type-group">${editable("内容文本_Medium", "lvg-type-caption", "p")}${editable("飞 书 未 来 无 限 大 会", "lvg-type-body", "p")}</div>
+            </div>
+            <div class="lvg-type-separator"></div>
+            <div>
+              ${editable("_ 英文(数字)字体", "lvg-type-kicker", "p")}
+              <div class="lvg-type-group">${editable("EN Typography", "lvg-type-caption", "p")}${editable("TikTok Display", "lvg-type-main", "p")}</div>
+              <div class="lvg-type-group">${editable("Headline_Bold", "lvg-type-caption", "p")}${editable("ABCDEFGHIJKLMN1234567890", "lvg-type-main", "p")}</div>
+              <div class="lvg-type-group">${editable("Content Body_Regular", "lvg-type-caption", "p")}${editable("Abcdefghijklmn1234567890", "lvg-type-body", "p")}</div>
+            </div>
+          </div>
+        </div>
+      `,
+    });
+  }
+
+  function visualLogoWall({ logos = [], bg, sourceSlide } = {}) {
+    return visualSlide({
+      title: "Logo",
+      template: "visual-logo-wall",
+      sourceSlide,
+      content: `
+        <div class="lvg-slide">
+          ${renderIf(bg, (src) => `${imageTag(src, "lvg-bg lvg-bg-soft")}<div class="lvg-wash"></div>`)}
+          <div class="lvg-logo-cloud">
+            ${renderList(logos, (logo) => `<div class="lvg-logo-card">${imageTag(logo)}</div>`)}
+          </div>
+        </div>
+      `,
+    });
+  }
+
+  function visualAvatarLibrary({ columns = [], sourceSlide } = {}) {
+    return visualSlide({
+      title: "通用头像",
+      template: "visual-avatar-library",
+      sourceSlide,
+      content: `
+        <div class="lvg-slide">
+          ${editable("通用头像", "lvg-title")}
+          ${editable("更多人像资源见 figma", "lvg-link")}
+          <div class="lvg-avatar-columns">
+            ${renderList(
+              columns,
+              (column) => `
+                  <div class="lvg-avatar-col">
+                    ${editable(column.title, "lvg-col-title", "p")}
+                    ${renderList(
+                      column.people || [],
+                      (person) => `
+                          <div class="lvg-person">
+                            ${imageTag(person.image)}
+                            ${editable(person.name)}
+                            ${editable(person.group)}
+                          </div>
+                        `
+                    )}
+                  </div>
+                `
+            )}
+          </div>
+        </div>
+      `,
+    });
+  }
+
+  function visualIconLibrary({ icons = [], sourceSlide } = {}) {
+    return visualSlide({
+      title: "功能 ICON 资源库",
+      template: "visual-icon-library",
+      sourceSlide,
+      content: `
+        <div class="lvg-slide">
+          ${editable("功能 ICON 资源库", "lvg-title strong")}
+          ${editable("功能 ICON 资源库", "lvg-link")}
+          <div class="lvg-status-row">
+            <img src="https://magic-builder.tos-cn-beijing.volces.com/uploads/1777923433793_a4540d81cce4891e.png" alt="">
+            <img src="https://magic-builder.tos-cn-beijing.volces.com/uploads/1777923387855_70f40590943bfa16.png" alt="">
+            <img src="https://magic-builder.tos-cn-beijing.volces.com/uploads/1777923394372_79537a3295e5735a.png" alt="">
+          </div>
+          <div class="lvg-icon-grid">
+            ${renderList(icons, (icon) => `<span class="lvg-icon-dot">${imageTag(icon)}</span>`)}
+          </div>
+        </div>
+      `,
+    });
+  }
+
+  function visualProductIcons({ icons = [], labels = [], sourceSlide } = {}) {
+    return visualSlide({
+      title: "产品 ICON",
+      template: "visual-product-icons",
+      sourceSlide,
+      content: `
+        <div class="lvg-slide">
+          ${editable("产品 ICON", "lvg-title strong")}
+          ${editable("更多资源见 figma", "lvg-link")}
+          <div class="lvg-product-icons">
+            ${renderList(icons, (icon) => `<div class="lvg-product-icon">${imageTag(icon)}</div>`)}
+          </div>
+          <div class="lvg-product-labels">
+            ${renderList(labels, (label) => editable(label))}
+          </div>
+        </div>
+      `,
+    });
+  }
+
+  function visualPhotoStory({ title, subtitle, images = [], captions = [], sourceSlide } = {}) {
+    return visualSlide({
+      title,
+      template: "visual-photo-story",
+      sourceSlide,
+      content: `
+        <div class="lvg-slide">
+          <div class="lvg-photo-strip">${renderList(images, (image) => imageTag(image))}</div>
+          <div class="lvg-wash"></div>
+          ${renderList(
+            captions,
+            (caption, index) => `
+                <div class="lvg-photo-caption" style="left:${index * 25}%;">
+                  ${editable(caption.title, "", "h3")}
+                  ${renderIf(caption.body, (text) => editable(text, "", "p"))}
+                </div>
+              `
+          )}
+          <div class="lvg-hero-copy center">
+            ${editable(title, "", "h1")}
+            ${renderIf(subtitle, (text) => editable(text, "", "p"))}
+          </div>
+        </div>
+      `,
+    });
+  }
+
+  function visualProductShot({ title, subtitle, image, bg, phone = false, sourceSlide } = {}) {
+    return visualSlide({
+      title,
+      template: "visual-product-shot",
+      sourceSlide,
+      content: `
+        <div class="lvg-slide">
+          ${renderIf(bg, (src) => imageTag(src, "lvg-bg lvg-bg-soft"))}
+          <div class="lvg-wash"></div>
+          <div class="lvg-hero-copy">
+            ${editable(title, "", "h1")}
+            ${renderIf(subtitle, (text) => editable(text, "", "p"))}
+          </div>
+          <div class="lvg-shot ${phone ? "phone" : ""}">${imageTag(image)}</div>
+        </div>
+      `,
+    });
+  }
+
+  function visualMetricChart({ title, value, label, subtitle, sourceSlide } = {}) {
+    return visualSlide({
+      title,
+      template: "visual-metric-chart",
+      sourceSlide,
+      content: `
+        <div class="lvg-slide">
+          <div class="lvg-metrics">
+            ${editable(label, "lvg-metric-label", "p")}
+            ${editable(value, "lvg-metric-value", "p")}
+            ${renderIf(subtitle, (text) => editable(text, "", "p"))}
+          </div>
+          <div class="lvg-chart"><div class="lvg-chart-grid"></div><div class="lvg-chart-line"></div></div>
+        </div>
+      `,
+    });
+  }
+
+  function visualBars({ title, subtitle, bars = [], sourceSlide } = {}) {
+    return visualSlide({
+      title,
+      template: "visual-bars",
+      sourceSlide,
+      content: `
+        <div class="lvg-slide">
+          <div class="lvg-hero-copy">
+            ${editable(title, "", "h1")}
+            ${renderIf(subtitle, (text) => editable(text, "", "p"))}
+          </div>
+          <div class="lvg-bar-group">
+            ${renderList(bars, (bar) => `<div class="lvg-bar"><span style="width:${Math.max(4, Math.min(100, Number(bar)))}%;"></span></div>`)}
+          </div>
+        </div>
+      `,
+    });
+  }
+
+  function visualCards({ title, subtitle, cards = [], bg, sourceSlide } = {}) {
+    return visualSlide({
+      title,
+      template: "visual-cards",
+      sourceSlide,
+      content: `
+        <div class="lvg-slide">
+          ${renderIf(bg, (src) => imageTag(src, "lvg-bg lvg-bg-soft"))}
+          <div class="lvg-wash"></div>
+          <div class="lvg-hero-copy center" style="top:34%;">
+            ${editable(title, "", "h1")}
+            ${renderIf(subtitle, (text) => editable(text, "", "p"))}
+          </div>
+          <div class="lvg-card-row">
+            ${renderList(cards, (card) => `<div class="lvg-dark-card">${editable(card.title, "", "h3")}${editable(card.body, "", "p")}</div>`)}
+          </div>
+        </div>
+      `,
+    });
+  }
+
+  function visualLogoSpec({ sourceSlide } = {}) {
+    return visualSlide({
+      title: "Logo",
+      template: "visual-logo-spec",
+      sourceSlide,
+      content: `
+        <div class="lvg-slide">
+          ${editable("Logo", "lvg-title lvg-muted")}
+          ${editable("更多品牌规范见设计资产库", "lvg-link")}
+          <div class="lvg-logo-spec">
+            <div class="lvg-logo-panel"><img src="https://magic-builder.tos-cn-beijing.volces.com/uploads/1777923449430_c79530d42bdf7e25.png" alt=""></div>
+            <div class="lvg-logo-panel dark"><img src="https://magic-builder.tos-cn-beijing.volces.com/uploads/1777923449430_c79530d42bdf7e25.png" alt=""></div>
+            <div>
+              ${editable("联合 Logo，飞书 Logo 固定在前面展示", "lvg-palette-label", "p")}
+              <div class="lvg-lockup-spec">
+                <img src="https://magic-builder.tos-cn-beijing.volces.com/uploads/1777923449430_c79530d42bdf7e25.png" alt="">
+                <span class="partner" contenteditable="true">Partner logo</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      `,
+    });
+  }
+
+  function visualGuideLines({ sourceSlide } = {}) {
+    return visualSlide({
+      title: "引导线组件",
+      template: "visual-guide-lines",
+      sourceSlide,
+      content: `
+        <div class="lvg-slide">
+          ${editable("引导线组件", "lvg-title lvg-muted")}
+          <div class="lvg-line-kit">
+            ${editable("内容引导线：基于内容需要 2px 的倍数使用，增长越高，越正向颜色越亮", "lvg-type-main", "p")}
+            <div class="lvg-line"></div>
+            <div class="lvg-line thin"></div>
+            <div class="lvg-line"></div>
+            <div class="lvg-line" style="background:#2e2e2e;"></div>
+            <div class="lvg-line" style="width:58%;"></div>
+            ${editable("产品引导线", "lvg-type-main", "p")}
+            <div class="lvg-line thin"></div>
+            <div class="lvg-line dashed"></div>
+          </div>
+          <div class="lvg-tag-list">
+            <div class="lvg-tag-row"><span class="lvg-tag" contenteditable="true">标签</span><span class="lvg-tag-line"></span></div>
+            <div class="lvg-tag-row"><span class="lvg-tag" contenteditable="true">标签</span><span class="lvg-tag-line" style="background:linear-gradient(90deg,#fff1e6,#d29aff);"></span></div>
+            <div class="lvg-tag-row"><span class="lvg-tag" contenteditable="true">标签</span><span class="lvg-tag-line" style="background:#fff;"></span></div>
+          </div>
+        </div>
+      `,
+    });
+  }
+
+  function visualMilestone({ title, subtitle, map, sourceSlide } = {}) {
+    return visualSlide({
+      title,
+      template: "visual-milestone",
+      sourceSlide,
+      content: `
+        <div class="lvg-slide">
+          <div class="lvg-hero-copy center" style="top:30%;">
+            ${editable(title, "", "h1")}
+            ${renderIf(subtitle, (text) => editable(text, "", "p"))}
+          </div>
+          ${renderIf(map, (src) => imageTag(src, "lvg-map"))}
+          <div class="lvg-milestone">
+            <i class="lvg-point" style="left:2%;"><span>2025.3</span></i>
+            <i class="lvg-point" style="left:28%;"><span>2025.5</span></i>
+            <i class="lvg-point" style="left:56%;"><span>2025.8</span></i>
+            <i class="lvg-point" style="left:86%;"><span>至今</span></i>
+          </div>
+        </div>
+      `,
+    });
+  }
+
+  const builtInTemplates = {
+    cover,
+    section,
+    imageHero,
+    metric,
+    twoColumn,
+    visualSlide,
+    visualLayout,
+    visualStatement,
+    visualTodoList,
+    visualCaseFlow,
+    visualCover,
+    visualHero,
+    visualQuote,
+    visualPalette,
+    visualHighlight,
+    visualTypography,
+    visualLogoWall,
+    visualAvatarLibrary,
+    visualIconLibrary,
+    visualProductIcons,
+    visualPhotoStory,
+    visualProductShot,
+    visualMetricChart,
+    visualBars,
+    visualCards,
+    visualLogoSpec,
+    visualGuideLines,
+    visualMilestone,
+  };
+
+  const builtInContracts = {
+    cover: { intent: "Simple opening slide.", limits: { maxTitleChars: 34, maxBodyChars: 140 }, slots: { title: "required", subtitle: "optional" } },
+    metric: { intent: "Metric summary slide.", limits: { maxItems: 4, maxBodyChars: 180 }, slots: { title: "required", metrics: "1-4 items" } },
+    twoColumn: { intent: "Two balanced content columns.", limits: { maxItems: 10, maxBodyChars: 420 }, slots: { title: "required", left: "up to 5 items", right: "up to 5 items" } },
+    visualLayout: { intent: "Precision 1600x900 editable block layout.", limits: { maxBlocks: 96, maxBodyChars: 2800 }, slots: { blocks: "absolute image/text/shape/vector blocks" } },
+    visualStatement: {
+      intent: "Fast keynote statement slide.",
+      limits: { maxTitleChars: 42, maxSubtitleChars: 96, maxBodyChars: 180 },
+      slots: { title: "required", subtitle: "optional", kicker: "optional" },
+      guidance: ["Use one dominant claim.", "Avoid body copy and decorative cards.", "Keep subtitle short enough to breathe at 28px or larger."],
+    },
+    visualTodoList: {
+      intent: "Stable checklist/process slide for Agent plans.",
+      limits: { maxItems: 5, maxBodyChars: 520 },
+      slots: { title: "required", subtitle: "optional", items: "up to 5 todo rows" },
+      guidance: ["Use only when each column is a real step.", "Prefer 3-4 items for stage presentation.", "Shorten body text before adding more boxes."],
+    },
+    visualCaseFlow: {
+      intent: "Prompt-to-actions case story.",
+      limits: { maxItems: 4, maxBodyChars: 560 },
+      slots: { title: "required", prompt: "required", steps: "up to 4 action cards" },
+      guidance: ["Show user goal to executed action.", "Keep the prompt centered and readable.", "Do not mix separate product narratives on this slide."],
+    },
+  };
+
+  Object.entries(builtInTemplates).forEach(([name, renderer]) => defineTemplate(name, renderer, builtInContracts[name]));
+
+  const components = {
+    editable,
+    richText,
+    imageTag,
+    gradientText,
+    textBlock,
+    imageBlock,
+    shapeBlock,
+    vectorBlock,
+    layoutGrid,
+  };
+
+  window.LarkSlideTemplates = {
+    ...builtInTemplates,
+    tokens,
+    components,
+    templates: templateRegistry,
+    contracts: templateContracts,
+    qualityRules,
+    designGuidance,
+    defineTemplate,
+    create,
+    templateNames,
+    getTemplateContract,
+    getDesignGuidance,
+    validateDeckSpec,
+    createDeckFromOutline,
+    asset,
+    deckSpec,
+  };
+
+  window.LarkSlideSDK = {
+    runtime: window.LarkSlides,
+    templates: window.LarkSlideTemplates,
+    tokens,
+    components,
+    create,
+    defineTemplate,
+    templateNames,
+    getTemplateContract,
+    getDesignGuidance,
+    validateDeckSpec,
+    createDeckFromOutline,
+    asset,
+    deckSpec,
+    createDeck(options) {
+      if (!window.LarkSlides?.createDeck) throw new Error("LarkSlideSDK: lark-slides.js is required");
+      return window.LarkSlides.createDeck(options);
+    },
+  };
+})();
+
+</script>
+    <script>
+      const DECK_ID = "lark-deckkit-usage-showcase-v3";
+      const MAGIC_TEXT_SYNC_ENDPOINT = "https://lark-deckkit.local/usage-showcase-text-sync";
+      const TEXT_STORE_PREFIX = "lark-deckkit:usage-showcase:";
+      const memoryTextStore = (window.__LARK_DECKKIT_USAGE_SHOWCASE_MEMORY__ ||= new Map());
+      const DEFAULT_TEXTS = {
+        "slide-01.badge": { text: "Lark DeckKit / Start Here" },
+        "slide-01.hero-title": { text: "三步做出飞书风格 HTML PPT" },
+        "slide-01.hero-subtitle": { text: "用结构化内容驱动模板，保留可编辑文字、播放控制和发布能力。" },
+        "slide-01.code": { text: "createDeckFromOutline()\nvalidate_deck.js\nmagic-builder page publish" },
+        "slide-01.step-1": { text: "读取 design.md 和 sdk/README.md，确定飞书 DeckKit 的字体、画布、颜色和密度规则。" },
+        "slide-01.step-2": { text: "把主题、听众、页数和每页要点写成 outline，让模板负责版式和层级。" },
+        "slide-01.step-3": { text: "跑验证、看截图、发布到妙笔；后续只改文案时走 data-text-id。" },
+        "slide-02.title": { text: "SDK 和播放器已经具备的能力" },
+        "slide-02.subtitle": { text: "这不是截图播放器，而是可继续维护的 HTML 演示稿运行时。" },
+        "slide-02.card-1-title": { text: "16:9 播放器" },
+        "slide-02.card-1-body": { text: "翻页、Hash 跳页、全屏、缩放、预加载和底部进度条。" },
+        "slide-02.card-2-title": { text: "模板生成" },
+        "slide-02.card-2-body": { text: "createDeckFromOutline 生成 statement、todo、caseFlow 等稳定页面。" },
+        "slide-02.card-3-title": { text: "精确布局" },
+        "slide-02.card-3-body": { text: "visualLayout 用 1600x900 坐标放置图片、文字、形状和 SVG。" },
+        "slide-02.card-4-title": { text: "可编辑文案" },
+        "slide-02.card-4-body": { text: "contenteditable 与 data-text-id 让标题、标签、正文都能继续修改。" },
+        "slide-02.card-5-title": { text: "产品原型" },
+        "slide-02.card-5-body": { text: "product-mocks 覆盖聊天、文档、多维表格、会议、任务、日历等示意。" },
+        "slide-02.card-6-title": { text: "分享定位" },
+        "slide-02.card-6-body": { text: "复制当前页链接会带 #/页码，别人打开后直接到对应页面。" },
+        "slide-03.title": { text: "从 PPTX 到可交付资产" },
+        "slide-03.subtitle": { text: "项目里同时沉淀了转换、校验、打包、发布和素材索引链路。" },
+        "slide-03.pipe-1": { text: "PPTX 转 HTML" },
+        "slide-03.pipe-1-body": { text: "抽取页面、图片、文本、母版背景和基础形状。" },
+        "slide-03.pipe-2": { text: "文本 sidecar" },
+        "slide-03.pipe-2-body": { text: "texts.md 承接文案修改，HTML 保持版式稳定。" },
+        "slide-03.pipe-3": { text: "云端文本" },
+        "slide-03.pipe-3-body": { text: "textSync 可接 window.magic.store、FaaS、KV 或数据库。" },
+        "slide-03.pipe-4": { text: "交付打包" },
+        "slide-03.pipe-4-body": { text: "delivery_* 脚本生成清单、反馈模板和 zip 包。" },
+        "slide-03.pipe-5": { text: "妙笔发布" },
+        "slide-03.pipe-5-body": { text: "单文件 HTML 发布到妙笔空间，资源外链化到 TOS。" },
+      };
+
+      const slides = [
+        {
+          title: "上手引导",
+          sourceSlide: 1,
+          content: `
+            <section class="showcase-slide">
+              <div class="intro-grid">
+                <div class="intro-copy">
+                  <div class="showcase-kicker" contenteditable="true" data-text-id="slide-01.badge">Lark DeckKit / Start Here</div>
+                  <h1 class="showcase-title" contenteditable="true" data-text-id="slide-01.hero-title">三步做出飞书风格 HTML PPT</h1>
+                  <p class="showcase-subtitle" contenteditable="true" data-text-id="slide-01.hero-subtitle">用结构化内容驱动模板，保留可编辑文字、播放控制和发布能力。</p>
+                  <div class="intro-code" contenteditable="true" data-text-id="slide-01.code">createDeckFromOutline()
+validate_deck.js
+magic-builder page publish</div>
+                </div>
+                <div class="showcase-panel step-list">
+                  <article class="step-item">
+                    <div class="step-tag">Read</div>
+                    <p class="step-copy" contenteditable="true" data-text-id="slide-01.step-1">读取 design.md 和 sdk/README.md，确定飞书 DeckKit 的字体、画布、颜色和密度规则。</p>
+                  </article>
+                  <article class="step-item">
+                    <div class="step-tag">Outline</div>
+                    <p class="step-copy" contenteditable="true" data-text-id="slide-01.step-2">把主题、听众、页数和每页要点写成 outline，让模板负责版式和层级。</p>
+                  </article>
+                  <article class="step-item">
+                    <div class="step-tag">Ship</div>
+                    <p class="step-copy" contenteditable="true" data-text-id="slide-01.step-3">跑验证、看截图、发布到妙笔；后续只改文案时走 data-text-id。</p>
+                  </article>
+                </div>
+              </div>
+            </section>
+          `,
+        },
+        {
+          title: "SDK 能力",
+          sourceSlide: 2,
+          content: `
+            <section class="showcase-slide">
+              <div class="slide-head">
+                <h1 class="showcase-title" contenteditable="true" data-text-id="slide-02.title">SDK 和播放器已经具备的能力</h1>
+                <p class="showcase-subtitle" contenteditable="true" data-text-id="slide-02.subtitle">这不是截图播放器，而是可继续维护的 HTML 演示稿运行时。</p>
+              </div>
+              <div class="capability-grid">
+                <article class="capability-card"><span class="capability-chip">Runtime</span><h2 contenteditable="true" data-text-id="slide-02.card-1-title">16:9 播放器</h2><p contenteditable="true" data-text-id="slide-02.card-1-body">翻页、Hash 跳页、全屏、缩放、预加载和底部进度条。</p></article>
+                <article class="capability-card"><span class="capability-chip">Templates</span><h2 contenteditable="true" data-text-id="slide-02.card-2-title">模板生成</h2><p contenteditable="true" data-text-id="slide-02.card-2-body">createDeckFromOutline 生成 statement、todo、caseFlow 等稳定页面。</p></article>
+                <article class="capability-card"><span class="capability-chip">Layout</span><h2 contenteditable="true" data-text-id="slide-02.card-3-title">精确布局</h2><p contenteditable="true" data-text-id="slide-02.card-3-body">visualLayout 用 1600x900 坐标放置图片、文字、形状和 SVG。</p></article>
+                <article class="capability-card"><span class="capability-chip">Editable</span><h2 contenteditable="true" data-text-id="slide-02.card-4-title">可编辑文案</h2><p contenteditable="true" data-text-id="slide-02.card-4-body">contenteditable 与 data-text-id 让标题、标签、正文都能继续修改。</p></article>
+                <article class="capability-card"><span class="capability-chip">Mocks</span><h2 contenteditable="true" data-text-id="slide-02.card-5-title">产品原型</h2><p contenteditable="true" data-text-id="slide-02.card-5-body">product-mocks 覆盖聊天、文档、多维表格、会议、任务、日历等示意。</p></article>
+                <article class="capability-card"><span class="capability-chip">Share</span><h2 contenteditable="true" data-text-id="slide-02.card-6-title">分享定位</h2><p contenteditable="true" data-text-id="slide-02.card-6-body">复制当前页链接会带 #/页码，别人打开后直接到对应页面。</p></article>
+              </div>
+            </section>
+          `,
+        },
+        {
+          title: "交付能力",
+          sourceSlide: 3,
+          content: `
+            <section class="showcase-slide">
+              <div class="slide-head">
+                <h1 class="showcase-title" contenteditable="true" data-text-id="slide-03.title">从 PPTX 到可交付资产</h1>
+                <p class="showcase-subtitle" contenteditable="true" data-text-id="slide-03.subtitle">项目里同时沉淀了转换、校验、打包、发布和素材索引链路。</p>
+              </div>
+              <div class="pipeline">
+                <article class="pipeline-card"><span class="pipeline-num">01</span><h2 contenteditable="true" data-text-id="slide-03.pipe-1">PPTX 转 HTML</h2><p contenteditable="true" data-text-id="slide-03.pipe-1-body">抽取页面、图片、文本、母版背景和基础形状。</p></article>
+                <article class="pipeline-card"><span class="pipeline-num">02</span><h2 contenteditable="true" data-text-id="slide-03.pipe-2">文本 sidecar</h2><p contenteditable="true" data-text-id="slide-03.pipe-2-body">texts.md 承接文案修改，HTML 保持版式稳定。</p></article>
+                <article class="pipeline-card"><span class="pipeline-num">03</span><h2 contenteditable="true" data-text-id="slide-03.pipe-3">云端文本</h2><p contenteditable="true" data-text-id="slide-03.pipe-3-body">textSync 可接 window.magic.store、FaaS、KV 或数据库。</p></article>
+                <article class="pipeline-card"><span class="pipeline-num">04</span><h2 contenteditable="true" data-text-id="slide-03.pipe-4">交付打包</h2><p contenteditable="true" data-text-id="slide-03.pipe-4-body">delivery_* 脚本生成清单、反馈模板和 zip 包。</p></article>
+                <article class="pipeline-card"><span class="pipeline-num">05</span><h2 contenteditable="true" data-text-id="slide-03.pipe-5">妙笔发布</h2><p contenteditable="true" data-text-id="slide-03.pipe-5-body">单文件 HTML 发布到妙笔空间，资源外链化到 TOS。</p></article>
+              </div>
+              <div class="metrics-row">
+                <div class="metric"><strong>299</strong><span>原始 PPTX 媒体文件</span></div>
+                <div class="metric"><strong>215</strong><span>公共素材池资产</span></div>
+                <div class="metric"><strong>30</strong><span>当前测试用例通过</span></div>
+                <div class="metric"><strong>1</strong><span>HTML 文件即可发布</span></div>
+              </div>
+            </section>
+          `,
+        },
+      ];
+
+      const deckSpec = LarkSlides.createDeckSpec({
+        title: "Lark DeckKit Usage Showcase",
+        theme: "larkVisual",
+        slides,
+        meta: {
+          id: DECK_ID,
+          title: "Lark DeckKit Usage Showcase",
+        },
+      });
+
+      installMagicTextSyncEndpoint();
+
+      const deck = LarkSlides.createDeck({
+        mount: "#deck",
+        deck: deckSpec,
+        textSync: {
+          deckId: DECK_ID,
+          loadUrl: `${MAGIC_TEXT_SYNC_ENDPOINT}?id=${encodeURIComponent(DECK_ID)}`,
+          saveUrl: MAGIC_TEXT_SYNC_ENDPOINT,
+          saveDebounceMs: 500,
+        },
+      });
+
+      window.LarkDeckKitUsageShowcase = deck;
+
+      function installMagicTextSyncEndpoint() {
+        if (window.__LARK_DECKKIT_USAGE_SHOWCASE_FETCH_INSTALLED__) return;
+        window.__LARK_DECKKIT_USAGE_SHOWCASE_FETCH_INSTALLED__ = true;
+        const nativeFetch = window.fetch.bind(window);
+        window.fetch = async (resource, options = {}) => {
+          const url = typeof resource === "string" ? resource : resource?.url || "";
+          if (!url.startsWith(MAGIC_TEXT_SYNC_ENDPOINT)) return nativeFetch(resource, options);
+          return handleMagicTextSyncRequest(url, options);
+        };
+      }
+
+      async function handleMagicTextSyncRequest(url, options = {}) {
+        const method = String(options.method || "GET").toUpperCase();
+        const requestUrl = new URL(url);
+        const deckId = requestUrl.searchParams.get("id") || DECK_ID;
+        if (method === "GET") return jsonResponse(await readTextRecord(deckId));
+        if (method === "POST") {
+          const payload = JSON.parse(options.body || "{}");
+          const next = mergeTextRecord(await readTextRecord(payload.deckId || deckId), payload);
+          await writeTextRecord(next.deckId, next);
+          return jsonResponse({ ok: true, deckId: next.deckId, updatedAt: next.updatedAt, changed: next.changed });
+        }
+        return jsonResponse({ ok: false, error: "Method not allowed" }, 405);
+      }
+
+      async function readTextRecord(deckId) {
+        const key = TEXT_STORE_PREFIX + deckId;
+        const store = getMagicStore();
+        if (store) {
+          const raw = await store.global_get(key);
+          const parsed = parseStoredValue(raw);
+          if (parsed) return parsed;
+        }
+        return memoryTextStore.get(key) || defaultTextRecord(deckId);
+      }
+
+      async function writeTextRecord(deckId, record) {
+        const key = TEXT_STORE_PREFIX + deckId;
+        const store = getMagicStore();
+        if (store) await store.global_set(key, JSON.stringify(record));
+        memoryTextStore.set(key, record);
+      }
+
+      function getMagicStore() {
+        const store = window.magic?.store || window.magic?.redis;
+        if (store && typeof store.global_get === "function" && typeof store.global_set === "function") return store;
+        return null;
+      }
+
+      function defaultTextRecord(deckId) {
+        return {
+          deckId,
+          texts: { ...DEFAULT_TEXTS },
+          changed: null,
+          updatedAt: new Date().toISOString(),
+        };
+      }
+
+      function mergeTextRecord(current, payload) {
+        const next = {
+          deckId: payload.deckId || current.deckId || DECK_ID,
+          texts: {
+            ...(current.texts || {}),
+            ...(payload.texts || {}),
+          },
+          changed: payload.changed || null,
+          updatedAt: payload.updatedAt || new Date().toISOString(),
+        };
+        if (payload.changed?.id) {
+          next.texts[payload.changed.id] = {
+            text: payload.changed.text || "",
+            html: payload.changed.html || "",
+            slide: payload.changed.slide || null,
+          };
+        }
+        return next;
+      }
+
+      function parseStoredValue(raw) {
+        if (!raw) return null;
+        if (typeof raw === "object") return raw;
+        try {
+          return JSON.parse(String(raw));
+        } catch (_error) {
+          return null;
+        }
+      }
+
+      function jsonResponse(body, status = 200) {
+        return new Response(JSON.stringify(body), {
+          status,
+          headers: { "Content-Type": "application/json; charset=utf-8" },
+        });
+      }
+    </script>
+  </body>
+</html>

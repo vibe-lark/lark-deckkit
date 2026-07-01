@@ -26,13 +26,14 @@ PPTX 导出的 `pptx-media` 图片文件名通常是无意义哈希，团队复�
 | `icons.json` | icon 分片索引，Agent 需要找图标时只加载这个。 |
 | `logos.json` | logo 分片索引，Agent 需要找品牌/产品标识时只加载这个。 |
 | `excluded.json` | 暂不纳入资产的分片索引，用于复核边界。 |
-| `index.html` | 本地可打开的检索页，支持按类型/状态搜索、复制链接。 |
+| `gallery.html` | 面向人的可点击图库页，用于发布到妙笔空间。 |
+| `index.html` | 本地可打开的完整检索页；上传到 TOS 后只作为静态 HTML 下载备份。 |
 | `USAGE.md` | 当前这份使用说明。 |
 | `not-needed-now.md` | 当前明确不做的能力和不纳入资产范围。 |
 
 ## 已上传的索引文件
 
-- llms.txt 妙笔预览页：https://magic.solutionsuite.cn/html-box/vjC9AsKydQw
+- 可点击检索页（妙笔空间）：https://magic.solutionsuite.cn/html-box/vnRjxHHZxlv
 - USAGE.md：https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/USAGE.md
 - assets-index.csv：https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/assets-index.csv
 - not-needed-now.md：https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/not-needed-now.md
@@ -45,6 +46,13 @@ PPTX 导出的 `pptx-media` 图片文件名通常是无意义哈希，团队复�
 - product-assets.json：https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/product-assets.json
 - brand-customer-logos.json：https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/brand-customer-logos.json
 - general-icons.json：https://magic-builder.tos-cn-beijing.volces.com/gtm/pptx-media/v1/general-icons.json
+
+## 打开方式
+
+- 给人直接打开：使用妙笔空间页面 https://magic.solutionsuite.cn/html-box/vnRjxHHZxlv。
+- 本地开发/复核：打开 `gallery.html` 或 `index.html`。
+- TOS `index.html` 是静态 HTML 下载备份。浏览器点开直接下载是预期行为，不要把它当成面向人的入口。
+- LLM / Agent 入口仍然是 `llms.txt`，按分片 JSON 渐进加载。
 
 ## 当前统计
 
@@ -91,6 +99,12 @@ PPTX 导出的 `pptx-media` 图片文件名通常是无意义哈希，团队复�
 
 ```bash
 node scripts/build_pptx_media_linker.mjs --upload --upload-artifacts
+```
+
+如果需要同步更新妙笔空间里给人看的图库页：
+
+```bash
+node scripts/build_pptx_media_linker.mjs --publish-gallery
 ```
 
 如果只是更新索引页面，不重新上传素材：

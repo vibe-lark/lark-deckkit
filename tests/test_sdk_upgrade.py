@@ -25,7 +25,7 @@ class SdkUpgradeTest(unittest.TestCase):
                 """
                 const fs = require("fs");
                 const vm = require("vm");
-                const context = { window: {} };
+                const context = { window: {}, URL, location: { href: "https://example.com/deck.html#/1" } };
                 vm.runInNewContext(fs.readFileSync("sdk/lark-slides.js", "utf8"), context);
                 const LarkSlides = context.window.LarkSlides;
                 const spec = LarkSlides.createDeckSpec({
@@ -37,15 +37,27 @@ class SdkUpgradeTest(unittest.TestCase):
                   className: "ls-theme-custom",
                   cssVars: { "--ls-accent": "#3ec3f7" },
                 });
+                const remoteTexts = LarkSlides.normalizeTextPayload({
+                  texts: {
+                    "slide-01.title": "云端标题",
+                    "slide-01.subtitle": { html: "云端<br>副标题" },
+                  },
+                });
+                const slideLink = LarkSlides.currentSlideLink({ index: 2, slides: [1, 2, 3] });
                 console.log(JSON.stringify({
                   hasSpecApi: typeof LarkSlides.createDeckSpec === "function",
                   hasThemeApi: typeof LarkSlides.defineTheme === "function",
+                  hasTextSyncApi: typeof LarkSlides.loadRemoteTexts === "function",
+                  hasCopySlideLinkApi: typeof LarkSlides.copyCurrentSlideLink === "function",
                   specTitle: spec.title,
                   specTheme: spec.theme,
                   slideCount: spec.slides.length,
                   themeName: theme.name,
                   themeAccent: LarkSlides.themes.custom.cssVars["--ls-accent"],
                   canFullscreen: typeof LarkSlides.toggleFullscreen === "function",
+                  remoteTitle: remoteTexts["slide-01.title"].text,
+                  remoteSubtitleHtml: remoteTexts["slide-01.subtitle"].html,
+                  slideLink,
                 }));
                 """
             )
@@ -56,12 +68,17 @@ class SdkUpgradeTest(unittest.TestCase):
             {
                 "hasSpecApi": True,
                 "hasThemeApi": True,
+                "hasTextSyncApi": True,
+                "hasCopySlideLinkApi": True,
                 "specTitle": "复用型演示稿",
                 "specTheme": "larkVisual",
                 "slideCount": 1,
                 "themeName": "custom",
                 "themeAccent": "#3ec3f7",
                 "canFullscreen": True,
+                "remoteTitle": "云端标题",
+                "remoteSubtitleHtml": "云端<br>副标题",
+                "slideLink": "https://example.com/deck.html#/3",
             },
         )
 
@@ -229,6 +246,59 @@ class SdkUpgradeTest(unittest.TestCase):
         self.assertTrue(output["ok"])
         self.assertEqual(output["slideCount"], 3)
         self.assertEqual(output["externalAssets"], {"stylesheets": 0, "scripts": 0, "images": 0})
+
+    def test_remote_text_faas_example_reads_and_updates_texts(self):
+        output = self.run_node(
+            textwrap.dedent(
+                """
+                const handler = require("./sdk/remote-text-faas.example.js");
+                (async () => {
+                  const deckId = "unit-test-deck";
+                  const first = await handler(new Request(`https://faas.example.test/?id=${deckId}`));
+                  const firstJson = await first.json();
+                  const save = await handler(new Request("https://faas.example.test/", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                      deckId,
+                      changed: {
+                        id: "slide-01.hero-title",
+                        text: "保存后的标题",
+                        html: "保存后的标题",
+                        slide: 1,
+                      },
+                      texts: {
+                        "slide-01.hero-title": {
+                          text: "保存后的标题",
+                          html: "保存后的标题",
+                          slide: 1,
+                        },
+                      },
+                    }),
+                  }));
+                  const saveJson = await save.json();
+                  const second = await handler(new Request(`https://faas.example.test/?id=${deckId}`));
+                  const secondJson = await second.json();
+                  console.log(JSON.stringify({
+                    firstTitle: firstJson.texts["slide-01.hero-title"],
+                    saveOk: saveJson.ok,
+                    changedId: saveJson.changed.id,
+                    secondTitle: secondJson.texts["slide-01.hero-title"].text,
+                  }));
+                })();
+                """
+            )
+        )
+
+        self.assertEqual(
+            output,
+            {
+                "firstTitle": "云端标题",
+                "saveOk": True,
+                "changedId": "slide-01.hero-title",
+                "secondTitle": "保存后的标题",
+            },
+        )
 
 
 if __name__ == "__main__":
