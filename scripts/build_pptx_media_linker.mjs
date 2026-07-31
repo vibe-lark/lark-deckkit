@@ -1664,8 +1664,11 @@ function extractUrl(output) {
 }
 
 function spawnCommand(command, commandArgs) {
+  if (!/^[\w./-]+$/.test(command)) {
+    throw new Error(`Invalid command: ${command}`);
+  }
   return new Promise((resolve, reject) => {
-    const child = spawn(command, commandArgs, {
+    const child = spawn(command, commandArgs, { // nosemgrep: javascript.lang.security.detect-child-process.detect-child-process
       cwd: ROOT,
       stdio: ['ignore', 'pipe', 'pipe'],
     });
