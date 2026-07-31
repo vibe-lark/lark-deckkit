@@ -5,7 +5,7 @@
 ## 文件
 
 - `fonts.css`：字体资产入口，包含 `@font-face` 和统一字体变量。
-- `font-manifest.json`：已提交字体文件、字重和可选字体说明。
+- `font-manifest.json`：TOS 字体 URL、字重和可选字体说明。
 - `fonts/`：浏览器可直接加载的 WOFF2 字体资源。
 - `lark-slides.css`：基础画布、播放控件、模板样式。
 - `lark-slides.js`：演示稿运行时，提供翻页、Hash 定位、当前页链接复制、全屏、缩放、主题注册、云端文本同步和 Deck Spec。
@@ -182,7 +182,8 @@ Lark DeckKit 的默认产物是演示稿，不是网页 Dashboard。使用 SDK �
 示例：
 
 ```js
-const A = LarkSlideTemplates.asset("assets/pptx-media");
+const assetManifest = await fetch("../dist/magic-assets-manifest.json").then((response) => response.json());
+const A = (name) => assetManifest.assets[name] || "";
 
 LarkSlides.defineTheme("customerStory", {
   className: "ls-theme-customer-story",
@@ -272,8 +273,8 @@ LarkSlides.createDeck({
     LarkSlideTemplates.visualPalette({ sourceSlide: 39 }),
     LarkSlideTemplates.visualLogoWall({
       sourceSlide: 36,
-      bg: "assets/pptx-media/fe0be4b4d6325923.png",
-      logos: ["assets/pptx-media/5cfa40729e3c636e.png"],
+      bg: A("fe0be4b4d6325923.png"),
+      logos: [A("5cfa40729e3c636e.png")],
     }),
   ],
 });
@@ -297,7 +298,7 @@ LarkSlideTemplates.visualLayout({
   sourceSlide: 1,
   title: "Keynote Visual Guidelines",
   blocks: [
-    { kind: "image", src: "assets/pptx-media/bg.png", style: "left:0;top:0;width:1600px;height:900px;" },
+    { kind: "image", src: A("e2cc3c0d5dc3155d.png"), style: "left:0;top:0;width:1600px;height:900px;" },
     {
       kind: "text",
       style: "left:240px;top:350px;width:1120px;height:120px;background:transparent;text-align:center;",
@@ -315,7 +316,7 @@ const { imageBlock, textBlock, shapeBlock } = LarkSlideTemplates.components;
 LarkSlideTemplates.visualLayout({
   title: "指标页",
   blocks: [
-    imageBlock({ src: "assets/pptx-media/bg.png" }),
+    imageBlock({ src: A("e2cc3c0d5dc3155d.png") }),
     shapeBlock({ x: 280, y: 310, w: 480, h: 240, fill: "rgba(255,255,255,0.08)", radius: "8px" }),
     textBlock({ x: 0, y: 360, w: 1600, h: 100, text: "提效价值", align: "center", gradient: "brand" }),
   ],

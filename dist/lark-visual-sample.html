@@ -13,11 +13,16 @@
     <script src="../sdk/lark-slides.js"></script>
     <script src="../sdk/templates.js"></script>
     <script>
-      const A = (name) => `assets/pptx-media/${name}`;
-      const DECK_ID = "lark-deckkit-full-ppt-showcase-v2";
-      const MAGIC_TEXT_SYNC_ENDPOINT = "https://lark-deckkit.local/full-ppt-text-sync";
-      const TEXT_STORE_PREFIX = "lark-deckkit:full-ppt-showcase:";
-      const memoryTextStore = (window.__LARK_DECKKIT_FULL_PPT_MEMORY__ ||= new Map());
+      (async () => {
+        const { assets: referenceAssets } = await fetch("./magic-assets-manifest.json").then((response) => {
+          if (!response.ok) throw new Error(`Failed to load remote asset manifest: ${response.status}`);
+          return response.json();
+        });
+        const A = (name) => referenceAssets[name] || "";
+        const DECK_ID = "lark-deckkit-full-ppt-showcase-v2";
+        const MAGIC_TEXT_SYNC_ENDPOINT = "https://lark-deckkit.local/full-ppt-text-sync";
+        const TEXT_STORE_PREFIX = "lark-deckkit:full-ppt-showcase:";
+        const memoryTextStore = (window.__LARK_DECKKIT_FULL_PPT_MEMORY__ ||= new Map());
 
       const deckSlides = [
         LarkSlideTemplates.visualLayout({
@@ -1155,6 +1160,7 @@
           headers: { "Content-Type": "application/json; charset=utf-8" },
         });
       }
+      })();
     </script>
   </body>
 </html>

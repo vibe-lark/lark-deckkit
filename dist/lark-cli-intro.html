@@ -190,7 +190,12 @@
     <script src="../sdk/lark-slides.js"></script>
     <script src="../sdk/templates.js"></script>
     <script>
-      const A = (name) => `assets/pptx-media/${name}`;
+      (async () => {
+      const { assets: referenceAssets } = await fetch("./magic-assets-manifest.json").then((response) => {
+        if (!response.ok) throw new Error(`Failed to load remote asset manifest: ${response.status}`);
+        return response.json();
+      });
+      const A = (name) => referenceAssets[name] || "";
       const T = LarkSlideTemplates;
       const C = T.components;
       const FRAME = { x: 120, w: 1360 };
@@ -466,6 +471,7 @@
         controls: new URLSearchParams(location.search).get("controls") !== "0",
       });
       bindInstallDemo();
+      })();
     </script>
   </body>
 </html>

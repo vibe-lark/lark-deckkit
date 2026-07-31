@@ -1,0 +1,4 @@
+interface:
+  display_name: "Lark DeckKit"
+  short_description: "Create concise Lark-style editable HTML slide decks"
+  default_prompt: "Use $lark-deckkit to create a concise editable 16:9 Lark-style HTML slide deck."
