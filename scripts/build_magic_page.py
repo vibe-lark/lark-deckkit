@@ -89,12 +89,19 @@ def main():
         '<script src="../sdk/templates.js"></script>',
         f"<script>\n{templates}\n</script>",
     )
-    html = html.replace(
-        "const A = (name) => `assets/pptx-media/${name}`;",
+    remote_loader = '''const { assets: referenceAssets } = await fetch("./magic-assets-manifest.json").then((response) => {
+          if (!response.ok) throw new Error(`Failed to load remote asset manifest: ${response.status}`);
+          return response.json();
+        });
+        const A = (name) => referenceAssets[name] || "";'''
+    inline_loader = (
         "const MAGIC_ASSET_URLS = "
         + json.dumps(assets, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
-        + ';\n      const A = (name) => MAGIC_ASSET_URLS[name] || "";',
+        + ';\n        const A = (name) => MAGIC_ASSET_URLS[name] || "";'
     )
+    if remote_loader not in html:
+        raise SystemExit("source HTML is missing the remote asset loader")
+    html = html.replace(remote_loader, inline_loader, 1)
     html = replace_literal_asset_paths(html, assets)
 
     args.out.write_text(html, encoding="utf-8")

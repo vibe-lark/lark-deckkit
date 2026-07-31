@@ -242,6 +242,17 @@
     };
   }
 
+  const referenceAssets = Object.freeze({
+    "a4540d81cce4891e.png": "https://magic-builder.tos-cn-beijing.volces.com/uploads/1777923433793_a4540d81cce4891e.png",
+    "70f40590943bfa16.png": "https://magic-builder.tos-cn-beijing.volces.com/uploads/1777923387855_70f40590943bfa16.png",
+    "79537a3295e5735a.png": "https://magic-builder.tos-cn-beijing.volces.com/uploads/1777923394372_79537a3295e5735a.png",
+    "c79530d42bdf7e25.png": "https://magic-builder.tos-cn-beijing.volces.com/uploads/1777923449430_c79530d42bdf7e25.png",
+  });
+
+  function referenceAsset(name) {
+    return referenceAssets[String(name || "")] || "";
+  }
+
   function deckSpec({
     title = "",
     description = "",
@@ -767,12 +778,12 @@
           ${editable("高亮字", "lvg-title lvg-muted")}
           <div class="lvg-highlight-demo">
             <div class="lvg-ok-line">
-              <img class="lvg-status" src="assets/pptx-media/a4540d81cce4891e.png" alt="">
+              <img class="lvg-status" src="${referenceAsset("a4540d81cce4891e.png")}" alt="">
               <strong contenteditable="true">先进团队 <span class="lvg-blue">先用飞书</span></strong>
             </div>
             <div class="lvg-rule"></div>
             <div class="lvg-bad-line">
-              <img class="lvg-status" src="assets/pptx-media/70f40590943bfa16.png" alt="">
+              <img class="lvg-status" src="${referenceAsset("70f40590943bfa16.png")}" alt="">
               <strong contenteditable="true">封面标题\\金句高亮文案<span class="lvg-blue">高亮文案</span><br>封面标题\\金句高亮文案<span class="lvg-blue">高亮文案</span></strong>
             </div>
           </div>
@@ -869,9 +880,9 @@
           ${editable("功能 ICON 资源库", "lvg-title strong")}
           ${editable("功能 ICON 资源库", "lvg-link")}
           <div class="lvg-status-row">
-            <img src="assets/pptx-media/a4540d81cce4891e.png" alt="">
-            <img src="assets/pptx-media/70f40590943bfa16.png" alt="">
-            <img src="assets/pptx-media/79537a3295e5735a.png" alt="">
+            <img src="${referenceAsset("a4540d81cce4891e.png")}" alt="">
+            <img src="${referenceAsset("70f40590943bfa16.png")}" alt="">
+            <img src="${referenceAsset("79537a3295e5735a.png")}" alt="">
           </div>
           <div class="lvg-icon-grid">
             ${renderList(icons, (icon) => `<span class="lvg-icon-dot">${imageTag(icon)}</span>`)}
@@ -1015,12 +1026,12 @@
           ${editable("Logo", "lvg-title lvg-muted")}
           ${editable("更多品牌规范见设计资产库", "lvg-link")}
           <div class="lvg-logo-spec">
-            <div class="lvg-logo-panel"><img src="assets/pptx-media/c79530d42bdf7e25.png" alt=""></div>
-            <div class="lvg-logo-panel dark"><img src="assets/pptx-media/c79530d42bdf7e25.png" alt=""></div>
+            <div class="lvg-logo-panel"><img src="${referenceAsset("c79530d42bdf7e25.png")}" alt=""></div>
+            <div class="lvg-logo-panel dark"><img src="${referenceAsset("c79530d42bdf7e25.png")}" alt=""></div>
             <div>
               ${editable("联合 Logo，飞书 Logo 固定在前面展示", "lvg-palette-label", "p")}
               <div class="lvg-lockup-spec">
-                <img src="assets/pptx-media/c79530d42bdf7e25.png" alt="">
+                <img src="${referenceAsset("c79530d42bdf7e25.png")}" alt="">
                 <span class="partner" contenteditable="true">Partner logo</span>
               </div>
             </div>
@@ -1168,6 +1179,8 @@
     validateDeckSpec,
     createDeckFromOutline,
     asset,
+    referenceAsset,
+    referenceAssets,
     deckSpec,
   };
 
@@ -1184,6 +1197,8 @@
     validateDeckSpec,
     createDeckFromOutline,
     asset,
+    referenceAsset,
+    referenceAssets,
     deckSpec,
     createDeck(options) {
       if (!window.LarkSlides?.createDeck) throw new Error("LarkSlideSDK: lark-slides.js is required");

@@ -19,37 +19,16 @@ def assert_loads_before(testcase, html, first, second):
 
 
 class GeneratedArtifactsTest(unittest.TestCase):
-    def test_converted_deck_manifest_covers_source_pptx(self):
-        manifest_path = DIST / "source-deck-manifest.json"
-        self.assertTrue(manifest_path.exists(), "missing generated deck manifest")
+    def test_repository_keeps_remote_manifests_not_binary_assets(self):
+        asset_manifest = json.loads((DIST / "magic-assets-manifest.json").read_text(encoding="utf-8"))
+        font_manifest = json.loads((DIST / "magic-fonts-manifest.json").read_text(encoding="utf-8"))
 
-        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-        self.assertEqual(manifest["source"], "16-9 活动 PPT-通用模版.pptx")
-        self.assertEqual(manifest["slideCount"], 49)
-        self.assertEqual(manifest["canvas"], {"width": 1600, "height": 900})
-        self.assertEqual(len(manifest["slides"]), 49)
-
-        for slide in manifest["slides"]:
-            self.assertIn("index", slide)
-            self.assertIn("layout", slide)
-            self.assertIn("elementCount", slide)
-            self.assertGreater(slide["elementCount"], 0)
-
-        for asset in manifest["assets"]:
-            self.assertTrue((ROOT / asset["path"]).exists(), asset["path"])
-
-    def test_converted_deck_html_contains_49_presentable_slides(self):
-        html_path = DIST / "lark-design-guidelines.html"
-        self.assertTrue(html_path.exists(), "missing converted HTML deck")
-        html = html_path.read_text(encoding="utf-8")
-
-        self.assertIn("data-lark-deck", html)
-        self.assertIn("sdk/lark-slides.js", html)
-        self.assertEqual(len(re.findall(r'<section class="ls-slide"', html)), 49)
-        self.assertNotIn('font-family:"', html)
-        self.assertNotIn(".emf", html.lower())
-        self.assertIn("Keynote Visual Guidelines", html)
-        self.assertIn("功能 ICON 资源库", html)
+        self.assertEqual(len(asset_manifest["assets"]), 299)
+        self.assertEqual(len(font_manifest["assets"]), 9)
+        self.assertFalse((DIST / "assets" / "pptx-media").exists())
+        self.assertFalse((SDK / "fonts").exists())
+        for url in [*asset_manifest["assets"].values(), *font_manifest["assets"].values()]:
+            self.assertTrue(url.startswith("https://magic-builder.tos-cn-beijing.volces.com/"))
 
     def test_sdk_runtime_and_templates_are_present(self):
         runtime = (SDK / "lark-slides.js").read_text(encoding="utf-8")
@@ -139,7 +118,7 @@ class GeneratedArtifactsTest(unittest.TestCase):
         self.assertIn("module.exports = async function", remote_text_faas)
         self.assertIn("slide-01.hero-title", remote_text_faas)
 
-    def test_font_assets_are_bundled_and_reusable(self):
+    def test_font_assets_are_remote_and_reusable(self):
         fonts_css_path = SDK / "fonts.css"
         font_manifest_path = SDK / "font-manifest.json"
         font_standard_path = ROOT / "docs" / "font-standard.md"
@@ -164,18 +143,15 @@ class GeneratedArtifactsTest(unittest.TestCase):
         self.assertIn("dist/magic-fonts-manifest.json", font_standard)
 
         for font in font_manifest["fonts"]:
-            font_path = ROOT / font["file"]
-            self.assertTrue(font_path.exists(), font["file"])
-            self.assertEqual(font_path.suffix, ".woff2")
-            self.assertGreater(font_path.stat().st_size, 100_000)
-            self.assertIn(font_path.name, fonts_css)
+            self.assertTrue(font["url"].startswith("https://"))
+            self.assertTrue(font["url"].endswith(".woff2"))
+            self.assertIn(font["url"], fonts_css)
 
     def test_html_entrypoints_load_fonts_before_slide_css(self):
         entrypoints = [
             (SDK / "example.html", './fonts.css', './lark-slides.css'),
             (SDK / "quickstart.html", './fonts.css', './lark-slides.css'),
             (DIST / "lark-visual-sample.html", '../sdk/fonts.css', '../sdk/lark-slides.css'),
-            (DIST / "lark-design-guidelines.html", '../sdk/fonts.css', '../sdk/lark-slides.css'),
             (DIST / "lark-cli-intro.html", '../sdk/fonts.css', '../sdk/lark-slides.css'),
         ]
 
@@ -234,7 +210,7 @@ class GeneratedArtifactsTest(unittest.TestCase):
         self.assertNotIn("dist/magic-fonts-manifest.json", readme)
         self.assertIn("scripts/validate_deck.js", readme)
         self.assertIn("https://bytedance.larkoffice.com/wiki/PdkgwdJO9iKS49k57pDcEcGxnad", readme)
-        self.assertIn("仓库里不需要提交原始 PPTX", readme)
+        self.assertIn("仓库里不提交原始 PPTX、图片或字体二进制", readme)
 
     def test_feishu_deck_h5_gap_analysis_is_recorded(self):
         comparison = ROOT / "docs" / "comparisons" / "2026-05-10-feishu-deck-h5-gap-analysis.md"

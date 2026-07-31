@@ -4,7 +4,7 @@ This document follows the DESIGN.md pattern from VoltAgent's `awesome-design-md`
 
 Use this file together with:
 
-- `sdk/fonts.css` for bundled web fonts, `@font-face` declarations, and font-family variables.
+- `sdk/fonts.css` for TOS-hosted web fonts, `@font-face` declarations, and font-family variables.
 - `sdk/lark-slides.css` for implemented visual tokens and component styles.
 - `sdk/lark-slides.js` for deck runtime, themes, and `createDeckSpec`.
 - `sdk/templates.js` for template registry, tokens, and block components.
@@ -89,7 +89,7 @@ Implementation:
 | SDK Light Template | `var(--ld-font-ui)` = `"Inter", "FZLanTingHeiPro_GB18030", "PingFang SC", "Microsoft YaHei", Arial, sans-serif` |
 | English / Numeric Accent | `"TikTok Display", "Inter", Arial, sans-serif` |
 
-The primary committed family is `FZLanTingHeiPro_GB18030`, stored as full-glyph WOFF2 files in `sdk/fonts/` and registered by `sdk/fonts.css`. Any new HTML deck must load `sdk/fonts.css` before `sdk/lark-slides.css`. `TikTok Display` is optional and should only render when the viewer environment or a future licensed font file provides it.
+The primary family is `FZLanTingHeiPro_GB18030`, loaded from TOS by `sdk/fonts.css`; font binaries are not committed. Any new HTML deck must load `sdk/fonts.css` before `sdk/lark-slides.css`. `TikTok Display` is optional and should only render when the viewer environment or a future licensed font URL provides it.
 
 ### Hierarchy
 
@@ -175,10 +175,11 @@ Block rules:
 
 ### Images
 
-- Use real PPT assets from `dist/assets/pptx-media/` when reproducing the style.
+- Use approved TOS assets from the public element catalog when reproducing the style.
 - Prefer full-bleed or large art-directed image use; avoid small decorative blobs.
 - Apply dark wash overlays when text needs contrast.
 - Do not use a full-slide screenshot as the slide implementation unless explicitly requested.
+- Reference remote URLs directly; do not copy image binaries into the repository.
 
 ## 5. Layout Principles
 
@@ -242,7 +243,7 @@ Rules:
 
 - Use `LarkSlides.createDeckSpec` for new decks.
 - Use `LarkSlideTemplates.defineTemplate` for repeated page types.
-- Use `LarkSlideTemplates.asset("assets/pptx-media")` to resolve local PPT assets.
+- Resolve approved image URLs from `dist/magic-assets-manifest.json` or the public TOS element catalog.
 - Use `visualLayout` for pages that need precise PPT-like positioning.
 - Use gradient text for key claims: `先进团队`, `提效价值`, `供应链业务协同平台`, major metrics.
 - Keep slides editable: text should be DOM text, not baked into screenshots.

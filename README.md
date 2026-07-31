@@ -227,7 +227,7 @@ https://skills.sh/anthropics/skills/frontend-design
 <link rel="stylesheet" href="./sdk/lark-slides.css" />
 ```
 
-仓库里提交了 `FZLanTingHeiPro_GB18030` 的 WOFF2 字体。模板里不要到处手写字体名，优先用这些变量：
+`sdk/fonts.css` 通过 TOS 加载 `FZLanTingHeiPro_GB18030`，仓库不再提交 WOFF2 二进制。模板里不要到处手写字体名，优先用这些变量：
 
 ```css
 font-family: var(--ld-font-display);
@@ -327,9 +327,8 @@ http://127.0.0.1:4173/sdk/quickstart.html
 .
 ├── design.md
 ├── dist/
-│   ├── lark-design-guidelines.html
 │   ├── lark-visual-sample.html
-│   └── assets/pptx-media/
+│   └── magic-assets-manifest.json
 ├── sdk/
 │   ├── fonts.css
 │   ├── lark-deckkit-loader.js
@@ -346,6 +345,8 @@ http://127.0.0.1:4173/sdk/quickstart.html
 │   └── products/
 ├── deliveries/
 │   └── README.md
+├── skills/
+│   └── lark-deckkit/
 ├── scripts/
 │   ├── convert_pptx_to_html.py
 │   ├── delivery_new.js
@@ -365,7 +366,7 @@ http://127.0.0.1:4173/sdk/quickstart.html
 https://bytedance.larkoffice.com/wiki/PdkgwdJO9iKS49k57pDcEcGxnad
 ```
 
-仓库里不需要提交原始 PPTX。保留 HTML、SDK、测试、`design.md` 和公开素材就够了。
+仓库里不提交原始 PPTX、图片或字体二进制。保留 HTML、SDK、测试、`design.md`、最小 Skill 和 TOS 素材索引即可。
 
 ## License
 

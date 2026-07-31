@@ -16,21 +16,21 @@ For HTML files inside `dist/`, use:
 <link rel="stylesheet" href="../sdk/lark-slides.css" />
 ```
 
-## Bundled Fonts
+## Hosted Fonts
 
-The committed primary family is `FZLanTingHeiPro_GB18030`.
+The primary family is `FZLanTingHeiPro_GB18030`. Font binaries live on TOS and are referenced by `sdk/fonts.css` and `sdk/font-manifest.json`.
 
-| Weight | File |
+| Weight | Manifest entry |
 |---:|---|
-| 200 | `sdk/fonts/FZLanTingHeiProGB18030-ExtraLight.woff2` |
-| 300 | `sdk/fonts/FZLanTingHeiProGB18030-Light.woff2` |
-| 400 | `sdk/fonts/FZLanTingHeiProGB18030-Regular.woff2` |
-| 500 | `sdk/fonts/FZLanTingHeiProGB18030-Medium.woff2` |
-| 600 | `sdk/fonts/FZLanTingHeiProGB18030-SemiBold.woff2` |
-| 650 | `sdk/fonts/FZLanTingHeiProGB18030-DemiBold.woff2` |
-| 700 | `sdk/fonts/FZLanTingHeiProGB18030-Bold.woff2` |
-| 800 | `sdk/fonts/FZLanTingHeiProGB18030-ExtraBold.woff2` |
-| 900 | `sdk/fonts/FZLanTingHeiProGB18030-Heavy.woff2` |
+| 200 | `FZLanTingHeiProGB18030-ExtraLight.woff2` |
+| 300 | `FZLanTingHeiProGB18030-Light.woff2` |
+| 400 | `FZLanTingHeiProGB18030-Regular.woff2` |
+| 500 | `FZLanTingHeiProGB18030-Medium.woff2` |
+| 600 | `FZLanTingHeiProGB18030-SemiBold.woff2` |
+| 650 | `FZLanTingHeiProGB18030-DemiBold.woff2` |
+| 700 | `FZLanTingHeiProGB18030-Bold.woff2` |
+| 800 | `FZLanTingHeiProGB18030-ExtraBold.woff2` |
+| 900 | `FZLanTingHeiProGB18030-Heavy.woff2` |
 
 The files are full-glyph WOFF2 exports, not Chinese subsets, so new document-generated decks can use arbitrary Chinese text.
 
@@ -67,17 +67,16 @@ Then use `LarkSlideTemplates.tokens.fonts` or the CSS variables instead of hardc
 
 ## Magic Pages Rule
 
-Magic Pages cannot load repo-local font files. Publishing must:
+Publishing must:
 
-1. Upload `sdk/fonts/` to Magic TOS/CDN.
-2. Write the returned URLs into `dist/magic-fonts-manifest.json`.
-3. Run `python3 scripts/build_magic_page.py`, which inlines `fonts.css` and rewrites font URLs to CDN URLs.
-4. Publish `dist/lark-deckkit-magic.html`.
+1. Keep `sdk/font-manifest.json` and `dist/magic-fonts-manifest.json` aligned.
+2. Run `python3 scripts/build_magic_page.py`, which inlines `fonts.css`.
+3. Publish `dist/lark-deckkit-magic.html`.
 
 ## Optional Fonts
 
-`TikTok Display` is referenced by the original PPT and remains an optional font family in the stack. It is not bundled in this repo because the file is not currently available here. Do not alias `TikTok Display` to another font. If a licensed WOFF2 file is available later, add it under `sdk/fonts/`, register it in `sdk/fonts.css`, and update `sdk/font-manifest.json`.
+`TikTok Display` is referenced by the original PPT and remains an optional font family in the stack. It is not hosted by this project. Do not alias it to another family. If a licensed WOFF2 file is available later, upload it to the approved CDN, register the URL in `sdk/fonts.css`, and update `sdk/font-manifest.json`.
 
 ## Licensing Rule
 
-Only commit font files that the project is allowed to redistribute. If a deck is internal-only, publish the font through the internal Magic CDN flow rather than adding an unlicensed binary to the public repo.
+Do not commit font binaries. For internal-only decks, publish licensed fonts through the approved internal CDN flow.

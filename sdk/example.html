@@ -13,7 +13,12 @@
     <script src="./lark-slides.js"></script>
     <script src="./templates.js"></script>
     <script>
-      const A = LarkSlideTemplates.asset("../dist/assets/pptx-media");
+      (async () => {
+      const { assets: referenceAssets } = await fetch("../dist/magic-assets-manifest.json").then((response) => {
+        if (!response.ok) throw new Error(`Failed to load remote asset manifest: ${response.status}`);
+        return response.json();
+      });
+      const A = (name) => referenceAssets[name] || "";
 
       LarkSlideTemplates.defineTemplate("teamQuote", ({ title, subtitle, bg }) =>
         LarkSlideTemplates.visualLayout({
@@ -91,6 +96,7 @@
       });
 
       LarkSlides.createDeck({ mount: "#deck", deck });
+      })();
     </script>
   </body>
 </html>

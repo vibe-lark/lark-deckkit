@@ -10,11 +10,18 @@ __pycache__/
 # Local Office temporary files
 ~$*
 
-# Source decks can easily exceed GitHub's 100MB single-file limit.
-# Keep the generated HTML/assets in dist, but store original PPTX files elsewhere
-# or use Git LFS if you really need to version them.
+# Keep source decks and extracted binaries outside the code-only repository.
 *.ppt
 *.pptx
+sdk/fonts/
+dist/assets/
+dist/pptx-media-linker/*
+!dist/pptx-media-linker/USAGE.md
+!dist/pptx-media-linker/llms.txt
+!dist/pptx-media-linker/llms-preview.html
+!dist/pptx-media-linker/gallery.html
+dist/source-deck-manifest.json
+dist/lark-design-guidelines.html
 
 # Local screenshots and smoke-test artifacts
 *.log
@@ -23,10 +30,7 @@ __pycache__/
 deliveries/*
 !deliveries/README.md
 
-# Generated deck exports and Magic publishing artifacts that are not canonical
-# examples. Keep source builders/scripts in git and regenerate these locally.
-dist/assets/one-store-one-group/
-dist/assets/one-store-one-group-magic/
+# Generated deck exports and Magic publishing artifacts that are not canonical.
 dist/feishu-bot-chat-slide.html
 dist/feishu-bot-chat-slide.magic.html
 dist/one-store-one-group-magic-assets.json
@@ -44,6 +48,5 @@ scripts/build_why_skill_feishu_deck.mjs
 product-mocks/generated/
 product-mocks/captures/
 
-# Oversized offline artifact. Regenerate with:
-# python3 scripts/build_magic_preview.py
+# Oversized offline artifact.
 dist/lark-deckkit-preview.html

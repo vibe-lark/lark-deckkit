@@ -1,4 +1,5 @@
 import re
+import json
 import unittest
 from pathlib import Path
 
@@ -22,12 +23,17 @@ class VisualSampleTest(unittest.TestCase):
         self.assertNotIn("ls-element", html)
         self.assertNotIn("source-deck-manifest", html)
 
-    def test_visual_sample_uses_ppt_assets_and_runtime(self):
+    def test_visual_sample_uses_remote_assets_and_runtime(self):
         html = HTML.read_text(encoding="utf-8")
         asset_names = set(re.findall(r'A\("([^"]+)"\)', html))
+        manifest = json.loads((ROOT / "dist" / "magic-assets-manifest.json").read_text(encoding="utf-8"))
+        remote_assets = manifest["assets"]
         self.assertGreaterEqual(len(asset_names), 30)
         for asset in asset_names:
-            self.assertTrue((ROOT / "dist" / "assets" / "pptx-media" / asset).exists(), asset)
+            self.assertIn(asset, remote_assets)
+            self.assertTrue(remote_assets[asset].startswith("https://"), asset)
+        self.assertIn('fetch("./magic-assets-manifest.json")', html)
+        self.assertFalse((ROOT / "dist" / "assets" / "pptx-media").exists())
 
         runtime = (ROOT / "sdk" / "lark-slides.js").read_text(encoding="utf-8")
         templates = (ROOT / "sdk" / "templates.js").read_text(encoding="utf-8")
@@ -35,6 +41,7 @@ class VisualSampleTest(unittest.TestCase):
         self.assertIn("keydown", runtime)
         self.assertIn("Escape", runtime)
         self.assertIn("data-src", templates)
+        self.assertNotIn("assets/pptx-media/", templates)
         self.assertIn("contenteditable", templates)
         self.assertIn("重复工作量</span></p><p", html)
         self.assertIn(">下降</span></p>", html)

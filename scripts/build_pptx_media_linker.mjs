@@ -5,7 +5,7 @@ import path from 'path';
 import { spawn } from 'child_process';
 
 const ROOT = process.cwd();
-const MEDIA_DIR = 'dist/assets/pptx-media';
+const MEDIA_DIR = process.env.PPTX_MEDIA_DIR || 'dist/assets/pptx-media';
 const OUT_DIR = 'dist/pptx-media-linker';
 const INVENTORY_PATH = path.join(OUT_DIR, 'media-inventory.json');
 const UPLOAD_STATE_PATH = path.join(OUT_DIR, 'upload-results.json');
